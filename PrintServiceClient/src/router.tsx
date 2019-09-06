@@ -2,6 +2,8 @@ import React from 'react';
 import { Router, Route } from 'dva/router';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { LocaleProvider } from 'antd';
+import { addLocaleData, IntlProvider } from 'react-intl';
+import zh from 'react-intl/locale-data/zh';
 import IndexPage from './routes/IndexPage';
 import User from './routes/User/User';
 import Home from './routes/Home/Home';
@@ -87,7 +89,7 @@ export default function RouterConfig({ history }) {
 					<Route path="/userCRUDDemo" component={UserCRUDDemo} />
 					<Route path="/appEdition" component={AppEdition} />
 					<Route path="/appStartPage" component={AppStartPage} />
-						<Route path="/print" component={Print} />
+					<Route path="/print" component={Print} />
 				</Route>
 			</Router>
 		</LocaleProvider>

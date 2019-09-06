@@ -1,14 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import { FormattedNumber } from 'react-intl';
-import { addLocaleData, IntlProvider } from 'react-intl';
-import zh from 'react-intl/locale-data/zh';
 export default class InactiveCardReceipt extends React.Component {
     render() {
         const { inactiveCardReceipt } = this.props;
-        addLocaleData(zh);
-        return (<IntlProvider locale={'zh'}>
-				<div style={{ fontSize: '12px' }}>
+        return (<div style={{ fontSize: '12px' }}>
 					<div>欢迎下次光临</div>
 					<br />
 					<div style={{ textAlign: 'center', fontWeight: 'bolder' }}>
@@ -32,13 +27,12 @@ export default class InactiveCardReceipt extends React.Component {
 					<div>计费时长：{inactiveCardReceipt.usedTimeSubFeeTime}</div>
 					<div>
 						应收费用：<span style={{ fontWeight: 'bold' }}>
-							<FormattedNumber value={inactiveCardReceipt.consume.fee ? inactiveCardReceipt.consume.fee : 0} minimumFractionDigits={2}/>
+							
 						</span>
 					</div>
 					<br />
 					<br />
 					<hr />
-				</div>
-			</IntlProvider>);
+				</div>);
     }
 }

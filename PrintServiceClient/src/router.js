@@ -86,7 +86,7 @@ export default function RouterConfig({ history }) {
 					<Route path="/userCRUDDemo" component={UserCRUDDemo}/>
 					<Route path="/appEdition" component={AppEdition}/>
 					<Route path="/appStartPage" component={AppStartPage}/>
-						<Route path="/print" component={Print}/>
+					<Route path="/print" component={Print}/>
 				</Route>
 			</Router>
 		</LocaleProvider>);

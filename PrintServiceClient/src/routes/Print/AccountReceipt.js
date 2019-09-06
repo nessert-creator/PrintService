@@ -1,13 +1,8 @@
 import React from 'react';
-import { FormattedNumber } from 'react-intl';
-import { addLocaleData, IntlProvider } from 'react-intl';
-import zh from 'react-intl/locale-data/zh';
 export default class AccountReceipt extends React.Component {
     render() {
         const { accountReceipt } = this.props;
-        addLocaleData(zh);
-        return (<IntlProvider locale={'zh'}>
-				<div style={{ fontSize: '12px' }}>
+        return (<div style={{ fontSize: '12px' }}>
 					<div style={{ textAlign: 'center', fontWeight: 'bolder', fontSize: '14px' }}>
 						{accountReceipt.examinationCenterName}
 					</div>
@@ -21,7 +16,6 @@ export default class AccountReceipt extends React.Component {
 					<br />
 					<br />
 					<hr />
-				</div>
-			</IntlProvider>);
+				</div>);
     }
 }

@@ -197,7 +197,7 @@ export function PrintIOU(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(3, 2200, 80, '');
-		LODOP.PRINT();
-		// LODOP.PREVIEW();
+		// LODOP.PRINT();
+		LODOP.PREVIEW();
 	}
 }

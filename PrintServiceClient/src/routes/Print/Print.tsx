@@ -13,19 +13,14 @@ class Print extends React.Component {
 
 		return (
 			<div>
-				<Button onClick={() => {}}>测试</Button>
+				<Button onClick={() => {
+					dispatch({
+						type:"print/printIOU"
+					})
+				}}>测试</Button>
 				<div>
-					<div style={{ width: '220px', border: '1px solid black' }}>
-						<ActiveCardReceipt activeCardReceipt={activeCardReceipt} />
-					</div>
-					<div style={{ width: '220px', border: '1px solid black' }}>
-						<InactiveCardReceipt inactiveCardReceipt={inactiveCardReceipt} />
-					</div>
 					<div style={{ width: '830px', border: '1px solid black' }}>
-						<IOU iou={iou} />
-					</div>
-					<div style={{ width: '220px', border: '1px solid black' }}>
-						<AccountReceipt accountReceipt={accountReceipt} />
+						<IOU iou={{endCoachSchoolName:"",usedTimeSubFeeTime:"",consume:{realFee:100}}} />
 					</div>
 				</div>
 			</div>
