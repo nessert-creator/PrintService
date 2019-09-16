@@ -28,6 +28,7 @@ import serverImageBrowse from './serverImageBrowse';
 import appEdition from './appEdition';
 import print from './print';
 import jiangzhangdan from './jiangzhangdan';
+import powerbook from './powerbook';
 
 /**
  * index.js
@@ -65,4 +66,5 @@ export function registerModels(app) {
 	app.model(appEdition);
 	app.model(print);
 	app.model(jiangzhangdan);
+	app.model(powerbook);
 }

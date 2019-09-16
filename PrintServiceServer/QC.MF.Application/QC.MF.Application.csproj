@@ -410,6 +410,12 @@
     <Compile Include="Demos\Dto\UpdateDemoDto.cs" />
     <Compile Include="Demos\IDemoAppService.cs" />
     <Compile Include="Demos\DemoAppService.cs" />
+    <Compile Include="Powerbooks\Dto\CreatePowerbookDto.cs" />
+    <Compile Include="Powerbooks\Dto\GetListPowerbookDto.cs" />
+    <Compile Include="Powerbooks\Dto\GetPowerbookDto.cs" />
+    <Compile Include="Powerbooks\Dto\UpdatePowerbookDto.cs" />
+    <Compile Include="Powerbooks\IPowerbookAppService.cs" />
+    <Compile Include="Powerbooks\PowerbookAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AsyncMFCrudAppService.cs" />
     <Compile Include="Roles\Dto\CreateOrUpdateRoleInput.cs" />
