@@ -28,6 +28,8 @@ import serverImageBrowse from './serverImageBrowse';
 import appEdition from './appEdition';
 import print from './print';
 import xinjinjiaokuandan from './xinjinjiaokuandan';
+import jiangzhangdan from './jiangzhangdan';
+import powerbook from './powerbook';
 /**
  * index.js
  * Created by 李廷旭 on 2017/9/5 10:15
@@ -64,4 +66,6 @@ export function registerModels(app) {
     app.model(appEdition);
     app.model(print);
     app.model(xinjinjiaokuandan);
+    app.model(jiangzhangdan);
+    app.model(powerbook);
 }
