@@ -464,10 +464,10 @@
     <Compile Include="Users\Profile\ProfileAppService.cs" />
     <Compile Include="Users\UserAppService.cs" />
     <Compile Include="Users\UserLoginAppService.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\CreateXianjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetListXianjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetXianjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\UpdateXianjinjiaokuandanDto.cs" />
+    <Compile Include="Xianjinjiaokuandan\Dto\CreateXinjinjiaokuandanDto.cs" />
+    <Compile Include="Xianjinjiaokuandan\Dto\GetListXinjinjiaokuandanDto.cs" />
+    <Compile Include="Xianjinjiaokuandan\Dto\GetXinjinjiaokuandanDto.cs" />
+    <Compile Include="Xianjinjiaokuandan\Dto\UpdateXinjinjiaokuandanDto.cs" />
     <Compile Include="Xianjinjiaokuandan\IXianjinjiaokuandanAppService.cs" />
     <Compile Include="Xianjinjiaokuandan\XianjinjiaokuandanAppService.cs" />
   </ItemGroup>

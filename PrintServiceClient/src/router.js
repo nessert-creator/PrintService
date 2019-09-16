@@ -39,8 +39,12 @@ import UserCRUDDemo from './routes/UserCRUDDemo/User';
 import AppEdition from './routes/AppEdition/AppEdition';
 import AppStartPage from './routes/AppStartPage/AppStartPage';
 import Print from './routes/Print/Print';
-import Xianjinjiaokuandan from './routes/Xianjinjiaokuandan/Xianjinjiaokuandan';
-import LuruXianjinjiaokuandan from './routes/Xianjinjiaokuandan/LuruXianjinjiaokuandan';
+import Xinjinjiaokuandan from './routes/Xinjinjiaokuandan/Xinjinjiaokuandan';
+import LuruXinjinjiaokuandan from './routes/Xinjinjiaokuandan/LuruXinjinjiaokuandan';
+import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
+import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
+import Powerbook from './routes/Powerbook/Powerbook';
+import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -89,10 +93,14 @@ export default function RouterConfig({ history }) {
 					<Route path="/appEdition" component={AppEdition}/>
 					<Route path="/appStartPage" component={AppStartPage}/>
 					<Route path="/print" component={Print}/>
-					<Route path="/Xianjinjiaokuandan" component={Xianjinjiaokuandan}/>
+					<Route path="/xinjinjiaokuandan" component={Xinjinjiaokuandan}/>
+					<Route path="/jiangzhangdan" component={Jiangzhangdan}/>
+					<Route path="/powerbook" component={Powerbook}/>
 				</Route>
 			
-			    <Route path="/luruxianjinjiaokuandan" component={LuruXianjinjiaokuandan}/>
+				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan}/>
+				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan}/>
+					<Route path="/luruPowerbook" component={LuruPowerbook}/>
 			</Router>
 		</LocaleProvider>);
 }

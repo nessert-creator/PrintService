@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QC.MF.Xianjinjiaokuandan
 {
-  public   interface IXianjinjiaokuandanAppService:IAsyncCrudAppService<GetListXianjinjiaokuandanDto, int, PagedSortedAndFilteredInputDto, CreateXianjinjiaokuandanDto, UpdateXianjinjiaokuandanDto>
+  public   interface IXianjinjiaokuandanAppService:IAsyncCrudAppService<GetListXinjinjiaokuandanDto, int, PagedSortedAndFilteredInputDto, CreateXinjinjiaokuandanDto, UpdateXinjinjiaokuandanDto>
     {
 
     }

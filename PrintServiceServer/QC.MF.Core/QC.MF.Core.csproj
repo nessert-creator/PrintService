@@ -295,7 +295,7 @@
     <Compile Include="WebFiles\WebFileManager.cs" />
     <Compile Include="Web\IWebUrlService.cs" />
     <Compile Include="Web\WebUrlService.cs" />
-    <Compile Include="Xianjinjiaokuandan\Xianjinjiaokuandan.cs" />
+    <Compile Include="Xianjinjiaokuandans\Xianjinjiaokuandan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

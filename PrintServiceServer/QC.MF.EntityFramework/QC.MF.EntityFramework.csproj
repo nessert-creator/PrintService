@@ -239,33 +239,9 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909100753467_zhuhang20190910.cs" />
-    <Compile Include="Migrations\201909100753467_zhuhang20190910.Designer.cs">
-      <DependentUpon>201909100753467_zhuhang20190910.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909120601540_zhuhang20199121401.cs" />
-    <Compile Include="Migrations\201909120601540_zhuhang20199121401.Designer.cs">
-      <DependentUpon>201909120601540_zhuhang20199121401.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909160119079_zhuhang2019916918.cs" />
-    <Compile Include="Migrations\201909160119079_zhuhang2019916918.Designer.cs">
-      <DependentUpon>201909160119079_zhuhang2019916918.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909100754495_zhangyunfei20199101553.cs" />
-    <Compile Include="Migrations\201909100754495_zhangyunfei20199101553.Designer.cs">
-      <DependentUpon>201909100754495_zhangyunfei20199101553.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909101538042_yuanhui20199102337.cs" />
-    <Compile Include="Migrations\201909101538042_yuanhui20199102337.Designer.cs">
-      <DependentUpon>201909101538042_yuanhui20199102337.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909111013339_yuanhui20199111813.cs" />
-    <Compile Include="Migrations\201909111013339_yuanhui20199111813.Designer.cs">
-      <DependentUpon>201909111013339_yuanhui20199111813.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909140343237_yuanhui20199141142.cs" />
-    <Compile Include="Migrations\201909140343237_yuanhui20199141142.Designer.cs">
-      <DependentUpon>201909140343237_yuanhui20199141142.cs</DependentUpon>
+    <Compile Include="Migrations\201909160146426_merge20190916.cs" />
+    <Compile Include="Migrations\201909160146426_merge20190916.Designer.cs">
+      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -337,26 +313,8 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909100753467_zhuhang20190910.resx">
-      <DependentUpon>201909100753467_zhuhang20190910.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909120601540_zhuhang20199121401.resx">
-      <DependentUpon>201909120601540_zhuhang20199121401.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909160119079_zhuhang2019916918.resx">
-      <DependentUpon>201909160119079_zhuhang2019916918.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909100754495_zhangyunfei20199101553.resx">
-      <DependentUpon>201909100754495_zhangyunfei20199101553.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909101538042_yuanhui20199102337.resx">
-      <DependentUpon>201909101538042_yuanhui20199102337.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909111013339_yuanhui20199111813.resx">
-      <DependentUpon>201909111013339_yuanhui20199111813.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909140343237_yuanhui20199141142.resx">
-      <DependentUpon>201909140343237_yuanhui20199141142.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909160146426_merge20190916.resx">
+      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

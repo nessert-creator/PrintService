@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace QC.MF.Xianjinjiaokuandan
 {
-    public class XianjinjiaokuandanAppService : AsyncMFCrudAppService<Xianjinjiaokuandan, GetListXianjinjiaokuandanDto, PagedSortedAndFilteredInputDto, CreateXianjinjiaokuandanDto, UpdateXianjinjiaokuandanDto>, IXianjinjiaokuandanAppService
+    public class XianjinjiaokuandanAppService : AsyncMFCrudAppService<Xianjinjiaokuandans.Xianjinjiaokuandan, GetListXinjinjiaokuandanDto, PagedSortedAndFilteredInputDto, CreateXinjinjiaokuandanDto, UpdateXinjinjiaokuandanDto>, IXianjinjiaokuandanAppService
     {
-        public XianjinjiaokuandanAppService(IRepository<Xianjinjiaokuandan, int> repository) : base(repository)
+        public XianjinjiaokuandanAppService(IRepository<Xianjinjiaokuandans.Xianjinjiaokuandan, int> repository) : base(repository)
         {
         }
     }
