@@ -235,6 +235,7 @@
     <Compile Include="Geetests\GeetestLib.cs" />
     <Compile Include="HttpRequester.cs" />
     <Compile Include="IAppFolders.cs" />
+    <Compile Include="Jingzhangdan\Jingzhangdan.cs" />
     <Compile Include="Push\Getui\GetuiServer.cs" />
     <Compile Include="Push\Getui\IGetuiServer.cs" />
     <Compile Include="Push\JPush\IJPushService.cs" />

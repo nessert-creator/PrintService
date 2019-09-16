@@ -41,6 +41,8 @@ import UserCRUDDemo from './routes/UserCRUDDemo/User';
 import AppEdition from './routes/AppEdition/AppEdition';
 import AppStartPage from './routes/AppStartPage/AppStartPage';
 import Print from './routes/Print/Print';
+import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
+import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -90,7 +92,9 @@ export default function RouterConfig({ history }) {
 					<Route path="/appEdition" component={AppEdition} />
 					<Route path="/appStartPage" component={AppStartPage} />
 					<Route path="/print" component={Print} />
+					<Route path="/jiangzhangdan" component={Jiangzhangdan} />
 				</Route>
+				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
 			</Router>
 		</LocaleProvider>
 	);

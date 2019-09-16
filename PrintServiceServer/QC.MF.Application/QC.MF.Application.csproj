@@ -358,6 +358,12 @@
     <Compile Include="InterfaceExport\IInterfaceExportAppService.cs" />
     <Compile Include="InterfaceExport\InterfaceExportAppService.cs" />
     <Compile Include="IO\AppFileHelper.cs" />
+    <Compile Include="Jingzhangdans\Dto\CreateJingzhangdanDto.cs" />
+    <Compile Include="Jingzhangdans\Dto\GetJiangzhangdanDto.cs" />
+    <Compile Include="Jingzhangdans\Dto\GetListJiangzhangdanDto.cs" />
+    <Compile Include="Jingzhangdans\Dto\UpdateJiangzhangdanDto.cs" />
+    <Compile Include="Jingzhangdans\IjingzhangdanAppService.cs" />
+    <Compile Include="Jingzhangdans\JingzhangdanAppService.cs" />
     <Compile Include="Menus\CodeNavigationProvider.cs" />
     <Compile Include="Menus\Dto\CreateMenuInput.cs" />
     <Compile Include="Menus\Dto\DeleteMenuInput.cs" />
