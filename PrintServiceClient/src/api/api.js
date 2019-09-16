@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./custom.d.ts" />
 // tslint:disable
 /**
@@ -11,29 +12,42 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import url from 'url';
-const portableFetch = fetch;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+exports.__esModule = true;
+var url_1 = require("url");
+var portableFetch = fetch;
 //const BASE_PATH = "http://220.165.143.73:666".replace(/\/+$/, "");
-const BASE_PATH = location.host.indexOf('localhost') >= 0 || location.host.indexOf('127.0.0.1') >= 0
-    ? `${location.protocol}//${location.host}/api`.replace(/\/+$/, '')
-    : `${location.protocol}//${location.host}`.replace(/\/+$/, '');
+var BASE_PATH = location.host.indexOf('localhost') >= 0 || location.host.indexOf('127.0.0.1') >= 0
+    ? (location.protocol + "//" + location.host + "/api").replace(/\/+$/, '')
+    : (location.protocol + "//" + location.host).replace(/\/+$/, '');
 /**
  *
  * @export
  */
-export const COLLECTION_FORMATS = {
+exports.COLLECTION_FORMATS = {
     csv: ",",
     ssv: " ",
     tsv: "\t",
-    pipes: "|",
+    pipes: "|"
 };
 /**
  *
  * @export
  * @class BaseAPI
  */
-export class BaseAPI {
-    constructor(configuration, basePath = BASE_PATH, fetch = portableFetch) {
+var BaseAPI = /** @class */ (function () {
+    function BaseAPI(configuration, basePath, fetch) {
+        if (basePath === void 0) { basePath = BASE_PATH; }
+        if (fetch === void 0) { fetch = portableFetch; }
         this.basePath = basePath;
         this.fetch = fetch;
         if (configuration) {
@@ -41,7 +55,9 @@ export class BaseAPI {
             this.basePath = configuration.basePath || this.basePath;
         }
     }
-}
+    return BaseAPI;
+}());
+exports.BaseAPI = BaseAPI;
 ;
 /**
  *
@@ -49,23 +65,27 @@ export class BaseAPI {
  * @class RequiredError
  * @extends {Error}
  */
-export class RequiredError extends Error {
-    constructor(field, msg) {
-        super(msg);
-        this.field = field;
+var RequiredError = /** @class */ (function (_super) {
+    __extends(RequiredError, _super);
+    function RequiredError(field, msg) {
+        var _this = _super.call(this, msg) || this;
+        _this.field = field;
+        return _this;
     }
-}
+    return RequiredError;
+}(Error));
+exports.RequiredError = RequiredError;
 /**
  * @export
  * @namespace ChatMessageDto
  */
-export var ChatMessageDto;
+var ChatMessageDto;
 (function (ChatMessageDto) {
     /**
      * @export
      * @enum {string}
      */
-    let SideEnum;
+    var SideEnum;
     (function (SideEnum) {
         SideEnum[SideEnum["NUMBER_1"] = 1] = "NUMBER_1";
         SideEnum[SideEnum["NUMBER_2"] = 2] = "NUMBER_2";
@@ -74,169 +94,169 @@ export var ChatMessageDto;
      * @export
      * @enum {string}
      */
-    let ReadStateEnum;
+    var ReadStateEnum;
     (function (ReadStateEnum) {
         ReadStateEnum[ReadStateEnum["NUMBER_1"] = 1] = "NUMBER_1";
         ReadStateEnum[ReadStateEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(ReadStateEnum = ChatMessageDto.ReadStateEnum || (ChatMessageDto.ReadStateEnum = {}));
-})(ChatMessageDto || (ChatMessageDto = {}));
+})(ChatMessageDto = exports.ChatMessageDto || (exports.ChatMessageDto = {}));
 /**
  * @export
  * @namespace CreateAppStartPageDto
  */
-export var CreateAppStartPageDto;
+var CreateAppStartPageDto;
 (function (CreateAppStartPageDto) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = CreateAppStartPageDto.PlatformEnum || (CreateAppStartPageDto.PlatformEnum = {}));
-})(CreateAppStartPageDto || (CreateAppStartPageDto = {}));
+})(CreateAppStartPageDto = exports.CreateAppStartPageDto || (exports.CreateAppStartPageDto = {}));
 /**
  * @export
  * @namespace FriendDto
  */
-export var FriendDto;
+var FriendDto;
 (function (FriendDto) {
     /**
      * @export
      * @enum {string}
      */
-    let StateEnum;
+    var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["NUMBER_1"] = 1] = "NUMBER_1";
         StateEnum[StateEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(StateEnum = FriendDto.StateEnum || (FriendDto.StateEnum = {}));
-})(FriendDto || (FriendDto = {}));
+})(FriendDto = exports.FriendDto || (exports.FriendDto = {}));
 /**
  * @export
  * @namespace GetAppEditionsInput
  */
-export var GetAppEditionsInput;
+var GetAppEditionsInput;
 (function (GetAppEditionsInput) {
     /**
      * @export
      * @enum {string}
      */
-    let AppSearchTypeEnum;
+    var AppSearchTypeEnum;
     (function (AppSearchTypeEnum) {
         AppSearchTypeEnum[AppSearchTypeEnum["NUMBER_0"] = 0] = "NUMBER_0";
         AppSearchTypeEnum[AppSearchTypeEnum["NUMBER_1"] = 1] = "NUMBER_1";
         AppSearchTypeEnum[AppSearchTypeEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(AppSearchTypeEnum = GetAppEditionsInput.AppSearchTypeEnum || (GetAppEditionsInput.AppSearchTypeEnum = {}));
-})(GetAppEditionsInput || (GetAppEditionsInput = {}));
+})(GetAppEditionsInput = exports.GetAppEditionsInput || (exports.GetAppEditionsInput = {}));
 /**
  * @export
  * @namespace GetAppStartPageDto
  */
-export var GetAppStartPageDto;
+var GetAppStartPageDto;
 (function (GetAppStartPageDto) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = GetAppStartPageDto.PlatformEnum || (GetAppStartPageDto.PlatformEnum = {}));
-})(GetAppStartPageDto || (GetAppStartPageDto = {}));
+})(GetAppStartPageDto = exports.GetAppStartPageDto || (exports.GetAppStartPageDto = {}));
 /**
  * @export
  * @namespace GetAppStartPageInput
  */
-export var GetAppStartPageInput;
+var GetAppStartPageInput;
 (function (GetAppStartPageInput) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = GetAppStartPageInput.PlatformEnum || (GetAppStartPageInput.PlatformEnum = {}));
-})(GetAppStartPageInput || (GetAppStartPageInput = {}));
+})(GetAppStartPageInput = exports.GetAppStartPageInput || (exports.GetAppStartPageInput = {}));
 /**
  * @export
  * @namespace GetListAppStartPageDto
  */
-export var GetListAppStartPageDto;
+var GetListAppStartPageDto;
 (function (GetListAppStartPageDto) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = GetListAppStartPageDto.PlatformEnum || (GetListAppStartPageDto.PlatformEnum = {}));
-})(GetListAppStartPageDto || (GetListAppStartPageDto = {}));
+})(GetListAppStartPageDto = exports.GetListAppStartPageDto || (exports.GetListAppStartPageDto = {}));
 /**
  * @export
  * @namespace GetUserNotificationsInput
  */
-export var GetUserNotificationsInput;
+var GetUserNotificationsInput;
 (function (GetUserNotificationsInput) {
     /**
      * @export
      * @enum {string}
      */
-    let StateEnum;
+    var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["NUMBER_0"] = 0] = "NUMBER_0";
         StateEnum[StateEnum["NUMBER_1"] = 1] = "NUMBER_1";
     })(StateEnum = GetUserNotificationsInput.StateEnum || (GetUserNotificationsInput.StateEnum = {}));
-})(GetUserNotificationsInput || (GetUserNotificationsInput = {}));
+})(GetUserNotificationsInput = exports.GetUserNotificationsInput || (exports.GetUserNotificationsInput = {}));
 /**
  * @export
  * @namespace IsTenantAvailableOutput
  */
-export var IsTenantAvailableOutput;
+var IsTenantAvailableOutput;
 (function (IsTenantAvailableOutput) {
     /**
      * @export
      * @enum {string}
      */
-    let StateEnum;
+    var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["NUMBER_1"] = 1] = "NUMBER_1";
         StateEnum[StateEnum["NUMBER_2"] = 2] = "NUMBER_2";
         StateEnum[StateEnum["NUMBER_3"] = 3] = "NUMBER_3";
     })(StateEnum = IsTenantAvailableOutput.StateEnum || (IsTenantAvailableOutput.StateEnum = {}));
-})(IsTenantAvailableOutput || (IsTenantAvailableOutput = {}));
+})(IsTenantAvailableOutput = exports.IsTenantAvailableOutput || (exports.IsTenantAvailableOutput = {}));
 /**
  * @export
  * @namespace IsUpatedInput
  */
-export var IsUpatedInput;
+var IsUpatedInput;
 (function (IsUpatedInput) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = IsUpatedInput.PlatformEnum || (IsUpatedInput.PlatformEnum = {}));
-})(IsUpatedInput || (IsUpatedInput = {}));
+})(IsUpatedInput = exports.IsUpatedInput || (exports.IsUpatedInput = {}));
 /**
  * @export
  * @namespace TenantNotification
  */
-export var TenantNotification;
+var TenantNotification;
 (function (TenantNotification) {
     /**
      * @export
      * @enum {string}
      */
-    let SeverityEnum;
+    var SeverityEnum;
     (function (SeverityEnum) {
         SeverityEnum[SeverityEnum["NUMBER_0"] = 0] = "NUMBER_0";
         SeverityEnum[SeverityEnum["NUMBER_1"] = 1] = "NUMBER_1";
@@ -244,44 +264,62 @@ export var TenantNotification;
         SeverityEnum[SeverityEnum["NUMBER_3"] = 3] = "NUMBER_3";
         SeverityEnum[SeverityEnum["NUMBER_4"] = 4] = "NUMBER_4";
     })(SeverityEnum = TenantNotification.SeverityEnum || (TenantNotification.SeverityEnum = {}));
-})(TenantNotification || (TenantNotification = {}));
+})(TenantNotification = exports.TenantNotification || (exports.TenantNotification = {}));
+/**
+ * @export
+ * @namespace ThirdPartyLoginModel
+ */
+var ThirdPartyLoginModel;
+(function (ThirdPartyLoginModel) {
+    /**
+     * @export
+     * @enum {string}
+     */
+    var ThirdPartyEnum;
+    (function (ThirdPartyEnum) {
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_2"] = 2] = "NUMBER_2";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_3"] = 3] = "NUMBER_3";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_4"] = 4] = "NUMBER_4";
+    })(ThirdPartyEnum = ThirdPartyLoginModel.ThirdPartyEnum || (ThirdPartyLoginModel.ThirdPartyEnum = {}));
+})(ThirdPartyLoginModel = exports.ThirdPartyLoginModel || (exports.ThirdPartyLoginModel = {}));
 /**
  * @export
  * @namespace UpdateAppStartPageDto
  */
-export var UpdateAppStartPageDto;
+var UpdateAppStartPageDto;
 (function (UpdateAppStartPageDto) {
     /**
      * @export
      * @enum {string}
      */
-    let PlatformEnum;
+    var PlatformEnum;
     (function (PlatformEnum) {
         PlatformEnum[PlatformEnum["NUMBER_1"] = 1] = "NUMBER_1";
         PlatformEnum[PlatformEnum["NUMBER_2"] = 2] = "NUMBER_2";
     })(PlatformEnum = UpdateAppStartPageDto.PlatformEnum || (UpdateAppStartPageDto.PlatformEnum = {}));
-})(UpdateAppStartPageDto || (UpdateAppStartPageDto = {}));
+})(UpdateAppStartPageDto = exports.UpdateAppStartPageDto || (exports.UpdateAppStartPageDto = {}));
 /**
  * @export
  * @namespace UserNotification
  */
-export var UserNotification;
+var UserNotification;
 (function (UserNotification) {
     /**
      * @export
      * @enum {string}
      */
-    let StateEnum;
+    var StateEnum;
     (function (StateEnum) {
         StateEnum[StateEnum["NUMBER_0"] = 0] = "NUMBER_0";
         StateEnum[StateEnum["NUMBER_1"] = 1] = "NUMBER_1";
     })(StateEnum = UserNotification.StateEnum || (UserNotification.StateEnum = {}));
-})(UserNotification || (UserNotification = {}));
+})(UserNotification = exports.UserNotification || (exports.UserNotification = {}));
 /**
  * AbpCacheApi - fetch parameter creator
  * @export
  */
-export const AbpCacheApiFetchParamCreator = function (configuration) {
+exports.AbpCacheApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -291,16 +329,17 @@ export const AbpCacheApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClear(model, X_XSRF_TOKEN, authorization, options = {}) {
+        abpCacheClear: function (model, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'model' is not null or undefined
             if (model === null || model === undefined) {
                 throw new RequiredError('model', 'Required parameter model was null or undefined when calling abpCacheClear.');
             }
-            const localVarPath = `/api/AbpCache/Clear`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/AbpCache/Clear";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -312,11 +351,11 @@ export const AbpCacheApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ClearCacheModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ClearCacheModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(model || {}) : (model || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -327,16 +366,17 @@ export const AbpCacheApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options = {}) {
+        abpCacheClearAll: function (model, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'model' is not null or undefined
             if (model === null || model === undefined) {
                 throw new RequiredError('model', 'Required parameter model was null or undefined when calling abpCacheClearAll.');
             }
-            const localVarPath = `/api/AbpCache/ClearAll`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/AbpCache/ClearAll";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -348,20 +388,20 @@ export const AbpCacheApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ClearAllCacheModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ClearAllCacheModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(model || {}) : (model || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AbpCacheApi - functional programming interface
  * @export
  */
-export const AbpCacheApiFp = function (configuration) {
+exports.AbpCacheApiFp = function (configuration) {
     return {
         /**
          *
@@ -371,10 +411,12 @@ export const AbpCacheApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClear(model, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AbpCacheApiFetchParamCreator(configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        abpCacheClear: function (model, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AbpCacheApiFetchParamCreator(configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -392,10 +434,12 @@ export const AbpCacheApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AbpCacheApiFetchParamCreator(configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        abpCacheClearAll: function (model, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AbpCacheApiFetchParamCreator(configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -404,14 +448,14 @@ export const AbpCacheApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AbpCacheApi - factory interface
  * @export
  */
-export const AbpCacheApiFactory = function (configuration, fetch, basePath) {
+exports.AbpCacheApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -421,8 +465,8 @@ export const AbpCacheApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClear(model, X_XSRF_TOKEN, authorization, options) {
-            return AbpCacheApiFp(configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        abpCacheClear: function (model, X_XSRF_TOKEN, authorization, options) {
+            return exports.AbpCacheApiFp(configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -432,9 +476,9 @@ export const AbpCacheApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options) {
-            return AbpCacheApiFp(configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        abpCacheClearAll: function (model, X_XSRF_TOKEN, authorization, options) {
+            return exports.AbpCacheApiFp(configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -443,57 +487,64 @@ export const AbpCacheApiFactory = function (configuration, fetch, basePath) {
  * @class AbpCacheApi
  * @extends {BaseAPI}
  */
-export class AbpCacheApi extends BaseAPI {
+var AbpCacheApi = /** @class */ (function (_super) {
+    __extends(AbpCacheApi, _super);
+    function AbpCacheApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} model
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {ClearCacheModel} model
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpCacheApi
      */
-    abpCacheClear(model, X_XSRF_TOKEN, authorization, options) {
-        return AbpCacheApiFp(this.configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AbpCacheApi.prototype.abpCacheClear = function (model, X_XSRF_TOKEN, authorization, options) {
+        return exports.AbpCacheApiFp(this.configuration).abpCacheClear(model, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} model
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {ClearAllCacheModel} model
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpCacheApi
      */
-    abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options) {
-        return AbpCacheApiFp(this.configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    AbpCacheApi.prototype.abpCacheClearAll = function (model, X_XSRF_TOKEN, authorization, options) {
+        return exports.AbpCacheApiFp(this.configuration).abpCacheClearAll(model, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return AbpCacheApi;
+}(BaseAPI));
+exports.AbpCacheApi = AbpCacheApi;
 /**
  * AbpServiceProxiesApi - fetch parameter creator
  * @export
  */
-export const AbpServiceProxiesApiFetchParamCreator = function (configuration) {
+exports.AbpServiceProxiesApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options = {}) {
+        abpServiceProxiesGet: function (name, X_XSRF_TOKEN, authorization, type, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'name' is not null or undefined
             if (name === null || name === undefined) {
                 throw new RequiredError('name', 'Required parameter name was null or undefined when calling abpServiceProxiesGet.');
             }
-            const localVarPath = `/api/AbpServiceProxies`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/AbpServiceProxies";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (name !== undefined) {
                 localVarQueryParameter['name'] = name;
             }
@@ -511,31 +562,33 @@ export const AbpServiceProxiesApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AbpServiceProxiesApi - functional programming interface
  * @export
  */
-export const AbpServiceProxiesApiFp = function (configuration) {
+exports.AbpServiceProxiesApiFp = function (configuration) {
     return {
         /**
          *
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options) {
-            const localVarFetchArgs = AbpServiceProxiesApiFetchParamCreator(configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        abpServiceProxiesGet: function (name, X_XSRF_TOKEN, authorization, type, options) {
+            var localVarFetchArgs = exports.AbpServiceProxiesApiFetchParamCreator(configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -544,27 +597,27 @@ export const AbpServiceProxiesApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AbpServiceProxiesApi - factory interface
  * @export
  */
-export const AbpServiceProxiesApiFactory = function (configuration, fetch, basePath) {
+exports.AbpServiceProxiesApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options) {
-            return AbpServiceProxiesApiFp(configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options)(fetch, basePath);
-        },
+        abpServiceProxiesGet: function (name, X_XSRF_TOKEN, authorization, type, options) {
+            return exports.AbpServiceProxiesApiFp(configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -573,45 +626,53 @@ export const AbpServiceProxiesApiFactory = function (configuration, fetch, baseP
  * @class AbpServiceProxiesApi
  * @extends {BaseAPI}
  */
-export class AbpServiceProxiesApi extends BaseAPI {
+var AbpServiceProxiesApi = /** @class */ (function (_super) {
+    __extends(AbpServiceProxiesApi, _super);
+    function AbpServiceProxiesApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} name
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {} [type]
+     * @param {string} name
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {0 | 1} [type]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpServiceProxiesApi
      */
-    abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options) {
-        return AbpServiceProxiesApiFp(this.configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options)(this.fetch, this.basePath);
-    }
-}
+    AbpServiceProxiesApi.prototype.abpServiceProxiesGet = function (name, X_XSRF_TOKEN, authorization, type, options) {
+        return exports.AbpServiceProxiesApiFp(this.configuration).abpServiceProxiesGet(name, X_XSRF_TOKEN, authorization, type, options)(this.fetch, this.basePath);
+    };
+    return AbpServiceProxiesApi;
+}(BaseAPI));
+exports.AbpServiceProxiesApi = AbpServiceProxiesApi;
 /**
  * AccountApi - fetch parameter creator
  * @export
  */
-export const AccountApiFetchParamCreator = function (configuration) {
+exports.AccountApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options = {}) {
+        accountAuthenticate: function (loginModel, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'loginModel' is not null or undefined
             if (loginModel === null || loginModel === undefined) {
                 throw new RequiredError('loginModel', 'Required parameter loginModel was null or undefined when calling accountAuthenticate.');
             }
-            const localVarPath = `/api/Account`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/Account";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -623,31 +684,33 @@ export const AccountApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("LoginModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("LoginModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(loginModel || {}) : (loginModel || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAccountBindingThirdParty: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAccountBindingThirdParty.');
             }
-            const localVarPath = `/api/services/app/account/BindingThirdParty`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/account/BindingThirdParty";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -659,31 +722,33 @@ export const AccountApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("BindingThirdPartyInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("BindingThirdPartyInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAccountIsTenantAvailable: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAccountIsTenantAvailable.');
             }
-            const localVarPath = `/api/services/app/account/IsTenantAvailable`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/account/IsTenantAvailable";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -695,31 +760,33 @@ export const AccountApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("IsTenantAvailableInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("IsTenantAvailableInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAccountSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAccountSendPhoneNumberCode.');
             }
-            const localVarPath = `/api/services/app/account/SendPhoneNumberCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/account/SendPhoneNumberCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -731,33 +798,36 @@ export const AccountApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AccountApi - functional programming interface
  * @export
  */
-export const AccountApiFp = function (configuration) {
+exports.AccountApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AccountApiFetchParamCreator(configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        accountAuthenticate: function (loginModel, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AccountApiFetchParamCreator(configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -769,16 +839,19 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AccountApiFetchParamCreator(configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAccountBindingThirdParty: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AccountApiFetchParamCreator(configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -790,16 +863,19 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AccountApiFetchParamCreator(configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAccountIsTenantAvailable: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AccountApiFetchParamCreator(configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -811,16 +887,19 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AccountApiFetchParamCreator(configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAccountSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AccountApiFetchParamCreator(configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -829,59 +908,63 @@ export const AccountApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AccountApi - factory interface
  * @export
  */
-export const AccountApiFactory = function (configuration, fetch, basePath) {
+exports.AccountApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options) {
-            return AccountApiFp(configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        accountAuthenticate: function (loginModel, X_XSRF_TOKEN, authorization, options) {
+            return exports.AccountApiFp(configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options) {
-            return AccountApiFp(configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAccountBindingThirdParty: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AccountApiFp(configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options) {
-            return AccountApiFp(configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAccountIsTenantAvailable: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AccountApiFp(configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            return AccountApiFp(configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appAccountSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AccountApiFp(configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -890,80 +973,92 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
  * @class AccountApi
  * @extends {BaseAPI}
  */
-export class AccountApi extends BaseAPI {
+var AccountApi = /** @class */ (function (_super) {
+    __extends(AccountApi, _super);
+    function AccountApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} loginModel
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 登录认证
+     * @param {LoginModel} loginModel
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options) {
-        return AccountApiFp(this.configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AccountApi.prototype.accountAuthenticate = function (loginModel, X_XSRF_TOKEN, authorization, options) {
+        return exports.AccountApiFp(this.configuration).accountAuthenticate(loginModel, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 绑定账号  （无调用）
+     * @param {BindingThirdPartyInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options) {
-        return AccountApiFp(this.configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AccountApi.prototype.appAccountBindingThirdParty = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AccountApiFp(this.configuration).appAccountBindingThirdParty(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 租户是否可用  （无调用）
+     * @param {IsTenantAvailableInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options) {
-        return AccountApiFp(this.configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AccountApi.prototype.appAccountIsTenantAvailable = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AccountApiFp(this.configuration).appAccountIsTenantAvailable(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 登录时发送手机证码
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
      */
-    appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-        return AccountApiFp(this.configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    AccountApi.prototype.appAccountSendPhoneNumberCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AccountApiFp(this.configuration).appAccountSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return AccountApi;
+}(BaseAPI));
+exports.AccountApi = AccountApi;
 /**
  * ActiveApi - fetch parameter creator
  * @export
  */
-export const ActiveApiFetchParamCreator = function (configuration) {
+exports.ActiveApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appActiveConfirmEmailByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appActiveConfirmEmailByCode.');
             }
-            const localVarPath = `/api/services/app/active/ConfirmEmailByCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/active/ConfirmEmailByCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -975,31 +1070,33 @@ export const ActiveApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ConfirmEmailCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ConfirmEmailCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appActiveConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appActiveConfirmPhoneNumberByCode.');
             }
-            const localVarPath = `/api/services/app/active/ConfirmPhoneNumberByCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/active/ConfirmPhoneNumberByCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1011,31 +1108,33 @@ export const ActiveApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("VerificationCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("VerificationCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appActiveSendConfirmEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appActiveSendConfirmEmailCode.');
             }
-            const localVarPath = `/api/services/app/active/SendConfirmEmailCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/active/SendConfirmEmailCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1047,31 +1146,33 @@ export const ActiveApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appActiveSendConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appActiveSendConfirmPhoneNumberByCode.');
             }
-            const localVarPath = `/api/services/app/active/SendConfirmPhoneNumberByCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/active/SendConfirmPhoneNumberByCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1083,33 +1184,36 @@ export const ActiveApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("VerificationCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("VerificationCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * ActiveApi - functional programming interface
  * @export
  */
-export const ActiveApiFp = function (configuration) {
+exports.ActiveApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ActiveApiFetchParamCreator(configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appActiveConfirmEmailByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ActiveApiFetchParamCreator(configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1121,16 +1225,19 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ActiveApiFetchParamCreator(configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appActiveConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ActiveApiFetchParamCreator(configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1142,16 +1249,19 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ActiveApiFetchParamCreator(configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appActiveSendConfirmEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ActiveApiFetchParamCreator(configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1163,16 +1273,19 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ActiveApiFetchParamCreator(configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appActiveSendConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ActiveApiFetchParamCreator(configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1181,59 +1294,63 @@ export const ActiveApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * ActiveApi - factory interface
  * @export
  */
-export const ActiveApiFactory = function (configuration, fetch, basePath) {
+exports.ActiveApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options) {
-            return ActiveApiFp(configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appActiveConfirmEmailByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ActiveApiFp(configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-            return ActiveApiFp(configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appActiveConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ActiveApiFp(configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            return ActiveApiFp(configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appActiveSendConfirmEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ActiveApiFp(configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-            return ActiveApiFp(configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appActiveSendConfirmPhoneNumberByCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ActiveApiFp(configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -1242,61 +1359,71 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
  * @class ActiveApi
  * @extends {BaseAPI}
  */
-export class ActiveApi extends BaseAPI {
+var ActiveApi = /** @class */ (function (_super) {
+    __extends(ActiveApi, _super);
+    function ActiveApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 验证邮箱验  （sendemail）
+     * @param {ConfirmEmailCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
      */
-    appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options) {
-        return ActiveApiFp(this.configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ActiveApi.prototype.appActiveConfirmEmailByCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ActiveApiFp(this.configuration).appActiveConfirmEmailByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 验证手机号  （sendemail）
+     * @param {VerificationCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
      */
-    appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-        return ActiveApiFp(this.configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ActiveApi.prototype.appActiveConfirmPhoneNumberByCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ActiveApiFp(this.configuration).appActiveConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码  （sendemail）
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
      */
-    appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-        return ActiveApiFp(this.configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ActiveApi.prototype.appActiveSendConfirmEmailCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ActiveApiFp(this.configuration).appActiveSendConfirmEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送手机激活验证码  （sendemail）
+     * @param {VerificationCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
      */
-    appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options) {
-        return ActiveApiFp(this.configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    ActiveApi.prototype.appActiveSendConfirmPhoneNumberByCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ActiveApiFp(this.configuration).appActiveSendConfirmPhoneNumberByCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return ActiveApi;
+}(BaseAPI));
+exports.ActiveApi = ActiveApi;
 /**
  * AppEditionsApi - fetch parameter creator
  * @export
  */
-export const AppEditionsApiFetchParamCreator = function (configuration) {
+exports.AppEditionsApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -1306,16 +1433,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsCheckUpdate.');
             }
-            const localVarPath = `/api/services/app/appEditions/CheckUpdate`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/CheckUpdate";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1327,11 +1455,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1342,16 +1470,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsCreateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsCreateAndroidAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/CreateAndroidAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/CreateAndroidAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1363,11 +1492,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateAndroidAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateAndroidAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1378,16 +1507,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsCreateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsCreateIOSAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/CreateIOSAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/CreateIOSAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1399,11 +1529,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateIOSAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateIOSAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1414,16 +1544,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsDeleteAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsDeleteAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/DeleteAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/DeleteAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1435,11 +1566,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1450,16 +1581,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsDownloadAppEdition: function (id, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
                 throw new RequiredError('id', 'Required parameter id was null or undefined when calling appAppEditionsDownloadAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/DownloadAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/DownloadAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (id !== undefined) {
                 localVarQueryParameter['id'] = id;
             }
@@ -1474,8 +1606,8 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1486,16 +1618,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsGetAbout: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsGetAbout.');
             }
-            const localVarPath = `/api/services/app/appEditions/GetAbout`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/GetAbout";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1507,11 +1640,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1522,16 +1655,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsGetAboutAndCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsGetAboutAndCheckUpdate.');
             }
-            const localVarPath = `/api/services/app/appEditions/GetAboutAndCheckUpdate`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/GetAboutAndCheckUpdate";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1543,11 +1677,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("VersionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1558,16 +1692,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsGetAppEditions: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsGetAppEditions.');
             }
-            const localVarPath = `/api/services/app/appEditions/GetAppEditions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/GetAppEditions";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1579,11 +1714,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetAppEditionsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetAppEditionsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1594,16 +1729,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsUpdateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsUpdateAndroidAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/UpdateAndroidAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/UpdateAndroidAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1615,11 +1751,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateAndroidAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateAndroidAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1630,16 +1766,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppEditionsUpdateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppEditionsUpdateIOSAppEdition.');
             }
-            const localVarPath = `/api/services/app/appEditions/UpdateIOSAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appEditions/UpdateIOSAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1651,11 +1788,11 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateIOSAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateIOSAppEditionInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -1665,12 +1802,13 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/appEditions/UploadAppEdition`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appAppEditionsUploadAppEdition: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/appEditions/UploadAppEdition";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -1682,17 +1820,17 @@ export const AppEditionsApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AppEditionsApi - functional programming interface
  * @export
  */
-export const AppEditionsApiFp = function (configuration) {
+exports.AppEditionsApiFp = function (configuration) {
     return {
         /**
          *
@@ -1702,10 +1840,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -1723,10 +1863,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsCreateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1744,10 +1886,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsCreateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1765,10 +1909,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsDeleteAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1786,10 +1932,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsDownloadAppEdition: function (id, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1807,10 +1955,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsGetAbout: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -1828,10 +1978,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsGetAboutAndCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -1849,10 +2001,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsGetAppEditions: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -1870,10 +2024,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsUpdateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1891,10 +2047,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsUpdateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -1911,10 +2069,12 @@ export const AppEditionsApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppEditionsApiFetchParamCreator(configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppEditionsUploadAppEdition: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppEditionsApiFetchParamCreator(configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -1923,14 +2083,14 @@ export const AppEditionsApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AppEditionsApi - factory interface
  * @export
  */
-export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
+exports.AppEditionsApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -1940,8 +2100,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -1951,8 +2111,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsCreateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -1962,8 +2122,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsCreateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -1973,8 +2133,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsDeleteAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -1984,8 +2144,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsDownloadAppEdition: function (id, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -1995,8 +2155,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsGetAbout: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2006,8 +2166,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsGetAboutAndCheckUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2017,8 +2177,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsGetAppEditions: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2028,8 +2188,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsUpdateAndroidAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2039,8 +2199,8 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppEditionsUpdateIOSAppEdition: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2049,9 +2209,9 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options) {
-            return AppEditionsApiFp(configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appAppEditionsUploadAppEdition: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.AppEditionsApiFp(configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -2060,144 +2220,150 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
  * @class AppEditionsApi
  * @extends {BaseAPI}
  */
-export class AppEditionsApi extends BaseAPI {
+var AppEditionsApi = /** @class */ (function (_super) {
+    __extends(AppEditionsApi, _super);
+    function AppEditionsApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsCheckUpdate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateAndroidAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsCreateAndroidAppEdition = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsCreateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateIOSAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsCreateIOSAppEdition = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsCreateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsDeleteAppEdition = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsDeleteAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} id
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {number} id
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsDownloadAppEdition = function (id, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsDownloadAppEdition(id, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsGetAbout = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsGetAbout(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsGetAboutAndCheckUpdate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsGetAboutAndCheckUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAppEditionsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsGetAppEditions = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsGetAppEditions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateAndroidAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsUpdateAndroidAppEdition = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsUpdateAndroidAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateIOSAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppEditionsApi.prototype.appAppEditionsUpdateIOSAppEdition = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsUpdateIOSAppEdition(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
      */
-    appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options) {
-        return AppEditionsApiFp(this.configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    AppEditionsApi.prototype.appAppEditionsUploadAppEdition = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.AppEditionsApiFp(this.configuration).appAppEditionsUploadAppEdition(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return AppEditionsApi;
+}(BaseAPI));
+exports.AppEditionsApi = AppEditionsApi;
 /**
  * AppStartPageApi - fetch parameter creator
  * @export
  */
-export const AppStartPageApiFetchParamCreator = function (configuration) {
+exports.AppStartPageApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -2207,16 +2373,17 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageCreate.');
             }
-            const localVarPath = `/api/services/app/appStartPage/Create`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/Create";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2228,11 +2395,11 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateAppStartPageDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateAppStartPageDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -2243,16 +2410,17 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageDelete.');
             }
-            const localVarPath = `/api/services/app/appStartPage/Delete`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/Delete";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2264,31 +2432,33 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageDeleteBatch: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageDeleteBatch.');
             }
-            const localVarPath = `/api/services/app/appStartPage/DeleteBatch`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/DeleteBatch";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2300,11 +2470,11 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ArrayDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ArrayDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -2315,16 +2485,17 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageGet.');
             }
-            const localVarPath = `/api/services/app/appStartPage/Get`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/Get";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2336,11 +2507,11 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -2351,16 +2522,17 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageGetAll.');
             }
-            const localVarPath = `/api/services/app/appStartPage/GetAll`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/GetAll";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2372,31 +2544,33 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageGetAppStartPage: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageGetAppStartPage.');
             }
-            const localVarPath = `/api/services/app/appStartPage/GetAppStartPage`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/GetAppStartPage";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2408,31 +2582,33 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetAppStartPageInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetAppStartPageInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageIsUpdated: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageIsUpdated.');
             }
-            const localVarPath = `/api/services/app/appStartPage/IsUpdated`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/IsUpdated";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2444,11 +2620,11 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("IsUpatedInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("IsUpatedInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -2459,16 +2635,17 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAppStartPageUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAppStartPageUpdate.');
             }
-            const localVarPath = `/api/services/app/appStartPage/Update`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/appStartPage/Update";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2480,20 +2657,20 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateAppStartPageDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateAppStartPageDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AppStartPageApi - functional programming interface
  * @export
  */
-export const AppStartPageApiFp = function (configuration) {
+exports.AppStartPageApiFp = function (configuration) {
     return {
         /**
          *
@@ -2503,10 +2680,12 @@ export const AppStartPageApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2524,10 +2703,12 @@ export const AppStartPageApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -2539,16 +2720,19 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageDeleteBatch: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -2566,10 +2750,12 @@ export const AppStartPageApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2587,10 +2773,12 @@ export const AppStartPageApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2602,16 +2790,19 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageGetAppStartPage: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2623,16 +2814,19 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageIsUpdated: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2650,10 +2844,12 @@ export const AppStartPageApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AppStartPageApiFetchParamCreator(configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAppStartPageUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AppStartPageApiFetchParamCreator(configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2662,14 +2858,14 @@ export const AppStartPageApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AppStartPageApi - factory interface
  * @export
  */
-export const AppStartPageApiFactory = function (configuration, fetch, basePath) {
+exports.AppStartPageApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -2679,8 +2875,8 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2690,19 +2886,20 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageDeleteBatch: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2712,8 +2909,8 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2723,30 +2920,32 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageGetAppStartPage: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAppStartPageIsUpdated: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -2756,9 +2955,9 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            return AppStartPageApiFp(configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appAppStartPageUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AppStartPageApiFp(configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -2767,109 +2966,118 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
  * @class AppStartPageApi
  * @extends {BaseAPI}
  */
-export class AppStartPageApi extends BaseAPI {
+var AppStartPageApi = /** @class */ (function (_super) {
+    __extends(AppStartPageApi, _super);
+    function AppStartPageApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateAppStartPageDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageCreate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageDelete = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量删除
+     * @param {ArrayDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageDeleteBatch = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageGet = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageGetAll = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary App端： 获取图片
+     * @param {GetAppStartPageInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageGetAppStartPage = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageGetAppStartPage(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary App端： 检查图片是否有更新
+     * @param {IsUpatedInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AppStartPageApi.prototype.appAppStartPageIsUpdated = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageIsUpdated(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateAppStartPageDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
      */
-    appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options) {
-        return AppStartPageApiFp(this.configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    AppStartPageApi.prototype.appAppStartPageUpdate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AppStartPageApiFp(this.configuration).appAppStartPageUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return AppStartPageApi;
+}(BaseAPI));
+exports.AppStartPageApi = AppStartPageApi;
 /**
  * AuditLogApi - fetch parameter creator
  * @export
  */
-export const AuditLogApiFetchParamCreator = function (configuration) {
+exports.AuditLogApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -2879,16 +3087,17 @@ export const AuditLogApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAuditLogGetAuditLogs: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAuditLogGetAuditLogs.');
             }
-            const localVarPath = `/api/services/app/auditLog/GetAuditLogs`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/auditLog/GetAuditLogs";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2900,11 +3109,11 @@ export const AuditLogApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetAuditLogsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetAuditLogsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -2915,16 +3124,17 @@ export const AuditLogApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appAuditLogGetAuditLogsToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appAuditLogGetAuditLogsToExcel.');
             }
-            const localVarPath = `/api/services/app/auditLog/GetAuditLogsToExcel`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/auditLog/GetAuditLogsToExcel";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -2936,20 +3146,20 @@ export const AuditLogApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetAuditLogsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetAuditLogsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * AuditLogApi - functional programming interface
  * @export
  */
-export const AuditLogApiFp = function (configuration) {
+exports.AuditLogApiFp = function (configuration) {
     return {
         /**
          *
@@ -2959,10 +3169,12 @@ export const AuditLogApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AuditLogApiFetchParamCreator(configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAuditLogGetAuditLogs: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AuditLogApiFetchParamCreator(configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2980,10 +3192,12 @@ export const AuditLogApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = AuditLogApiFetchParamCreator(configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appAuditLogGetAuditLogsToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.AuditLogApiFetchParamCreator(configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -2992,14 +3206,14 @@ export const AuditLogApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * AuditLogApi - factory interface
  * @export
  */
-export const AuditLogApiFactory = function (configuration, fetch, basePath) {
+exports.AuditLogApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -3009,8 +3223,8 @@ export const AuditLogApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options) {
-            return AuditLogApiFp(configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appAuditLogGetAuditLogs: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AuditLogApiFp(configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -3020,9 +3234,9 @@ export const AuditLogApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options) {
-            return AuditLogApiFp(configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appAuditLogGetAuditLogsToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.AuditLogApiFp(configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -3031,37 +3245,43 @@ export const AuditLogApiFactory = function (configuration, fetch, basePath) {
  * @class AuditLogApi
  * @extends {BaseAPI}
  */
-export class AuditLogApi extends BaseAPI {
+var AuditLogApi = /** @class */ (function (_super) {
+    __extends(AuditLogApi, _super);
+    function AuditLogApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAuditLogsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuditLogApi
      */
-    appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options) {
-        return AuditLogApiFp(this.configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    AuditLogApi.prototype.appAuditLogGetAuditLogs = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AuditLogApiFp(this.configuration).appAuditLogGetAuditLogs(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAuditLogsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuditLogApi
      */
-    appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options) {
-        return AuditLogApiFp(this.configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    AuditLogApi.prototype.appAuditLogGetAuditLogsToExcel = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.AuditLogApiFp(this.configuration).appAuditLogGetAuditLogsToExcel(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return AuditLogApi;
+}(BaseAPI));
+exports.AuditLogApi = AuditLogApi;
 /**
  * ChatApi - fetch parameter creator
  * @export
  */
-export const ChatApiFetchParamCreator = function (configuration) {
+exports.ChatApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -3070,12 +3290,13 @@ export const ChatApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/chat/GetUserChatFriendsWithSettings`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appChatGetUserChatFriendsWithSettings: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/chat/GetUserChatFriendsWithSettings";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3087,8 +3308,8 @@ export const ChatApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3099,16 +3320,17 @@ export const ChatApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appChatGetUserChatMessages: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appChatGetUserChatMessages.');
             }
-            const localVarPath = `/api/services/app/chat/GetUserChatMessages`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/chat/GetUserChatMessages";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3120,11 +3342,11 @@ export const ChatApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetUserChatMessagesInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetUserChatMessagesInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3135,16 +3357,17 @@ export const ChatApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appChatMarkAllUnreadMessagesOfUserAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appChatMarkAllUnreadMessagesOfUserAsRead.');
             }
-            const localVarPath = `/api/services/app/chat/MarkAllUnreadMessagesOfUserAsRead`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/chat/MarkAllUnreadMessagesOfUserAsRead";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3156,20 +3379,20 @@ export const ChatApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("MarkAllUnreadMessagesOfUserAsReadInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("MarkAllUnreadMessagesOfUserAsReadInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * ChatApi - functional programming interface
  * @export
  */
-export const ChatApiFp = function (configuration) {
+exports.ChatApiFp = function (configuration) {
     return {
         /**
          *
@@ -3178,10 +3401,12 @@ export const ChatApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ChatApiFetchParamCreator(configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appChatGetUserChatFriendsWithSettings: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ChatApiFetchParamCreator(configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -3199,10 +3424,12 @@ export const ChatApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ChatApiFetchParamCreator(configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appChatGetUserChatMessages: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ChatApiFetchParamCreator(configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -3220,10 +3447,12 @@ export const ChatApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ChatApiFetchParamCreator(configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appChatMarkAllUnreadMessagesOfUserAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ChatApiFetchParamCreator(configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -3232,14 +3461,14 @@ export const ChatApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * ChatApi - factory interface
  * @export
  */
-export const ChatApiFactory = function (configuration, fetch, basePath) {
+exports.ChatApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -3248,8 +3477,8 @@ export const ChatApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options) {
-            return ChatApiFp(configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appChatGetUserChatFriendsWithSettings: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ChatApiFp(configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -3259,8 +3488,8 @@ export const ChatApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options) {
-            return ChatApiFp(configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appChatGetUserChatMessages: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ChatApiFp(configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -3270,9 +3499,9 @@ export const ChatApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options) {
-            return ChatApiFp(configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appChatMarkAllUnreadMessagesOfUserAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ChatApiFp(configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -3281,67 +3510,75 @@ export const ChatApiFactory = function (configuration, fetch, basePath) {
  * @class ChatApi
  * @extends {BaseAPI}
  */
-export class ChatApi extends BaseAPI {
+var ChatApi = /** @class */ (function (_super) {
+    __extends(ChatApi, _super);
+    function ChatApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
      */
-    appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options) {
-        return ChatApiFp(this.configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ChatApi.prototype.appChatGetUserChatFriendsWithSettings = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ChatApiFp(this.configuration).appChatGetUserChatFriendsWithSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUserChatMessagesInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
      */
-    appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options) {
-        return ChatApiFp(this.configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ChatApi.prototype.appChatGetUserChatMessages = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ChatApiFp(this.configuration).appChatGetUserChatMessages(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MarkAllUnreadMessagesOfUserAsReadInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
      */
-    appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options) {
-        return ChatApiFp(this.configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    ChatApi.prototype.appChatMarkAllUnreadMessagesOfUserAsRead = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ChatApiFp(this.configuration).appChatMarkAllUnreadMessagesOfUserAsRead(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return ChatApi;
+}(BaseAPI));
+exports.ChatApi = ChatApi;
 /**
  * ConfigurationApi - fetch parameter creator
  * @export
  */
-export const ConfigurationApiFetchParamCreator = function (configuration) {
+exports.ConfigurationApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appConfigurationChangeUiTheme: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appConfigurationChangeUiTheme.');
             }
-            const localVarPath = `/api/services/app/configuration/ChangeUiTheme`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/configuration/ChangeUiTheme";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3353,26 +3590,28 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ChangeUiThemeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ChangeUiThemeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/configuration/GetAllSettings`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appConfigurationGetAllSettings: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/configuration/GetAllSettings";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3384,23 +3623,25 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/configuration/GetClientSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appConfigurationGetClientSetting: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/configuration/GetClientSetting";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3412,23 +3653,25 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/configuration/GetUiTheme`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appConfigurationGetUiTheme: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/configuration/GetUiTheme";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3440,28 +3683,30 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appConfigurationUpdateAllSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appConfigurationUpdateAllSettings.');
             }
-            const localVarPath = `/api/services/app/configuration/UpdateAllSettings`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/configuration/UpdateAllSettings";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3473,33 +3718,36 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SettingsEditIntput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("any" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * ConfigurationApi - functional programming interface
  * @export
  */
-export const ConfigurationApiFp = function (configuration) {
+exports.ConfigurationApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ConfigurationApiFetchParamCreator(configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appConfigurationChangeUiTheme: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ConfigurationApiFetchParamCreator(configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -3511,15 +3759,18 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ConfigurationApiFetchParamCreator(configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appConfigurationGetAllSettings: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ConfigurationApiFetchParamCreator(configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -3531,15 +3782,18 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ConfigurationApiFetchParamCreator(configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appConfigurationGetClientSetting: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ConfigurationApiFetchParamCreator(configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -3551,15 +3805,18 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ConfigurationApiFetchParamCreator(configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appConfigurationGetUiTheme: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ConfigurationApiFetchParamCreator(configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -3571,16 +3828,19 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ConfigurationApiFetchParamCreator(configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appConfigurationUpdateAllSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ConfigurationApiFetchParamCreator(configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -3589,67 +3849,72 @@ export const ConfigurationApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * ConfigurationApi - factory interface
  * @export
  */
-export const ConfigurationApiFactory = function (configuration, fetch, basePath) {
+exports.ConfigurationApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options) {
-            return ConfigurationApiFp(configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appConfigurationChangeUiTheme: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ConfigurationApiFp(configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options) {
-            return ConfigurationApiFp(configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appConfigurationGetAllSettings: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ConfigurationApiFp(configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options) {
-            return ConfigurationApiFp(configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appConfigurationGetClientSetting: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ConfigurationApiFp(configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options) {
-            return ConfigurationApiFp(configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appConfigurationGetUiTheme: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ConfigurationApiFp(configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options) {
-            return ConfigurationApiFp(configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appConfigurationUpdateAllSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ConfigurationApiFp(configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -3658,70 +3923,81 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
  * @class ConfigurationApi
  * @extends {BaseAPI}
  */
-export class ConfigurationApi extends BaseAPI {
+var ConfigurationApi = /** @class */ (function (_super) {
+    __extends(ConfigurationApi, _super);
+    function ConfigurationApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 设置皮肤
+     * @param {ChangeUiThemeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
      */
-    appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options) {
-        return ConfigurationApiFp(this.configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ConfigurationApi.prototype.appConfigurationChangeUiTheme = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ConfigurationApiFp(this.configuration).appConfigurationChangeUiTheme(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取所有配置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
      */
-    appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options) {
-        return ConfigurationApiFp(this.configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ConfigurationApi.prototype.appConfigurationGetAllSettings = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ConfigurationApiFp(this.configuration).appConfigurationGetAllSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取客户端设置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
      */
-    appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options) {
-        return ConfigurationApiFp(this.configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ConfigurationApi.prototype.appConfigurationGetClientSetting = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ConfigurationApiFp(this.configuration).appConfigurationGetClientSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取用户设置的皮肤
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
      */
-    appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options) {
-        return ConfigurationApiFp(this.configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ConfigurationApi.prototype.appConfigurationGetUiTheme = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ConfigurationApiFp(this.configuration).appConfigurationGetUiTheme(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 更新所有配置
+     * @param {any} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
      */
-    appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options) {
-        return ConfigurationApiFp(this.configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    ConfigurationApi.prototype.appConfigurationUpdateAllSettings = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ConfigurationApiFp(this.configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return ConfigurationApi;
+}(BaseAPI));
+exports.ConfigurationApi = ConfigurationApi;
 /**
  * DemoApi - fetch parameter creator
  * @export
  */
-export const DemoApiFetchParamCreator = function (configuration) {
+exports.DemoApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -3731,16 +4007,17 @@ export const DemoApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDemoCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoCreate.');
             }
-            const localVarPath = `/api/services/app/demo/Create`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/demo/Create";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3752,11 +4029,11 @@ export const DemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3767,16 +4044,17 @@ export const DemoApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDemoDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoDelete.');
             }
-            const localVarPath = `/api/services/app/demo/Delete`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/demo/Delete";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3788,47 +4066,11 @@ export const DemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoDeleteBatch.');
-            }
-            const localVarPath = `/api/services/app/demo/DeleteBatch`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ArrayDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3839,16 +4081,17 @@ export const DemoApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDemoGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoGet.');
             }
-            const localVarPath = `/api/services/app/demo/Get`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/demo/Get";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3860,11 +4103,11 @@ export const DemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3875,16 +4118,17 @@ export const DemoApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDemoGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoGetAll.');
             }
-            const localVarPath = `/api/services/app/demo/GetAll`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/demo/GetAll";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3896,47 +4140,11 @@ export const DemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'msg' is not null or undefined
-            if (msg === null || msg === undefined) {
-                throw new RequiredError('msg', 'Required parameter msg was null or undefined when calling appDemoJPushMsg.');
-            }
-            const localVarPath = `/api/services/app/demo/JPushMsg`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PushMsgInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(msg || {}) : (msg || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -3947,16 +4155,17 @@ export const DemoApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDemoUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoUpdate.');
             }
-            const localVarPath = `/api/services/app/demo/Update`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/demo/Update";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -3968,20 +4177,20 @@ export const DemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * DemoApi - functional programming interface
  * @export
  */
-export const DemoApiFp = function (configuration) {
+exports.DemoApiFp = function (configuration) {
     return {
         /**
          *
@@ -3991,10 +4200,12 @@ export const DemoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoCreate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDemoCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DemoApiFetchParamCreator(configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4012,31 +4223,12 @@ export const DemoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoDelete(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDemoDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DemoApiFetchParamCreator(configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -4054,10 +4246,12 @@ export const DemoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGet(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDemoGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DemoApiFetchParamCreator(configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4075,33 +4269,14 @@ export const DemoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDemoGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DemoApiFetchParamCreator(configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
                     }
                     else {
                         throw response;
@@ -4117,10 +4292,12 @@ export const DemoApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDemoUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DemoApiFetchParamCreator(configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4129,14 +4306,14 @@ export const DemoApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * DemoApi - factory interface
  * @export
  */
-export const DemoApiFactory = function (configuration, fetch, basePath) {
+exports.DemoApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -4146,8 +4323,8 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoCreate(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appDemoCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DemoApiFp(configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4157,19 +4334,8 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoDelete(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appDemoDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DemoApiFp(configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4179,8 +4345,8 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGet(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appDemoGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DemoApiFp(configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4190,19 +4356,8 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appDemoGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DemoApiFp(configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4212,9 +4367,9 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDemoUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appDemoUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DemoApiFp(configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -4223,97 +4378,79 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
  * @class DemoApi
  * @extends {BaseAPI}
  */
-export class DemoApi extends BaseAPI {
+var DemoApi = /** @class */ (function (_super) {
+    __extends(DemoApi, _super);
+    function DemoApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
      */
-    appDemoCreate(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    DemoApi.prototype.appDemoCreate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DemoApiFp(this.configuration).appDemoCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
      */
-    appDemoDelete(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    DemoApi.prototype.appDemoDelete = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DemoApiFp(this.configuration).appDemoDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
      */
-    appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    DemoApi.prototype.appDemoGet = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DemoApiFp(this.configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
      */
-    appDemoGet(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    DemoApi.prototype.appDemoGetAll = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DemoApiFp(this.configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
      */
-    appDemoGetAll(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} msg
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DemoApi
-     */
-    appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DemoApi
-     */
-    appDemoUpdate(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    DemoApi.prototype.appDemoUpdate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DemoApiFp(this.configuration).appDemoUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return DemoApi;
+}(BaseAPI));
+exports.DemoApi = DemoApi;
 /**
  * DragVerificationApi - fetch parameter creator
  * @export
  */
-export const DragVerificationApiFetchParamCreator = function (configuration) {
+exports.DragVerificationApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -4323,16 +4460,17 @@ export const DragVerificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appDragVerificationCheckCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDragVerificationCheckCode.');
             }
-            const localVarPath = `/api/services/app/dragVerification/CheckCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/dragVerification/CheckCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4344,11 +4482,11 @@ export const DragVerificationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CheckCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CheckCodeInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4358,12 +4496,13 @@ export const DragVerificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/dragVerification/GetDragVerificationCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appDragVerificationGetDragVerificationCode: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/dragVerification/GetDragVerificationCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4375,17 +4514,17 @@ export const DragVerificationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * DragVerificationApi - functional programming interface
  * @export
  */
-export const DragVerificationApiFp = function (configuration) {
+exports.DragVerificationApiFp = function (configuration) {
     return {
         /**
          *
@@ -4395,10 +4534,12 @@ export const DragVerificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DragVerificationApiFetchParamCreator(configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDragVerificationCheckCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DragVerificationApiFetchParamCreator(configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4415,10 +4556,12 @@ export const DragVerificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DragVerificationApiFetchParamCreator(configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appDragVerificationGetDragVerificationCode: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.DragVerificationApiFetchParamCreator(configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4427,14 +4570,14 @@ export const DragVerificationApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * DragVerificationApi - factory interface
  * @export
  */
-export const DragVerificationApiFactory = function (configuration, fetch, basePath) {
+exports.DragVerificationApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -4444,8 +4587,8 @@ export const DragVerificationApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options) {
-            return DragVerificationApiFp(configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appDragVerificationCheckCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.DragVerificationApiFp(configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4454,9 +4597,9 @@ export const DragVerificationApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options) {
-            return DragVerificationApiFp(configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appDragVerificationGetDragVerificationCode: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.DragVerificationApiFp(configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -4465,50 +4608,58 @@ export const DragVerificationApiFactory = function (configuration, fetch, basePa
  * @class DragVerificationApi
  * @extends {BaseAPI}
  */
-export class DragVerificationApi extends BaseAPI {
+var DragVerificationApi = /** @class */ (function (_super) {
+    __extends(DragVerificationApi, _super);
+    function DragVerificationApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CheckCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DragVerificationApi
      */
-    appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options) {
-        return DragVerificationApiFp(this.configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    DragVerificationApi.prototype.appDragVerificationCheckCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.DragVerificationApiFp(this.configuration).appDragVerificationCheckCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DragVerificationApi
      */
-    appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options) {
-        return DragVerificationApiFp(this.configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    DragVerificationApi.prototype.appDragVerificationGetDragVerificationCode = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.DragVerificationApiFp(this.configuration).appDragVerificationGetDragVerificationCode(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return DragVerificationApi;
+}(BaseAPI));
+exports.DragVerificationApi = DragVerificationApi;
 /**
  * FileSettingDemoApi - fetch parameter creator
  * @export
  */
-export const FileSettingDemoApiFetchParamCreator = function (configuration) {
+exports.FileSettingDemoApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/fileSettingDemo/Get`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appFileSettingDemoGet: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/fileSettingDemo/Get";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4520,28 +4671,30 @@ export const FileSettingDemoApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFileSettingDemoSet: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFileSettingDemoSet.');
             }
-            const localVarPath = `/api/services/app/fileSettingDemo/Set`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/fileSettingDemo/Set";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4553,32 +4706,35 @@ export const FileSettingDemoApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SetFileSettingDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("SetFileSettingDemoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * FileSettingDemoApi - functional programming interface
  * @export
  */
-export const FileSettingDemoApiFp = function (configuration) {
+exports.FileSettingDemoApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FileSettingDemoApiFetchParamCreator(configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFileSettingDemoGet: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FileSettingDemoApiFetchParamCreator(configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4590,16 +4746,19 @@ export const FileSettingDemoApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FileSettingDemoApiFetchParamCreator(configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFileSettingDemoSet: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FileSettingDemoApiFetchParamCreator(configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -4608,36 +4767,38 @@ export const FileSettingDemoApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * FileSettingDemoApi - factory interface
  * @export
  */
-export const FileSettingDemoApiFactory = function (configuration, fetch, basePath) {
+exports.FileSettingDemoApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options) {
-            return FileSettingDemoApiFp(configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFileSettingDemoGet: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.FileSettingDemoApiFp(configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options) {
-            return FileSettingDemoApiFp(configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appFileSettingDemoSet: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FileSettingDemoApiFp(configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -4646,36 +4807,44 @@ export const FileSettingDemoApiFactory = function (configuration, fetch, basePat
  * @class FileSettingDemoApi
  * @extends {BaseAPI}
  */
-export class FileSettingDemoApi extends BaseAPI {
+var FileSettingDemoApi = /** @class */ (function (_super) {
+    __extends(FileSettingDemoApi, _super);
+    function FileSettingDemoApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取内容
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileSettingDemoApi
      */
-    appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options) {
-        return FileSettingDemoApiFp(this.configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FileSettingDemoApi.prototype.appFileSettingDemoGet = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.FileSettingDemoApiFp(this.configuration).appFileSettingDemoGet(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 修改内容
+     * @param {SetFileSettingDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileSettingDemoApi
      */
-    appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options) {
-        return FileSettingDemoApiFp(this.configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    FileSettingDemoApi.prototype.appFileSettingDemoSet = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FileSettingDemoApiFp(this.configuration).appFileSettingDemoSet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return FileSettingDemoApi;
+}(BaseAPI));
+exports.FileSettingDemoApi = FileSettingDemoApi;
 /**
  * FriendshipApi - fetch parameter creator
  * @export
  */
-export const FriendshipApiFetchParamCreator = function (configuration) {
+exports.FriendshipApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -4685,16 +4854,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipAcceptFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipAcceptFriendshipRequest.');
             }
-            const localVarPath = `/api/services/app/friendship/AcceptFriendshipRequest`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/AcceptFriendshipRequest";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4706,31 +4876,32 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("AcceptFriendshipRequestInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("AcceptFriendshipRequestInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipBatchCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipBatchCreateFriendshipRequest.');
             }
-            const localVarPath = `/api/services/app/friendship/BatchCreateFriendshipRequest`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/BatchCreateFriendshipRequest";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4742,11 +4913,11 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("Array&lt;CreateFriendshipRequestInput&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("Array&lt;CreateFriendshipRequestInput&gt;" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4757,16 +4928,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipBlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipBlockUser.');
             }
-            const localVarPath = `/api/services/app/friendship/BlockUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/BlockUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4778,11 +4950,11 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("BlockUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("BlockUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4793,16 +4965,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipCreateFriendshipRequest.');
             }
-            const localVarPath = `/api/services/app/friendship/CreateFriendshipRequest`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/CreateFriendshipRequest";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4814,11 +4987,11 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateFriendshipRequestInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateFriendshipRequestInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4829,16 +5002,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipCreateFriendshipRequestByUserName: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipCreateFriendshipRequestByUserName.');
             }
-            const localVarPath = `/api/services/app/friendship/CreateFriendshipRequestByUserName`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/CreateFriendshipRequestByUserName";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4850,11 +5024,11 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateFriendshipRequestByUserNameInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateFriendshipRequestByUserNameInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4865,16 +5039,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipGetCreateFriendshipUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipGetCreateFriendshipUserList.');
             }
-            const localVarPath = `/api/services/app/friendship/GetCreateFriendshipUserList`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/GetCreateFriendshipUserList";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4886,11 +5061,11 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PagedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PagedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -4901,16 +5076,17 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appFriendshipUnblockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appFriendshipUnblockUser.');
             }
-            const localVarPath = `/api/services/app/friendship/UnblockUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/friendship/UnblockUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -4922,20 +5098,20 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UnblockUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UnblockUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * FriendshipApi - functional programming interface
  * @export
  */
-export const FriendshipApiFp = function (configuration) {
+exports.FriendshipApiFp = function (configuration) {
     return {
         /**
          *
@@ -4945,10 +5121,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipAcceptFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -4960,16 +5138,18 @@ export const FriendshipApiFp = function (configuration) {
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipBatchCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -4987,10 +5167,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipBlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -5008,10 +5190,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5029,10 +5213,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipCreateFriendshipRequestByUserName: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5050,10 +5236,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipGetCreateFriendshipUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5071,10 +5259,12 @@ export const FriendshipApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = FriendshipApiFetchParamCreator(configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appFriendshipUnblockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.FriendshipApiFetchParamCreator(configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -5083,14 +5273,14 @@ export const FriendshipApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * FriendshipApi - factory interface
  * @export
  */
-export const FriendshipApiFactory = function (configuration, fetch, basePath) {
+exports.FriendshipApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -5100,19 +5290,19 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipAcceptFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipBatchCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5122,8 +5312,8 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipBlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5133,8 +5323,8 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipCreateFriendshipRequest: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5144,8 +5334,8 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipCreateFriendshipRequestByUserName: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5155,8 +5345,8 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appFriendshipGetCreateFriendshipUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5166,9 +5356,9 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options) {
-            return FriendshipApiFp(configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appFriendshipUnblockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.FriendshipApiFp(configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -5177,116 +5367,123 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
  * @class FriendshipApi
  * @extends {BaseAPI}
  */
-export class FriendshipApi extends BaseAPI {
+var FriendshipApi = /** @class */ (function (_super) {
+    __extends(FriendshipApi, _super);
+    function FriendshipApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {AcceptFriendshipRequestInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipAcceptFriendshipRequest = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipAcceptFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {Array<CreateFriendshipRequestInput>} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipBatchCreateFriendshipRequest = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipBatchCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {BlockUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipBlockUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipBlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateFriendshipRequestInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipCreateFriendshipRequest = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipCreateFriendshipRequest(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateFriendshipRequestByUserNameInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipCreateFriendshipRequestByUserName = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipCreateFriendshipRequestByUserName(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    FriendshipApi.prototype.appFriendshipGetCreateFriendshipUserList = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipGetCreateFriendshipUserList(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UnblockUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
      */
-    appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options) {
-        return FriendshipApiFp(this.configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    FriendshipApi.prototype.appFriendshipUnblockUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.FriendshipApiFp(this.configuration).appFriendshipUnblockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return FriendshipApi;
+}(BaseAPI));
+exports.FriendshipApi = FriendshipApi;
 /**
  * GeetestApi - fetch parameter creator
  * @export
  */
-export const GeetestApiFetchParamCreator = function (configuration) {
+exports.GeetestApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @param {GeetestCheckInput} input
+         * @param {GeetestAppCheckInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestCheck(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appGeetestAPPCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appGeetestCheck.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appGeetestAPPCheck.');
             }
-            const localVarPath = `/api/services/app/geetest/Check`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/geetest/APPCheck";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5298,11 +5495,11 @@ export const GeetestApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GeetestCheckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GeetestAppCheckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -5312,12 +5509,13 @@ export const GeetestApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/geetest/GetCaptcha`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appGeetestAPPGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/geetest/APPGetCaptcha";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5329,18 +5527,129 @@ export const GeetestApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
+        /**
+         *
+         * @param {GeetestCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appGeetestCheck.');
+            }
+            var localVarPath = "/api/services/app/geetest/Check";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            var needsSerialization = ("GeetestCheckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/geetest/GetCaptcha";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        }
     };
 };
 /**
  * GeetestApi - functional programming interface
  * @export
  */
-export const GeetestApiFp = function (configuration) {
+exports.GeetestApiFp = function (configuration) {
     return {
+        /**
+         *
+         * @param {GeetestAppCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.GeetestApiFetchParamCreator(configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.GeetestApiFetchParamCreator(configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
         /**
          *
          * @param {GeetestCheckInput} input
@@ -5349,10 +5658,12 @@ export const GeetestApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestCheck(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = GeetestApiFetchParamCreator(configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appGeetestCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.GeetestApiFetchParamCreator(configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5369,10 +5680,12 @@ export const GeetestApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = GeetestApiFetchParamCreator(configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appGeetestGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.GeetestApiFetchParamCreator(configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5381,15 +5694,36 @@ export const GeetestApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * GeetestApi - factory interface
  * @export
  */
-export const GeetestApiFactory = function (configuration, fetch, basePath) {
+exports.GeetestApiFactory = function (configuration, fetch, basePath) {
     return {
+        /**
+         *
+         * @param {GeetestAppCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.GeetestApiFp(configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.GeetestApiFp(configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
         /**
          *
          * @param {GeetestCheckInput} input
@@ -5398,8 +5732,8 @@ export const GeetestApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestCheck(input, X_XSRF_TOKEN, authorization, options) {
-            return GeetestApiFp(configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appGeetestCheck: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.GeetestApiFp(configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5408,9 +5742,9 @@ export const GeetestApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options) {
-            return GeetestApiFp(configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appGeetestGetCaptcha: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.GeetestApiFp(configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -5419,50 +5753,81 @@ export const GeetestApiFactory = function (configuration, fetch, basePath) {
  * @class GeetestApi
  * @extends {BaseAPI}
  */
-export class GeetestApi extends BaseAPI {
+var GeetestApi = /** @class */ (function (_super) {
+    __extends(GeetestApi, _super);
+    function GeetestApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GeetestAppCheckInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GeetestApi
      */
-    appGeetestCheck(input, X_XSRF_TOKEN, authorization, options) {
-        return GeetestApiFp(this.configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    GeetestApi.prototype.appGeetestAPPCheck = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.GeetestApiFp(this.configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GeetestApi
      */
-    appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options) {
-        return GeetestApiFp(this.configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    GeetestApi.prototype.appGeetestAPPGetCaptcha = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.GeetestApiFp(this.configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {GeetestCheckInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GeetestApi
+     */
+    GeetestApi.prototype.appGeetestCheck = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.GeetestApiFp(this.configuration).appGeetestCheck(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GeetestApi
+     */
+    GeetestApi.prototype.appGeetestGetCaptcha = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.GeetestApiFp(this.configuration).appGeetestGetCaptcha(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return GeetestApi;
+}(BaseAPI));
+exports.GeetestApi = GeetestApi;
 /**
  * InterfaceExportApi - fetch parameter creator
  * @export
  */
-export const InterfaceExportApiFetchParamCreator = function (configuration) {
+exports.InterfaceExportApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/interfaceExport/GetReactDownloadUrl`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appInterfaceExportGetReactDownloadUrl: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/interfaceExport/GetReactDownloadUrl";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5474,29 +5839,32 @@ export const InterfaceExportApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * InterfaceExportApi - functional programming interface
  * @export
  */
-export const InterfaceExportApiFp = function (configuration) {
+exports.InterfaceExportApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = InterfaceExportApiFetchParamCreator(configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appInterfaceExportGetReactDownloadUrl: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.InterfaceExportApiFetchParamCreator(configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5505,25 +5873,26 @@ export const InterfaceExportApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * InterfaceExportApi - factory interface
  * @export
  */
-export const InterfaceExportApiFactory = function (configuration, fetch, basePath) {
+exports.InterfaceExportApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options) {
-            return InterfaceExportApiFp(configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appInterfaceExportGetReactDownloadUrl: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.InterfaceExportApiFp(configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -5532,24 +5901,31 @@ export const InterfaceExportApiFactory = function (configuration, fetch, basePat
  * @class InterfaceExportApi
  * @extends {BaseAPI}
  */
-export class InterfaceExportApi extends BaseAPI {
+var InterfaceExportApi = /** @class */ (function (_super) {
+    __extends(InterfaceExportApi, _super);
+    function InterfaceExportApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 导出React使用的TypeScript文件
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InterfaceExportApi
      */
-    appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options) {
-        return InterfaceExportApiFp(this.configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    InterfaceExportApi.prototype.appInterfaceExportGetReactDownloadUrl = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.InterfaceExportApiFp(this.configuration).appInterfaceExportGetReactDownloadUrl(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return InterfaceExportApi;
+}(BaseAPI));
+exports.InterfaceExportApi = InterfaceExportApi;
 /**
  * MenuApi - fetch parameter creator
  * @export
  */
-export const MenuApiFetchParamCreator = function (configuration) {
+exports.MenuApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -5560,16 +5936,17 @@ export const MenuApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appMenuCreateCustomMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appMenuCreateCustomMenu.');
             }
-            const localVarPath = `/api/services/app/menu/CreateCustomMenu`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/menu/CreateCustomMenu";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5581,11 +5958,11 @@ export const MenuApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -5597,16 +5974,17 @@ export const MenuApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appMenuCreateSystemMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appMenuCreateSystemMenu.');
             }
-            const localVarPath = `/api/services/app/menu/CreateSystemMenu`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/menu/CreateSystemMenu";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5618,11 +5996,11 @@ export const MenuApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -5634,16 +6012,17 @@ export const MenuApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appMenuDeleteMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appMenuDeleteMenu.');
             }
-            const localVarPath = `/api/services/app/menu/DeleteMenu`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/menu/DeleteMenu";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5655,26 +6034,28 @@ export const MenuApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("DeleteMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("DeleteMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/menu/GetAllMenus`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appMenuGetAllMenus: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/menu/GetAllMenus";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5686,23 +6067,25 @@ export const MenuApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/menu/GetUserMenus`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appMenuGetUserMenus: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/menu/GetUserMenus";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5714,8 +6097,8 @@ export const MenuApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -5727,16 +6110,17 @@ export const MenuApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appMenuMoveMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appMenuMoveMenu.');
             }
-            const localVarPath = `/api/services/app/menu/MoveMenu`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/menu/MoveMenu";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5748,11 +6132,11 @@ export const MenuApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("MoveMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("MoveMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -5764,16 +6148,17 @@ export const MenuApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appMenuUpdateMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appMenuUpdateMenu.');
             }
-            const localVarPath = `/api/services/app/menu/UpdateMenu`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/menu/UpdateMenu";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -5785,20 +6170,20 @@ export const MenuApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateMenuInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * MenuApi - functional programming interface
  * @export
  */
-export const MenuApiFp = function (configuration) {
+exports.MenuApiFp = function (configuration) {
     return {
         /**
          *
@@ -5809,10 +6194,12 @@ export const MenuApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuCreateCustomMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5831,10 +6218,12 @@ export const MenuApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuCreateSystemMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5853,10 +6242,12 @@ export const MenuApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuDeleteMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -5868,15 +6259,18 @@ export const MenuApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuGetAllMenus: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5888,15 +6282,18 @@ export const MenuApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuGetUserMenus: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5915,10 +6312,12 @@ export const MenuApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuMoveMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5937,10 +6336,12 @@ export const MenuApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenuApiFetchParamCreator(configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appMenuUpdateMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenuApiFetchParamCreator(configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -5949,14 +6350,14 @@ export const MenuApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * MenuApi - factory interface
  * @export
  */
-export const MenuApiFactory = function (configuration, fetch, basePath) {
+exports.MenuApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -5967,8 +6368,8 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuCreateCustomMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5979,8 +6380,8 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuCreateSystemMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -5991,28 +6392,30 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuDeleteMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuGetAllMenus: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuGetUserMenus: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6023,8 +6426,8 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appMenuMoveMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6035,9 +6438,9 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options) {
-            return MenuApiFp(configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appMenuUpdateMenu: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.MenuApiFp(configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -6046,100 +6449,108 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
  * @class MenuApi
  * @extends {BaseAPI}
  */
-export class MenuApi extends BaseAPI {
+var MenuApi = /** @class */ (function (_super) {
+    __extends(MenuApi, _super);
+    function MenuApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
      * @summary 创建用户自定义菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuCreateCustomMenu = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuCreateCustomMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 创建系统菜单，开发人员使用
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuCreateSystemMenu = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuCreateSystemMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 删除菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {DeleteMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuDeleteMenu = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuDeleteMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取菜单及权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuGetAllMenus = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuGetAllMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取菜单及权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuGetUserMenus = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuGetUserMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 移动菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MoveMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    MenuApi.prototype.appMenuMoveMenu = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuMoveMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 更新菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
      */
-    appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options) {
-        return MenuApiFp(this.configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    MenuApi.prototype.appMenuUpdateMenu = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.MenuApiFp(this.configuration).appMenuUpdateMenu(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return MenuApi;
+}(BaseAPI));
+exports.MenuApi = MenuApi;
 /**
  * MenusApi - fetch parameter creator
  * @export
  */
-export const MenusApiFetchParamCreator = function (configuration) {
+exports.MenusApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -6149,12 +6560,13 @@ export const MenusApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        menusGetMenus(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/Menus`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        menusGetMenus: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/Menus";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6166,17 +6578,17 @@ export const MenusApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * MenusApi - functional programming interface
  * @export
  */
-export const MenusApiFp = function (configuration) {
+exports.MenusApiFp = function (configuration) {
     return {
         /**
          *
@@ -6186,10 +6598,12 @@ export const MenusApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        menusGetMenus(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = MenusApiFetchParamCreator(configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        menusGetMenus: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.MenusApiFetchParamCreator(configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -6198,14 +6612,14 @@ export const MenusApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * MenusApi - factory interface
  * @export
  */
-export const MenusApiFactory = function (configuration, fetch, basePath) {
+exports.MenusApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -6215,9 +6629,9 @@ export const MenusApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        menusGetMenus(X_XSRF_TOKEN, authorization, options) {
-            return MenusApiFp(configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        menusGetMenus: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.MenusApiFp(configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -6226,25 +6640,31 @@ export const MenusApiFactory = function (configuration, fetch, basePath) {
  * @class MenusApi
  * @extends {BaseAPI}
  */
-export class MenusApi extends BaseAPI {
+var MenusApi = /** @class */ (function (_super) {
+    __extends(MenusApi, _super);
+    function MenusApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
      * @summary 获取菜单及权限
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenusApi
      */
-    menusGetMenus(X_XSRF_TOKEN, authorization, options) {
-        return MenusApiFp(this.configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    MenusApi.prototype.menusGetMenus = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.MenusApiFp(this.configuration).menusGetMenus(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return MenusApi;
+}(BaseAPI));
+exports.MenusApi = MenusApi;
 /**
  * NotificationApi - fetch parameter creator
  * @export
  */
-export const NotificationApiFetchParamCreator = function (configuration) {
+exports.NotificationApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -6253,12 +6673,13 @@ export const NotificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/notification/GetNotificationSettings`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appNotificationGetNotificationSettings: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/notification/GetNotificationSettings";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6270,8 +6691,8 @@ export const NotificationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6282,16 +6703,17 @@ export const NotificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appNotificationGetUserNotifications: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appNotificationGetUserNotifications.');
             }
-            const localVarPath = `/api/services/app/notification/GetUserNotifications`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/notification/GetUserNotifications";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6303,11 +6725,11 @@ export const NotificationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetUserNotificationsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetUserNotificationsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6317,12 +6739,13 @@ export const NotificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/notification/SetAllNotificationsAsRead`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appNotificationSetAllNotificationsAsRead: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/notification/SetAllNotificationsAsRead";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6334,8 +6757,8 @@ export const NotificationApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6346,16 +6769,17 @@ export const NotificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appNotificationSetNotificationAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appNotificationSetNotificationAsRead.');
             }
-            const localVarPath = `/api/services/app/notification/SetNotificationAsRead`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/notification/SetNotificationAsRead";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6367,11 +6791,11 @@ export const NotificationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoGuid" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoGuid" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6382,16 +6806,17 @@ export const NotificationApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appNotificationUpdateNotificationSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appNotificationUpdateNotificationSettings.');
             }
-            const localVarPath = `/api/services/app/notification/UpdateNotificationSettings`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/notification/UpdateNotificationSettings";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6403,20 +6828,20 @@ export const NotificationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateNotificationSettingsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateNotificationSettingsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * NotificationApi - functional programming interface
  * @export
  */
-export const NotificationApiFp = function (configuration) {
+exports.NotificationApiFp = function (configuration) {
     return {
         /**
          *
@@ -6425,10 +6850,12 @@ export const NotificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = NotificationApiFetchParamCreator(configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appNotificationGetNotificationSettings: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.NotificationApiFetchParamCreator(configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -6446,10 +6873,12 @@ export const NotificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = NotificationApiFetchParamCreator(configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appNotificationGetUserNotifications: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.NotificationApiFetchParamCreator(configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -6466,10 +6895,12 @@ export const NotificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = NotificationApiFetchParamCreator(configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appNotificationSetAllNotificationsAsRead: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.NotificationApiFetchParamCreator(configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -6487,10 +6918,12 @@ export const NotificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = NotificationApiFetchParamCreator(configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appNotificationSetNotificationAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.NotificationApiFetchParamCreator(configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -6508,10 +6941,12 @@ export const NotificationApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = NotificationApiFetchParamCreator(configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appNotificationUpdateNotificationSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.NotificationApiFetchParamCreator(configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -6520,14 +6955,14 @@ export const NotificationApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * NotificationApi - factory interface
  * @export
  */
-export const NotificationApiFactory = function (configuration, fetch, basePath) {
+exports.NotificationApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -6536,8 +6971,8 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options) {
-            return NotificationApiFp(configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appNotificationGetNotificationSettings: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.NotificationApiFp(configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6547,8 +6982,8 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options) {
-            return NotificationApiFp(configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appNotificationGetUserNotifications: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.NotificationApiFp(configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6557,8 +6992,8 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options) {
-            return NotificationApiFp(configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appNotificationSetAllNotificationsAsRead: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.NotificationApiFp(configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6568,8 +7003,8 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options) {
-            return NotificationApiFp(configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appNotificationSetNotificationAsRead: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.NotificationApiFp(configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -6579,9 +7014,9 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options) {
-            return NotificationApiFp(configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appNotificationUpdateNotificationSettings: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.NotificationApiFp(configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -6590,275 +7025,98 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
  * @class NotificationApi
  * @extends {BaseAPI}
  */
-export class NotificationApi extends BaseAPI {
+var NotificationApi = /** @class */ (function (_super) {
+    __extends(NotificationApi, _super);
+    function NotificationApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
      */
-    appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options) {
-        return NotificationApiFp(this.configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationApi
-     */
-    appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options) {
-        return NotificationApiFp(this.configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationApi
-     */
-    appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options) {
-        return NotificationApiFp(this.configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationApi
-     */
-    appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options) {
-        return NotificationApiFp(this.configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof NotificationApi
-     */
-    appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options) {
-        return NotificationApiFp(this.configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * OAuthConfigurationApi - fetch parameter creator
- * @export
- */
-export const OAuthConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/oAuthConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOAuthConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/oAuthConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("OAuthSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
+    NotificationApi.prototype.appNotificationGetNotificationSettings = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.NotificationApiFp(this.configuration).appNotificationGetNotificationSettings(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     };
-};
-/**
- * OAuthConfigurationApi - functional programming interface
- * @export
- */
-export const OAuthConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OAuthConfigurationApiFetchParamCreator(configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OAuthConfigurationApiFetchParamCreator(configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * OAuthConfigurationApi - factory interface
- * @export
- */
-export const OAuthConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return OAuthConfigurationApiFp(configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return OAuthConfigurationApiFp(configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * OAuthConfigurationApi - object-oriented interface
- * @export
- * @class OAuthConfigurationApi
- * @extends {BaseAPI}
- */
-export class OAuthConfigurationApi extends BaseAPI {
     /**
      *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUserNotificationsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OAuthConfigurationApi
+     * @memberof NotificationApi
      */
-    appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return OAuthConfigurationApiFp(this.configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    NotificationApi.prototype.appNotificationGetUserNotifications = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.NotificationApiFp(this.configuration).appNotificationGetUserNotifications(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof OAuthConfigurationApi
+     * @memberof NotificationApi
      */
-    appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return OAuthConfigurationApiFp(this.configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    NotificationApi.prototype.appNotificationSetAllNotificationsAsRead = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.NotificationApiFp(this.configuration).appNotificationSetAllNotificationsAsRead(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {EntityDtoGuid} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotificationApi
+     */
+    NotificationApi.prototype.appNotificationSetNotificationAsRead = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.NotificationApiFp(this.configuration).appNotificationSetNotificationAsRead(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {UpdateNotificationSettingsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof NotificationApi
+     */
+    NotificationApi.prototype.appNotificationUpdateNotificationSettings = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.NotificationApiFp(this.configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return NotificationApi;
+}(BaseAPI));
+exports.NotificationApi = NotificationApi;
 /**
  * OrganizationUnitApi - fetch parameter creator
  * @export
  */
-export const OrganizationUnitApiFetchParamCreator = function (configuration) {
+exports.OrganizationUnitApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitAddUserToOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitAddUserToOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/AddUserToOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/AddUserToOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6870,11 +7128,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UsersToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UsersToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6886,16 +7144,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitCreateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitCreateOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/CreateOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/CreateOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6907,11 +7166,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6923,16 +7182,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitDeleteOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitDeleteOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/DeleteOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/DeleteOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6944,11 +7204,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6960,16 +7220,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitGetOrganizationUnitJoinableUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitGetOrganizationUnitJoinableUserList.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/GetOrganizationUnitJoinableUserList`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/GetOrganizationUnitJoinableUserList";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -6981,11 +7242,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetOrganizationUnitJoinableUserListInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetOrganizationUnitJoinableUserListInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -6997,16 +7258,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitGetOrganizationUnitUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitGetOrganizationUnitUsers.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/GetOrganizationUnitUsers`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/GetOrganizationUnitUsers";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7018,11 +7280,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetOrganizationUnitUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetOrganizationUnitUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -7033,12 +7295,13 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/organizationUnit/GetOrganizationUnits`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appOrganizationUnitGetOrganizationUnits: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/organizationUnit/GetOrganizationUnits";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7050,28 +7313,30 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitGetUserOrganizationUnits: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitGetUserOrganizationUnits.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/GetUserOrganizationUnits`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/GetUserOrganizationUnits";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7083,11 +7348,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UserIdInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UserIdInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -7099,16 +7364,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitIsInOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitIsInOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/IsInOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/IsInOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7120,11 +7386,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UserToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UserToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -7136,16 +7402,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitMoveOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitMoveOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/MoveOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/MoveOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7157,31 +7424,33 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("MoveOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("MoveOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitRemoveAllOrganizationUnit: function (userId, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'userId' is not null or undefined
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId', 'Required parameter userId was null or undefined when calling appOrganizationUnitRemoveAllOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/RemoveAllOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/RemoveAllOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (userId !== undefined) {
                 localVarQueryParameter['userId'] = userId;
             }
@@ -7196,28 +7465,30 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitRemoveUserFromOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitRemoveUserFromOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/RemoveUserFromOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/RemoveUserFromOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7229,11 +7500,11 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UsersToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UsersToOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -7245,16 +7516,17 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appOrganizationUnitUpdateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOrganizationUnitUpdateOrganizationUnit.');
             }
-            const localVarPath = `/api/services/app/organizationUnit/UpdateOrganizationUnit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/organizationUnit/UpdateOrganizationUnit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7266,33 +7538,36 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateOrganizationUnitInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * OrganizationUnitApi - functional programming interface
  * @export
  */
-export const OrganizationUnitApiFp = function (configuration) {
+exports.OrganizationUnitApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitAddUserToOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -7311,10 +7586,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitCreateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7333,10 +7610,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitDeleteOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -7355,10 +7634,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitGetOrganizationUnitJoinableUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7377,10 +7658,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitGetOrganizationUnitUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7398,10 +7681,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitGetOrganizationUnits: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7413,16 +7698,19 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitGetUserOrganizationUnits: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7441,10 +7729,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitIsInOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7463,10 +7753,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitMoveOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7478,16 +7770,19 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitRemoveAllOrganizationUnit: function (userId, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -7499,16 +7794,19 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitRemoveUserFromOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -7527,10 +7825,12 @@ export const OrganizationUnitApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appOrganizationUnitUpdateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.OrganizationUnitApiFetchParamCreator(configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7539,25 +7839,26 @@ export const OrganizationUnitApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * OrganizationUnitApi - factory interface
  * @export
  */
-export const OrganizationUnitApiFactory = function (configuration, fetch, basePath) {
+exports.OrganizationUnitApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitAddUserToOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7568,8 +7869,8 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitCreateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7580,8 +7881,8 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitDeleteOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7592,8 +7893,8 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitGetOrganizationUnitJoinableUserList: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7604,8 +7905,8 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitGetOrganizationUnitUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7615,19 +7916,20 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitGetOrganizationUnits: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitGetUserOrganizationUnits: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7638,8 +7940,8 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitIsInOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7650,30 +7952,32 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitMoveOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitRemoveAllOrganizationUnit: function (userId, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appOrganizationUnitRemoveUserFromOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -7684,9 +7988,9 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-            return OrganizationUnitApiFp(configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appOrganizationUnitUpdateOrganizationUnit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.OrganizationUnitApiFp(configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -7695,178 +7999,190 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
  * @class OrganizationUnitApi
  * @extends {BaseAPI}
  */
-export class OrganizationUnitApi extends BaseAPI {
+var OrganizationUnitApi = /** @class */ (function (_super) {
+    __extends(OrganizationUnitApi, _super);
+    function OrganizationUnitApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 将用户添加到组织机构中
+     * @param {UsersToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitAddUserToOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitAddUserToOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 创建组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitCreateOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitCreateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 删除组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitDeleteOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitDeleteOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取可加入某组织单元的所有人员
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetOrganizationUnitJoinableUserListInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitGetOrganizationUnitJoinableUserList = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnitJoinableUserList(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取组织机构下的所有人员
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetOrganizationUnitUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitGetOrganizationUnitUsers = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnitUsers(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取组织机构树
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitGetOrganizationUnits = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetOrganizationUnits(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取用户所在组织机构
+     * @param {UserIdInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitGetUserOrganizationUnits = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitGetUserOrganizationUnits(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 用户是否属于组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UserToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitIsInOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitIsInOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 移动组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MoveOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitMoveOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitMoveOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} userId
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 移除用户的全部组织机构
+     * @param {number} userId
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitRemoveAllOrganizationUnit = function (userId, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitRemoveAllOrganizationUnit(userId, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 从组织机构中移除用户
+     * @param {UsersToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    OrganizationUnitApi.prototype.appOrganizationUnitRemoveUserFromOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitRemoveUserFromOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 修改组织机构信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
      */
-    appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options) {
-        return OrganizationUnitApiFp(this.configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    OrganizationUnitApi.prototype.appOrganizationUnitUpdateOrganizationUnit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.OrganizationUnitApiFp(this.configuration).appOrganizationUnitUpdateOrganizationUnit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return OrganizationUnitApi;
+}(BaseAPI));
+exports.OrganizationUnitApi = OrganizationUnitApi;
 /**
  * PermissionApi - fetch parameter creator
  * @export
  */
-export const PermissionApiFetchParamCreator = function (configuration) {
+exports.PermissionApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/permission/GetAllPermissionTree`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appPermissionGetAllPermissionTree: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/permission/GetAllPermissionTree";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7878,23 +8194,25 @@ export const PermissionApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/permission/GetAllPermissions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appPermissionGetAllPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/permission/GetAllPermissions";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7906,23 +8224,25 @@ export const PermissionApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/permission/GetUserPermissions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appPermissionGetUserPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/permission/GetUserPermissions";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -7934,29 +8254,32 @@ export const PermissionApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * PermissionApi - functional programming interface
  * @export
  */
-export const PermissionApiFp = function (configuration) {
+exports.PermissionApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PermissionApiFetchParamCreator(configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appPermissionGetAllPermissionTree: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.PermissionApiFetchParamCreator(configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7968,15 +8291,18 @@ export const PermissionApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PermissionApiFetchParamCreator(configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appPermissionGetAllPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.PermissionApiFetchParamCreator(configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -7988,15 +8314,18 @@ export const PermissionApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PermissionApiFetchParamCreator(configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appPermissionGetUserPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.PermissionApiFetchParamCreator(configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -8005,45 +8334,48 @@ export const PermissionApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * PermissionApi - factory interface
  * @export
  */
-export const PermissionApiFactory = function (configuration, fetch, basePath) {
+exports.PermissionApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options) {
-            return PermissionApiFp(configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appPermissionGetAllPermissionTree: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.PermissionApiFp(configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options) {
-            return PermissionApiFp(configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appPermissionGetAllPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.PermissionApiFp(configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options) {
-            return PermissionApiFp(configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appPermissionGetUserPermissions: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.PermissionApiFp(configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -8052,65 +8384,76 @@ export const PermissionApiFactory = function (configuration, fetch, basePath) {
  * @class PermissionApi
  * @extends {BaseAPI}
  */
-export class PermissionApi extends BaseAPI {
+var PermissionApi = /** @class */ (function (_super) {
+    __extends(PermissionApi, _super);
+    function PermissionApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取权限树
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options) {
-        return PermissionApiFp(this.configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    PermissionApi.prototype.appPermissionGetAllPermissionTree = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.PermissionApiFp(this.configuration).appPermissionGetAllPermissionTree(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取所有权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options) {
-        return PermissionApiFp(this.configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    PermissionApi.prototype.appPermissionGetAllPermissions = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.PermissionApiFp(this.configuration).appPermissionGetAllPermissions(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取登录用户所有权值
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
      */
-    appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options) {
-        return PermissionApiFp(this.configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    PermissionApi.prototype.appPermissionGetUserPermissions = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.PermissionApiFp(this.configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return PermissionApi;
+}(BaseAPI));
+exports.PermissionApi = PermissionApi;
 /**
  * ProfileApi - fetch parameter creator
  * @export
  */
-export const ProfileApiFetchParamCreator = function (configuration) {
+exports.ProfileApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appProfileChangePassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appProfileChangePassword.');
             }
-            const localVarPath = `/api/services/app/profile/ChangePassword`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/profile/ChangePassword";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8122,31 +8465,33 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ChangePasswordInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ChangePasswordInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appProfileChangeUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appProfileChangeUserPassword.');
             }
-            const localVarPath = `/api/services/app/profile/ChangeUserPassword`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/profile/ChangeUserPassword";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8158,26 +8503,28 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ChangeUserPasswordInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ChangeUserPasswordInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/profile/GetCurrentUserProfileForEdit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appProfileGetCurrentUserProfileForEdit: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/profile/GetCurrentUserProfileForEdit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8189,23 +8536,25 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/profile/GetPasswordComplexitySetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appProfileGetPasswordComplexitySetting: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/profile/GetPasswordComplexitySetting";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8217,28 +8566,30 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appProfileResetUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appProfileResetUserPassword.');
             }
-            const localVarPath = `/api/services/app/profile/ResetUserPassword`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/profile/ResetUserPassword";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8250,31 +8601,33 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appProfileUpdateCurrentUserProfile: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appProfileUpdateCurrentUserProfile.');
             }
-            const localVarPath = `/api/services/app/profile/UpdateCurrentUserProfile`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/profile/UpdateCurrentUserProfile";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8286,31 +8639,33 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CurrentUserProfileEditDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CurrentUserProfileEditDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appProfileUpdateProfilePicture: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appProfileUpdateProfilePicture.');
             }
-            const localVarPath = `/api/services/app/profile/UpdateProfilePicture`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/profile/UpdateProfilePicture";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8322,33 +8677,36 @@ export const ProfileApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateProfilePictureInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateProfilePictureInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * ProfileApi - functional programming interface
  * @export
  */
-export const ProfileApiFp = function (configuration) {
+exports.ProfileApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileChangePassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -8360,16 +8718,19 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileChangeUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -8381,15 +8742,18 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileGetCurrentUserProfileForEdit: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -8401,15 +8765,18 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileGetPasswordComplexitySetting: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -8421,16 +8788,19 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileResetUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -8442,16 +8812,19 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileUpdateCurrentUserProfile: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -8463,16 +8836,19 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = ProfileApiFetchParamCreator(configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appProfileUpdateProfilePicture: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ProfileApiFetchParamCreator(configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -8481,90 +8857,97 @@ export const ProfileApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * ProfileApi - factory interface
  * @export
  */
-export const ProfileApiFactory = function (configuration, fetch, basePath) {
+exports.ProfileApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileChangePassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileChangeUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileGetCurrentUserProfileForEdit: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileGetPasswordComplexitySetting: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileResetUserPassword: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appProfileUpdateCurrentUserProfile: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options) {
-            return ProfileApiFp(configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appProfileUpdateProfilePicture: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ProfileApiFp(configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -8573,299 +8956,129 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
  * @class ProfileApi
  * @extends {BaseAPI}
  */
-export class ProfileApi extends BaseAPI {
+var ProfileApi = /** @class */ (function (_super) {
+    __extends(ProfileApi, _super);
+    function ProfileApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 修改自己的密码
+     * @param {ChangePasswordInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
-    appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof ProfileApi
-     */
-    appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options) {
-        return ProfileApiFp(this.configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * PushConfigurationApi - fetch parameter creator
- * @export
- */
-export const PushConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/pushConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appPushConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/pushConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PushSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
+    ProfileApi.prototype.appProfileChangePassword = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileChangePassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     };
-};
-/**
- * PushConfigurationApi - functional programming interface
- * @export
- */
-export const PushConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PushConfigurationApiFetchParamCreator(configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PushConfigurationApiFetchParamCreator(configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * PushConfigurationApi - factory interface
- * @export
- */
-export const PushConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return PushConfigurationApiFp(configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return PushConfigurationApiFp(configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * PushConfigurationApi - object-oriented interface
- * @export
- * @class PushConfigurationApi
- * @extends {BaseAPI}
- */
-export class PushConfigurationApi extends BaseAPI {
     /**
      *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 管理员修改别人的密码
+     * @param {ChangeUserPasswordInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PushConfigurationApi
+     * @memberof ProfileApi
      */
-    appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return PushConfigurationApiFp(this.configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    ProfileApi.prototype.appProfileChangeUserPassword = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileChangeUserPassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 编辑前，获取用户的基本信息
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof PushConfigurationApi
+     * @memberof ProfileApi
      */
-    appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return PushConfigurationApiFp(this.configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    ProfileApi.prototype.appProfileGetCurrentUserProfileForEdit = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileGetCurrentUserProfileForEdit(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @summary 获取密码复杂性设置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApi
+     */
+    ProfileApi.prototype.appProfileGetPasswordComplexitySetting = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileGetPasswordComplexitySetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @summary 管理员重置别人的密码
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApi
+     */
+    ProfileApi.prototype.appProfileResetUserPassword = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileResetUserPassword(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @summary 编辑用户的基本信息
+     * @param {CurrentUserProfileEditDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApi
+     */
+    ProfileApi.prototype.appProfileUpdateCurrentUserProfile = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileUpdateCurrentUserProfile(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @summary 修改头像
+     * @param {UpdateProfilePictureInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ProfileApi
+     */
+    ProfileApi.prototype.appProfileUpdateProfilePicture = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ProfileApiFp(this.configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return ProfileApi;
+}(BaseAPI));
+exports.ProfileApi = ProfileApi;
 /**
  * RegisterApi - fetch parameter creator
  * @export
  */
-export const RegisterApiFetchParamCreator = function (configuration) {
+exports.RegisterApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegister(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterRegister: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterRegister.');
             }
-            const localVarPath = `/api/services/app/register/Register`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/Register";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8877,31 +9090,33 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("RegisterInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("RegisterInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterRegisterByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterRegisterByEmail.');
             }
-            const localVarPath = `/api/services/app/register/RegisterByEmail`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/RegisterByEmail";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8913,31 +9128,33 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("RegisterByEmailInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("RegisterByEmailInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterRegisterByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterRegisterByPhoneNumber.');
             }
-            const localVarPath = `/api/services/app/register/RegisterByPhoneNumber`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/RegisterByPhoneNumber";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8949,31 +9166,33 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("RegisterByPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("RegisterByPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterRegisterOnlyPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterRegisterOnlyPhoneNumber.');
             }
-            const localVarPath = `/api/services/app/register/RegisterOnlyPhoneNumber`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/RegisterOnlyPhoneNumber";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -8985,31 +9204,33 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("RegisterOnlyPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("RegisterOnlyPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterSendEmailCode.');
             }
-            const localVarPath = `/api/services/app/register/SendEmailCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/SendEmailCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9021,31 +9242,33 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRegisterSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRegisterSendPhoneNumberCode.');
             }
-            const localVarPath = `/api/services/app/register/SendPhoneNumberCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/register/SendPhoneNumberCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9057,33 +9280,36 @@ export const RegisterApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * RegisterApi - functional programming interface
  * @export
  */
-export const RegisterApiFp = function (configuration) {
+exports.RegisterApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegister(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterRegister: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9095,16 +9321,19 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterRegisterByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9116,16 +9345,19 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterRegisterByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9137,16 +9369,19 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterRegisterOnlyPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9158,16 +9393,19 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9179,16 +9417,19 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RegisterApiFetchParamCreator(configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRegisterSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RegisterApiFetchParamCreator(configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9197,81 +9438,87 @@ export const RegisterApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * RegisterApi - factory interface
  * @export
  */
-export const RegisterApiFactory = function (configuration, fetch, basePath) {
+exports.RegisterApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegister(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRegisterRegister: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRegisterRegisterByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRegisterRegisterByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRegisterRegisterOnlyPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRegisterSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            return RegisterApiFp(configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appRegisterSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RegisterApiFp(configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -9280,104 +9527,118 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
  * @class RegisterApi
  * @extends {BaseAPI}
  */
-export class RegisterApi extends BaseAPI {
+var RegisterApi = /** @class */ (function (_super) {
+    __extends(RegisterApi, _super);
+    function RegisterApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册
+     * @param {RegisterInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterRegister(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RegisterApi.prototype.appRegisterRegister = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterRegister(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过邮箱注册
+     * @param {RegisterByEmailInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RegisterApi.prototype.appRegisterRegisterByEmail = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterRegisterByEmail(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号注册
+     * @param {RegisterByPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RegisterApi.prototype.appRegisterRegisterByPhoneNumber = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterRegisterByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号注册（只有手机号）
+     * @param {RegisterOnlyPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RegisterApi.prototype.appRegisterRegisterOnlyPhoneNumber = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterRegisterOnlyPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码     (使用者：registerByEmail)
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RegisterApi.prototype.appRegisterSendEmailCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册时发送手机证码    （register）
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
      */
-    appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-        return RegisterApiFp(this.configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    RegisterApi.prototype.appRegisterSendPhoneNumberCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RegisterApiFp(this.configuration).appRegisterSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return RegisterApi;
+}(BaseAPI));
+exports.RegisterApi = RegisterApi;
 /**
  * RestPasswordApi - fetch parameter creator
  * @export
  */
-export const RestPasswordApiFetchParamCreator = function (configuration) {
+exports.RestPasswordApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRestPasswordResetPasswordByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRestPasswordResetPasswordByEmail.');
             }
-            const localVarPath = `/api/services/app/restPassword/ResetPasswordByEmail`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/restPassword/ResetPasswordByEmail";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9389,31 +9650,33 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ResetPasswordByEmailInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ResetPasswordByEmailInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRestPasswordResetPasswordByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRestPasswordResetPasswordByPhoneNumber.');
             }
-            const localVarPath = `/api/services/app/restPassword/ResetPasswordByPhoneNumber`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/restPassword/ResetPasswordByPhoneNumber";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9425,31 +9688,33 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ResetPasswordByPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ResetPasswordByPhoneNumberInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRestPasswordSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRestPasswordSendEmailCode.');
             }
-            const localVarPath = `/api/services/app/restPassword/SendEmailCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/restPassword/SendEmailCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9461,31 +9726,33 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("SendConfirmEmailByCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRestPasswordSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRestPasswordSendPhoneNumberCode.');
             }
-            const localVarPath = `/api/services/app/restPassword/SendPhoneNumberCode`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/restPassword/SendPhoneNumberCode";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9497,33 +9764,36 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("PhoneWithCaptchaInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * RestPasswordApi - functional programming interface
  * @export
  */
-export const RestPasswordApiFp = function (configuration) {
+exports.RestPasswordApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RestPasswordApiFetchParamCreator(configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRestPasswordResetPasswordByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RestPasswordApiFetchParamCreator(configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9535,16 +9805,19 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RestPasswordApiFetchParamCreator(configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRestPasswordResetPasswordByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RestPasswordApiFetchParamCreator(configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9556,16 +9829,19 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RestPasswordApiFetchParamCreator(configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRestPasswordSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RestPasswordApiFetchParamCreator(configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9577,16 +9853,19 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RestPasswordApiFetchParamCreator(configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRestPasswordSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RestPasswordApiFetchParamCreator(configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9595,59 +9874,63 @@ export const RestPasswordApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * RestPasswordApi - factory interface
  * @export
  */
-export const RestPasswordApiFactory = function (configuration, fetch, basePath) {
+exports.RestPasswordApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options) {
-            return RestPasswordApiFp(configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRestPasswordResetPasswordByEmail: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RestPasswordApiFp(configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-            return RestPasswordApiFp(configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRestPasswordResetPasswordByPhoneNumber: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RestPasswordApiFp(configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-            return RestPasswordApiFp(configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRestPasswordSendEmailCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RestPasswordApiFp(configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-            return RestPasswordApiFp(configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appRestPasswordSendPhoneNumberCode: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RestPasswordApiFp(configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -9656,61 +9939,71 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
  * @class RestPasswordApi
  * @extends {BaseAPI}
  */
-export class RestPasswordApi extends BaseAPI {
+var RestPasswordApi = /** @class */ (function (_super) {
+    __extends(RestPasswordApi, _super);
+    function RestPasswordApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过邮箱找回密码  （backknow）
+     * @param {ResetPasswordByEmailInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
      */
-    appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options) {
-        return RestPasswordApiFp(this.configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RestPasswordApi.prototype.appRestPasswordResetPasswordByEmail = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RestPasswordApiFp(this.configuration).appRestPasswordResetPasswordByEmail(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号找回密码  （callback）
+     * @param {ResetPasswordByPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
      */
-    appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options) {
-        return RestPasswordApiFp(this.configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RestPasswordApi.prototype.appRestPasswordResetPasswordByPhoneNumber = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RestPasswordApiFp(this.configuration).appRestPasswordResetPasswordByPhoneNumber(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码     (使用者：backknow)
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
      */
-    appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options) {
-        return RestPasswordApiFp(this.configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RestPasswordApi.prototype.appRestPasswordSendEmailCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RestPasswordApiFp(this.configuration).appRestPasswordSendEmailCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册时发送手机证码    （callback）
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
      */
-    appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options) {
-        return RestPasswordApiFp(this.configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    RestPasswordApi.prototype.appRestPasswordSendPhoneNumberCode = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RestPasswordApiFp(this.configuration).appRestPasswordSendPhoneNumberCode(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return RestPasswordApi;
+}(BaseAPI));
+exports.RestPasswordApi = RestPasswordApi;
 /**
  * RoleApi - fetch parameter creator
  * @export
  */
-export const RoleApiFetchParamCreator = function (configuration) {
+exports.RoleApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -9721,16 +10014,17 @@ export const RoleApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRoleCreateOrUpdateRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRoleCreateOrUpdateRole.');
             }
-            const localVarPath = `/api/services/app/role/CreateOrUpdateRole`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/role/CreateOrUpdateRole";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9742,11 +10036,11 @@ export const RoleApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateOrUpdateRoleInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateOrUpdateRoleInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -9758,16 +10052,17 @@ export const RoleApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRoleDeleteRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRoleDeleteRole.');
             }
-            const localVarPath = `/api/services/app/role/DeleteRole`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/role/DeleteRole";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9779,11 +10074,11 @@ export const RoleApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -9795,16 +10090,17 @@ export const RoleApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRoleGetRoleForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRoleGetRoleForEdit.');
             }
-            const localVarPath = `/api/services/app/role/GetRoleForEdit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/role/GetRoleForEdit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9816,11 +10112,11 @@ export const RoleApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("NullableIdDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("NullableIdDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -9832,16 +10128,17 @@ export const RoleApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appRoleGetRoles: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appRoleGetRoles.');
             }
-            const localVarPath = `/api/services/app/role/GetRoles`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/role/GetRoles";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -9853,20 +10150,20 @@ export const RoleApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetRolesInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetRolesInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * RoleApi - functional programming interface
  * @export
  */
-export const RoleApiFp = function (configuration) {
+exports.RoleApiFp = function (configuration) {
     return {
         /**
          *
@@ -9877,10 +10174,12 @@ export const RoleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RoleApiFetchParamCreator(configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRoleCreateOrUpdateRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RoleApiFetchParamCreator(configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9899,10 +10198,12 @@ export const RoleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RoleApiFetchParamCreator(configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRoleDeleteRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RoleApiFetchParamCreator(configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -9921,10 +10222,12 @@ export const RoleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RoleApiFetchParamCreator(configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRoleGetRoleForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RoleApiFetchParamCreator(configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9943,10 +10246,12 @@ export const RoleApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = RoleApiFetchParamCreator(configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appRoleGetRoles: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.RoleApiFetchParamCreator(configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -9955,14 +10260,14 @@ export const RoleApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * RoleApi - factory interface
  * @export
  */
-export const RoleApiFactory = function (configuration, fetch, basePath) {
+exports.RoleApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -9973,8 +10278,8 @@ export const RoleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options) {
-            return RoleApiFp(configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRoleCreateOrUpdateRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RoleApiFp(configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -9985,8 +10290,8 @@ export const RoleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options) {
-            return RoleApiFp(configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRoleDeleteRole: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RoleApiFp(configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -9997,8 +10302,8 @@ export const RoleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            return RoleApiFp(configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appRoleGetRoleForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RoleApiFp(configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -10009,9 +10314,9 @@ export const RoleApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options) {
-            return RoleApiFp(configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appRoleGetRoles: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.RoleApiFp(configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -10020,84 +10325,92 @@ export const RoleApiFactory = function (configuration, fetch, basePath) {
  * @class RoleApi
  * @extends {BaseAPI}
  */
-export class RoleApi extends BaseAPI {
+var RoleApi = /** @class */ (function (_super) {
+    __extends(RoleApi, _super);
+    function RoleApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
      * @summary 创建或修改角色
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrUpdateRoleInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options) {
-        return RoleApiFp(this.configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RoleApi.prototype.appRoleCreateOrUpdateRole = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RoleApiFp(this.configuration).appRoleCreateOrUpdateRole(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 删除角色
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options) {
-        return RoleApiFp(this.configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RoleApi.prototype.appRoleDeleteRole = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RoleApiFp(this.configuration).appRoleDeleteRole(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取编辑时需要的角色信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {NullableIdDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options) {
-        return RoleApiFp(this.configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    RoleApi.prototype.appRoleGetRoleForEdit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RoleApiFp(this.configuration).appRoleGetRoleForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取角色列表
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetRolesInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
      */
-    appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options) {
-        return RoleApiFp(this.configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    RoleApi.prototype.appRoleGetRoles = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.RoleApiFp(this.configuration).appRoleGetRoles(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return RoleApi;
+}(BaseAPI));
+exports.RoleApi = RoleApi;
 /**
  * SMSLoginApi - fetch parameter creator
  * @export
  */
-export const SMSLoginApiFetchParamCreator = function (configuration) {
+exports.SMSLoginApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        sMSLoginAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling sMSLoginAuthenticate.');
             }
-            const localVarPath = `/api/SMSLogin`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/SMSLogin";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10109,33 +10422,36 @@ export const SMSLoginApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("LoginForSmsCode" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("LoginForSmsCode" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * SMSLoginApi - functional programming interface
  * @export
  */
-export const SMSLoginApiFp = function (configuration) {
+exports.SMSLoginApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SMSLoginApiFetchParamCreator(configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        sMSLoginAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.SMSLoginApiFetchParamCreator(configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -10144,26 +10460,27 @@ export const SMSLoginApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * SMSLoginApi - factory interface
  * @export
  */
-export const SMSLoginApiFactory = function (configuration, fetch, basePath) {
+exports.SMSLoginApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
-            return SMSLoginApiFp(configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        sMSLoginAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.SMSLoginApiFp(configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -10172,210 +10489,32 @@ export const SMSLoginApiFactory = function (configuration, fetch, basePath) {
  * @class SMSLoginApi
  * @extends {BaseAPI}
  */
-export class SMSLoginApi extends BaseAPI {
+var SMSLoginApi = /** @class */ (function (_super) {
+    __extends(SMSLoginApi, _super);
+    function SMSLoginApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 手机短信登录认证
+     * @param {LoginForSmsCode} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SMSLoginApi
      */
-    sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
-        return SMSLoginApiFp(this.configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * SecurityConfigurationApi - fetch parameter creator
- * @export
- */
-export const SecurityConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/securityConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appSecurityConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/securityConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SecuritySettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
+    SMSLoginApi.prototype.sMSLoginAuthenticate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.SMSLoginApiFp(this.configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     };
-};
-/**
- * SecurityConfigurationApi - functional programming interface
- * @export
- */
-export const SecurityConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SecurityConfigurationApiFetchParamCreator(configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SecurityConfigurationApiFetchParamCreator(configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * SecurityConfigurationApi - factory interface
- * @export
- */
-export const SecurityConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return SecurityConfigurationApiFp(configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return SecurityConfigurationApiFp(configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * SecurityConfigurationApi - object-oriented interface
- * @export
- * @class SecurityConfigurationApi
- * @extends {BaseAPI}
- */
-export class SecurityConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SecurityConfigurationApi
-     */
-    appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return SecurityConfigurationApiFp(this.configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SecurityConfigurationApi
-     */
-    appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return SecurityConfigurationApiFp(this.configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    return SMSLoginApi;
+}(BaseAPI));
+exports.SMSLoginApi = SMSLoginApi;
 /**
  * SessionApi - fetch parameter creator
  * @export
  */
-export const SessionApiFetchParamCreator = function (configuration) {
+exports.SessionApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -10384,12 +10523,13 @@ export const SessionApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/session/GetCurrentLoginInformations`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appSessionGetCurrentLoginInformations: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/session/GetCurrentLoginInformations";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10401,17 +10541,17 @@ export const SessionApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * SessionApi - functional programming interface
  * @export
  */
-export const SessionApiFp = function (configuration) {
+exports.SessionApiFp = function (configuration) {
     return {
         /**
          *
@@ -10420,10 +10560,12 @@ export const SessionApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SessionApiFetchParamCreator(configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appSessionGetCurrentLoginInformations: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.SessionApiFetchParamCreator(configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -10432,14 +10574,14 @@ export const SessionApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * SessionApi - factory interface
  * @export
  */
-export const SessionApiFactory = function (configuration, fetch, basePath) {
+exports.SessionApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -10448,9 +10590,9 @@ export const SessionApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options) {
-            return SessionApiFp(configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appSessionGetCurrentLoginInformations: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.SessionApiFp(configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -10459,72 +10601,51 @@ export const SessionApiFactory = function (configuration, fetch, basePath) {
  * @class SessionApi
  * @extends {BaseAPI}
  */
-export class SessionApi extends BaseAPI {
+var SessionApi = /** @class */ (function (_super) {
+    __extends(SessionApi, _super);
+    function SessionApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SessionApi
      */
-    appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options) {
-        return SessionApiFp(this.configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    SessionApi.prototype.appSessionGetCurrentLoginInformations = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.SessionApiFp(this.configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return SessionApi;
+}(BaseAPI));
+exports.SessionApi = SessionApi;
 /**
- * SystemConfigurationApi - fetch parameter creator
+ * ThirdPartyLoginForTokenApi - fetch parameter creator
  * @export
  */
-export const SystemConfigurationApiFetchParamCreator = function (configuration) {
+exports.ThirdPartyLoginForTokenApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/systemConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
+        thirdPartyLoginForTokenAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appSystemConfigurationSetSetting.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling thirdPartyLoginForTokenAuthenticate.');
             }
-            const localVarPath = `/api/services/app/systemConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/ThirdPartyLoginForToken";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10536,33 +10657,36 @@ export const SystemConfigurationApiFetchParamCreator = function (configuration) 
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SystemSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ThirdPartyLoginModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
- * SystemConfigurationApi - functional programming interface
+ * ThirdPartyLoginForTokenApi - functional programming interface
  * @export
  */
-export const SystemConfigurationApiFp = function (configuration) {
+exports.ThirdPartyLoginForTokenApiFp = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SystemConfigurationApiFetchParamCreator(configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        thirdPartyLoginForTokenAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.ThirdPartyLoginForTokenApiFetchParamCreator(configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -10571,97 +10695,61 @@ export const SystemConfigurationApiFp = function (configuration) {
                     }
                 });
             };
-        },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SystemConfigurationApiFetchParamCreator(configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
+        }
     };
 };
 /**
- * SystemConfigurationApi - factory interface
+ * ThirdPartyLoginForTokenApi - factory interface
  * @export
  */
-export const SystemConfigurationApiFactory = function (configuration, fetch, basePath) {
+exports.ThirdPartyLoginForTokenApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return SystemConfigurationApiFp(configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return SystemConfigurationApiFp(configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        thirdPartyLoginForTokenAuthenticate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.ThirdPartyLoginForTokenApiFp(configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
- * SystemConfigurationApi - object-oriented interface
+ * ThirdPartyLoginForTokenApi - object-oriented interface
  * @export
- * @class SystemConfigurationApi
+ * @class ThirdPartyLoginForTokenApi
  * @extends {BaseAPI}
  */
-export class SystemConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SystemConfigurationApi
-     */
-    appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return SystemConfigurationApiFp(this.configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+var ThirdPartyLoginForTokenApi = /** @class */ (function (_super) {
+    __extends(ThirdPartyLoginForTokenApi, _super);
+    function ThirdPartyLoginForTokenApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 第三方登录   返回token
+     * @param {ThirdPartyLoginModel} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SystemConfigurationApi
+     * @memberof ThirdPartyLoginForTokenApi
      */
-    appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return SystemConfigurationApiFp(this.configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    ThirdPartyLoginForTokenApi.prototype.thirdPartyLoginForTokenAuthenticate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.ThirdPartyLoginForTokenApiFp(this.configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return ThirdPartyLoginForTokenApi;
+}(BaseAPI));
+exports.ThirdPartyLoginForTokenApi = ThirdPartyLoginForTokenApi;
 /**
  * TypeScriptApi - fetch parameter creator
  * @export
  */
-export const TypeScriptApiFetchParamCreator = function (configuration) {
+exports.TypeScriptApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
@@ -10671,12 +10759,13 @@ export const TypeScriptApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options = {}) {
-            const localVarPath = `/api/TypeScript`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        typeScriptGet: function (X_XSRF_TOKEN, authorization, isCompleteService, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/TypeScript";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (isCompleteService !== undefined) {
                 localVarQueryParameter['isCompleteService'] = isCompleteService;
             }
@@ -10691,17 +10780,17 @@ export const TypeScriptApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * TypeScriptApi - functional programming interface
  * @export
  */
-export const TypeScriptApiFp = function (configuration) {
+exports.TypeScriptApiFp = function (configuration) {
     return {
         /**
          *
@@ -10711,10 +10800,12 @@ export const TypeScriptApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options) {
-            const localVarFetchArgs = TypeScriptApiFetchParamCreator(configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        typeScriptGet: function (X_XSRF_TOKEN, authorization, isCompleteService, options) {
+            var localVarFetchArgs = exports.TypeScriptApiFetchParamCreator(configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -10723,14 +10814,14 @@ export const TypeScriptApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * TypeScriptApi - factory interface
  * @export
  */
-export const TypeScriptApiFactory = function (configuration, fetch, basePath) {
+exports.TypeScriptApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
@@ -10740,9 +10831,9 @@ export const TypeScriptApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options) {
-            return TypeScriptApiFp(configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options)(fetch, basePath);
-        },
+        typeScriptGet: function (X_XSRF_TOKEN, authorization, isCompleteService, options) {
+            return exports.TypeScriptApiFp(configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -10751,44 +10842,52 @@ export const TypeScriptApiFactory = function (configuration, fetch, basePath) {
  * @class TypeScriptApi
  * @extends {BaseAPI}
  */
-export class TypeScriptApi extends BaseAPI {
+var TypeScriptApi = /** @class */ (function (_super) {
+    __extends(TypeScriptApi, _super);
+    function TypeScriptApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {} [isCompleteService]
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {boolean} [isCompleteService]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TypeScriptApi
      */
-    typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options) {
-        return TypeScriptApiFp(this.configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options)(this.fetch, this.basePath);
-    }
-}
+    TypeScriptApi.prototype.typeScriptGet = function (X_XSRF_TOKEN, authorization, isCompleteService, options) {
+        return exports.TypeScriptApiFp(this.configuration).typeScriptGet(X_XSRF_TOKEN, authorization, isCompleteService, options)(this.fetch, this.basePath);
+    };
+    return TypeScriptApi;
+}(BaseAPI));
+exports.TypeScriptApi = TypeScriptApi;
 /**
  * UserApi - fetch parameter creator
  * @export
  */
-export const UserApiFetchParamCreator = function (configuration) {
+exports.UserApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserBatchActiveUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserBatchActiveUser.');
             }
-            const localVarPath = `/api/services/app/user/BatchActiveUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/BatchActiveUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10800,31 +10899,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("BatchActiveUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("BatchActiveUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserBatchDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserBatchDeleteUser.');
             }
-            const localVarPath = `/api/services/app/user/BatchDeleteUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/BatchDeleteUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10836,31 +10937,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ArrayDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ArrayDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserBatchUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserBatchUnlockUser.');
             }
-            const localVarPath = `/api/services/app/user/BatchUnlockUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/BatchUnlockUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10872,11 +10975,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ArrayDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("ArrayDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -10888,16 +10991,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserCreateOrUpdateUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserCreateOrUpdateUser.');
             }
-            const localVarPath = `/api/services/app/user/CreateOrUpdateUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/CreateOrUpdateUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10909,31 +11013,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateOrUpdateUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateOrUpdateUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserDeleteUser.');
             }
-            const localVarPath = `/api/services/app/user/DeleteUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/DeleteUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10945,11 +11051,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -10960,12 +11066,13 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetRoles(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/user/GetRoles`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+        appUserGetRoles: function (X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            var localVarPath = "/api/services/app/user/GetRoles";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -10977,8 +11084,8 @@ export const UserApiFetchParamCreator = function (configuration) {
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -10990,16 +11097,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserGetUserForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserGetUserForEdit.');
             }
-            const localVarPath = `/api/services/app/user/GetUserForEdit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/GetUserForEdit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11011,11 +11119,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("NullableIdDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("NullableIdDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -11027,16 +11135,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserGetUserPermissionsForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserGetUserPermissionsForEdit.');
             }
-            const localVarPath = `/api/services/app/user/GetUserPermissionsForEdit`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/GetUserPermissionsForEdit";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11048,11 +11157,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -11064,16 +11173,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsers(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserGetUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserGetUsers.');
             }
-            const localVarPath = `/api/services/app/user/GetUsers`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/GetUsers";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11085,31 +11195,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserGetUsersToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserGetUsersToExcel.');
             }
-            const localVarPath = `/api/services/app/user/GetUsersToExcel`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/GetUsersToExcel";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11121,11 +11233,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetUsersInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -11137,16 +11249,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserResetUserSpecificPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserResetUserSpecificPermissions.');
             }
-            const localVarPath = `/api/services/app/user/ResetUserSpecificPermissions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/ResetUserSpecificPermissions";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11158,31 +11271,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserToggleActiveStatus: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserToggleActiveStatus.');
             }
-            const localVarPath = `/api/services/app/user/ToggleActiveStatus`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/ToggleActiveStatus";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11194,31 +11309,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserUnlockUser.');
             }
-            const localVarPath = `/api/services/app/user/UnlockUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/UnlockUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11230,31 +11347,33 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("EntityDtoInt64" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserUpdateCurrentUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserUpdateCurrentUser.');
             }
-            const localVarPath = `/api/services/app/user/UpdateCurrentUser`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/UpdateCurrentUser";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11266,11 +11385,11 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateCurrentUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateCurrentUserInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
         /**
@@ -11282,16 +11401,17 @@ export const UserApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserUpdateUserPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserUpdateUserPermissions.');
             }
-            const localVarPath = `/api/services/app/user/UpdateUserPermissions`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/user/UpdateUserPermissions";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -11303,33 +11423,36 @@ export const UserApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateUserPermissionsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("UpdateUserPermissionsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * UserApi - functional programming interface
  * @export
  */
-export const UserApiFp = function (configuration) {
+exports.UserApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserBatchActiveUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11341,16 +11464,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserBatchDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11362,16 +11488,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserBatchUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11390,10 +11519,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserCreateOrUpdateUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11405,16 +11536,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11432,10 +11566,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetRoles(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserGetRoles: function (X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -11454,10 +11590,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserGetUserForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -11476,10 +11614,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserGetUserPermissionsForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -11498,10 +11638,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsers(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserGetUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -11513,16 +11655,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserGetUsersToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -11541,10 +11686,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserResetUserSpecificPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11556,16 +11703,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserToggleActiveStatus: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11577,16 +11727,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11598,16 +11751,19 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserUpdateCurrentUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11626,10 +11782,12 @@ export const UserApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserApiFetchParamCreator(configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserUpdateUserPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserApiFetchParamCreator(configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -11638,47 +11796,50 @@ export const UserApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * UserApi - factory interface
  * @export
  */
-export const UserApiFactory = function (configuration, fetch, basePath) {
+exports.UserApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserBatchActiveUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserBatchDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserBatchUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11689,19 +11850,20 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserCreateOrUpdateUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserDeleteUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11711,8 +11873,8 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetRoles(X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserGetRoles: function (X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11723,8 +11885,8 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserGetUserForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11735,8 +11897,8 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserGetUserPermissionsForEdit: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11747,19 +11909,20 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsers(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserGetUsers: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserGetUsersToExcel: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11770,41 +11933,44 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserResetUserSpecificPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserToggleActiveStatus: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserUnlockUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appUserUpdateCurrentUser: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -11815,9 +11981,9 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options) {
-            return UserApiFp(configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appUserUpdateUserPermissions: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserApiFp(configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -11826,218 +11992,234 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
  * @class UserApi
  * @extends {BaseAPI}
  */
-export class UserApi extends BaseAPI {
+var UserApi = /** @class */ (function (_super) {
+    __extends(UserApi, _super);
+    function UserApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量激活用户
+     * @param {BatchActiveUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserBatchActiveUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserBatchActiveUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量删除用户
+     * @param {ArrayDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserBatchDeleteUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserBatchDeleteUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量解锁用户
+     * @param {ArrayDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserBatchUnlockUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserBatchUnlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 创建或编辑用户，Id为空时创建，否则编辑
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrUpdateUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserCreateOrUpdateUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserCreateOrUpdateUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 删除用户
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserDeleteUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserDeleteUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取全部的角色
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserGetRoles(X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserGetRoles = function (X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserGetRoles(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取编辑时需要的单个用户信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {NullableIdDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserGetUserForEdit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserGetUserForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取编辑时需要的用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserGetUserPermissionsForEdit = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserGetUserPermissionsForEdit(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 获取用户列表
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserGetUsers(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserGetUsers = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserGetUsers(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 导出用户信息到Excel文件
+     * @param {GetUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserGetUsersToExcel = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserGetUsersToExcel(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 重置用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserResetUserSpecificPermissions = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserResetUserSpecificPermissions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 切换用户启用禁用状态
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserToggleActiveStatus = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserToggleActiveStatus(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 解锁用户
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserUnlockUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserUnlockUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 用户修改自己的信息
+     * @param {UpdateCurrentUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
+    UserApi.prototype.appUserUpdateCurrentUser = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserUpdateCurrentUser(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
     /**
      *
      * @summary 修改用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateUserPermissionsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
      */
-    appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options) {
-        return UserApiFp(this.configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    UserApi.prototype.appUserUpdateUserPermissions = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserApiFp(this.configuration).appUserUpdateUserPermissions(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return UserApi;
+}(BaseAPI));
+exports.UserApi = UserApi;
 /**
  * UserLoginApi - fetch parameter creator
  * @export
  */
-export const UserLoginApiFetchParamCreator = function (configuration) {
+exports.UserLoginApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appUserLoginGetRecentUserLoginAttempts: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
                 throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserLoginGetRecentUserLoginAttempts.');
             }
-            const localVarPath = `/api/services/app/userLogin/GetRecentUserLoginAttempts`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/userLogin/GetRecentUserLoginAttempts";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -12049,33 +12231,36 @@ export const UserLoginApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("GetUserLoginsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("GetUserLoginsInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
-        },
+        }
     };
 };
 /**
  * UserLoginApi - functional programming interface
  * @export
  */
-export const UserLoginApiFp = function (configuration) {
+exports.UserLoginApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserLoginApiFetchParamCreator(configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appUserLoginGetRecentUserLoginAttempts: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.UserLoginApiFetchParamCreator(configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -12084,26 +12269,27 @@ export const UserLoginApiFp = function (configuration) {
                     }
                 });
             };
-        },
+        }
     };
 };
 /**
  * UserLoginApi - factory interface
  * @export
  */
-export const UserLoginApiFactory = function (configuration, fetch, basePath) {
+exports.UserLoginApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options) {
-            return UserLoginApiFp(configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
+        appUserLoginGetRecentUserLoginAttempts: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.UserLoginApiFp(configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
@@ -12112,73 +12298,52 @@ export const UserLoginApiFactory = function (configuration, fetch, basePath) {
  * @class UserLoginApi
  * @extends {BaseAPI}
  */
-export class UserLoginApi extends BaseAPI {
+var UserLoginApi = /** @class */ (function (_super) {
+    __extends(UserLoginApi, _super);
+    function UserLoginApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取登录历史
+     * @param {GetUserLoginsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLoginApi
      */
-    appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options) {
-        return UserLoginApiFp(this.configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    UserLoginApi.prototype.appUserLoginGetRecentUserLoginAttempts = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.UserLoginApiFp(this.configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return UserLoginApi;
+}(BaseAPI));
+exports.UserLoginApi = UserLoginApi;
 /**
- * UserManagementConfigurationApi - fetch parameter creator
+ * XianjinjiaokuandanApi - fetch parameter creator
  * @export
  */
-export const UserManagementConfigurationApiFetchParamCreator = function (configuration) {
+exports.XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @param {CreateXianjinjiaokuandanDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/userManagementConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {UserManagementSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appXianjinjiaokuandanCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserManagementConfigurationSetSetting.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanCreate.');
             }
-            const localVarPath = `/api/services/app/userManagementConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
+            var localVarPath = "/api/services/app/xianjinjiaokuandan/Create";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
             if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
                 localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
             }
@@ -12190,33 +12355,183 @@ export const UserManagementConfigurationApiFetchParamCreator = function (configu
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UserManagementSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            var needsSerialization = ("CreateXianjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
             };
         },
-    };
-};
-/**
- * UserManagementConfigurationApi - functional programming interface
- * @export
- */
-export const UserManagementConfigurationApiFp = function (configuration) {
-    return {
         /**
          *
-         * @summary 获取设置
+         * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserManagementConfigurationApiFetchParamCreator(configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appXianjinjiaokuandanDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanDelete.');
+            }
+            var localVarPath = "/api/services/app/xianjinjiaokuandan/Delete";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGet.');
+            }
+            var localVarPath = "/api/services/app/xianjinjiaokuandan/Get";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            var needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGetAll.');
+            }
+            var localVarPath = "/api/services/app/xianjinjiaokuandan/GetAll";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            var needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        },
+        /**
+         *
+         * @param {UpdateXianjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            if (options === void 0) { options = {}; }
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanUpdate.');
+            }
+            var localVarPath = "/api/services/app/xianjinjiaokuandan/Update";
+            var localVarUrlObj = url_1["default"].parse(localVarPath, true);
+            var localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            var localVarHeaderParameter = {};
+            var localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            var needsSerialization = ("UpdateXianjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url_1["default"].format(localVarUrlObj),
+                options: localVarRequestOptions
+            };
+        }
+    };
+};
+/**
+ * XianjinjiaokuandanApi - functional programming interface
+ * @export
+ */
+exports.XianjinjiaokuandanApiFp = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateXianjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
                     }
@@ -12228,16 +12543,18 @@ export const UserManagementConfigurationApiFp = function (configuration) {
         },
         /**
          *
-         * @param {UserManagementSettingDto} input
+         * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserManagementConfigurationApiFetchParamCreator(configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+        appXianjinjiaokuandanDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
                     if (response.status >= 200 && response.status < 300) {
                         return response;
                     }
@@ -12247,67 +12564,211 @@ export const UserManagementConfigurationApiFp = function (configuration) {
                 });
             };
         },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateXianjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            var localVarFetchArgs = exports.XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return function (fetch, basePath) {
+                if (fetch === void 0) { fetch = portableFetch; }
+                if (basePath === void 0) { basePath = BASE_PATH; }
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then(function (response) {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        }
     };
 };
 /**
- * UserManagementConfigurationApi - factory interface
+ * XianjinjiaokuandanApi - factory interface
  * @export
  */
-export const UserManagementConfigurationApiFactory = function (configuration, fetch, basePath) {
+exports.XianjinjiaokuandanApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @param {CreateXianjinjiaokuandanDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return UserManagementConfigurationApiFp(configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appXianjinjiaokuandanCreate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
-         * @param {UserManagementSettingDto} input
+         * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return UserManagementConfigurationApiFp(configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appXianjinjiaokuandanDelete: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateXianjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate: function (input, X_XSRF_TOKEN, authorization, options) {
+            return exports.XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        }
     };
 };
 /**
- * UserManagementConfigurationApi - object-oriented interface
+ * XianjinjiaokuandanApi - object-oriented interface
  * @export
- * @class UserManagementConfigurationApi
+ * @class XianjinjiaokuandanApi
  * @extends {BaseAPI}
  */
-export class UserManagementConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof UserManagementConfigurationApi
-     */
-    appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return UserManagementConfigurationApiFp(this.configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+var XianjinjiaokuandanApi = /** @class */ (function (_super) {
+    __extends(XianjinjiaokuandanApi, _super);
+    function XianjinjiaokuandanApi() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateXianjinjiaokuandanDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserManagementConfigurationApi
+     * @memberof XianjinjiaokuandanApi
      */
-    appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return UserManagementConfigurationApiFp(this.configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
+    XianjinjiaokuandanApi.prototype.appXianjinjiaokuandanCreate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    XianjinjiaokuandanApi.prototype.appXianjinjiaokuandanDelete = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    XianjinjiaokuandanApi.prototype.appXianjinjiaokuandanGet = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    XianjinjiaokuandanApi.prototype.appXianjinjiaokuandanGetAll = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    /**
+     *
+     * @param {UpdateXianjinjiaokuandanDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    XianjinjiaokuandanApi.prototype.appXianjinjiaokuandanUpdate = function (input, X_XSRF_TOKEN, authorization, options) {
+        return exports.XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    };
+    return XianjinjiaokuandanApi;
+}(BaseAPI));
+exports.XianjinjiaokuandanApi = XianjinjiaokuandanApi;

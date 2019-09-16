@@ -239,6 +239,18 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909100753467_zhuhang20190910.cs" />
+    <Compile Include="Migrations\201909100753467_zhuhang20190910.Designer.cs">
+      <DependentUpon>201909100753467_zhuhang20190910.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909120601540_zhuhang20199121401.cs" />
+    <Compile Include="Migrations\201909120601540_zhuhang20199121401.Designer.cs">
+      <DependentUpon>201909120601540_zhuhang20199121401.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909160119079_zhuhang2019916918.cs" />
+    <Compile Include="Migrations\201909160119079_zhuhang2019916918.Designer.cs">
+      <DependentUpon>201909160119079_zhuhang2019916918.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MFDataModule.cs" />
@@ -308,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909100753467_zhuhang20190910.resx">
+      <DependentUpon>201909100753467_zhuhang20190910.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909120601540_zhuhang20199121401.resx">
+      <DependentUpon>201909120601540_zhuhang20199121401.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909160119079_zhuhang2019916918.resx">
+      <DependentUpon>201909160119079_zhuhang2019916918.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
