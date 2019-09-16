@@ -41,6 +41,8 @@ import UserCRUDDemo from './routes/UserCRUDDemo/User';
 import AppEdition from './routes/AppEdition/AppEdition';
 import AppStartPage from './routes/AppStartPage/AppStartPage';
 import Print from './routes/Print/Print';
+import Powerbook from './routes/Powerbook/Powerbook';
+import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -90,7 +92,9 @@ export default function RouterConfig({ history }) {
 					<Route path="/appEdition" component={AppEdition} />
 					<Route path="/appStartPage" component={AppStartPage} />
 					<Route path="/print" component={Print} />
+					<Route path="/powerbook" component={Powerbook} />
 				</Route>
+					<Route path="/luruPowerbook" component={LuruPowerbook} />
 			</Router>
 		</LocaleProvider>
 	);
