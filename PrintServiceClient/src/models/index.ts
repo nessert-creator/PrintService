@@ -27,6 +27,7 @@ import crud from './crud';
 import serverImageBrowse from './serverImageBrowse';
 import appEdition from './appEdition';
 import print from './print';
+import xinjinjiaokuandan from './xinjinjiaokuandan';
 
 /**
  * index.js
@@ -63,4 +64,5 @@ export function registerModels(app) {
 	app.model(serverImageBrowse);
 	app.model(appEdition);
 	app.model(print);
+	app.model(xinjinjiaokuandan);
 }

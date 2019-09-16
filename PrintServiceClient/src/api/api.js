@@ -247,6 +247,24 @@ export var TenantNotification;
 })(TenantNotification || (TenantNotification = {}));
 /**
  * @export
+ * @namespace ThirdPartyLoginModel
+ */
+export var ThirdPartyLoginModel;
+(function (ThirdPartyLoginModel) {
+    /**
+     * @export
+     * @enum {string}
+     */
+    let ThirdPartyEnum;
+    (function (ThirdPartyEnum) {
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_1"] = 1] = "NUMBER_1";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_2"] = 2] = "NUMBER_2";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_3"] = 3] = "NUMBER_3";
+        ThirdPartyEnum[ThirdPartyEnum["NUMBER_4"] = 4] = "NUMBER_4";
+    })(ThirdPartyEnum = ThirdPartyLoginModel.ThirdPartyEnum || (ThirdPartyLoginModel.ThirdPartyEnum = {}));
+})(ThirdPartyLoginModel || (ThirdPartyLoginModel = {}));
+/**
+ * @export
  * @namespace UpdateAppStartPageDto
  */
 export var UpdateAppStartPageDto;
@@ -446,9 +464,9 @@ export const AbpCacheApiFactory = function (configuration, fetch, basePath) {
 export class AbpCacheApi extends BaseAPI {
     /**
      *
-     * @param {} model
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {ClearCacheModel} model
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpCacheApi
@@ -458,9 +476,9 @@ export class AbpCacheApi extends BaseAPI {
     }
     /**
      *
-     * @param {} model
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {ClearAllCacheModel} model
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpCacheApi
@@ -480,7 +498,7 @@ export const AbpServiceProxiesApiFetchParamCreator = function (configuration) {
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -528,7 +546,7 @@ export const AbpServiceProxiesApiFp = function (configuration) {
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -558,7 +576,7 @@ export const AbpServiceProxiesApiFactory = function (configuration, fetch, baseP
          * @param {string} name
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
-         * @param {number} [type]
+         * @param {0 | 1} [type]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -576,10 +594,10 @@ export const AbpServiceProxiesApiFactory = function (configuration, fetch, baseP
 export class AbpServiceProxiesApi extends BaseAPI {
     /**
      *
-     * @param {} name
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {} [type]
+     * @param {string} name
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {0 | 1} [type]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AbpServiceProxiesApi
@@ -596,6 +614,7 @@ export const AccountApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -632,6 +651,7 @@ export const AccountApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -668,6 +688,7 @@ export const AccountApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -704,6 +725,7 @@ export const AccountApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -748,6 +770,7 @@ export const AccountApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -769,6 +792,7 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -790,6 +814,7 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -811,6 +836,7 @@ export const AccountApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -840,6 +866,7 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 登录认证
          * @param {LoginModel} loginModel
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -851,6 +878,7 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 绑定账号  （无调用）
          * @param {BindingThirdPartyInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -862,6 +890,7 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 租户是否可用  （无调用）
          * @param {IsTenantAvailableInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -873,6 +902,7 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 登录时发送手机证码
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -893,9 +923,10 @@ export const AccountApiFactory = function (configuration, fetch, basePath) {
 export class AccountApi extends BaseAPI {
     /**
      *
-     * @param {} loginModel
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 登录认证
+     * @param {LoginModel} loginModel
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
@@ -905,9 +936,10 @@ export class AccountApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 绑定账号  （无调用）
+     * @param {BindingThirdPartyInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
@@ -917,9 +949,10 @@ export class AccountApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 租户是否可用  （无调用）
+     * @param {IsTenantAvailableInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
@@ -929,9 +962,10 @@ export class AccountApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 登录时发送手机证码
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AccountApi
@@ -948,6 +982,7 @@ export const ActiveApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -984,6 +1019,7 @@ export const ActiveApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1020,6 +1056,7 @@ export const ActiveApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1056,6 +1093,7 @@ export const ActiveApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1100,6 +1138,7 @@ export const ActiveApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1121,6 +1160,7 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1142,6 +1182,7 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1163,6 +1204,7 @@ export const ActiveApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1192,6 +1234,7 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 验证邮箱验  （sendemail）
          * @param {ConfirmEmailCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1203,6 +1246,7 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 验证手机号  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1214,6 +1258,7 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 发送邮箱验证码  （sendemail）
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1225,6 +1270,7 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 发送手机激活验证码  （sendemail）
          * @param {VerificationCodeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -1245,9 +1291,10 @@ export const ActiveApiFactory = function (configuration, fetch, basePath) {
 export class ActiveApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 验证邮箱验  （sendemail）
+     * @param {ConfirmEmailCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
@@ -1257,9 +1304,10 @@ export class ActiveApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 验证手机号  （sendemail）
+     * @param {VerificationCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
@@ -1269,9 +1317,10 @@ export class ActiveApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码  （sendemail）
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
@@ -1281,9 +1330,10 @@ export class ActiveApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送手机激活验证码  （sendemail）
+     * @param {VerificationCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActiveApi
@@ -2063,9 +2113,9 @@ export const AppEditionsApiFactory = function (configuration, fetch, basePath) {
 export class AppEditionsApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2075,9 +2125,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateAndroidAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2087,9 +2137,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateIOSAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2099,9 +2149,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2111,9 +2161,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} id
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {number} id
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2123,9 +2173,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2135,9 +2185,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {VersionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2147,9 +2197,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAppEditionsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2159,9 +2209,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateAndroidAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2171,9 +2221,9 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateIOSAppEditionInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2183,8 +2233,8 @@ export class AppEditionsApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppEditionsApi
@@ -2273,6 +2323,7 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2381,6 +2432,7 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2417,6 +2469,7 @@ export const AppStartPageApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2539,6 +2592,7 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2602,6 +2656,7 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2623,6 +2678,7 @@ export const AppStartPageApiFp = function (configuration) {
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2695,6 +2751,7 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary 批量删除
          * @param {ArrayDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2728,6 +2785,7 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary App端： 获取图片
          * @param {GetAppStartPageInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2739,6 +2797,7 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary App端： 检查图片是否有更新
          * @param {IsUpatedInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -2770,9 +2829,9 @@ export const AppStartPageApiFactory = function (configuration, fetch, basePath) 
 export class AppStartPageApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateAppStartPageDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2782,9 +2841,9 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2794,9 +2853,10 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量删除
+     * @param {ArrayDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2806,9 +2866,9 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2818,9 +2878,9 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2830,9 +2890,10 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary App端： 获取图片
+     * @param {GetAppStartPageInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2842,9 +2903,10 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary App端： 检查图片是否有更新
+     * @param {IsUpatedInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -2854,9 +2916,9 @@ export class AppStartPageApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateAppStartPageDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AppStartPageApi
@@ -3034,9 +3096,9 @@ export const AuditLogApiFactory = function (configuration, fetch, basePath) {
 export class AuditLogApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAuditLogsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuditLogApi
@@ -3046,9 +3108,9 @@ export class AuditLogApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetAuditLogsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof AuditLogApi
@@ -3284,8 +3346,8 @@ export const ChatApiFactory = function (configuration, fetch, basePath) {
 export class ChatApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
@@ -3295,9 +3357,9 @@ export class ChatApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUserChatMessagesInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
@@ -3307,9 +3369,9 @@ export class ChatApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MarkAllUnreadMessagesOfUserAsReadInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ChatApi
@@ -3326,6 +3388,7 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -3362,6 +3425,7 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3390,6 +3454,7 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3418,6 +3483,7 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3446,7 +3512,8 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3473,7 +3540,7 @@ export const ConfigurationApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SettingsEditIntput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = ("any" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
                 url: url.format(localVarUrlObj),
@@ -3490,6 +3557,7 @@ export const ConfigurationApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -3511,6 +3579,7 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3531,6 +3600,7 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3551,6 +3621,7 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3571,7 +3642,8 @@ export const ConfigurationApiFp = function (configuration) {
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3600,6 +3672,7 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
     return {
         /**
          *
+         * @summary 设置皮肤
          * @param {ChangeUiThemeInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -3611,6 +3684,7 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
         },
         /**
          *
+         * @summary 获取所有配置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3621,6 +3695,7 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
         },
         /**
          *
+         * @summary 获取客户端设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3631,6 +3706,7 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
         },
         /**
          *
+         * @summary 获取用户设置的皮肤
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3641,7 +3717,8 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
         },
         /**
          *
-         * @param {SettingsEditIntput} input
+         * @summary 更新所有配置
+         * @param {any} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -3661,9 +3738,10 @@ export const ConfigurationApiFactory = function (configuration, fetch, basePath)
 export class ConfigurationApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 设置皮肤
+     * @param {ChangeUiThemeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
@@ -3673,8 +3751,9 @@ export class ConfigurationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取所有配置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
@@ -3684,8 +3763,9 @@ export class ConfigurationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取客户端设置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
@@ -3695,8 +3775,9 @@ export class ConfigurationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取用户设置的皮肤
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
@@ -3706,9 +3787,10 @@ export class ConfigurationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 更新所有配置
+     * @param {any} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ConfigurationApi
@@ -3797,42 +3879,6 @@ export const DemoApiFetchParamCreator = function (configuration) {
         },
         /**
          *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDemoDeleteBatch.');
-            }
-            const localVarPath = `/api/services/app/demo/DeleteBatch`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("ArrayDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
          * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -3898,42 +3944,6 @@ export const DemoApiFetchParamCreator = function (configuration) {
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
             const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'msg' is not null or undefined
-            if (msg === null || msg === undefined) {
-                throw new RequiredError('msg', 'Required parameter msg was null or undefined when calling appDemoJPushMsg.');
-            }
-            const localVarPath = `/api/services/app/demo/JPushMsg`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PushMsgInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(msg || {}) : (msg || "");
             return {
                 url: url.format(localVarUrlObj),
                 options: localVarRequestOptions,
@@ -4027,27 +4037,6 @@ export const DemoApiFp = function (configuration) {
         },
         /**
          *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
          * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -4081,27 +4070,6 @@ export const DemoApiFp = function (configuration) {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
                         return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = DemoApiFetchParamCreator(configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
                     }
                     else {
                         throw response;
@@ -4162,17 +4130,6 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
-         * @param {ArrayDtoInt32} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
          * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -4192,17 +4149,6 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
          */
         appDemoGetAll(input, X_XSRF_TOKEN, authorization, options) {
             return DemoApiFp(configuration).appDemoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {PushMsgInput} msg
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-            return DemoApiFp(configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -4226,9 +4172,9 @@ export const DemoApiFactory = function (configuration, fetch, basePath) {
 export class DemoApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
@@ -4238,9 +4184,9 @@ export class DemoApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
@@ -4250,21 +4196,9 @@ export class DemoApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DemoApi
-     */
-    appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoDeleteBatch(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
@@ -4274,9 +4208,9 @@ export class DemoApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
@@ -4286,21 +4220,9 @@ export class DemoApi extends BaseAPI {
     }
     /**
      *
-     * @param {} msg
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof DemoApi
-     */
-    appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options) {
-        return DemoApiFp(this.configuration).appDemoJPushMsg(msg, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DemoApi
@@ -4468,9 +4390,9 @@ export const DragVerificationApiFactory = function (configuration, fetch, basePa
 export class DragVerificationApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CheckCodeInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DragVerificationApi
@@ -4480,8 +4402,8 @@ export class DragVerificationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof DragVerificationApi
@@ -4498,6 +4420,7 @@ export const FileSettingDemoApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -4526,6 +4449,7 @@ export const FileSettingDemoApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -4570,6 +4494,7 @@ export const FileSettingDemoApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -4590,6 +4515,7 @@ export const FileSettingDemoApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -4619,6 +4545,7 @@ export const FileSettingDemoApiFactory = function (configuration, fetch, basePat
     return {
         /**
          *
+         * @summary 获取内容
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -4629,6 +4556,7 @@ export const FileSettingDemoApiFactory = function (configuration, fetch, basePat
         },
         /**
          *
+         * @summary 修改内容
          * @param {SetFileSettingDemoDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -4649,8 +4577,9 @@ export const FileSettingDemoApiFactory = function (configuration, fetch, basePat
 export class FileSettingDemoApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取内容
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileSettingDemoApi
@@ -4660,9 +4589,10 @@ export class FileSettingDemoApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 修改内容
+     * @param {SetFileSettingDemoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FileSettingDemoApi
@@ -4715,7 +4645,7 @@ export const FriendshipApiFetchParamCreator = function (configuration) {
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -4960,7 +4890,7 @@ export const FriendshipApiFp = function (configuration) {
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5105,7 +5035,7 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
-         * @param {Array&lt;CreateFriendshipRequestInput&gt;} input
+         * @param {Array<CreateFriendshipRequestInput>} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5180,9 +5110,9 @@ export const FriendshipApiFactory = function (configuration, fetch, basePath) {
 export class FriendshipApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {AcceptFriendshipRequestInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5192,9 +5122,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {Array<CreateFriendshipRequestInput>} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5204,9 +5134,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {BlockUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5216,9 +5146,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateFriendshipRequestInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5228,9 +5158,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateFriendshipRequestByUserNameInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5240,9 +5170,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {PagedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5252,9 +5182,9 @@ export class FriendshipApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UnblockUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof FriendshipApi
@@ -5269,6 +5199,70 @@ export class FriendshipApi extends BaseAPI {
  */
 export const GeetestApiFetchParamCreator = function (configuration) {
     return {
+        /**
+         *
+         * @param {GeetestAppCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appGeetestAPPCheck.');
+            }
+            const localVarPath = `/api/services/app/geetest/APPCheck`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("GeetestAppCheckInput" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options = {}) {
+            const localVarPath = `/api/services/app/geetest/APPGetCaptcha`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'GET' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
         /**
          *
          * @param {GeetestCheckInput} input
@@ -5343,6 +5337,47 @@ export const GeetestApiFp = function (configuration) {
     return {
         /**
          *
+         * @param {GeetestAppCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = GeetestApiFetchParamCreator(configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = GeetestApiFetchParamCreator(configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
          * @param {GeetestCheckInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -5392,6 +5427,27 @@ export const GeetestApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @param {GeetestAppCheckInput} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options) {
+            return GeetestApiFp(configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options) {
+            return GeetestApiFp(configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
          * @param {GeetestCheckInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -5422,9 +5478,32 @@ export const GeetestApiFactory = function (configuration, fetch, basePath) {
 export class GeetestApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GeetestAppCheckInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GeetestApi
+     */
+    appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options) {
+        return GeetestApiFp(this.configuration).appGeetestAPPCheck(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof GeetestApi
+     */
+    appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options) {
+        return GeetestApiFp(this.configuration).appGeetestAPPGetCaptcha(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {GeetestCheckInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GeetestApi
@@ -5434,8 +5513,8 @@ export class GeetestApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof GeetestApi
@@ -5452,6 +5531,7 @@ export const InterfaceExportApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5488,6 +5568,7 @@ export const InterfaceExportApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5516,6 +5597,7 @@ export const InterfaceExportApiFactory = function (configuration, fetch, basePat
     return {
         /**
          *
+         * @summary 导出React使用的TypeScript文件
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5535,8 +5617,9 @@ export const InterfaceExportApiFactory = function (configuration, fetch, basePat
 export class InterfaceExportApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 导出React使用的TypeScript文件
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof InterfaceExportApi
@@ -5664,6 +5747,7 @@ export const MenuApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5692,6 +5776,7 @@ export const MenuApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5868,6 +5953,7 @@ export const MenuApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5888,6 +5974,7 @@ export const MenuApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -5996,6 +6083,7 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -6006,6 +6094,7 @@ export const MenuApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 获取菜单及权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -6050,9 +6139,9 @@ export class MenuApi extends BaseAPI {
     /**
      *
      * @summary 创建用户自定义菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6063,9 +6152,9 @@ export class MenuApi extends BaseAPI {
     /**
      *
      * @summary 创建系统菜单，开发人员使用
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6076,9 +6165,9 @@ export class MenuApi extends BaseAPI {
     /**
      *
      * @summary 删除菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {DeleteMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6088,8 +6177,9 @@ export class MenuApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取菜单及权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6099,8 +6189,9 @@ export class MenuApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取菜单及权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6111,9 +6202,9 @@ export class MenuApi extends BaseAPI {
     /**
      *
      * @summary 移动菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MoveMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6124,9 +6215,9 @@ export class MenuApi extends BaseAPI {
     /**
      *
      * @summary 更新菜单
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateMenuInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenuApi
@@ -6230,8 +6321,8 @@ export class MenusApi extends BaseAPI {
     /**
      *
      * @summary 获取菜单及权限
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof MenusApi
@@ -6593,8 +6684,8 @@ export const NotificationApiFactory = function (configuration, fetch, basePath) 
 export class NotificationApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
@@ -6604,9 +6695,9 @@ export class NotificationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUserNotificationsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
@@ -6616,8 +6707,8 @@ export class NotificationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
@@ -6627,9 +6718,9 @@ export class NotificationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoGuid} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
@@ -6639,200 +6730,15 @@ export class NotificationApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateNotificationSettingsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof NotificationApi
      */
     appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options) {
         return NotificationApiFp(this.configuration).appNotificationUpdateNotificationSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * OAuthConfigurationApi - fetch parameter creator
- * @export
- */
-export const OAuthConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/oAuthConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appOAuthConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/oAuthConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("OAuthSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    };
-};
-/**
- * OAuthConfigurationApi - functional programming interface
- * @export
- */
-export const OAuthConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OAuthConfigurationApiFetchParamCreator(configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = OAuthConfigurationApiFetchParamCreator(configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * OAuthConfigurationApi - factory interface
- * @export
- */
-export const OAuthConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return OAuthConfigurationApiFp(configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {OAuthSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return OAuthConfigurationApiFp(configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * OAuthConfigurationApi - object-oriented interface
- * @export
- * @class OAuthConfigurationApi
- * @extends {BaseAPI}
- */
-export class OAuthConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OAuthConfigurationApi
-     */
-    appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return OAuthConfigurationApiFp(this.configuration).appOAuthConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof OAuthConfigurationApi
-     */
-    appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return OAuthConfigurationApiFp(this.configuration).appOAuthConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
 /**
@@ -6843,6 +6749,7 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7056,6 +6963,7 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7166,6 +7074,7 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7202,6 +7111,7 @@ export const OrganizationUnitApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7283,6 +7193,7 @@ export const OrganizationUnitApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7413,6 +7324,7 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7478,6 +7390,7 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7499,6 +7412,7 @@ export const OrganizationUnitApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7550,6 +7464,7 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
     return {
         /**
          *
+         * @summary 将用户添加到组织机构中
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7620,6 +7535,7 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
         },
         /**
          *
+         * @summary 获取用户所在组织机构
          * @param {UserIdInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7655,6 +7571,7 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
         },
         /**
          *
+         * @summary 移除用户的全部组织机构
          * @param {number} userId
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7666,6 +7583,7 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
         },
         /**
          *
+         * @summary 从组织机构中移除用户
          * @param {UsersToOrganizationUnitInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -7698,9 +7616,10 @@ export const OrganizationUnitApiFactory = function (configuration, fetch, basePa
 export class OrganizationUnitApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 将用户添加到组织机构中
+     * @param {UsersToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7711,9 +7630,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 创建组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7724,9 +7643,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 删除组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7737,9 +7656,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 获取可加入某组织单元的所有人员
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetOrganizationUnitJoinableUserListInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7750,9 +7669,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 获取组织机构下的所有人员
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetOrganizationUnitUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7763,8 +7682,8 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 获取组织机构树
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7774,9 +7693,10 @@ export class OrganizationUnitApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取用户所在组织机构
+     * @param {UserIdInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7787,9 +7707,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 用户是否属于组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UserToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7800,9 +7720,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 移动组织机构
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {MoveOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7812,9 +7732,10 @@ export class OrganizationUnitApi extends BaseAPI {
     }
     /**
      *
-     * @param {} userId
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 移除用户的全部组织机构
+     * @param {number} userId
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7824,9 +7745,10 @@ export class OrganizationUnitApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 从组织机构中移除用户
+     * @param {UsersToOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7837,9 +7759,9 @@ export class OrganizationUnitApi extends BaseAPI {
     /**
      *
      * @summary 修改组织机构信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateOrganizationUnitInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof OrganizationUnitApi
@@ -7856,6 +7778,7 @@ export const PermissionApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -7884,6 +7807,7 @@ export const PermissionApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -7912,6 +7836,7 @@ export const PermissionApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -7948,6 +7873,7 @@ export const PermissionApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -7968,6 +7894,7 @@ export const PermissionApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -7988,6 +7915,7 @@ export const PermissionApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8016,6 +7944,7 @@ export const PermissionApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 获取权限树
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8026,6 +7955,7 @@ export const PermissionApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 获取所有权限
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8036,6 +7966,7 @@ export const PermissionApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 获取登录用户所有权值
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8055,8 +7986,9 @@ export const PermissionApiFactory = function (configuration, fetch, basePath) {
 export class PermissionApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取权限树
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
@@ -8066,8 +7998,9 @@ export class PermissionApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取所有权限
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
@@ -8077,8 +8010,9 @@ export class PermissionApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取登录用户所有权值
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof PermissionApi
@@ -8095,6 +8029,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8131,6 +8066,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8167,6 +8103,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8195,6 +8132,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8223,6 +8161,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8259,6 +8198,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8295,6 +8235,7 @@ export const ProfileApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8339,6 +8280,7 @@ export const ProfileApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8360,6 +8302,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8381,6 +8324,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8401,6 +8345,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8421,6 +8366,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8442,6 +8388,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8463,6 +8410,7 @@ export const ProfileApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8492,6 +8440,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 修改自己的密码
          * @param {ChangePasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8503,6 +8452,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 管理员修改别人的密码
          * @param {ChangeUserPasswordInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8514,6 +8464,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 编辑前，获取用户的基本信息
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8524,6 +8475,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 获取密码复杂性设置
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
@@ -8534,6 +8486,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 管理员重置别人的密码
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8545,6 +8498,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 编辑用户的基本信息
          * @param {CurrentUserProfileEditDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8556,6 +8510,7 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 修改头像
          * @param {UpdateProfilePictureInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8576,9 +8531,10 @@ export const ProfileApiFactory = function (configuration, fetch, basePath) {
 export class ProfileApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 修改自己的密码
+     * @param {ChangePasswordInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8588,9 +8544,10 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 管理员修改别人的密码
+     * @param {ChangeUserPasswordInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8600,8 +8557,9 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 编辑前，获取用户的基本信息
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8611,8 +8569,9 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取密码复杂性设置
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8622,9 +8581,10 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 管理员重置别人的密码
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8634,9 +8594,10 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 编辑用户的基本信息
+     * @param {CurrentUserProfileEditDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
@@ -8646,200 +8607,16 @@ export class ProfileApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 修改头像
+     * @param {UpdateProfilePictureInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ProfileApi
      */
     appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options) {
         return ProfileApiFp(this.configuration).appProfileUpdateProfilePicture(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * PushConfigurationApi - fetch parameter creator
- * @export
- */
-export const PushConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/pushConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appPushConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/pushConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("PushSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    };
-};
-/**
- * PushConfigurationApi - functional programming interface
- * @export
- */
-export const PushConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PushConfigurationApiFetchParamCreator(configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = PushConfigurationApiFetchParamCreator(configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * PushConfigurationApi - factory interface
- * @export
- */
-export const PushConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return PushConfigurationApiFp(configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {PushSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return PushConfigurationApiFp(configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * PushConfigurationApi - object-oriented interface
- * @export
- * @class PushConfigurationApi
- * @extends {BaseAPI}
- */
-export class PushConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PushConfigurationApi
-     */
-    appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return PushConfigurationApiFp(this.configuration).appPushConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof PushConfigurationApi
-     */
-    appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return PushConfigurationApiFp(this.configuration).appPushConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
 /**
@@ -8850,6 +8627,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8886,6 +8664,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8922,6 +8701,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8958,6 +8738,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -8994,6 +8775,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9030,6 +8812,7 @@ export const RegisterApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9074,6 +8857,7 @@ export const RegisterApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9095,6 +8879,7 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9116,6 +8901,7 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9137,6 +8923,7 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9158,6 +8945,7 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9179,6 +8967,7 @@ export const RegisterApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9208,6 +8997,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 注册
          * @param {RegisterInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9219,6 +9009,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 通过邮箱注册
          * @param {RegisterByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9230,6 +9021,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 通过手机号注册
          * @param {RegisterByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9241,6 +9033,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 通过手机号注册（只有手机号）
          * @param {RegisterOnlyPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9252,6 +9045,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：registerByEmail)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9263,6 +9057,7 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （register）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9283,9 +9078,10 @@ export const RegisterApiFactory = function (configuration, fetch, basePath) {
 export class RegisterApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册
+     * @param {RegisterInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9295,9 +9091,10 @@ export class RegisterApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过邮箱注册
+     * @param {RegisterByEmailInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9307,9 +9104,10 @@ export class RegisterApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号注册
+     * @param {RegisterByPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9319,9 +9117,10 @@ export class RegisterApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号注册（只有手机号）
+     * @param {RegisterOnlyPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9331,9 +9130,10 @@ export class RegisterApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码     (使用者：registerByEmail)
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9343,9 +9143,10 @@ export class RegisterApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册时发送手机证码    （register）
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RegisterApi
@@ -9362,6 +9163,7 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9398,6 +9200,7 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9434,6 +9237,7 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9470,6 +9274,7 @@ export const RestPasswordApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9514,6 +9319,7 @@ export const RestPasswordApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9535,6 +9341,7 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9556,6 +9363,7 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9577,6 +9385,7 @@ export const RestPasswordApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9606,6 +9415,7 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
     return {
         /**
          *
+         * @summary 通过邮箱找回密码  （backknow）
          * @param {ResetPasswordByEmailInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9617,6 +9427,7 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary 通过手机号找回密码  （callback）
          * @param {ResetPasswordByPhoneNumberInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9628,6 +9439,7 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary 发送邮箱验证码     (使用者：backknow)
          * @param {SendConfirmEmailByCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9639,6 +9451,7 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
         },
         /**
          *
+         * @summary 注册时发送手机证码    （callback）
          * @param {PhoneWithCaptchaInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -9659,9 +9472,10 @@ export const RestPasswordApiFactory = function (configuration, fetch, basePath) 
 export class RestPasswordApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过邮箱找回密码  （backknow）
+     * @param {ResetPasswordByEmailInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
@@ -9671,9 +9485,10 @@ export class RestPasswordApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 通过手机号找回密码  （callback）
+     * @param {ResetPasswordByPhoneNumberInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
@@ -9683,9 +9498,10 @@ export class RestPasswordApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 发送邮箱验证码     (使用者：backknow)
+     * @param {SendConfirmEmailByCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
@@ -9695,9 +9511,10 @@ export class RestPasswordApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 注册时发送手机证码    （callback）
+     * @param {PhoneWithCaptchaInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RestPasswordApi
@@ -10024,9 +9841,9 @@ export class RoleApi extends BaseAPI {
     /**
      *
      * @summary 创建或修改角色
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrUpdateRoleInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
@@ -10037,9 +9854,9 @@ export class RoleApi extends BaseAPI {
     /**
      *
      * @summary 删除角色
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
@@ -10050,9 +9867,9 @@ export class RoleApi extends BaseAPI {
     /**
      *
      * @summary 获取编辑时需要的角色信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {NullableIdDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
@@ -10063,9 +9880,9 @@ export class RoleApi extends BaseAPI {
     /**
      *
      * @summary 获取角色列表
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetRolesInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoleApi
@@ -10082,6 +9899,7 @@ export const SMSLoginApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10126,6 +9944,7 @@ export const SMSLoginApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10155,6 +9974,7 @@ export const SMSLoginApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 手机短信登录认证
          * @param {LoginForSmsCode} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10175,200 +9995,16 @@ export const SMSLoginApiFactory = function (configuration, fetch, basePath) {
 export class SMSLoginApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 手机短信登录认证
+     * @param {LoginForSmsCode} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SMSLoginApi
      */
     sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
         return SMSLoginApiFp(this.configuration).sMSLoginAuthenticate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-}
-/**
- * SecurityConfigurationApi - fetch parameter creator
- * @export
- */
-export const SecurityConfigurationApiFetchParamCreator = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/securityConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
-            // verify required parameter 'input' is not null or undefined
-            if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appSecurityConfigurationSetSetting.');
-            }
-            const localVarPath = `/api/services/app/securityConfiguration/SetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarHeaderParameter['Content-Type'] = 'application/json';
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SecuritySettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-    };
-};
-/**
- * SecurityConfigurationApi - functional programming interface
- * @export
- */
-export const SecurityConfigurationApiFp = function (configuration) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SecurityConfigurationApiFetchParamCreator(configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response.json();
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SecurityConfigurationApiFetchParamCreator(configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
-    };
-};
-/**
- * SecurityConfigurationApi - factory interface
- * @export
- */
-export const SecurityConfigurationApiFactory = function (configuration, fetch, basePath) {
-    return {
-        /**
-         *
-         * @summary 获取设置
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return SecurityConfigurationApiFp(configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {SecuritySettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return SecurityConfigurationApiFp(configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-    };
-};
-/**
- * SecurityConfigurationApi - object-oriented interface
- * @export
- * @class SecurityConfigurationApi
- * @extends {BaseAPI}
- */
-export class SecurityConfigurationApi extends BaseAPI {
-    /**
-     *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SecurityConfigurationApi
-     */
-    appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return SecurityConfigurationApiFp(this.configuration).appSecurityConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SecurityConfigurationApi
-     */
-    appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return SecurityConfigurationApiFp(this.configuration).appSecurityConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
 /**
@@ -10462,8 +10098,8 @@ export const SessionApiFactory = function (configuration, fetch, basePath) {
 export class SessionApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SessionApi
@@ -10473,54 +10109,26 @@ export class SessionApi extends BaseAPI {
     }
 }
 /**
- * SystemConfigurationApi - fetch parameter creator
+ * ThirdPartyLoginForTokenApi - fetch parameter creator
  * @export
  */
-export const SystemConfigurationApiFetchParamCreator = function (configuration) {
+export const ThirdPartyLoginForTokenApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/systemConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
+        thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appSystemConfigurationSetSetting.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling thirdPartyLoginForTokenAuthenticate.');
             }
-            const localVarPath = `/api/services/app/systemConfiguration/SetSetting`;
+            const localVarPath = `/api/ThirdPartyLoginForToken`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -10536,7 +10144,7 @@ export const SystemConfigurationApiFetchParamCreator = function (configuration) 
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("SystemSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = ("ThirdPartyLoginModel" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
                 url: url.format(localVarUrlObj),
@@ -10546,21 +10154,22 @@ export const SystemConfigurationApiFetchParamCreator = function (configuration) 
     };
 };
 /**
- * SystemConfigurationApi - functional programming interface
+ * ThirdPartyLoginForTokenApi - functional programming interface
  * @export
  */
-export const SystemConfigurationApiFp = function (configuration) {
+export const ThirdPartyLoginForTokenApiFp = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SystemConfigurationApiFetchParamCreator(configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
+        thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = ThirdPartyLoginForTokenApiFetchParamCreator(configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -10572,89 +10181,47 @@ export const SystemConfigurationApiFp = function (configuration) {
                 });
             };
         },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = SystemConfigurationApiFetchParamCreator(configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
-            return (fetch = portableFetch, basePath = BASE_PATH) => {
-                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                    if (response.status >= 200 && response.status < 300) {
-                        return response;
-                    }
-                    else {
-                        throw response;
-                    }
-                });
-            };
-        },
     };
 };
 /**
- * SystemConfigurationApi - factory interface
+ * ThirdPartyLoginForTokenApi - factory interface
  * @export
  */
-export const SystemConfigurationApiFactory = function (configuration, fetch, basePath) {
+export const ThirdPartyLoginForTokenApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @summary 第三方登录   返回token
+         * @param {ThirdPartyLoginModel} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return SystemConfigurationApiFp(configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
-        },
-        /**
-         *
-         * @param {SystemSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return SystemConfigurationApiFp(configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
+            return ThirdPartyLoginForTokenApiFp(configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
     };
 };
 /**
- * SystemConfigurationApi - object-oriented interface
+ * ThirdPartyLoginForTokenApi - object-oriented interface
  * @export
- * @class SystemConfigurationApi
+ * @class ThirdPartyLoginForTokenApi
  * @extends {BaseAPI}
  */
-export class SystemConfigurationApi extends BaseAPI {
+export class ThirdPartyLoginForTokenApi extends BaseAPI {
     /**
      *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 第三方登录   返回token
+     * @param {ThirdPartyLoginModel} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof SystemConfigurationApi
+     * @memberof ThirdPartyLoginForTokenApi
      */
-    appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return SystemConfigurationApiFp(this.configuration).appSystemConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
-    }
-    /**
-     *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {*} [options] Override http request option.
-     * @throws {RequiredError}
-     * @memberof SystemConfigurationApi
-     */
-    appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return SystemConfigurationApiFp(this.configuration).appSystemConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options) {
+        return ThirdPartyLoginForTokenApiFp(this.configuration).thirdPartyLoginForTokenAuthenticate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
 /**
@@ -10754,9 +10321,9 @@ export const TypeScriptApiFactory = function (configuration, fetch, basePath) {
 export class TypeScriptApi extends BaseAPI {
     /**
      *
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
-     * @param {} [isCompleteService]
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {boolean} [isCompleteService]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof TypeScriptApi
@@ -10773,6 +10340,7 @@ export const UserApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10809,6 +10377,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10845,6 +10414,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -10918,6 +10488,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11094,6 +10665,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11167,6 +10739,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11203,6 +10776,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11239,6 +10813,7 @@ export const UserApiFetchParamCreator = function (configuration) {
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11320,6 +10895,7 @@ export const UserApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11341,6 +10917,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11362,6 +10939,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11405,6 +10983,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11513,6 +11092,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11556,6 +11136,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11577,6 +11158,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11598,6 +11180,7 @@ export const UserApiFp = function (configuration) {
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11649,6 +11232,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 批量激活用户
          * @param {BatchActiveUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11660,6 +11244,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 批量删除用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11671,6 +11256,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 批量解锁用户
          * @param {ArrayDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11694,6 +11280,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 删除用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11752,6 +11339,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 导出用户信息到Excel文件
          * @param {GetUsersInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11775,6 +11363,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 切换用户启用禁用状态
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11786,6 +11375,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 解锁用户
          * @param {EntityDtoInt64} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11797,6 +11387,7 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
         },
         /**
          *
+         * @summary 用户修改自己的信息
          * @param {UpdateCurrentUserInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -11829,9 +11420,10 @@ export const UserApiFactory = function (configuration, fetch, basePath) {
 export class UserApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量激活用户
+     * @param {BatchActiveUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11841,9 +11433,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量删除用户
+     * @param {ArrayDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11853,9 +11446,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 批量解锁用户
+     * @param {ArrayDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11866,9 +11460,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 创建或编辑用户，Id为空时创建，否则编辑
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateOrUpdateUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11878,9 +11472,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 删除用户
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11891,8 +11486,8 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 获取全部的角色
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11903,9 +11498,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 获取编辑时需要的单个用户信息
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {NullableIdDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11916,9 +11511,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 获取编辑时需要的用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11929,9 +11524,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 获取用户列表
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {GetUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11941,9 +11536,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 导出用户信息到Excel文件
+     * @param {GetUsersInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11954,9 +11550,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 重置用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11966,9 +11562,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 切换用户启用禁用状态
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11978,9 +11575,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 解锁用户
+     * @param {EntityDtoInt64} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -11990,9 +11588,10 @@ export class UserApi extends BaseAPI {
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 用户修改自己的信息
+     * @param {UpdateCurrentUserInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -12003,9 +11602,9 @@ export class UserApi extends BaseAPI {
     /**
      *
      * @summary 修改用户权限
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {UpdateUserPermissionsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserApi
@@ -12022,6 +11621,7 @@ export const UserLoginApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -12066,6 +11666,7 @@ export const UserLoginApiFp = function (configuration) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -12095,6 +11696,7 @@ export const UserLoginApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
+         * @summary 获取登录历史
          * @param {GetUserLoginsInput} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
@@ -12115,9 +11717,10 @@ export const UserLoginApiFactory = function (configuration, fetch, basePath) {
 export class UserLoginApi extends BaseAPI {
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @summary 获取登录历史
+     * @param {GetUserLoginsInput} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UserLoginApi
@@ -12127,54 +11730,25 @@ export class UserLoginApi extends BaseAPI {
     }
 }
 /**
- * UserManagementConfigurationApi - fetch parameter creator
+ * XianjinjiaokuandanApi - fetch parameter creator
  * @export
  */
-export const UserManagementConfigurationApiFetchParamCreator = function (configuration) {
+export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @param {CreateXinjinjiaokuandanDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options = {}) {
-            const localVarPath = `/api/services/app/userManagementConfiguration/GetSetting`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
-                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
-            }
-            if (authorization !== undefined && authorization !== null) {
-                localVarHeaderParameter['authorization'] = String(authorization);
-            }
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            delete localVarUrlObj.search;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         *
-         * @param {UserManagementSettingDto} input
-         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
-         * @param {string} [authorization] token
-         * @param {*} [options] Override http request option.
-         * @throws {RequiredError}
-         */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appUserManagementConfigurationSetSetting.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanCreate.');
             }
-            const localVarPath = `/api/services/app/userManagementConfiguration/SetSetting`;
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Create`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12190,7 +11764,151 @@ export const UserManagementConfigurationApiFetchParamCreator = function (configu
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UserManagementSettingDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = ("CreateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanDelete.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGet.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGetAll.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanUpdate.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("UpdateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
                 url: url.format(localVarUrlObj),
@@ -12200,21 +11918,21 @@ export const UserManagementConfigurationApiFetchParamCreator = function (configu
     };
 };
 /**
- * UserManagementConfigurationApi - functional programming interface
+ * XianjinjiaokuandanApi - functional programming interface
  * @export
  */
-export const UserManagementConfigurationApiFp = function (configuration) {
+export const XianjinjiaokuandanApiFp = function (configuration) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @param {CreateXinjinjiaokuandanDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserManagementConfigurationApiFetchParamCreator(configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options);
+        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12228,14 +11946,14 @@ export const UserManagementConfigurationApiFp = function (configuration) {
         },
         /**
          *
-         * @param {UserManagementSettingDto} input
+         * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = UserManagementConfigurationApiFetchParamCreator(configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options);
+        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12247,67 +11965,199 @@ export const UserManagementConfigurationApiFp = function (configuration) {
                 });
             };
         },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
     };
 };
 /**
- * UserManagementConfigurationApi - factory interface
+ * XianjinjiaokuandanApi - factory interface
  * @export
  */
-export const UserManagementConfigurationApiFactory = function (configuration, fetch, basePath) {
+export const XianjinjiaokuandanApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
-         * @summary 获取设置
+         * @param {CreateXinjinjiaokuandanDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-            return UserManagementConfigurationApiFp(configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
-         * @param {UserManagementSettingDto} input
+         * @param {EntityDtoInt32} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-            return UserManagementConfigurationApiFp(configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
     };
 };
 /**
- * UserManagementConfigurationApi - object-oriented interface
+ * XianjinjiaokuandanApi - object-oriented interface
  * @export
- * @class UserManagementConfigurationApi
+ * @class XianjinjiaokuandanApi
  * @extends {BaseAPI}
  */
-export class UserManagementConfigurationApi extends BaseAPI {
+export class XianjinjiaokuandanApi extends BaseAPI {
     /**
      *
-     * @summary 获取设置
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {CreateXinjinjiaokuandanDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserManagementConfigurationApi
+     * @memberof XianjinjiaokuandanApi
      */
-    appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options) {
-        return UserManagementConfigurationApiFp(this.configuration).appUserManagementConfigurationGetSetting(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
     /**
      *
-     * @param {} input
-     * @param {} [X_XSRF_TOKEN] XSRF-TOKEN
-     * @param {} [authorization] token
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof UserManagementConfigurationApi
+     * @memberof XianjinjiaokuandanApi
      */
-    appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options) {
-        return UserManagementConfigurationApiFp(this.configuration).appUserManagementConfigurationSetSetting(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {UpdateXinjinjiaokuandanDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
