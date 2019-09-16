@@ -103,10 +103,10 @@ export default function RouterConfig({ history }) {
 					<Route path="/powerbook" component={Powerbook} />
 					<Route path="/ywdlsqbiao" component={Ywdlsqbiao} />
 				</Route>
-			
+
 				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
 				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
-					<Route path="/luruPowerbook" component={LuruPowerbook} />
+				<Route path="/luruPowerbook" component={LuruPowerbook} />
 				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao} />
 			</Router>
 		</LocaleProvider>

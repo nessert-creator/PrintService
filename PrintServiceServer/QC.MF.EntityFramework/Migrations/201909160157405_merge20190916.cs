@@ -93,10 +93,28 @@ namespace QC.MF.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.Ywdlsqbiaos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Customername = c.String(),
+                        Name = c.String(),
+                        Certificatetype = c.String(),
+                        Idnumber = c.Int(nullable: false),
+                        Contactnumber = c.String(),
+                        Name1 = c.String(),
+                        Certificatetype1 = c.String(),
+                        Idnumber1 = c.Int(nullable: false),
+                        Contactnumber1 = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.Ywdlsqbiaos");
             DropTable("dbo.Xianjinjiaokuandans");
             DropTable("dbo.Powerbooks",
                 removedAnnotations: new Dictionary<string, object>

@@ -990,6 +990,92 @@ export interface CreateIOSAppEditionInput {
 }
 
 /**
+ * 
+ * @export
+ * @interface CreateJingzhangdanDto
+ */
+export interface CreateJingzhangdanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJingzhangdanDto
+     */
+    chupiaorenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    chupiaorenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJingzhangdanDto
+     */
+    chupiaorenkhyh?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJingzhangdanDto
+     */
+    shoukuanrenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    shoukuanrenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJingzhangdanDto
+     */
+    shoukuanrenkhyh?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    renminbi?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJingzhangdanDto
+     */
+    piaojuzhonglei?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    piaojuzhangshu?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJingzhangdanDto
+     */
+    piaojuhaoma?: number;
+}
+
+/**
  * 创建菜单参数
  * @export
  * @interface CreateMenuInput
@@ -1126,6 +1212,172 @@ export interface CreateOrganizationUnitInput {
 /**
  * 
  * @export
+ * @interface CreatePowerbookDto
+ */
+export interface CreatePowerbookDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    sname?: string;
+    /**
+     * 法定代表人信息
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    phoneNumber1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreatePowerbookDto
+     */
+    phoneNumber2?: string;
+}
+
+/**
+ * 
+ * @export
+ * @interface CreateXinjinjiaokuandanDto
+ */
+export interface CreateXinjinjiaokuandanDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    accountName?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    accountNumber?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    openingBank?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    _abstract?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    money?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    thousand1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    hundred1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    ten1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    tenThousand?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    thousand2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    hundred2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    ten2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    yuan?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    jiao?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    fen?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    bankSpecialColumn?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface CreateYwdlsqbiaoDto
  */
 export interface CreateYwdlsqbiaoDto {
@@ -1135,6 +1387,12 @@ export interface CreateYwdlsqbiaoDto {
      * @memberof CreateYwdlsqbiaoDto
      */
     customername?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    clientinformation?: string;
     /**
      * 
      * @type {string}
@@ -1159,6 +1417,12 @@ export interface CreateYwdlsqbiaoDto {
      * @memberof CreateYwdlsqbiaoDto
      */
     contactnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    agentinformation?: string;
     /**
      * 
      * @type {string}
@@ -2214,6 +2478,276 @@ export interface GetListDemoDto {
 /**
  * 
  * @export
+ * @interface GetListJiangzhangdanDto
+ */
+export interface GetListJiangzhangdanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJiangzhangdanDto
+     */
+    chupiaorenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    chupiaorenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJiangzhangdanDto
+     */
+    chupiaorenkhyh?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJiangzhangdanDto
+     */
+    shoukuanrenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    shoukuanrenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJiangzhangdanDto
+     */
+    shoukuanrenkhyh?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    renminbi?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJiangzhangdanDto
+     */
+    piaojuzhonglei?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    piaojuzhangshu?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJiangzhangdanDto
+     */
+    piaojuhaoma?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface GetListPowerbookDto
+ */
+export interface GetListPowerbookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListPowerbookDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    sname?: string;
+    /**
+     * 法定代表人信息
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    phoneNumber1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListPowerbookDto
+     */
+    phoneNumber2?: string;
+}
+
+/**
+ * 
+ * @export
+ * @interface GetListXinjinjiaokuandanDto
+ */
+export interface GetListXinjinjiaokuandanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    accountName?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    accountNumber?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    openingBank?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    _abstract?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    money?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    thousand1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    hundred1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    ten1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    tenThousand?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    thousand2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    hundred2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    ten2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    yuan?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    jiao?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    fen?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    bankSpecialColumn?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListYwdlsqbiaoDto
  */
 export interface GetListYwdlsqbiaoDto {
@@ -2224,55 +2758,73 @@ export interface GetListYwdlsqbiaoDto {
      */
     id?: number;
     /**
-     * 名称
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    customername?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    clientinformation?: string;
+    /**
+     * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
     name?: string;
     /**
-     * 介绍
+     * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    longText?: string;
+    certificatetype?: string;
     /**
-     * 组
-     * @type {string}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    group?: string;
-    /**
-     * 是否启用
-     * @type {boolean}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    isActivate?: boolean;
-    /**
-     * 顺序
+     * 
      * @type {number}
      * @memberof GetListYwdlsqbiaoDto
      */
-    sort?: number;
+    idnumber?: number;
     /**
-     * 权
-     * @type {number}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    weight?: number;
-    /**
-     * 发布时间
-     * @type {Date}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    publishTime?: Date;
-    /**
-     * 头像
+     * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    avatar?: string;
+    contactnumber?: string;
     /**
-     * 位置
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    agentinformation?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    certificatetype1?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    idnumber1?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    contactnumber1?: string;
+    /**
+     * 
      * @type {Location}
      * @memberof GetListYwdlsqbiaoDto
      */
@@ -3506,6 +4058,66 @@ export interface PagedResultDtoGetListDemoDto {
 /**
  * 
  * @export
+ * @interface PagedResultDtoGetListJiangzhangdanDto
+ */
+export interface PagedResultDtoGetListJiangzhangdanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListJiangzhangdanDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListJiangzhangdanDto>}
+     * @memberof PagedResultDtoGetListJiangzhangdanDto
+     */
+    items?: Array<GetListJiangzhangdanDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListPowerbookDto
+ */
+export interface PagedResultDtoGetListPowerbookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListPowerbookDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListPowerbookDto>}
+     * @memberof PagedResultDtoGetListPowerbookDto
+     */
+    items?: Array<GetListPowerbookDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListXinjinjiaokuandanDto
+ */
+export interface PagedResultDtoGetListXinjinjiaokuandanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListXinjinjiaokuandanDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListXinjinjiaokuandanDto>}
+     * @memberof PagedResultDtoGetListXinjinjiaokuandanDto
+     */
+    items?: Array<GetListXinjinjiaokuandanDto>;
+}
+
+/**
+ * 
+ * @export
  * @interface PagedResultDtoGetListYwdlsqbiaoDto
  */
 export interface PagedResultDtoGetListYwdlsqbiaoDto {
@@ -4628,6 +5240,98 @@ export interface UpdateIOSAppEditionInput {
 }
 
 /**
+ * 
+ * @export
+ * @interface UpdateJiangzhangdanDto
+ */
+export interface UpdateJiangzhangdanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    chupiaorenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    chupiaorenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    chupiaorenkhyh?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    shoukuanrenqc?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    shoukuanrenzh?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    shoukuanrenkhyh?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    renminbi?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    piaojuzhonglei?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    piaojuzhangshu?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateJiangzhangdanDto
+     */
+    piaojuhaoma?: number;
+}
+
+/**
  * 更新菜单信息
  * @export
  * @interface UpdateMenuInput
@@ -4714,6 +5418,74 @@ export interface UpdateOrganizationUnitInput {
 /**
  * 
  * @export
+ * @interface UpdatePowerbookDto
+ */
+export interface UpdatePowerbookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdatePowerbookDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    sname?: string;
+    /**
+     * 法定代表人信息
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    phoneNumber1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdatePowerbookDto
+     */
+    phoneNumber2?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateProfilePictureInput
  */
 export interface UpdateProfilePictureInput {
@@ -4772,6 +5544,116 @@ export interface UpdateUserPermissionsInput {
 /**
  * 
  * @export
+ * @interface UpdateXinjinjiaokuandanDto
+ */
+export interface UpdateXinjinjiaokuandanDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    accountName?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    accountNumber?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    openingBank?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    _abstract?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    money?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    thousand1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    hundred1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    ten1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    tenThousand?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    thousand2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    hundred2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    ten2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    yuan?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    jiao?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    fen?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    bankSpecialColumn?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateYwdlsqbiaoDto
  */
 export interface UpdateYwdlsqbiaoDto {
@@ -4782,55 +5664,73 @@ export interface UpdateYwdlsqbiaoDto {
      */
     id?: number;
     /**
-     * 名称
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    customername?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    clientinformation?: string;
+    /**
+     * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
     name?: string;
     /**
-     * 介绍
+     * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    longText?: string;
+    certificatetype?: string;
     /**
-     * 组
-     * @type {string}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    group?: string;
-    /**
-     * 是否启用
-     * @type {boolean}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    isActivate?: boolean;
-    /**
-     * 顺序
+     * 
      * @type {number}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    sort?: number;
+    idnumber?: number;
     /**
-     * 权
-     * @type {number}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    weight?: number;
-    /**
-     * 发布时间
-     * @type {Date}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    publishTime?: Date;
-    /**
-     * 头像
+     * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    avatar?: string;
+    contactnumber?: string;
     /**
-     * 位置
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    agentinformation?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    certificatetype1?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    idnumber1?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    contactnumber1?: string;
+    /**
+     * 
      * @type {Location}
      * @memberof UpdateYwdlsqbiaoDto
      */
@@ -11075,6 +11975,467 @@ export class InterfaceExportApi extends BaseAPI {
 }
 
 /**
+ * JingzhangdanApi - fetch parameter creator
+ * @export
+ */
+export const JingzhangdanApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJingzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanCreate(input: CreateJingzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJingzhangdanCreate.');
+            }
+            const localVarPath = `/api/services/app/jingzhangdan/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateJingzhangdanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJingzhangdanDelete.');
+            }
+            const localVarPath = `/api/services/app/jingzhangdan/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJingzhangdanGet.');
+            }
+            const localVarPath = `/api/services/app/jingzhangdan/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJingzhangdanGetAll.');
+            }
+            const localVarPath = `/api/services/app/jingzhangdan/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateJiangzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJingzhangdanUpdate.');
+            }
+            const localVarPath = `/api/services/app/jingzhangdan/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateJiangzhangdanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * JingzhangdanApi - functional programming interface
+ * @export
+ */
+export const JingzhangdanApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJingzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanCreate(input: CreateJingzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJiangzhangdanDto> {
+            const localVarFetchArgs = JingzhangdanApiFetchParamCreator(configuration).appJingzhangdanCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = JingzhangdanApiFetchParamCreator(configuration).appJingzhangdanDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJiangzhangdanDto> {
+            const localVarFetchArgs = JingzhangdanApiFetchParamCreator(configuration).appJingzhangdanGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListJiangzhangdanDto> {
+            const localVarFetchArgs = JingzhangdanApiFetchParamCreator(configuration).appJingzhangdanGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateJiangzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJiangzhangdanDto> {
+            const localVarFetchArgs = JingzhangdanApiFetchParamCreator(configuration).appJingzhangdanUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * JingzhangdanApi - factory interface
+ * @export
+ */
+export const JingzhangdanApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateJingzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanCreate(input: CreateJingzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JingzhangdanApiFp(configuration).appJingzhangdanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JingzhangdanApiFp(configuration).appJingzhangdanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JingzhangdanApiFp(configuration).appJingzhangdanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JingzhangdanApiFp(configuration).appJingzhangdanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateJiangzhangdanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JingzhangdanApiFp(configuration).appJingzhangdanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * JingzhangdanApi - object-oriented interface
+ * @export
+ * @class JingzhangdanApi
+ * @extends {BaseAPI}
+ */
+export class JingzhangdanApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateJingzhangdanDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JingzhangdanApi
+     */
+    public appJingzhangdanCreate(input: CreateJingzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JingzhangdanApiFp(this.configuration).appJingzhangdanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JingzhangdanApi
+     */
+    public appJingzhangdanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JingzhangdanApiFp(this.configuration).appJingzhangdanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JingzhangdanApi
+     */
+    public appJingzhangdanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JingzhangdanApiFp(this.configuration).appJingzhangdanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JingzhangdanApi
+     */
+    public appJingzhangdanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JingzhangdanApiFp(this.configuration).appJingzhangdanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateJiangzhangdanDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JingzhangdanApi
+     */
+    public appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JingzhangdanApiFp(this.configuration).appJingzhangdanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
  * MenuApi - fetch parameter creator
  * @export
  */
@@ -13614,6 +14975,467 @@ export class PermissionApi extends BaseAPI {
      */
     public appPermissionGetUserPermissions(X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return PermissionApiFp(this.configuration).appPermissionGetUserPermissions(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * PowerbookApi - fetch parameter creator
+ * @export
+ */
+export const PowerbookApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookCreate(input: CreatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appPowerbookCreate.');
+            }
+            const localVarPath = `/api/services/app/powerbook/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreatePowerbookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appPowerbookDelete.');
+            }
+            const localVarPath = `/api/services/app/powerbook/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appPowerbookGet.');
+            }
+            const localVarPath = `/api/services/app/powerbook/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appPowerbookGetAll.');
+            }
+            const localVarPath = `/api/services/app/powerbook/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookUpdate(input: UpdatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appPowerbookUpdate.');
+            }
+            const localVarPath = `/api/services/app/powerbook/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdatePowerbookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * PowerbookApi - functional programming interface
+ * @export
+ */
+export const PowerbookApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookCreate(input: CreatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListPowerbookDto> {
+            const localVarFetchArgs = PowerbookApiFetchParamCreator(configuration).appPowerbookCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = PowerbookApiFetchParamCreator(configuration).appPowerbookDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListPowerbookDto> {
+            const localVarFetchArgs = PowerbookApiFetchParamCreator(configuration).appPowerbookGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListPowerbookDto> {
+            const localVarFetchArgs = PowerbookApiFetchParamCreator(configuration).appPowerbookGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookUpdate(input: UpdatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListPowerbookDto> {
+            const localVarFetchArgs = PowerbookApiFetchParamCreator(configuration).appPowerbookUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * PowerbookApi - factory interface
+ * @export
+ */
+export const PowerbookApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookCreate(input: CreatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return PowerbookApiFp(configuration).appPowerbookCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return PowerbookApiFp(configuration).appPowerbookDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return PowerbookApiFp(configuration).appPowerbookGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return PowerbookApiFp(configuration).appPowerbookGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdatePowerbookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appPowerbookUpdate(input: UpdatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return PowerbookApiFp(configuration).appPowerbookUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * PowerbookApi - object-oriented interface
+ * @export
+ * @class PowerbookApi
+ * @extends {BaseAPI}
+ */
+export class PowerbookApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreatePowerbookDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PowerbookApi
+     */
+    public appPowerbookCreate(input: CreatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return PowerbookApiFp(this.configuration).appPowerbookCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PowerbookApi
+     */
+    public appPowerbookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return PowerbookApiFp(this.configuration).appPowerbookDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PowerbookApi
+     */
+    public appPowerbookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return PowerbookApiFp(this.configuration).appPowerbookGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PowerbookApi
+     */
+    public appPowerbookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return PowerbookApiFp(this.configuration).appPowerbookGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdatePowerbookDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof PowerbookApi
+     */
+    public appPowerbookUpdate(input: UpdatePowerbookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return PowerbookApiFp(this.configuration).appPowerbookUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }
@@ -17563,6 +19385,467 @@ export class UserLoginApi extends BaseAPI {
      */
     public appUserLoginGetRecentUserLoginAttempts(input: GetUserLoginsInput, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return UserLoginApiFp(this.configuration).appUserLoginGetRecentUserLoginAttempts(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * XianjinjiaokuandanApi - fetch parameter creator
+ * @export
+ */
+export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanCreate.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanDelete.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanGet.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanGetAll.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanUpdate.');
+            }
+            const localVarPath = `/api/services/app/xianjinjiaokuandan/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * XianjinjiaokuandanApi - functional programming interface
+ * @export
+ */
+export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListXinjinjiaokuandanDto> {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
+            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * XianjinjiaokuandanApi - factory interface
+ * @export
+ */
+export const XianjinjiaokuandanApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * XianjinjiaokuandanApi - object-oriented interface
+ * @export
+ * @class XianjinjiaokuandanApi
+ * @extends {BaseAPI}
+ */
+export class XianjinjiaokuandanApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateXinjinjiaokuandanDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    public appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    public appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    public appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    public appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateXinjinjiaokuandanDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof XianjinjiaokuandanApi
+     */
+    public appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }

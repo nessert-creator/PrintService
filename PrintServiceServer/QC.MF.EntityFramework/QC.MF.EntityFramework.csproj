@@ -239,21 +239,9 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909160146426_merge20190916.cs" />
-    <Compile Include="Migrations\201909160146426_merge20190916.Designer.cs">
-      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909100825170_gaozhen20199101624.cs" />
-    <Compile Include="Migrations\201909100825170_gaozhen20199101624.Designer.cs">
-      <DependentUpon>201909100825170_gaozhen20199101624.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909120613587_gaozheng20199121413.cs" />
-    <Compile Include="Migrations\201909120613587_gaozheng20199121413.Designer.cs">
-      <DependentUpon>201909120613587_gaozheng20199121413.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909151419559_gaozheng20199152216.cs" />
-    <Compile Include="Migrations\201909151419559_gaozheng20199152216.Designer.cs">
-      <DependentUpon>201909151419559_gaozheng20199152216.cs</DependentUpon>
+    <Compile Include="Migrations\201909160157405_merge20190916.cs" />
+    <Compile Include="Migrations\201909160157405_merge20190916.Designer.cs">
+      <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -325,17 +313,8 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909160146426_merge20190916.resx">
-      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909100825170_gaozhen20199101624.resx">
-      <DependentUpon>201909100825170_gaozhen20199101624.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909120613587_gaozheng20199121413.resx">
-      <DependentUpon>201909120613587_gaozheng20199121413.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909151419559_gaozheng20199152216.resx">
-      <DependentUpon>201909151419559_gaozheng20199152216.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909160157405_merge20190916.resx">
+      <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
