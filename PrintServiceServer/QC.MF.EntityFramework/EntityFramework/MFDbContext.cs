@@ -14,6 +14,7 @@ using QC.MF.Demos;
 using QC.MF.WebFiles;
 using QC.MF.AppEditions;
 using QC.MF.AppStartPages;
+using QC.MF.Xianjinjiaokuandans;
 using QC.MF.Powerbooks;
 using QC.MF.Ywdlsqbiaos;
 
@@ -36,8 +37,8 @@ namespace QC.MF.EntityFramework
         public IDbSet<FileSettingDemo> GetSetDemo { get; set; }
         public IDbSet<AppStartPage> AppStartPage { get; set; }
         public IDbSet<Ywdlsqbiao> Ywdlsqbiao { get; set; }
+        public IDbSet<Xianjinjiaokuandan> Xianjinjiaokuandan { get; set; }
         public IDbSet<Powerbook> Powerbook { get; set; }
-
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
 
         /* NOTE: 

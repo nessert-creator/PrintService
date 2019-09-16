@@ -239,21 +239,9 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909100754495_zhangyunfei20199101553.cs" />
-    <Compile Include="Migrations\201909100754495_zhangyunfei20199101553.Designer.cs">
-      <DependentUpon>201909100754495_zhangyunfei20199101553.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909101538042_yuanhui20199102337.cs" />
-    <Compile Include="Migrations\201909101538042_yuanhui20199102337.Designer.cs">
-      <DependentUpon>201909101538042_yuanhui20199102337.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909111013339_yuanhui20199111813.cs" />
-    <Compile Include="Migrations\201909111013339_yuanhui20199111813.Designer.cs">
-      <DependentUpon>201909111013339_yuanhui20199111813.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909140343237_yuanhui20199141142.cs" />
-    <Compile Include="Migrations\201909140343237_yuanhui20199141142.Designer.cs">
-      <DependentUpon>201909140343237_yuanhui20199141142.cs</DependentUpon>
+    <Compile Include="Migrations\201909160146426_merge20190916.cs" />
+    <Compile Include="Migrations\201909160146426_merge20190916.Designer.cs">
+      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201909100825170_gaozhen20199101624.cs" />
     <Compile Include="Migrations\201909100825170_gaozhen20199101624.Designer.cs">
@@ -337,17 +325,8 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909100754495_zhangyunfei20199101553.resx">
-      <DependentUpon>201909100754495_zhangyunfei20199101553.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909101538042_yuanhui20199102337.resx">
-      <DependentUpon>201909101538042_yuanhui20199102337.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909111013339_yuanhui20199111813.resx">
-      <DependentUpon>201909111013339_yuanhui20199111813.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909140343237_yuanhui20199141142.resx">
-      <DependentUpon>201909140343237_yuanhui20199141142.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909160146426_merge20190916.resx">
+      <DependentUpon>201909160146426_merge20190916.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909100825170_gaozhen20199101624.resx">
       <DependentUpon>201909100825170_gaozhen20199101624.cs</DependentUpon>

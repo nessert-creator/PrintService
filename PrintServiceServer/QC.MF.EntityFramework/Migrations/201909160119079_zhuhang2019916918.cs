@@ -3,7 +3,7 @@ namespace QC.MF.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class yuanhui20199141142 : DbMigration
+    public partial class zhuhang2019916918 : DbMigration
     {
         public override void Up()
         {
