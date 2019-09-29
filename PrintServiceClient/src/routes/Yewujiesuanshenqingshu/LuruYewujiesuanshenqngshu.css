@@ -1,0 +1,165 @@
+.container {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.zhongxinyinhang {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.content1 {
+    border: 1px black solid;
+    width: 62%;
+    margin: 0 auto;
+}
+
+.shenqingren {
+    width: 1%;
+    position: relative;
+    top: 132px;
+    right: -10px;
+}
+
+.shoukuanren {
+    width: 1%;
+    position: relative;
+    top: 132px;
+    right: -10px;
+}
+
+.content2 {
+    width: 50%;
+    float: left;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.content3 {
+    width: 100%;
+}
+
+.shoukuanren1 {
+    width: 50%;
+    float: left;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right-color: transparent;
+}
+
+.content4 {
+    width: 100%;
+    height: 324px;
+    border-bottom: 1px solid black;
+}
+
+.bizhong {
+    width: 20%;
+}
+
+.jine {
+    position: relative;
+    top: -55px;
+}
+
+.bizhong1 {
+    width: 2%;
+}
+
+.border1 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    position: relative;
+    top: 8px;
+    left: 20px;
+}
+
+.pay {
+    width: 100%;
+}
+
+.pay>span {
+    display: inline-block;
+    position: relative;
+    top: -53px;
+    left: 37px;
+}
+
+.border2 {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    position: relative;
+    top: -47px;
+    left: 20px;
+}
+
+.pay2 {
+    position: relative;
+    top: -63px;
+    left: 36px;
+}
+
+.zhanghao {
+    position: relative;
+    top: -64px;
+    width: 50%;
+}
+
+.pay3 {
+    position: relative;
+    left: 199px;
+    top: -109px;
+}
+
+.content5 {
+    width: 100%;
+}
+
+.content5_pay {
+    width: 50%;
+    height: 243.6px;
+    border: 1px solid black;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.payWord {
+    position: relative;
+    right: -470px;
+    top: -244px;
+    border: 1px solid black;
+    border-top-color: transparent;
+    width: 50%;
+    border-right-color: transparent;
+}
+
+.payWord2 {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.leixing{
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
+.dixian{
+    border-bottom: 1px solid;
+}
+.zhongxian{
+    border-right: 1px solid;
+    width: 50%;
+    float: left;
+    height: 240px;
+}

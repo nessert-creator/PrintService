@@ -7,13 +7,13 @@ namespace QC.MF.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class merge20190916 : IMigrationMetadata
+    public sealed partial class zhnagyunfei20199202100 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(merge20190916));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(zhnagyunfei20199202100));
         
         string IMigrationMetadata.Id
         {
-            get { return "201909160157405_merge20190916"; }
+            get { return "201909201301537_zhnagyunfei20199202100"; }
         }
         
         string IMigrationMetadata.Source

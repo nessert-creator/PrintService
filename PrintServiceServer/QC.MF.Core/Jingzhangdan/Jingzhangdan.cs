@@ -13,10 +13,10 @@ namespace QC.MF.Jingzhangdan
         public int Month { get; set; }
         public int Day { get; set; }
         public string Chupiaorenqc { get; set; }
-        public int Chupiaorenzh { get; set; }
+        public string Chupiaorenzh { get; set; }
         public string Chupiaorenkhyh { get; set; }
         public string Shoukuanrenqc { get; set; }
-        public int Shoukuanrenzh { get; set; }
+        public string Shoukuanrenzh { get; set; }
         public string Shoukuanrenkhyh { get; set; }
         public decimal Renminbi { get; set; }
         public string Piaojuzhonglei { get; set; }

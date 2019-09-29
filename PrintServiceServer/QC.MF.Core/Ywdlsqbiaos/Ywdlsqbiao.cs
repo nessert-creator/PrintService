@@ -11,7 +11,6 @@ namespace QC.MF.Ywdlsqbiaos
     {
         //客户名称
         public string Customername { get; set; }
-        //委托人信息
         //姓名
         public string Name { get; set; }
         //证件类型
@@ -20,8 +19,14 @@ namespace QC.MF.Ywdlsqbiaos
         public int Idnumber { get; set; }
         //联系电话
         public string Contactnumber { get; set; }
-
-        //代理人信息
+        //姓名
+        public string Name2 { get; set; }
+        //证件类型
+        public string Certificatetype2 { get; set; }
+        //证件号码
+        public int Idnumber2 { get; set; }
+        //联系电话
+        public string Contactnumber2 { get; set; }
         //姓名
         public string Name1 { get; set; }
         //证件类型
