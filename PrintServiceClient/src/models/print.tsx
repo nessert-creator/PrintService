@@ -3,12 +3,13 @@ import * as ReactDOM from 'react-dom';
 import { message } from 'antd';
 import * as api from './../api/api';
 import { createApiAuthParam } from './../api/apiUtil';
-import { PrintReceipt, PrintIOU } from './../utils/print';
+import { PrintReceipt, PrintIOU,PrintPowerbook,PrintRegistration} from './../utils/print';
 import ActiveCardReceipt from './../routes/Print/ActiveCardReceipt';
 import InactiveCardReceipt from './../routes/Print/InactiveCardReceipt';
 import IOU from './../routes/Print/IOU';
 import AccountReceipt from './../routes/Print/AccountReceipt';
-
+import Powerbook from './../routes/Print/Powerbook';
+import Registration from './../routes/Print/Registration';
 function print(reactElement, printFunction) {
 	let div = document.createElement('div');
 	document.body.appendChild(div);
@@ -75,6 +76,12 @@ export default {
 		*printAccountReceipt({ payload }, { select }) {
 			payload.receipt.examinationCenterName = yield select(state => state.indexpage.setting.systemName);
 			print(<AccountReceipt accountReceipt={payload.receipt} />, PrintReceipt);
+		},
+		*printPowerbook({ payload }, { call, put }) {
+			print(<Powerbook powerbook={payload} />, PrintPowerbook);
+		},
+		*printRegistration({ payload }, { call, put }) {
+			print(<Registration registration={payload} />, PrintRegistration);
 		},
 	},
 	subscriptions: {}

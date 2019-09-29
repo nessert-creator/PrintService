@@ -201,3 +201,34 @@ export function PrintIOU(html) {
 		LODOP.PREVIEW();
 	}
 }
+
+export function PrintPowerbook(html) {
+	let LODOP = getLodop();
+	var index = getEPSONLQ_630KIndex();
+	if (index >= 0) {
+		LODOP.PRINT_INIT();
+		LODOP.SET_PRINTER_INDEX(index);
+
+		LODOP.ADD_PRINT_HTM(0, 0, 830, '', html);
+
+		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+		LODOP.SET_PRINT_PAGESIZE(3, 2200, 80, '');
+		// LODOP.PRINT();
+		LODOP.PREVIEW();
+	}
+}
+export function PrintRegistration(html) {
+	let LODOP = getLodop();
+	var index = getEPSONLQ_630KIndex();
+	if (index >= 0) {
+		LODOP.PRINT_INIT();
+		LODOP.SET_PRINTER_INDEX(index);
+
+		LODOP.ADD_PRINT_HTM(0, 0, 830, '', html);
+
+		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+		LODOP.SET_PRINT_PAGESIZE(3, 2200, 80, '');
+		// LODOP.PRINT();
+		LODOP.PREVIEW();
+	}
+}

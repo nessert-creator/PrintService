@@ -30,6 +30,7 @@ import print from './print';
 import xinjinjiaokuandan from './xinjinjiaokuandan';
 import jiangzhangdan from './jiangzhangdan';
 import powerbook from './powerbook';
+import registration from './registration';
 
 /**
  * index.js
@@ -69,4 +70,5 @@ export function registerModels(app) {
 	app.model(xinjinjiaokuandan);
 	app.model(jiangzhangdan);
 	app.model(powerbook);
+	app.model(registration);
 }

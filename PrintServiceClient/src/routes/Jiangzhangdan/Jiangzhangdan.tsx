@@ -181,6 +181,19 @@ function Jiangzhangdan({ form, record }) {
             createApi={new api.JingzhangdanApi().appJingzhangdanCreate}
             columns={columns}
             formNode={formNode}
+            customColumnOption={(text, record) => (
+				
+				<span>
+					<a onClick={() => {
+						dispatch({
+							type:"print/printJinzhangdan",
+							payload:record
+						})
+					}}>
+						打印
+					</a>
+				<span style={{marginLeft:'6px'}} /></span>
+			)}
             filterProps={{
                 filters,
                 searchProvide: 'sql'
