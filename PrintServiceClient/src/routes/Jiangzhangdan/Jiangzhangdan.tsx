@@ -44,17 +44,17 @@ function Jiangzhangdan({ form, record }) {
             sorter: true
         },
         {
-            title: '售票人全称',
+            title: '收款人全称',
             dataIndex: 'shoukuanrenqc',
             sorter: true
         },
         {
-            title: '售票人账号',
+            title: '收款人账号',
             dataIndex: 'shoukuanrenzh',
             sorter: true
         },
         {
-            title: '售票人开户银行',
+            title: '收款人开户银行',
             dataIndex: 'shoukuanrenkhyh',
             sorter: true
         },
@@ -117,19 +117,19 @@ function Jiangzhangdan({ form, record }) {
                     initialValue: record.chupiaorenkhyh,
                 })(<Input />)}
             </FormItem>
-            <FormItem label="售票人全称" {...formCol}>
+            <FormItem label="收款人全称" {...formCol}>
                 {getFieldDecorator('shoukuanrenqc', {
                     initialValue: record.shoukuanrenqc
                 })(<Input />)}
             </FormItem>
-            <FormItem label="售票人账号" {...formCol}>
-                {getFieldDecorator('shupiaorenzh', {
-                    initialValue: record.chupiaorenzh
+            <FormItem label="收款人账号" {...formCol}>
+                {getFieldDecorator('shoukuanrenzh', {
+                    initialValue: record.shpoupiaorenzh
                 })(<Input />)}
             </FormItem>
-            <FormItem label="售票人开户银行" {...formCol}>
-                {getFieldDecorator('shupiaorenkhyh', {
-                    initialValue: record.chupiaorenkhyh,
+            <FormItem label="收款人开户银行" {...formCol}>
+                {getFieldDecorator('shoukuanrenkhyh', {
+                    initialValue: record.shoukuanrenkhyh,
                 })(<Input />)}
             </FormItem>
             <FormItem label="人民币" {...formCol}>
@@ -164,12 +164,12 @@ function Jiangzhangdan({ form, record }) {
             name: 'month',
             displayName: '月',
             option: 'like'
-        }, 
+        },
         {
             name: 'day',
             displayName: '日',
             option: 'like'
-        }, 
+        },
     ];
 
     return (
@@ -181,6 +181,19 @@ function Jiangzhangdan({ form, record }) {
             createApi={new api.JingzhangdanApi().appJingzhangdanCreate}
             columns={columns}
             formNode={formNode}
+            customColumnOption={(text, record) => (
+				
+				<span>
+					<a onClick={() => {
+						dispatch({
+							type:"print/printJinzhangdan",
+							payload:record
+						})
+					}}>
+						打印
+					</a>
+				<span style={{marginLeft:'6px'}} /></span>
+			)}
             filterProps={{
                 filters,
                 searchProvide: 'sql'

@@ -10,7 +10,6 @@ import * as api from '../../api/api';
 
 import CRUD from '../CRUD/CRUD';
 import moment from 'moment';
-
 function Powerbook({ form, record }) {
 	const columns = [
 		{
@@ -25,9 +24,9 @@ function Powerbook({ form, record }) {
 		},
 		{
 			title: '证件类型',
-			dataIndex: ' type_1',
-            sorter: true,
-        },
+			dataIndex: 'type_1',
+			sorter: true,
+		},
 		{
 			title: '证件号码',
 			dataIndex: 'number_1',
@@ -69,7 +68,7 @@ function Powerbook({ form, record }) {
 			<FormItem label="客户名称" {...formCol}>
 				{getFieldDecorator('sname', {
 					initialValue: record.sname,
-					rules: [ { required: true, message: '请填写名称' } ]
+					rules: [{ required: true, message: '请填写名称' }]
 				})(<Input />)}
 			</FormItem>
 			<FormItem label="姓名" {...formCol}>
@@ -120,18 +119,18 @@ function Powerbook({ form, record }) {
 			displayName: '客户名称',
 			option: 'like'
 		},
-		// {
-		// 	name: 'creationTime',
-		// 	displayName: '添加时间',
-		// 	type: 'datetime',
-		// 	option: '>='
-		// },
-		// {
-		// 	name: 'creationTime',
-		// 	displayName: '',
-		// 	type: 'datetime',
-		// 	option: '<'
-		// }
+		{
+			name: 'creationTime',
+			displayName: '添加时间',
+			type: 'datetime',
+			option: '>='
+		},
+		{
+			name: 'creationTime',
+			displayName: '',
+			type: 'datetime',
+			option: '<'
+		}
 	];
 
 	return (
@@ -143,6 +142,19 @@ function Powerbook({ form, record }) {
 			createApi={new api.PowerbookApi().appPowerbookCreate}
 			columns={columns}
 			formNode={formNode}
+			customColumnOption={(text, record) => (
+				
+				<span>
+					<a onClick={() => {
+						dispatch({
+							type:"print/printPowerbook",
+							payload:record
+						})
+					}}>
+						打印
+					</a>
+				<span style={{marginLeft:'6px'}} /></span>
+			)}
 			filterProps={{
 				filters,
 				searchProvide: 'sql'

@@ -840,6 +840,326 @@ export namespace CreateAppStartPageDto {
 /**
  * 
  * @export
+ * @interface CreateDanweixinxidengjibiaoDto
+ */
+export interface CreateDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    numbe4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address3?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface CreateDemoDto
  */
 export interface CreateDemoDto {
@@ -1414,105 +1734,105 @@ export interface CreatePowerbookDto {
 /**
  * 
  * @export
- * @interface CreateXinjinjiaokuandanDto
+ * @interface CreateYewujiesuanshenqingshuDto
  */
-export interface CreateXinjinjiaokuandanDto {
+export interface CreateYewujiesuanshenqingshuDto {
     /**
      * 
      * @type {string}
-     * @memberof CreateXinjinjiaokuandanDto
+     * @memberof CreateYewujiesuanshenqingshuDto
      */
-    accountName?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    accountNumber?: number;
+    designation?: string;
     /**
      * 
      * @type {string}
-     * @memberof CreateXinjinjiaokuandanDto
+     * @memberof CreateYewujiesuanshenqingshuDto
      */
-    openingBank?: string;
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
     /**
      * 
      * @type {string}
-     * @memberof CreateXinjinjiaokuandanDto
+     * @memberof CreateYewujiesuanshenqingshuDto
      */
-    _abstract?: string;
+    account1?: string;
     /**
      * 
      * @type {string}
-     * @memberof CreateXinjinjiaokuandanDto
+     * @memberof CreateYewujiesuanshenqingshuDto
      */
-    money?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    thousand1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    hundred1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    ten1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    tenThousand?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    thousand2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    hundred2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    ten2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    yuan?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    jiao?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateXinjinjiaokuandanDto
-     */
-    fen?: number;
+    designation1?: string;
     /**
      * 
      * @type {string}
-     * @memberof CreateXinjinjiaokuandanDto
+     * @memberof CreateYewujiesuanshenqingshuDto
      */
-    bankSpecialColumn?: string;
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    number?: string;
 }
 
 /**
@@ -2550,6 +2870,332 @@ export namespace GetListAppStartPageDto {
 /**
  * 
  * @export
+ * @interface GetListDanweixinxidengjibiaoDto
+ */
+export interface GetListDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    numbe4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address3?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListDemoDto
  */
 export interface GetListDemoDto {
@@ -2948,111 +3594,111 @@ export interface GetListPowerbookDto {
 /**
  * 
  * @export
- * @interface GetListXinjinjiaokuandanDto
+ * @interface GetListYewujiesuanshenqingshuDto
  */
-export interface GetListXinjinjiaokuandanDto {
+export interface GetListYewujiesuanshenqingshuDto {
     /**
      * 
      * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
     id?: number;
     /**
      * 
      * @type {string}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
-    accountName?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    accountNumber?: number;
+    designation?: string;
     /**
      * 
      * @type {string}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
-    openingBank?: string;
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
     /**
      * 
      * @type {string}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
-    _abstract?: string;
+    account1?: string;
     /**
      * 
      * @type {string}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
-    money?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    thousand1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    hundred1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    ten1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    tenThousand?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    thousand2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    hundred2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    ten2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    yuan?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    jiao?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListXinjinjiaokuandanDto
-     */
-    fen?: number;
+    designation1?: string;
     /**
      * 
      * @type {string}
-     * @memberof GetListXinjinjiaokuandanDto
+     * @memberof GetListYewujiesuanshenqingshuDto
      */
-    bankSpecialColumn?: string;
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    number?: string;
 }
 
 /**
@@ -4372,6 +5018,26 @@ export interface PagedResultDtoGetListAppStartPageDto {
 /**
  * 
  * @export
+ * @interface PagedResultDtoGetListDanweixinxidengjibiaoDto
+ */
+export interface PagedResultDtoGetListDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListDanweixinxidengjibiaoDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListDanweixinxidengjibiaoDto>}
+     * @memberof PagedResultDtoGetListDanweixinxidengjibiaoDto
+     */
+    items?: Array<GetListDanweixinxidengjibiaoDto>;
+}
+
+/**
+ * 
+ * @export
  * @interface PagedResultDtoGetListDemoDto
  */
 export interface PagedResultDtoGetListDemoDto {
@@ -4452,21 +5118,21 @@ export interface PagedResultDtoGetListPowerbookDto {
 /**
  * 
  * @export
- * @interface PagedResultDtoGetListXinjinjiaokuandanDto
+ * @interface PagedResultDtoGetListYewujiesuanshenqingshuDto
  */
-export interface PagedResultDtoGetListXinjinjiaokuandanDto {
+export interface PagedResultDtoGetListYewujiesuanshenqingshuDto {
     /**
      * 
      * @type {number}
-     * @memberof PagedResultDtoGetListXinjinjiaokuandanDto
+     * @memberof PagedResultDtoGetListYewujiesuanshenqingshuDto
      */
     totalCount?: number;
     /**
      * 
-     * @type {Array<GetListXinjinjiaokuandanDto>}
-     * @memberof PagedResultDtoGetListXinjinjiaokuandanDto
+     * @type {Array<GetListYewujiesuanshenqingshuDto>}
+     * @memberof PagedResultDtoGetListYewujiesuanshenqingshuDto
      */
-    items?: Array<GetListXinjinjiaokuandanDto>;
+    items?: Array<GetListYewujiesuanshenqingshuDto>;
 }
 
 /**
@@ -5618,6 +6284,332 @@ export interface UpdateCurrentUserInput {
 /**
  * 
  * @export
+ * @interface UpdateDanweixinxidengjibiaoDto
+ */
+export interface UpdateDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    numbe4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address3?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateDemoDto
  */
 export interface UpdateDemoDto {
@@ -6044,111 +7036,111 @@ export interface UpdateUserPermissionsInput {
 /**
  * 
  * @export
- * @interface UpdateXinjinjiaokuandanDto
+ * @interface UpdateYewujiesuanshenqingshuDto
  */
-export interface UpdateXinjinjiaokuandanDto {
+export interface UpdateYewujiesuanshenqingshuDto {
     /**
      * 
      * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
     id?: number;
     /**
      * 
      * @type {string}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    accountName?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    accountNumber?: number;
+    designation?: string;
     /**
      * 
      * @type {string}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    openingBank?: string;
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
     /**
      * 
      * @type {string}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    _abstract?: string;
+    account1?: string;
     /**
      * 
      * @type {string}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    money?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    thousand1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    hundred1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    ten1?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    tenThousand?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    thousand2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    hundred2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    ten2?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    yuan?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    jiao?: number;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateXinjinjiaokuandanDto
-     */
-    fen?: number;
+    designation1?: string;
     /**
      * 
      * @type {string}
-     * @memberof UpdateXinjinjiaokuandanDto
+     * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    bankSpecialColumn?: string;
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    number?: string;
 }
 
 /**
@@ -10541,6 +11533,467 @@ export class ConfigurationApi extends BaseAPI {
      */
     public appConfigurationUpdateAllSettings(input: any, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return ConfigurationApiFp(this.configuration).appConfigurationUpdateAllSettings(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * DanweixinxidengjibiaoApi - fetch parameter creator
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoCreate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoDelete.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGet.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGetAll.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoUpdate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DanweixinxidengjibiaoApi - functional programming interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * DanweixinxidengjibiaoApi - factory interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * DanweixinxidengjibiaoApi - object-oriented interface
+ * @export
+ * @class DanweixinxidengjibiaoApi
+ * @extends {BaseAPI}
+ */
+export class DanweixinxidengjibiaoApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateDanweixinxidengjibiaoDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateDanweixinxidengjibiaoDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }
@@ -20375,25 +21828,25 @@ export class UserLoginApi extends BaseAPI {
 }
 
 /**
- * XianjinjiaokuandanApi - fetch parameter creator
+ * YewujiesuanshenqingshuApi - fetch parameter creator
  * @export
  */
-export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: Configuration) {
+export const YewujiesuanshenqingshuApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanCreate.');
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuCreate.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Create`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Create`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
@@ -20413,7 +21866,7 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"CreateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = (<any>"CreateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
 
             return {
@@ -20429,12 +21882,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanDelete.');
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuDelete.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Delete`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Delete`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
@@ -20470,12 +21923,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanGet.');
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGet.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Get`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Get`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
@@ -20511,12 +21964,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanGetAll.');
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGetAll.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/GetAll`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/GetAll`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
@@ -20546,18 +21999,18 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
         },
         /**
          * 
-         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input','Required parameter input was null or undefined when calling appXianjinjiaokuandanUpdate.');
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuUpdate.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Update`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Update`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {} as any;
@@ -20577,7 +22030,7 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = (<any>"UpdateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = (<any>"UpdateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
 
             return {
@@ -20589,21 +22042,21 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration?: 
 };
 
 /**
- * XianjinjiaokuandanApi - functional programming interface
+ * YewujiesuanshenqingshuApi - functional programming interface
  * @export
  */
-export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
+export const YewujiesuanshenqingshuApiFp = function(configuration?: Configuration) {
     return {
         /**
          * 
-         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -20622,8 +22075,8 @@ export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -20642,8 +22095,8 @@ export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -20662,8 +22115,8 @@ export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListXinjinjiaokuandanDto> {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -20676,14 +22129,14 @@ export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
         },
         /**
          * 
-         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListXinjinjiaokuandanDto> {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -20698,21 +22151,21 @@ export const XianjinjiaokuandanApiFp = function(configuration?: Configuration) {
 };
 
 /**
- * XianjinjiaokuandanApi - factory interface
+ * YewujiesuanshenqingshuApi - factory interface
  * @export
  */
-export const XianjinjiaokuandanApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+export const YewujiesuanshenqingshuApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
     return {
         /**
          * 
-         * @param {CreateXinjinjiaokuandanDto} input 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          * 
@@ -20722,8 +22175,8 @@ export const XianjinjiaokuandanApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          * 
@@ -20733,8 +22186,8 @@ export const XianjinjiaokuandanApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          * 
@@ -20744,41 +22197,41 @@ export const XianjinjiaokuandanApiFactory = function (configuration?: Configurat
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          * 
-         * @param {UpdateXinjinjiaokuandanDto} input 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
     };
 };
 
 /**
- * XianjinjiaokuandanApi - object-oriented interface
+ * YewujiesuanshenqingshuApi - object-oriented interface
  * @export
- * @class XianjinjiaokuandanApi
+ * @class YewujiesuanshenqingshuApi
  * @extends {BaseAPI}
  */
-export class XianjinjiaokuandanApi extends BaseAPI {
+export class YewujiesuanshenqingshuApi extends BaseAPI {
     /**
      * 
-     * @param {CreateXinjinjiaokuandanDto} input 
+     * @param {CreateYewujiesuanshenqingshuDto} input 
      * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    public appXianjinjiaokuandanCreate(input: CreateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    public appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
     /**
@@ -20788,10 +22241,10 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    public appXianjinjiaokuandanDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    public appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
     /**
@@ -20801,10 +22254,10 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    public appXianjinjiaokuandanGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    public appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
     /**
@@ -20814,23 +22267,23 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    public appXianjinjiaokuandanGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    public appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
     /**
      * 
-     * @param {UpdateXinjinjiaokuandanDto} input 
+     * @param {UpdateYewujiesuanshenqingshuDto} input 
      * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    public appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    public appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }

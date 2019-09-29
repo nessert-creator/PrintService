@@ -326,6 +326,12 @@
     <Compile Include="AppStartPages\Dto\GetListAppStartPageDto.cs" />
     <Compile Include="AppStartPages\Dto\UpdateAppStartPageDto.cs" />
     <Compile Include="AppStartPages\IAppStartPageAppService.cs" />
+    <Compile Include="Danweixinxidengjibiaos\DanweixinxidengjibiaoAppService.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\CreateDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\GetDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\GetListDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\UpdateDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\IDanweixinxidengjibiaoAppService.cs" />
     <Compile Include="DragVerifications\DragVerificationAppService.cs" />
     <Compile Include="DragVerifications\Dto\CheckCodeInput.cs" />
     <Compile Include="DragVerifications\Dto\CheckCodeOutput.cs" />
@@ -424,6 +430,12 @@
     <Compile Include="Powerbooks\PowerbookAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AsyncMFCrudAppService.cs" />
+    <Compile Include="Registrations\Dto\CreateRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\GetListRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\GetRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\UpdateRegistrationDto.cs" />
+    <Compile Include="Registrations\IRegistrationAppService.cs" />
+    <Compile Include="Registrations\RegistrationAppService.cs" />
     <Compile Include="Roles\Dto\CreateOrUpdateRoleInput.cs" />
     <Compile Include="Roles\Dto\CreateRoleDto.cs" />
     <Compile Include="Roles\Dto\GetRoleForEditOutput.cs" />
@@ -433,6 +445,12 @@
     <Compile Include="Roles\Dto\RoleEditDto.cs" />
     <Compile Include="Roles\Dto\RoleListDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
+    <Compile Include="Shouquanshus\Dto\CreateShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\GetListShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\GetShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\UpdateShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\IShouquanshuAppService.cs" />
+    <Compile Include="Shouquanshus\ShouquanshuAppService.cs" />
     <Compile Include="Users\Dto\CreateOrUpdateUserInput.cs" />
     <Compile Include="Users\Dto\CreateUserDto.cs" />
     <Compile Include="Users\Dto\GetUserLoginsInput.cs" />
@@ -470,18 +488,18 @@
     <Compile Include="Users\Profile\ProfileAppService.cs" />
     <Compile Include="Users\UserAppService.cs" />
     <Compile Include="Users\UserLoginAppService.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\CreateYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\GetYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\GetListYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\UpdateYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\IYewujiesuanshenqingshuAppService.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\YewujiesuanshenqingshuAppService.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\CreateYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\GetListYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\GetYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\UpdataYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\IYwdlsqbiaoAppService.cs" />
     <Compile Include="Ywdlsqbiaos\YwdlsqbiaoAppService.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\CreateXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetListXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\UpdateXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\IXianjinjiaokuandanAppService.cs" />
-    <Compile Include="Xianjinjiaokuandan\XianjinjiaokuandanAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
