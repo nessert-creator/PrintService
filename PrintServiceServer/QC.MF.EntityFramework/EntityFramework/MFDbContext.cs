@@ -17,6 +17,7 @@ using QC.MF.AppStartPages;
 using QC.MF.Powerbooks;
 using QC.MF.Ywdlsqbiaos;
 using QC.MF.Xianjinjiaokuandans;
+using QC.MF.Jszhsqshus;
 
 namespace QC.MF.EntityFramework
 {
@@ -40,6 +41,7 @@ namespace QC.MF.EntityFramework
         public IDbSet<Xianjinjiaokuandan> Xianjinjiaokuandan { get; set; }
         public IDbSet<Powerbook> Powerbook { get; set; }
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
+        public IDbSet<Jszhsqshu> Jszhsqshu { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

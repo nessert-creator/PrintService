@@ -5,7 +5,7 @@ namespace QC.MF.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class merge20190916 : DbMigration
+    public partial class gaozhen20190923 : DbMigration
     {
         public override void Up()
         {
@@ -39,6 +39,36 @@ namespace QC.MF.Migrations
                 {
                     { "DynamicFilter_Jingzhangdan_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Jszhsqshus",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Accounttitle = c.String(),
+                        Bankname = c.String(),
+                        Bankcode = c.String(),
+                        Account = c.String(),
+                        Naturezccount = c.String(),
+                        Basic = c.String(),
+                        Special = c.String(),
+                        General = c.String(),
+                        Temporary = c.String(),
+                        Personal = c.String(),
+                        Accountnumber = c.String(),
+                        Pinreasons = c.String(),
+                        Species = c.String(),
+                        Anumberof = c.String(),
+                        Allnumbers = c.String(),
+                        Fillingexplanation = c.String(),
+                        Year = c.Int(nullable: false),
+                        Month = c.Int(nullable: false),
+                        Day = c.Int(nullable: false),
+                        Year1 = c.Int(nullable: false),
+                        Month1 = c.Int(nullable: false),
+                        Day1 = c.Int(nullable: false),
+                    })
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
@@ -103,6 +133,10 @@ namespace QC.MF.Migrations
                         Certificatetype = c.String(),
                         Idnumber = c.Int(nullable: false),
                         Contactnumber = c.String(),
+                        Name2 = c.String(),
+                        Certificatetype2 = c.String(),
+                        Idnumber2 = c.Int(nullable: false),
+                        Contactnumber2 = c.String(),
                         Name1 = c.String(),
                         Certificatetype1 = c.String(),
                         Idnumber1 = c.Int(nullable: false),
@@ -121,6 +155,7 @@ namespace QC.MF.Migrations
                 {
                     { "DynamicFilter_Powerbook_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
+            DropTable("dbo.Jszhsqshus");
             DropTable("dbo.Jingzhangdans",
                 removedAnnotations: new Dictionary<string, object>
                 {

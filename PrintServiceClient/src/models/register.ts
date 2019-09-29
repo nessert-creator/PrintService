@@ -3,6 +3,7 @@ import { remoteUrl } from '../utils/url';
 import { notification } from 'antd';
 import * as api from './../api/api';
 import { createApiAuthParam } from './../api/apiUtil.js';
+
 export default {
 	namespace: 'register',
 	state: {

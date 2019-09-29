@@ -364,6 +364,12 @@
     <Compile Include="Jingzhangdans\Dto\UpdateJiangzhangdanDto.cs" />
     <Compile Include="Jingzhangdans\IjingzhangdanAppService.cs" />
     <Compile Include="Jingzhangdans\JingzhangdanAppService.cs" />
+    <Compile Include="Jszhsqshus\Dto\CreateJszhsqshuDto.cs" />
+    <Compile Include="Jszhsqshus\Dto\GetJszhsqshuDto.cs" />
+    <Compile Include="Jszhsqshus\Dto\GetListJszhsqshuDto.cs" />
+    <Compile Include="Jszhsqshus\Dto\UpdataJszhsqshuDto.cs" />
+    <Compile Include="Jszhsqshus\IJszhsqshuAppService.cs" />
+    <Compile Include="Jszhsqshus\JszhsqshuAppService.cs" />
     <Compile Include="Menus\CodeNavigationProvider.cs" />
     <Compile Include="Menus\Dto\CreateMenuInput.cs" />
     <Compile Include="Menus\Dto\DeleteMenuInput.cs" />

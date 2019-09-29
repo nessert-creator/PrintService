@@ -1076,6 +1076,146 @@ export interface CreateJingzhangdanDto {
 }
 
 /**
+ * 
+ * @export
+ * @interface CreateJszhsqshuDto
+ */
+export interface CreateJszhsqshuDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    day1?: number;
+}
+
+/**
  * 创建菜单参数
  * @export
  * @interface CreateMenuInput
@@ -1386,73 +1526,97 @@ export interface CreateYwdlsqbiaoDto {
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -2570,6 +2734,152 @@ export interface GetListJiangzhangdanDto {
 /**
  * 
  * @export
+ * @interface GetListJszhsqshuDto
+ */
+export interface GetListJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    day1?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListPowerbookDto
  */
 export interface GetListPowerbookDto {
@@ -2762,73 +3072,97 @@ export interface GetListYwdlsqbiaoDto {
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -4078,6 +4412,26 @@ export interface PagedResultDtoGetListJiangzhangdanDto {
 /**
  * 
  * @export
+ * @interface PagedResultDtoGetListJszhsqshuDto
+ */
+export interface PagedResultDtoGetListJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListJszhsqshuDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListJszhsqshuDto>}
+     * @memberof PagedResultDtoGetListJszhsqshuDto
+     */
+    items?: Array<GetListJszhsqshuDto>;
+}
+
+/**
+ * 
+ * @export
  * @interface PagedResultDtoGetListPowerbookDto
  */
 export interface PagedResultDtoGetListPowerbookDto {
@@ -4983,6 +5337,152 @@ export interface UnblockUserInput {
 /**
  * 
  * @export
+ * @interface UpdataJszhsqshuDto
+ */
+export interface UpdataJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    day1?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateAndroidAppEditionInput
  */
 export interface UpdateAndroidAppEditionInput {
@@ -5668,73 +6168,97 @@ export interface UpdateYwdlsqbiaoDto {
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -12431,6 +12955,467 @@ export class JingzhangdanApi extends BaseAPI {
      */
     public appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return JingzhangdanApiFp(this.configuration).appJingzhangdanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * JszhsqshuApi - fetch parameter creator
+ * @export
+ */
+export const JszhsqshuApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuCreate.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateJszhsqshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuDelete.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuGet.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuGetAll.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuUpdate.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdataJszhsqshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * JszhsqshuApi - functional programming interface
+ * @export
+ */
+export const JszhsqshuApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * JszhsqshuApi - factory interface
+ * @export
+ */
+export const JszhsqshuApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * JszhsqshuApi - object-oriented interface
+ * @export
+ * @class JszhsqshuApi
+ * @extends {BaseAPI}
+ */
+export class JszhsqshuApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateJszhsqshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdataJszhsqshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }

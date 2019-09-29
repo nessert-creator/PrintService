@@ -13,11 +13,7 @@ import moment from 'moment';
 
 function Ywdlsqbiao({ form, record }) {
 	const columns = [
-		{
-			title: '委托人信息',
-			dataIndex: 'Clientinformation',
-			sorter: true
-		},
+
 		{
 			title: '客户名称',
 			dataIndex: 'customername',
@@ -42,11 +38,6 @@ function Ywdlsqbiao({ form, record }) {
 		{
 			title: '联系电话',
 			dataIndex: 'contactnumber',
-			sorter: true
-		},
-		{
-			title: '代理人信息',
-			dataIndex: 'Agentinformation',
 			sorter: true
 		},
 		{
@@ -151,9 +142,22 @@ function Ywdlsqbiao({ form, record }) {
 			deleteApi={new api.YwdlsqbiaoApi().appYwdlsqbiaoDelete}
 			updateApi={new api.YwdlsqbiaoApi().appYwdlsqbiaoUpdate}
 			createApi={new api.YwdlsqbiaoApi().appYwdlsqbiaoCreate}
-			deleteBatchApi={new api.DemoApi().appYwdlsqbiaoDeleteBatch}
 			columns={columns}
 			formNode={formNode}
+
+			customColumnOption={(text, record) => (
+                <span>
+                    <a onClick={() => {
+                        dispatch({
+                            type: "print/printYwdlsqbiao",
+                            payload:record
+                        })
+                    }}>
+                        打印
+                        </a>
+                    <span style={{ marginLeft: '6px' }} />
+                </span>
+            )}
 			filterProps={{
 				filters,
 				searchProvide: 'sql'

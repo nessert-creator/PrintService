@@ -27,6 +27,7 @@ import crud from './crud';
 import serverImageBrowse from './serverImageBrowse';
 import appEdition from './appEdition';
 import print from './print';
+import ywdlsqbiao from './ywdlsqbiao';
 import xinjinjiaokuandan from './xinjinjiaokuandan';
 import jiangzhangdan from './jiangzhangdan';
 import powerbook from './powerbook';
@@ -65,6 +66,7 @@ export function registerModels(app) {
     app.model(serverImageBrowse);
     app.model(appEdition);
     app.model(print);
+    app.model(ywdlsqbiao);
     app.model(xinjinjiaokuandan);
     app.model(jiangzhangdan);
     app.model(powerbook);
