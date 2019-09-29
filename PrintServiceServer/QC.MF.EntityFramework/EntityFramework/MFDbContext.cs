@@ -17,6 +17,7 @@ using QC.MF.AppStartPages;
 using QC.MF.Powerbooks;
 using QC.MF.Ywdlsqbiaos;
 using QC.MF.Xianjinjiaokuandans;
+using QC.MF.danweixinxidengjibiao;
 
 namespace QC.MF.EntityFramework
 {
@@ -41,6 +42,7 @@ namespace QC.MF.EntityFramework
         public IDbSet<Powerbook> Powerbook { get; set; }
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
 
+        public IDbSet<Danweixinxidengjibiao> Danweixinxidengjibiao { get; set; }
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not

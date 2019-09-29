@@ -3800,6 +3800,438 @@ export class ConfigurationApi extends BaseAPI {
     }
 }
 /**
+ * DanweixinxidengjibiaoApi - fetch parameter creator
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFetchParamCreator = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDanweixinxidengjibiaoCreate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("CreateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDanweixinxidengjibiaoDelete.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGet.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGetAll.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {UpdateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appDanweixinxidengjibiaoUpdate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("UpdateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    };
+};
+/**
+ * DanweixinxidengjibiaoApi - functional programming interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFp = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    };
+};
+/**
+ * DanweixinxidengjibiaoApi - factory interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFactory = function (configuration, fetch, basePath) {
+    return {
+        /**
+         *
+         * @param {CreateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateDanweixinxidengjibiaoDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+/**
+ * DanweixinxidengjibiaoApi - object-oriented interface
+ * @export
+ * @class DanweixinxidengjibiaoApi
+ * @extends {BaseAPI}
+ */
+export class DanweixinxidengjibiaoApi extends BaseAPI {
+    /**
+     *
+     * @param {CreateDanweixinxidengjibiaoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {UpdateDanweixinxidengjibiaoDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+}
+/**
  * DemoApi - fetch parameter creator
  * @export
  */
@@ -12594,25 +13026,25 @@ export class UserLoginApi extends BaseAPI {
     }
 }
 /**
- * XianjinjiaokuandanApi - fetch parameter creator
+ * YewujiesuanshenqingshuApi - fetch parameter creator
  * @export
  */
-export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
+export const YewujiesuanshenqingshuApiFetchParamCreator = function (configuration) {
     return {
         /**
          *
-         * @param {CreateXinjinjiaokuandanDto} input
+         * @param {CreateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanCreate.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appYewujiesuanshenqingshuCreate.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Create`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Create`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12628,7 +13060,7 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("CreateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = ("CreateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
                 url: url.format(localVarUrlObj),
@@ -12643,12 +13075,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanDelete.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appYewujiesuanshenqingshuDelete.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Delete`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Delete`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12679,12 +13111,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGet.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGet.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Get`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Get`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12715,12 +13147,12 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanGetAll.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGetAll.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/GetAll`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/GetAll`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12745,18 +13177,18 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
         },
         /**
          *
-         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {UpdateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+        appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
             // verify required parameter 'input' is not null or undefined
             if (input === null || input === undefined) {
-                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appXianjinjiaokuandanUpdate.');
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appYewujiesuanshenqingshuUpdate.');
             }
-            const localVarPath = `/api/services/app/xianjinjiaokuandan/Update`;
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Update`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
             const localVarHeaderParameter = {};
@@ -12772,7 +13204,7 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-            const needsSerialization = ("UpdateXinjinjiaokuandanDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            const needsSerialization = ("UpdateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
             localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
             return {
                 url: url.format(localVarUrlObj),
@@ -12782,21 +13214,21 @@ export const XianjinjiaokuandanApiFetchParamCreator = function (configuration) {
     };
 };
 /**
- * XianjinjiaokuandanApi - functional programming interface
+ * YewujiesuanshenqingshuApi - functional programming interface
  * @export
  */
-export const XianjinjiaokuandanApiFp = function (configuration) {
+export const YewujiesuanshenqingshuApiFp = function (configuration) {
     return {
         /**
          *
-         * @param {CreateXinjinjiaokuandanDto} input
+         * @param {CreateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12816,8 +13248,8 @@ export const XianjinjiaokuandanApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12837,8 +13269,8 @@ export const XianjinjiaokuandanApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12858,8 +13290,8 @@ export const XianjinjiaokuandanApiFp = function (configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12873,14 +13305,14 @@ export const XianjinjiaokuandanApiFp = function (configuration) {
         },
         /**
          *
-         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {UpdateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            const localVarFetchArgs = XianjinjiaokuandanApiFetchParamCreator(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options);
+        appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options);
             return (fetch = portableFetch, basePath = BASE_PATH) => {
                 return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                     if (response.status >= 200 && response.status < 300) {
@@ -12895,21 +13327,21 @@ export const XianjinjiaokuandanApiFp = function (configuration) {
     };
 };
 /**
- * XianjinjiaokuandanApi - factory interface
+ * YewujiesuanshenqingshuApi - factory interface
  * @export
  */
-export const XianjinjiaokuandanApiFactory = function (configuration, fetch, basePath) {
+export const YewujiesuanshenqingshuApiFactory = function (configuration, fetch, basePath) {
     return {
         /**
          *
-         * @param {CreateXinjinjiaokuandanDto} input
+         * @param {CreateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -12919,8 +13351,8 @@ export const XianjinjiaokuandanApiFactory = function (configuration, fetch, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -12930,8 +13362,8 @@ export const XianjinjiaokuandanApiFactory = function (configuration, fetch, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
@@ -12941,40 +13373,40 @@ export const XianjinjiaokuandanApiFactory = function (configuration, fetch, base
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
         /**
          *
-         * @param {UpdateXinjinjiaokuandanDto} input
+         * @param {UpdateYewujiesuanshenqingshuDto} input
          * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
          * @param {string} [authorization] token
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
-            return XianjinjiaokuandanApiFp(configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
         },
     };
 };
 /**
- * XianjinjiaokuandanApi - object-oriented interface
+ * YewujiesuanshenqingshuApi - object-oriented interface
  * @export
- * @class XianjinjiaokuandanApi
+ * @class YewujiesuanshenqingshuApi
  * @extends {BaseAPI}
  */
-export class XianjinjiaokuandanApi extends BaseAPI {
+export class YewujiesuanshenqingshuApi extends BaseAPI {
     /**
      *
-     * @param {CreateXinjinjiaokuandanDto} input
+     * @param {CreateYewujiesuanshenqingshuDto} input
      * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
     /**
      *
@@ -12983,10 +13415,10 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
     /**
      *
@@ -12995,10 +13427,10 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
     /**
      *
@@ -13007,22 +13439,22 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
     /**
      *
-     * @param {UpdateXinjinjiaokuandanDto} input
+     * @param {UpdateYewujiesuanshenqingshuDto} input
      * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
      * @param {string} [authorization] token
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof XianjinjiaokuandanApi
+     * @memberof YewujiesuanshenqingshuApi
      */
-    appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options) {
-        return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 }
 /**

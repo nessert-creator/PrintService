@@ -326,6 +326,12 @@
     <Compile Include="AppStartPages\Dto\GetListAppStartPageDto.cs" />
     <Compile Include="AppStartPages\Dto\UpdateAppStartPageDto.cs" />
     <Compile Include="AppStartPages\IAppStartPageAppService.cs" />
+    <Compile Include="Danweixinxidengjibiaos\DanweixinxidengjibiaoAppService.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\CreateDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\GetDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\GetListDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\Dto\UpdateDanweixinxidengjibiaoDto.cs" />
+    <Compile Include="Danweixinxidengjibiaos\IDanweixinxidengjibiaoAppService.cs" />
     <Compile Include="DragVerifications\DragVerificationAppService.cs" />
     <Compile Include="DragVerifications\Dto\CheckCodeInput.cs" />
     <Compile Include="DragVerifications\Dto\CheckCodeOutput.cs" />
@@ -464,18 +470,18 @@
     <Compile Include="Users\Profile\ProfileAppService.cs" />
     <Compile Include="Users\UserAppService.cs" />
     <Compile Include="Users\UserLoginAppService.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\CreateYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\GetYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\GetListYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\Dto\UpdateYewujiesuanshenqingshuDto.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\IYewujiesuanshenqingshuAppService.cs" />
+    <Compile Include="Yewujiesuanshenqingshus\YewujiesuanshenqingshuAppService.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\CreateYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\GetListYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\GetYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\Dto\UpdataYwdlsqbiaoDto.cs" />
     <Compile Include="Ywdlsqbiaos\IYwdlsqbiaoAppService.cs" />
     <Compile Include="Ywdlsqbiaos\YwdlsqbiaoAppService.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\CreateXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetListXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\GetXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\Dto\UpdateXinjinjiaokuandanDto.cs" />
-    <Compile Include="Xianjinjiaokuandan\IXianjinjiaokuandanAppService.cs" />
-    <Compile Include="Xianjinjiaokuandan\XianjinjiaokuandanAppService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
