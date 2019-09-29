@@ -3,11 +3,12 @@ import * as ReactDOM from 'react-dom';
 import { message } from 'antd';
 import * as api from './../api/api';
 import { createApiAuthParam } from './../api/apiUtil';
-import { PrintReceipt, PrintIOU } from './../utils/print';
+import { PrintReceipt, PrintIOU, PrintXinjinjiaokuandan} from './../utils/print';
 import ActiveCardReceipt from './../routes/Print/ActiveCardReceipt';
 import InactiveCardReceipt from './../routes/Print/InactiveCardReceipt';
 import IOU from './../routes/Print/IOU';
 import AccountReceipt from './../routes/Print/AccountReceipt';
+import Xinjinjiaokuandan from './../routes/Print/Xinjinjiaokuandan';
 
 function print(reactElement, printFunction) {
 	let div = document.createElement('div');
@@ -75,6 +76,10 @@ export default {
 		*printAccountReceipt({ payload }, { select }) {
 			payload.receipt.examinationCenterName = yield select(state => state.indexpage.setting.systemName);
 			print(<AccountReceipt accountReceipt={payload.receipt} />, PrintReceipt);
+		},
+		*printXinjinjiaokuandan({ payload }, { call, put }) {
+			console.log(payload)
+			print(<Xinjinjiaokuandan xinjinjiaokuandan={payload } />, PrintXinjinjiaokuandan);
 		},
 	},
 	subscriptions: {}

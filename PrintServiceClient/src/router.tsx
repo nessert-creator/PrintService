@@ -49,6 +49,10 @@ import Powerbook from './routes/Powerbook/Powerbook';
 import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
 import Ywdlsqbiao from './routes/Ywdlsqbiao/Ywdlsqbiao';
 import LuruYwdlsqbiao from './routes/Ywdlsqbiao/LuruYwdlsqbiao';
+import Shouqunweituoshu1 from './routes/Shouqunweituoshu1/Shouqunweituoshu1';
+import LuruShouqunweituoshu1 from './routes/Shouqunweituoshu1/LuruShouqunweituoshu1';
+import Shouqunweituoshu2 from './routes/Shouqunweituoshu2/Shouqunweituoshu2';
+import LuruShouqunweituoshu2 from './routes/Shouqunweituoshu2/LuruShouqunweituoshu2';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -102,12 +106,16 @@ export default function RouterConfig({ history }) {
 					<Route path="/jiangzhangdan" component={Jiangzhangdan} />
 					<Route path="/powerbook" component={Powerbook} />
 					<Route path="/ywdlsqbiao" component={Ywdlsqbiao} />
+					<Route path="/Shouqunweituoshu1" component={Shouqunweituoshu1} />
+					<Route path="/Shouqunweituoshu2" component={Shouqunweituoshu2} />
 				</Route>
 
-				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
+				<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
 				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
 				<Route path="/luruPowerbook" component={LuruPowerbook} />
 				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao} />
+				<Route path="/luruShouqunweituoshu1" component={LuruShouqunweituoshu1} />
+				<Route path="/luruShouqunweituoshu2" component={LuruShouqunweituoshu2} />
 			</Router>
 		</LocaleProvider>
 	);

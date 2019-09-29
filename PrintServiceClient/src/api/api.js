@@ -10973,6 +10973,870 @@ export class SessionApi extends BaseAPI {
     }
 }
 /**
+ * Shouqunweituoshu1Api - fetch parameter creator
+ * @export
+ */
+export const Shouqunweituoshu1ApiFetchParamCreator = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu1Create.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu1/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("CreateShouqunweituoshus1Dto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu1Delete.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu1/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu1Get.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu1/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu1GetAll.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu1/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu1Update.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu1/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("UpdateShouquanweituoshu1Dto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    };
+};
+/**
+ * Shouqunweituoshu1Api - functional programming interface
+ * @export
+ */
+export const Shouqunweituoshu1ApiFp = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu1ApiFetchParamCreator(configuration).appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu1ApiFetchParamCreator(configuration).appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu1ApiFetchParamCreator(configuration).appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu1ApiFetchParamCreator(configuration).appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu1ApiFetchParamCreator(configuration).appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    };
+};
+/**
+ * Shouqunweituoshu1Api - factory interface
+ * @export
+ */
+export const Shouqunweituoshu1ApiFactory = function (configuration, fetch, basePath) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu1ApiFp(configuration).appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu1ApiFp(configuration).appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu1ApiFp(configuration).appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu1ApiFp(configuration).appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu1Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu1ApiFp(configuration).appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+/**
+ * Shouqunweituoshu1Api - object-oriented interface
+ * @export
+ * @class Shouqunweituoshu1Api
+ * @extends {BaseAPI}
+ */
+export class Shouqunweituoshu1Api extends BaseAPI {
+    /**
+     *
+     * @param {CreateShouqunweituoshus1Dto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu1Api
+     */
+    appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu1ApiFp(this.configuration).appShouqunweituoshu1Create(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu1Api
+     */
+    appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu1ApiFp(this.configuration).appShouqunweituoshu1Delete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu1Api
+     */
+    appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu1ApiFp(this.configuration).appShouqunweituoshu1Get(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu1Api
+     */
+    appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu1ApiFp(this.configuration).appShouqunweituoshu1GetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {UpdateShouquanweituoshu1Dto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu1Api
+     */
+    appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu1ApiFp(this.configuration).appShouqunweituoshu1Update(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+}
+/**
+ * Shouqunweituoshu2Api - fetch parameter creator
+ * @export
+ */
+export const Shouqunweituoshu2ApiFetchParamCreator = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu2Create.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu2/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("CreateShouqunweituoshus2Dto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu2Delete.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu2/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu2Get.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu2/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu2GetAll.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu2/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appShouqunweituoshu2Update.');
+            }
+            const localVarPath = `/api/services/app/shouqunweituoshu2/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("UpdateShouquanweituoshu2Dto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    };
+};
+/**
+ * Shouqunweituoshu2Api - functional programming interface
+ * @export
+ */
+export const Shouqunweituoshu2ApiFp = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu2ApiFetchParamCreator(configuration).appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu2ApiFetchParamCreator(configuration).appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu2ApiFetchParamCreator(configuration).appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu2ApiFetchParamCreator(configuration).appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = Shouqunweituoshu2ApiFetchParamCreator(configuration).appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    };
+};
+/**
+ * Shouqunweituoshu2Api - factory interface
+ * @export
+ */
+export const Shouqunweituoshu2ApiFactory = function (configuration, fetch, basePath) {
+    return {
+        /**
+         *
+         * @param {CreateShouqunweituoshus2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu2ApiFp(configuration).appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu2ApiFp(configuration).appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu2ApiFp(configuration).appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu2ApiFp(configuration).appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateShouquanweituoshu2Dto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options) {
+            return Shouqunweituoshu2ApiFp(configuration).appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+/**
+ * Shouqunweituoshu2Api - object-oriented interface
+ * @export
+ * @class Shouqunweituoshu2Api
+ * @extends {BaseAPI}
+ */
+export class Shouqunweituoshu2Api extends BaseAPI {
+    /**
+     *
+     * @param {CreateShouqunweituoshus2Dto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu2Api
+     */
+    appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu2ApiFp(this.configuration).appShouqunweituoshu2Create(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu2Api
+     */
+    appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu2ApiFp(this.configuration).appShouqunweituoshu2Delete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu2Api
+     */
+    appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu2ApiFp(this.configuration).appShouqunweituoshu2Get(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu2Api
+     */
+    appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu2ApiFp(this.configuration).appShouqunweituoshu2GetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {UpdateShouquanweituoshu2Dto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof Shouqunweituoshu2Api
+     */
+    appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options) {
+        return Shouqunweituoshu2ApiFp(this.configuration).appShouqunweituoshu2Update(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+}
+/**
  * ThirdPartyLoginForTokenApi - fetch parameter creator
  * @export
  */

@@ -14,18 +14,33 @@ import moment from 'moment';
 function Xinjinjiaokuandan({ form, record }) {
     const columns = [
         {
+            title: '年',
+            dataIndex: 'nian',
+            sorter: true
+        },
+        {
+            title: '月',
+            dataIndex: 'yue',
+            sorter: true
+        },
+        {
+            title: '日',
+            dataIndex: 'ri',
+            sorter: true
+        },
+        {
             title: '收款单位',
-            dataIndex: 'accountname',
+            dataIndex: 'accountName',
             sorter: true
         },
         {
             title: '收款账号',
-            dataIndex: 'accountnumber',
+            dataIndex: 'accountNumber',
             sorter: true
         },
         {
             title: '开户行',
-            dataIndex: 'openingbank',
+            dataIndex: 'openingBank',
             sorter: true,
         },
         {
@@ -40,7 +55,7 @@ function Xinjinjiaokuandan({ form, record }) {
         },
         {
             title: '银行专用栏',
-            dataIndex: 'bankspecialcolumn',
+            dataIndex: 'bankSpecialColumn',
             sorter: true
         },
     ];
@@ -51,6 +66,24 @@ function Xinjinjiaokuandan({ form, record }) {
     };
     const formNode = (
         <Form>
+            <FormItem label="年" {...formCol}>
+                {getFieldDecorator('nian', {
+                    initialValue: record.accountname,
+                    rules: [{ required: true, message: '请填写年' }]
+                })(<Input />)}
+            </FormItem>
+            <FormItem label="月" {...formCol}>
+                {getFieldDecorator('yue', {
+                    initialValue: record.accountname,
+                    rules: [{ required: true, message: '请填写月' }]
+                })(<Input />)}
+            </FormItem>
+            <FormItem label="日" {...formCol}>
+                {getFieldDecorator('ri', {
+                    initialValue: record.accountname,
+                    rules: [{ required: true, message: '请填写日' }]
+                })(<Input />)}
+            </FormItem>
             <FormItem label="收款单位" {...formCol}>
                 {getFieldDecorator('accountname', {
                     initialValue: record.accountname,
@@ -81,13 +114,28 @@ function Xinjinjiaokuandan({ form, record }) {
                 })(<Input />)}
             </FormItem>
             <FormItem label="银行专用栏" {...formCol}>
-                {getFieldDecorator('bankspecialcolumn', {
-                    initialValue: record.bankspecialcolumn 
+                {getFieldDecorator('bankSpecialColumn', {
+                    initialValue: record.bankspecialcolumn
                 })(<Input />)}
             </FormItem>
         </Form>
     );
     const filters = [
+        {
+            name: 'nian',
+            displayName: '年',
+            option: 'like'
+        },
+        {
+            name: 'yue',
+            displayName: '月',
+            option: 'like'
+        },
+        {
+            name: 'ri',
+            displayName: '日',
+            option: 'like'
+        },
         {
             name: 'accountname',
             displayName: '收款单位',
@@ -102,7 +150,7 @@ function Xinjinjiaokuandan({ form, record }) {
             name: 'openingbank',
             displayName: '开户行',
             option: 'like'
-        }
+        },
         {
             name: 'abstract',
             displayName: '摘要',
@@ -129,6 +177,22 @@ function Xinjinjiaokuandan({ form, record }) {
             createApi={new api.XianjinjiaokuandanApi().appXianjinjiaokuandanCreate}
             columns={columns}
             formNode={formNode}
+
+            customColumnOption={(text, record) => (
+                <span>
+                    <a onClick={() => {
+
+                        dispatch({
+                            type: "print/printXinjinjiaokuandan",
+                            payload: record
+                        })
+                    }}
+                    >
+                        打印
+            </a>
+                    <span style={{ marginLeft: '6px' }} />
+                </ span >
+            )}
             filterProps={{
                 filters,
                 searchProvide: 'sql'

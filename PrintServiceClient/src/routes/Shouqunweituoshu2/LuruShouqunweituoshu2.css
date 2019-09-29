@@ -1,0 +1,36 @@
+.clearfix:after {
+    clear: both;
+    height: 0;
+    content: "";
+    display: block;
+    visibility: hidden;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.kuan {
+    width: 30%;
+    float: left;
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: unset;
+    text-decoration: underline;
+}
+
+.fudong {
+    float: left;
+    line-height: 50px;
+}
+
+.xia {
+    margin-bottom: -15px;
+}

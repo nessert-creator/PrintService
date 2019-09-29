@@ -1,37 +1,58 @@
-.container {
-    width: 100%;
-    min-height: 100%;
-    /* background: #4f5b75; */
-    overflow: hidden;
-    color: red;
+.clearfix:after {
+    clear: both;
+    height: 0;
+    content: "";
+    display: block;
+    visibility: hidden;
 }
 
 .logo {
-    width: 200px;
-    height: 80px;
-    background-image: url(./timg.jpg)no-repeat;
-    background-size: 100%;
+    background-image: url('./timg.jpg');
+    background-size: 155px;
+    width: 155px;
+    height: 66px;
+    float: left;
 }
 
-.content {
-    width: 50%;
+.container {
+    width: 55%;
     margin: 0 auto;
 }
 
-.title {
-    text-align: center;
-}
-
 .biaoti {
-    font-size: 30px;
-    font-weight: 900;
+    float: left;
+    font-size: 37px;
+    margin: 10px 240px 10px 150px;
 }
 
-.neirong {
-    border: 2px solid red;
+.waikuan {
+    border: 1px solid;
+    display: inline-block;
+    width: 100%;
 }
 
-.baocun {
-    margin-left: 300px;
-    margin-top: 20px;
+.kehukuan {
+    border-bottom: 1px solid;
+}
+
+.kehukj {
+    width: 70%;
+}
+
+.kehutianxie {
+    border-right: 1px solid;
+    text-align: center;
+    display: flex;
+    height: 173px;
+}
+
+.juzhong {
+    display: inline-block;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.padd {
+    padding: 10px;
+    padding-left: 33px;
 }

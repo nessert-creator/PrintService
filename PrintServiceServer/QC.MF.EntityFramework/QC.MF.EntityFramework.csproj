@@ -243,6 +243,30 @@
     <Compile Include="Migrations\201909160157405_merge20190916.Designer.cs">
       <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909160309432_lubinrui20190916.cs" />
+    <Compile Include="Migrations\201909160309432_lubinrui20190916.Designer.cs">
+      <DependentUpon>201909160309432_lubinrui20190916.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909230330446_lubinrui201909231130.cs" />
+    <Compile Include="Migrations\201909230330446_lubinrui201909231130.Designer.cs">
+      <DependentUpon>201909230330446_lubinrui201909231130.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240719450_lubinrui201909241518.cs" />
+    <Compile Include="Migrations\201909240719450_lubinrui201909241518.Designer.cs">
+      <DependentUpon>201909240719450_lubinrui201909241518.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240806177_lubinrui201909241605.cs" />
+    <Compile Include="Migrations\201909240806177_lubinrui201909241605.Designer.cs">
+      <DependentUpon>201909240806177_lubinrui201909241605.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909240810561_lubinrui201909241610.cs" />
+    <Compile Include="Migrations\201909240810561_lubinrui201909241610.Designer.cs">
+      <DependentUpon>201909240810561_lubinrui201909241610.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909280719116_lubinrui201909281511.cs" />
+    <Compile Include="Migrations\201909280719116_lubinrui201909281511.Designer.cs">
+      <DependentUpon>201909280719116_lubinrui201909281511.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MFDataModule.cs" />
@@ -315,6 +339,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909160157405_merge20190916.resx">
       <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909160309432_lubinrui20190916.resx">
+      <DependentUpon>201909160309432_lubinrui20190916.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909230330446_lubinrui201909231130.resx">
+      <DependentUpon>201909230330446_lubinrui201909231130.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240719450_lubinrui201909241518.resx">
+      <DependentUpon>201909240719450_lubinrui201909241518.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240806177_lubinrui201909241605.resx">
+      <DependentUpon>201909240806177_lubinrui201909241605.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909240810561_lubinrui201909241610.resx">
+      <DependentUpon>201909240810561_lubinrui201909241610.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909280719116_lubinrui201909281511.resx">
+      <DependentUpon>201909280719116_lubinrui201909281511.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
