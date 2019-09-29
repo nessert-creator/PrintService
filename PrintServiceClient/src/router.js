@@ -47,6 +47,8 @@ import Powerbook from './routes/Powerbook/Powerbook';
 import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
 import Ywdlsqbiao from './routes/Ywdlsqbiao/Ywdlsqbiao';
 import LuruYwdlsqbiao from './routes/Ywdlsqbiao/LuruYwdlsqbiao';
+import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
+import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -99,12 +101,14 @@ export default function RouterConfig({ history }) {
 					<Route path="/jiangzhangdan" component={Jiangzhangdan}/>
 					<Route path="/powerbook" component={Powerbook}/>
 					<Route path="/ywdlsqbiao" component={Ywdlsqbiao}/>
+					<Route path="/shouquanshu" component={Shouquanshu}/>
 				</Route>
 
 				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan}/>
 				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan}/>
 				<Route path="/luruPowerbook" component={LuruPowerbook}/>
 				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao}/>
+				<Route path="/lurushouquanshu" component={LuruShouquanshu}/>
 			</Router>
 		</LocaleProvider>);
 }

@@ -276,6 +276,7 @@
     <Compile Include="Authorization\Users\UserStore.cs" />
     <Compile Include="Security\PasswordComplexityChecker.cs" />
     <Compile Include="Security\PasswordComplexitySetting.cs" />
+    <Compile Include="Shouquanshus\Shouquanshu.cs" />
     <Compile Include="SMSs\AliSMSSenderManager.cs" />
     <Compile Include="SMSs\ISMSManager.cs" />
     <Compile Include="SMSs\ISMSSenderManager.cs" />
@@ -311,9 +312,7 @@
     <EmbeddedResource Include="Localization\Source\MF.xml" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Folder Include="Jinzhangdan\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

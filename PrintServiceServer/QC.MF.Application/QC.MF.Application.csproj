@@ -427,6 +427,12 @@
     <Compile Include="Roles\Dto\RoleEditDto.cs" />
     <Compile Include="Roles\Dto\RoleListDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
+    <Compile Include="Shouquanshus\Dto\CreateShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\GetListShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\GetShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\Dto\UpdateShouquanshuDto.cs" />
+    <Compile Include="Shouquanshus\IShouquanshuAppService.cs" />
+    <Compile Include="Shouquanshus\ShouquanshuAppService.cs" />
     <Compile Include="Users\Dto\CreateOrUpdateUserInput.cs" />
     <Compile Include="Users\Dto\CreateUserDto.cs" />
     <Compile Include="Users\Dto\GetUserLoginsInput.cs" />

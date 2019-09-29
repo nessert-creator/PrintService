@@ -243,6 +243,18 @@
     <Compile Include="Migrations\201909160157405_merge20190916.Designer.cs">
       <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201909190830228_zhangyf20190919.cs" />
+    <Compile Include="Migrations\201909190830228_zhangyf20190919.Designer.cs">
+      <DependentUpon>201909190830228_zhangyf20190919.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909201301537_zhnagyunfei20199202100.cs" />
+    <Compile Include="Migrations\201909201301537_zhnagyunfei20199202100.Designer.cs">
+      <DependentUpon>201909201301537_zhnagyunfei20199202100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201909260640403_zhangyunfei2019926.cs" />
+    <Compile Include="Migrations\201909260640403_zhangyunfei2019926.Designer.cs">
+      <DependentUpon>201909260640403_zhangyunfei2019926.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MFDataModule.cs" />
@@ -315,6 +327,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201909160157405_merge20190916.resx">
       <DependentUpon>201909160157405_merge20190916.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909190830228_zhangyf20190919.resx">
+      <DependentUpon>201909190830228_zhangyf20190919.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909201301537_zhnagyunfei20199202100.resx">
+      <DependentUpon>201909201301537_zhnagyunfei20199202100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201909260640403_zhangyunfei2019926.resx">
+      <DependentUpon>201909260640403_zhangyunfei2019926.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
