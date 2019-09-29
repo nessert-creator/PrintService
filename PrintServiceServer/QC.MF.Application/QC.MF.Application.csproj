@@ -418,6 +418,12 @@
     <Compile Include="Powerbooks\PowerbookAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AsyncMFCrudAppService.cs" />
+    <Compile Include="Registrations\Dto\CreateRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\GetListRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\GetRegistrationDto.cs" />
+    <Compile Include="Registrations\Dto\UpdateRegistrationDto.cs" />
+    <Compile Include="Registrations\IRegistrationAppService.cs" />
+    <Compile Include="Registrations\RegistrationAppService.cs" />
     <Compile Include="Roles\Dto\CreateOrUpdateRoleInput.cs" />
     <Compile Include="Roles\Dto\CreateRoleDto.cs" />
     <Compile Include="Roles\Dto\GetRoleForEditOutput.cs" />

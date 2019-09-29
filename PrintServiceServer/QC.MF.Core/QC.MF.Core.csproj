@@ -274,6 +274,7 @@
     <Compile Include="Authorization\Users\User.cs" />
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
+    <Compile Include="Registrations\Registration.cs" />
     <Compile Include="Security\PasswordComplexityChecker.cs" />
     <Compile Include="Security\PasswordComplexitySetting.cs" />
     <Compile Include="Shouquanshus\Shouquanshu.cs" />

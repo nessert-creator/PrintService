@@ -1,0 +1,256 @@
+.container {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content_header>span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.day {
+    padding-left: 600px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.outsideborder {
+    border: 1px solid black;
+}
+
+.customer {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.border1 {
+    border-bottom: 1px solid black;
+}
+
+.type {
+    margin-left: -257px;
+}
+
+.border2 {
+    width: 153.8%;
+    position: relative;
+    left: -110px;
+    border-bottom: 1px solid black;
+}
+
+.often_address1 {
+    width: 100%;
+    height: 130px;
+    position: relative;
+    left: -174px;
+}
+
+.input {
+    position: relative;
+    top: 2px;
+    left: 1px;
+    width: 100px;
+}
+
+.sheng {
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+
+.sheng2 {
+    position: relative;
+    top: -15px;
+    left: 3px;
+}
+
+.input1 {
+    position: relative;
+    top: -50px;
+    left: 583px;
+    width: 100px;
+}
+
+.shi {
+    position: relative;
+    top: -53px;
+    left: 583px;
+}
+
+.input2 {
+    width: 100px;
+    position: relative;
+    top: -105px;
+    left: 739px;
+}
+
+.qu {
+    position: relative;
+    left: 741px;
+    top: -107px;
+}
+
+.often_address2 {
+    width: 100%;
+    height: 0;
+    position: relative;
+    left: -315px;
+    top: -28px;
+}
+
+.input3 {
+    position: relative;
+    top: -15px;
+    width: 100px;
+}
+
+.input4 {
+    width: 40%;
+    position: relative;
+    left: 725px;
+    top: -56px;
+    width: 100px;
+}
+
+.shi2 {
+    position: relative;
+    top: -53px;
+    left: 725px;
+}
+
+.shi3 {
+    width: 40%;
+}
+
+.input5 {
+    position: relative;
+    left: 881px;
+    top: -111px;
+    width: 100px;
+}
+
+.qu2 {
+    position: relative;
+    top: -111px;
+    left: 884px;
+}
+
+.border_address {
+    height: 194px;
+    border-bottom: 1px solid black;
+}
+
+.often_addressH {
+    height: 0;
+}
+
+.span {
+    position: relative;
+    top: -15px;
+}
+
+ .zhiye {
+   position: relative;
+    left: -413px;
+} 
+.content1{
+    position: relative;
+    top: -39px;
+    left: 506px;
+}
+.border_zhiye{
+    height: 177px;
+    border-bottom: 1px solid black;
+}
+.Tax{
+    height: 141px;
+    position: relative;
+    left: -40px;
+    top: -15px;
+}
+.border3{
+    width: 100.3%;
+    position: relative;
+    left: -1px;
+    border-bottom: 1px solid black;
+}
+.note{
+    position: relative;
+    left: 83px;
+}
+.input_1{
+    width: 40%;
+}
+.border_amercial{
+    border-bottom: 1px solid black;
+}
+.area{
+    margin-left: 481px;
+    margin-right: -190px;
+    margin-top: -54px;
+    width: 50%;
+}
+.border4{
+    width: 149.3%;
+    position: relative;
+    left: -89px;
+    border-bottom: 1px solid black;
+}
+.zhuming{
+    display: inline-block;
+    position: relative;
+    top: -38px;
+    left: 261px;
+}
+.footer{
+    margin-left: 273px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn{
+    text-align: center;
+    margin-top: 30px;
+}
+.DatePicker{
+    width: 138%;
+    position: relative;
+    top: -22px;
+    left: 25px;
+}
+.changqi{
+    position: relative;
+    top: -114px;
+    left: 182px;
+}
+.zhengjianhaoma {
+    height: 56px;
+    border-bottom: 1px solid black;
+}
+.fazhengjiguan{
+    border-bottom: 1px solid black;
+}
+.Position{
+    position: relative;
+    top: -43px;
+}
+.border_zhiye{
+    width: 200%;
+    height: 0;
+    position: relative;
+    left: 624px;
+    border-bottom: 1px solid black;
+}

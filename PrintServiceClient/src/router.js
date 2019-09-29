@@ -45,6 +45,8 @@ import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
 import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
 import Powerbook from './routes/Powerbook/Powerbook';
 import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
+import LuruRegistration from './routes/Registration/LuruRegistration';
+import Registration from './routes/Registration/Registration';
 import Ywdlsqbiao from './routes/Ywdlsqbiao/Ywdlsqbiao';
 import LuruYwdlsqbiao from './routes/Ywdlsqbiao/LuruYwdlsqbiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
@@ -100,6 +102,7 @@ export default function RouterConfig({ history }) {
 					<Route path="/xinjinjiaokuandan" component={Xinjinjiaokuandan}/>
 					<Route path="/jiangzhangdan" component={Jiangzhangdan}/>
 					<Route path="/powerbook" component={Powerbook}/>
+					<Route path="/registration" component={Registration}/>
 					<Route path="/ywdlsqbiao" component={Ywdlsqbiao}/>
 					<Route path="/shouquanshu" component={Shouquanshu}/>
 				</Route>
@@ -107,6 +110,7 @@ export default function RouterConfig({ history }) {
 				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan}/>
 				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan}/>
 				<Route path="/luruPowerbook" component={LuruPowerbook}/>
+				<Route path="/luruRegistration" component={LuruRegistration}/>
 				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao}/>
 				<Route path="/lurushouquanshu" component={LuruShouquanshu}/>
 			</Router>

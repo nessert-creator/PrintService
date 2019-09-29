@@ -17,6 +17,7 @@ using QC.MF.AppStartPages;
 using QC.MF.Powerbooks;
 using QC.MF.Ywdlsqbiaos;
 using QC.MF.Xianjinjiaokuandans;
+using QC.MF.Registrations;
 using QC.MF.Shouquanshus;
 
 namespace QC.MF.EntityFramework
@@ -40,6 +41,7 @@ namespace QC.MF.EntityFramework
         public IDbSet<Ywdlsqbiao> Ywdlsqbiao { get; set; }
         public IDbSet<Xianjinjiaokuandan> Xianjinjiaokuandan { get; set; }
         public IDbSet<Powerbook> Powerbook { get; set; }
+        public IDbSet<Registration> Registration { get; set; }
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
         public IDbSet<Shouquanshu> Shouquanshu { get; set; }
 
