@@ -47,12 +47,16 @@ import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
 import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
 import Powerbook from './routes/Powerbook/Powerbook';
 import LuruPowerbook from './routes/Powerbook/LuruPowerbook';
+import LuruRegistration from './routes/Registration/LuruRegistration';
+import Registration from './routes/Registration/Registration';
 import Ywdlsqbiao from './routes/Ywdlsqbiao/Ywdlsqbiao';
 import LuruYwdlsqbiao from './routes/Ywdlsqbiao/LuruYwdlsqbiao';
 import Yewujiesuanshenqingshu from './routes/Yewujiesuanshenqingshu/Yewujiesuanshenqingshu';
 import LuruYewujiesuanshenqngshu from './routes/Yewujiesuanshenqingshu/LuruYewujiesuanshenqngshu';
 import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxidengjibiao';
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
+import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
+import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -105,18 +109,22 @@ export default function RouterConfig({ history }) {
 					<Route path="/xinjinjiaokuandan" component={Xinjinjiaokuandan} />
 					<Route path="/jiangzhangdan" component={Jiangzhangdan} />
 					<Route path="/powerbook" component={Powerbook} />
+					<Route path="/registration" component={Registration} />
 					<Route path="/ywdlsqbiao" component={Ywdlsqbiao} />
 					<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu} />
 					<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao} />
+					<Route path="/shouquanshu" component={Shouquanshu} />
 				</Route>
 
 				<Route path="/LuruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
 				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
 				<Route path="/luruPowerbook" component={LuruPowerbook} />
+				<Route path="/luruRegistration" component={LuruRegistration} />
 				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao} />
 				<Route path="/luruYewujiesuanshenqngshu" component={LuruYewujiesuanshenqngshu} />
 				<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao} />
 
+				<Route path="/lurushouquanshu" component={LuruShouquanshu} />
 			</Router>
 		</LocaleProvider>
 	);

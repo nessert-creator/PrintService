@@ -30,6 +30,7 @@ import print from './print';
 import xinjinjiaokuandan from './xinjinjiaokuandan';
 import jiangzhangdan from './jiangzhangdan';
 import powerbook from './powerbook';
+import registration from './registration';
 /**
  * index.js
  * Created by 李廷旭 on 2017/9/5 10:15
@@ -68,4 +69,5 @@ export function registerModels(app) {
     app.model(xinjinjiaokuandan);
     app.model(jiangzhangdan);
     app.model(powerbook);
+    app.model(registration);
 }

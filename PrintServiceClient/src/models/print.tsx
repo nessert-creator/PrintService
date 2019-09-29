@@ -3,11 +3,13 @@ import * as ReactDOM from 'react-dom';
 import { message } from 'antd';
 import * as api from './../api/api';
 import { createApiAuthParam } from './../api/apiUtil';
-import { PrintReceipt, PrintIOU } from './../utils/print';
+import { PrintReceipt, PrintIOU, PrintJiangzhangdan, PrintShouquanshu} from './../utils/print';
 import ActiveCardReceipt from './../routes/Print/ActiveCardReceipt';
 import InactiveCardReceipt from './../routes/Print/InactiveCardReceipt';
 import IOU from './../routes/Print/IOU';
 import AccountReceipt from './../routes/Print/AccountReceipt';
+import Jiangzhangdan from './../routes/Print/Jiangzhangdan';
+import Shouquanshu from './../routes/Print/Shouquanshu';
 
 function print(reactElement, printFunction) {
 	let div = document.createElement('div');
@@ -71,6 +73,12 @@ export default {
 			let result = { endCoachSchoolName: '青才驾校', usedTimeSubFeeTime: 1, consume: { realFee: 200 } };
 			print(<IOU iou={result} />, PrintIOU);
 			// }
+		},
+		*printJiangzhangdan({ payload }, { call, put }) {
+			print(<Jiangzhangdan jiangzhangdan={payload} />, PrintJiangzhangdan);
+		},
+		*printShouquanshu({ payload }, { call, put }) {
+			print(<Shouquanshu Shouquanshu={payload} />, PrintShouquanshu);
 		},
 		*printAccountReceipt({ payload }, { select }) {
 			payload.receipt.examinationCenterName = yield select(state => state.indexpage.setting.systemName);

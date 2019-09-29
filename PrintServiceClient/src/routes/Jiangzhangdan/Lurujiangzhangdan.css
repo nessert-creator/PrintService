@@ -5,33 +5,129 @@
     overflow: hidden
 }
 
-.content {
-    width: 35%;
+.header {
+    width: 89%;
     margin: 0 auto;
-    font-size: 20px
-}
-
-.jinzhangdan {
-    display: block;
-    text-align: center;
     font-size: 30px;
-    font-weight: 600;
-    margin: 20px 0px 20px 0px;
+    text-align: center;
 }
 
-.cleearfix {
-    clear: both;
+.date {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
-/*.biao {
-    border-style: double;
+.biao {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px black solid;
 }
 
-.chupiaoren{
-    width: 30%;
+.chupiaorenheader {
+    width: 1%;
+    font-size: 20px;
     float: left;
-}*/
+    margin: 30px -40px 0px 30px;
+}
+
+.chupiaorenName {
+    margin: 1px;
+    float: left;
+    width: 48%;
+    border-right: 1px black solid;
+}
+
+.shoukuanrenheader {
+    width: 1%;
+    font-size: 20px;
+    float: left;
+    margin: 30px -40px 0px 30px;
+}
+
+.shoukuanrenName {
+    margin: 1px;
+    float: left;
+    width: 48%;
+}
+
+.top {
+    border: 1px black solid;
+    display: inline-block;
+    width: 99.8%;
+    margin: 1px 1px 0px 1px;
+}
+
+.moneyheader {
+    float: left;
+    width: 1%;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 0px -120px 0px 40px;
+}
+
+.renminbi {
+    float: left;
+    width: 90%;
+}
+
+.money {
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+    display: inline-block;
+    width: 99.8%;
+    margin: -5px 1px 0px 1px;
+    padding-top: 15px;
+    line-height: 20px;
+}
+
+.left {
+    width: 48%;
+    float: left;
+    border-left: 1px black solid;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+    margin: -5px 1px 1px 1px;
+    padding-top: 2px;
+}
+
+.right {
+    width: 51.5%;
+    float: left;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid; 
+    margin: -6px 0px 0px 2px;
+    padding-top: 269px;
+    padding-left: 350px;
+}
+/* 
+.piaojuzhonglei {
+    width: 50%;
+    float: left;
+}
+
+.piaojuzhangshu {
+    width: 50%;
+    float: left;
+} 
+*/
+
+.fuhejizhang {
+    border-top: 1px black solid;
+    padding-top: 100px;
+}
+
+.fuhe {
+    margin-left: 200px;
+}
+
+.jizhang {
+    margin-left: 70px;
+}
 
 .footer {
     text-align: center;
+    margin-top: 30px;
 }

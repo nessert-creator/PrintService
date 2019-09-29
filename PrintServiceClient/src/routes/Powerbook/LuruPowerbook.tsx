@@ -144,10 +144,12 @@ function LuruPowerbook({ dispatch, form, }) {
 								</div>
 							</div>
 						</div>
-
-						<Button type="primary" htmlType="submit" >
-							注册
+						<div className={styles.btn}>
+							<Button type="primary" htmlType="submit" >
+								提交
 					    </Button>
+						</div>
+
 					</Form>
 				</section>
 			</div>
