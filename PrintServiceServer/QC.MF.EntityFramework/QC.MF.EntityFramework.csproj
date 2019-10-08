@@ -239,101 +239,25 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909230907286_gaozhen20190923.cs" />
-    <Compile Include="Migrations\201909230907286_gaozhen20190923.Designer.cs">
-      <DependentUpon>201909230907286_gaozhen20190923.cs</DependentUpon>
+    <Compile Include="Migrations\201909290705463_merge20190929.cs" />
+    <Compile Include="Migrations\201909290705463_merge20190929.Designer.cs">
+      <DependentUpon>201909290705463_merge20190929.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909240813040_gaozhen20199241612.cs" />
-    <Compile Include="Migrations\201909240813040_gaozhen20199241612.Designer.cs">
-      <DependentUpon>201909240813040_gaozhen20199241612.cs</DependentUpon>
+    <Compile Include="Migrations\201910010746194_fany20191001.cs" />
+    <Compile Include="Migrations\201910010746194_fany20191001.Designer.cs">
+      <DependentUpon>201910010746194_fany20191001.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909161141465_zhuhang20199161941.cs" />
-    <Compile Include="Migrations\201909161141465_zhuhang20199161941.Designer.cs">
-      <DependentUpon>201909161141465_zhuhang20199161941.cs</DependentUpon>
+    <Compile Include="Migrations\201910010750457_fany2019100101.cs" />
+    <Compile Include="Migrations\201910010750457_fany2019100101.Designer.cs">
+      <DependentUpon>201910010750457_fany2019100101.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909161411505_zhuhang2019916.cs" />
-    <Compile Include="Migrations\201909161411505_zhuhang2019916.Designer.cs">
-      <DependentUpon>201909161411505_zhuhang2019916.cs</DependentUpon>
+    <Compile Include="Migrations\201910030150455_fany20191003.cs" />
+    <Compile Include="Migrations\201910030150455_fany20191003.Designer.cs">
+      <DependentUpon>201910030150455_fany20191003.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909221359551_zhuhang20199222157.cs" />
-    <Compile Include="Migrations\201909221359551_zhuhang20199222157.Designer.cs">
-      <DependentUpon>201909221359551_zhuhang20199222157.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909190830228_zhangyf20190919.cs" />
-    <Compile Include="Migrations\201909190830228_zhangyf20190919.Designer.cs">
-      <DependentUpon>201909190830228_zhangyf20190919.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909201301537_zhnagyunfei20199202100.cs" />
-    <Compile Include="Migrations\201909201301537_zhnagyunfei20199202100.Designer.cs">
-      <DependentUpon>201909201301537_zhnagyunfei20199202100.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909260640403_zhangyunfei2019926.cs" />
-    <Compile Include="Migrations\201909260640403_zhangyunfei2019926.Designer.cs">
-      <DependentUpon>201909260640403_zhangyunfei2019926.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909191116034_yuanhui20199191915.cs" />
-    <Compile Include="Migrations\201909191116034_yuanhui20199191915.Designer.cs">
-      <DependentUpon>201909191116034_yuanhui20199191915.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909191238306_yuanhui20199192038.cs" />
-    <Compile Include="Migrations\201909191238306_yuanhui20199192038.Designer.cs">
-      <DependentUpon>201909191238306_yuanhui20199192038.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909191325434_yuanhui20199192125.cs" />
-    <Compile Include="Migrations\201909191325434_yuanhui20199192125.Designer.cs">
-      <DependentUpon>201909191325434_yuanhui20199192125.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909230056416_yuanhui2019923856.cs" />
-    <Compile Include="Migrations\201909230056416_yuanhui2019923856.Designer.cs">
-      <DependentUpon>201909230056416_yuanhui2019923856.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909240105580_yuanhui2019924905.cs" />
-    <Compile Include="Migrations\201909240105580_yuanhui2019924905.Designer.cs">
-      <DependentUpon>201909240105580_yuanhui2019924905.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909240350050_yuanhui20199241145.cs" />
-    <Compile Include="Migrations\201909240350050_yuanhui20199241145.Designer.cs">
-      <DependentUpon>201909240350050_yuanhui20199241145.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909250326128_yuanhui2019925.cs" />
-    <Compile Include="Migrations\201909250326128_yuanhui2019925.Designer.cs">
-      <DependentUpon>201909250326128_yuanhui2019925.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909260618296_yuanhui2019926.cs" />
-    <Compile Include="Migrations\201909260618296_yuanhui2019926.Designer.cs">
-      <DependentUpon>201909260618296_yuanhui2019926.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909260642236_yuanhui20196261426.cs" />
-    <Compile Include="Migrations\201909260642236_yuanhui20196261426.Designer.cs">
-      <DependentUpon>201909260642236_yuanhui20196261426.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909260648164_yuanhui20196261448.cs" />
-    <Compile Include="Migrations\201909260648164_yuanhui20196261448.Designer.cs">
-      <DependentUpon>201909260648164_yuanhui20196261448.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909160309432_lubinrui20190916.cs" />
-    <Compile Include="Migrations\201909160309432_lubinrui20190916.Designer.cs">
-      <DependentUpon>201909160309432_lubinrui20190916.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909230330446_lubinrui201909231130.cs" />
-    <Compile Include="Migrations\201909230330446_lubinrui201909231130.Designer.cs">
-      <DependentUpon>201909230330446_lubinrui201909231130.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909240719450_lubinrui201909241518.cs" />
-    <Compile Include="Migrations\201909240719450_lubinrui201909241518.Designer.cs">
-      <DependentUpon>201909240719450_lubinrui201909241518.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909240806177_lubinrui201909241605.cs" />
-    <Compile Include="Migrations\201909240806177_lubinrui201909241605.Designer.cs">
-      <DependentUpon>201909240806177_lubinrui201909241605.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909240810561_lubinrui201909241610.cs" />
-    <Compile Include="Migrations\201909240810561_lubinrui201909241610.Designer.cs">
-      <DependentUpon>201909240810561_lubinrui201909241610.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201909280719116_lubinrui201909281511.cs" />
-    <Compile Include="Migrations\201909280719116_lubinrui201909281511.Designer.cs">
-      <DependentUpon>201909280719116_lubinrui201909281511.cs</DependentUpon>
+    <Compile Include="Migrations\201910040311437_fany20191004.cs" />
+    <Compile Include="Migrations\201910040311437_fany20191004.Designer.cs">
+      <DependentUpon>201910040311437_fany20191004.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -405,77 +329,20 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909230907286_gaozhen20190923.resx">
-      <DependentUpon>201909230907286_gaozhen20190923.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201909290705463_merge20190929.resx">
+      <DependentUpon>201909290705463_merge20190929.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240813040_gaozhen20199241612.resx">
-      <DependentUpon>201909240813040_gaozhen20199241612.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910010746194_fany20191001.resx">
+      <DependentUpon>201910010746194_fany20191001.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909161141465_zhuhang20199161941.resx">
-      <DependentUpon>201909161141465_zhuhang20199161941.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910010750457_fany2019100101.resx">
+      <DependentUpon>201910010750457_fany2019100101.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909161411505_zhuhang2019916.resx">
-      <DependentUpon>201909161411505_zhuhang2019916.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910030150455_fany20191003.resx">
+      <DependentUpon>201910030150455_fany20191003.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909221359551_zhuhang20199222157.resx">
-      <DependentUpon>201909221359551_zhuhang20199222157.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909190830228_zhangyf20190919.resx">
-      <DependentUpon>201909190830228_zhangyf20190919.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909201301537_zhnagyunfei20199202100.resx">
-      <DependentUpon>201909201301537_zhnagyunfei20199202100.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909260640403_zhangyunfei2019926.resx">
-      <DependentUpon>201909260640403_zhangyunfei2019926.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909191116034_yuanhui20199191915.resx">
-      <DependentUpon>201909191116034_yuanhui20199191915.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909191238306_yuanhui20199192038.resx">
-      <DependentUpon>201909191238306_yuanhui20199192038.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909191325434_yuanhui20199192125.resx">
-      <DependentUpon>201909191325434_yuanhui20199192125.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909230056416_yuanhui2019923856.resx">
-      <DependentUpon>201909230056416_yuanhui2019923856.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240105580_yuanhui2019924905.resx">
-      <DependentUpon>201909240105580_yuanhui2019924905.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240350050_yuanhui20199241145.resx">
-      <DependentUpon>201909240350050_yuanhui20199241145.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909250326128_yuanhui2019925.resx">
-      <DependentUpon>201909250326128_yuanhui2019925.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909260618296_yuanhui2019926.resx">
-      <DependentUpon>201909260618296_yuanhui2019926.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909260642236_yuanhui20196261426.resx">
-      <DependentUpon>201909260642236_yuanhui20196261426.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909260648164_yuanhui20196261448.resx">
-      <DependentUpon>201909260648164_yuanhui20196261448.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909160309432_lubinrui20190916.resx">
-      <DependentUpon>201909160309432_lubinrui20190916.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909230330446_lubinrui201909231130.resx">
-      <DependentUpon>201909230330446_lubinrui201909231130.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240719450_lubinrui201909241518.resx">
-      <DependentUpon>201909240719450_lubinrui201909241518.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240806177_lubinrui201909241605.resx">
-      <DependentUpon>201909240806177_lubinrui201909241605.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909240810561_lubinrui201909241610.resx">
-      <DependentUpon>201909240810561_lubinrui201909241610.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909280719116_lubinrui201909281511.resx">
-      <DependentUpon>201909280719116_lubinrui201909281511.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910040311437_fany20191004.resx">
+      <DependentUpon>201910040311437_fany20191004.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

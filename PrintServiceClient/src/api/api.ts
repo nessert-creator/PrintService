@@ -840,6 +840,326 @@ export namespace CreateAppStartPageDto {
 /**
  * 
  * @export
+ * @interface CreateDanweixinxidengjibiaoDto
+ */
+export interface CreateDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateDanweixinxidengjibiaoDto
+     */
+    address3?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface CreateDemoDto
  */
 export interface CreateDemoDto {
@@ -1021,10 +1341,10 @@ export interface CreateJingzhangdanDto {
     chupiaorenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateJingzhangdanDto
      */
-    chupiaorenzh?: number;
+    chupiaorenzh?: string;
     /**
      * 
      * @type {string}
@@ -1039,10 +1359,10 @@ export interface CreateJingzhangdanDto {
     shoukuanrenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateJingzhangdanDto
      */
-    shoukuanrenzh?: number;
+    shoukuanrenzh?: string;
     /**
      * 
      * @type {string}
@@ -1073,6 +1393,152 @@ export interface CreateJingzhangdanDto {
      * @memberof CreateJingzhangdanDto
      */
     piaojuhaoma?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface CreateJszhsqshuDto
+ */
+export interface CreateJszhsqshuDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    voucher?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateJszhsqshuDto
+     */
+    day1?: number;
 }
 
 /**
@@ -1274,6 +1740,406 @@ export interface CreatePowerbookDto {
 /**
  * 
  * @export
+ * @interface CreateRegistrationDto
+ */
+export interface CreateRegistrationDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    day1?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    namePinyin?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    gender1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    nationality1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    phoneNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    riqi1?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    year2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    month2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    day2?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    license?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    oftenAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    oftenAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    oftenAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    unitAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    unitAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    unitAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    tax?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    gender2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    nationality2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    number3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    riqi2?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    year3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    month3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    day3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    license2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    phoneNumber2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    province?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    city?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    area?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    why?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    marriage?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    record?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    familyNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    industry?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    unitName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    unitNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    email?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    professiona2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    product?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    type4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    indicate?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    typeNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateRegistrationDto
+     */
+    signature?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    year4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    month4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateRegistrationDto
+     */
+    day4?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface CreateShouquanshuDto
+ */
+export interface CreateShouquanshuDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouquanshuDto
+     */
+    zhihang?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouquanshuDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouquanshuDto
+     */
+    idcard?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouquanshuDto
+     */
+    telephonenumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouquanshuDto
+     */
+    other?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateShouquanshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateShouquanshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateShouquanshuDto
+     */
+    day?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface CreateShouqunweituoshus1Dto
  */
 export interface CreateShouqunweituoshus1Dto {
@@ -1297,10 +2163,10 @@ export interface CreateShouqunweituoshus1Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateShouqunweituoshus1Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -1315,10 +2181,40 @@ export interface CreateShouqunweituoshus1Dto {
     seal?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateShouqunweituoshus1Dto
      */
-    phone?: number;
+    phone?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus1Dto
+     */
+    bingXing?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus1Dto
+     */
+    feiZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus1Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus1Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus1Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -1347,10 +2243,10 @@ export interface CreateShouqunweituoshus2Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateShouqunweituoshus2Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -1363,6 +2259,126 @@ export interface CreateShouqunweituoshus2Dto {
      * @memberof CreateShouqunweituoshus2Dto
      */
     post?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    add?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    bianGeng?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    shanXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    miZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    miJie?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    qianYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    jieYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    huanBu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    zengHao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    cheXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    xiuGai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    gouMai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    shuHui?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    fengGu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    daoDong?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    zhiHuan?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    buFa?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateShouqunweituoshus2Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -1376,13 +2392,31 @@ export interface CreateXinjinjiaokuandanDto {
      * @type {string}
      * @memberof CreateXinjinjiaokuandanDto
      */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
+    ri?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateXinjinjiaokuandanDto
+     */
     accountName?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateXinjinjiaokuandanDto
      */
-    accountNumber?: number;
+    accountNumber?: string;
     /**
      * 
      * @type {string}
@@ -1412,6 +2446,110 @@ export interface CreateXinjinjiaokuandanDto {
 /**
  * 
  * @export
+ * @interface CreateYewujiesuanshenqingshuDto
+ */
+export interface CreateYewujiesuanshenqingshuDto {
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    designation?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    designation1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    number?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface CreateYwdlsqbiaoDto
  */
 export interface CreateYwdlsqbiaoDto {
@@ -1420,73 +2558,97 @@ export interface CreateYwdlsqbiaoDto {
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof CreateYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof CreateYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -2420,6 +3582,332 @@ export namespace GetListAppStartPageDto {
 /**
  * 
  * @export
+ * @interface GetListDanweixinxidengjibiaoDto
+ */
+export interface GetListDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListDanweixinxidengjibiaoDto
+     */
+    address3?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListDemoDto
  */
 export interface GetListDemoDto {
@@ -2547,10 +4035,10 @@ export interface GetListJiangzhangdanDto {
     chupiaorenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListJiangzhangdanDto
      */
-    chupiaorenzh?: number;
+    chupiaorenzh?: string;
     /**
      * 
      * @type {string}
@@ -2565,10 +4053,10 @@ export interface GetListJiangzhangdanDto {
     shoukuanrenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListJiangzhangdanDto
      */
-    shoukuanrenzh?: number;
+    shoukuanrenzh?: string;
     /**
      * 
      * @type {string}
@@ -2599,6 +4087,158 @@ export interface GetListJiangzhangdanDto {
      * @memberof GetListJiangzhangdanDto
      */
     piaojuhaoma?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface GetListJszhsqshuDto
+ */
+export interface GetListJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    voucher?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListJszhsqshuDto
+     */
+    day1?: number;
 }
 
 /**
@@ -2672,6 +4312,418 @@ export interface GetListPowerbookDto {
 /**
  * 
  * @export
+ * @interface GetListRegistrationDto
+ */
+export interface GetListRegistrationDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    day1?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    namePinyin?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    gender1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    nationality1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    phoneNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    riqi1?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    year2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    month2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    day2?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    license?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    oftenAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    oftenAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    oftenAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    unitAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    unitAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    unitAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    tax?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    gender2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    nationality2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    number3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    riqi2?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    year3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    month3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    day3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    license2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    phoneNumber2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    province?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    city?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    area?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    why?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    marriage?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    record?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    familyNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    industry?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    unitName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    unitNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    email?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    professiona2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    product?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    type4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    indicate?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    typeNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListRegistrationDto
+     */
+    signature?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    year4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    month4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListRegistrationDto
+     */
+    day4?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface GetListShouquanshuDto
+ */
+export interface GetListShouquanshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListShouquanshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouquanshuDto
+     */
+    zhihang?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouquanshuDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouquanshuDto
+     */
+    idcard?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouquanshuDto
+     */
+    telephonenumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouquanshuDto
+     */
+    other?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListShouquanshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListShouquanshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListShouquanshuDto
+     */
+    day?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListShouqunweituoshu1Dto
  */
 export interface GetListShouqunweituoshu1Dto {
@@ -2701,10 +4753,10 @@ export interface GetListShouqunweituoshu1Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListShouqunweituoshu1Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -2719,10 +4771,40 @@ export interface GetListShouqunweituoshu1Dto {
     seal?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListShouqunweituoshu1Dto
      */
-    phone?: number;
+    phone?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu1Dto
+     */
+    bingXing?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu1Dto
+     */
+    feiZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu1Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu1Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu1Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -2757,10 +4839,10 @@ export interface GetListShouqunweituoshu2Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListShouqunweituoshu2Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -2773,6 +4855,126 @@ export interface GetListShouqunweituoshu2Dto {
      * @memberof GetListShouqunweituoshu2Dto
      */
     post?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    add?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    bianGeng?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    shanXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    miZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    miJie?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    qianYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    jieYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    huanBu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    zengHao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    cheXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    xiuGai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    gouMai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    shuHui?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    fengGu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    daoDong?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    zhiHuan?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    buFa?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListShouqunweituoshu2Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -2792,13 +4994,31 @@ export interface GetListXinjinjiaokuandanDto {
      * @type {string}
      * @memberof GetListXinjinjiaokuandanDto
      */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
+    ri?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListXinjinjiaokuandanDto
+     */
     accountName?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListXinjinjiaokuandanDto
      */
-    accountNumber?: number;
+    accountNumber?: string;
     /**
      * 
      * @type {string}
@@ -2828,6 +5048,116 @@ export interface GetListXinjinjiaokuandanDto {
 /**
  * 
  * @export
+ * @interface GetListYewujiesuanshenqingshuDto
+ */
+export interface GetListYewujiesuanshenqingshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    designation?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    designation1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    number?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListYwdlsqbiaoDto
  */
 export interface GetListYwdlsqbiaoDto {
@@ -2842,73 +5172,97 @@ export interface GetListYwdlsqbiaoDto {
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof GetListYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof GetListYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -4118,6 +6472,26 @@ export interface PagedResultDtoGetListAppStartPageDto {
 /**
  * 
  * @export
+ * @interface PagedResultDtoGetListDanweixinxidengjibiaoDto
+ */
+export interface PagedResultDtoGetListDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListDanweixinxidengjibiaoDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListDanweixinxidengjibiaoDto>}
+     * @memberof PagedResultDtoGetListDanweixinxidengjibiaoDto
+     */
+    items?: Array<GetListDanweixinxidengjibiaoDto>;
+}
+
+/**
+ * 
+ * @export
  * @interface PagedResultDtoGetListDemoDto
  */
 export interface PagedResultDtoGetListDemoDto {
@@ -4158,6 +6532,26 @@ export interface PagedResultDtoGetListJiangzhangdanDto {
 /**
  * 
  * @export
+ * @interface PagedResultDtoGetListJszhsqshuDto
+ */
+export interface PagedResultDtoGetListJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListJszhsqshuDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListJszhsqshuDto>}
+     * @memberof PagedResultDtoGetListJszhsqshuDto
+     */
+    items?: Array<GetListJszhsqshuDto>;
+}
+
+/**
+ * 
+ * @export
  * @interface PagedResultDtoGetListPowerbookDto
  */
 export interface PagedResultDtoGetListPowerbookDto {
@@ -4173,6 +6567,46 @@ export interface PagedResultDtoGetListPowerbookDto {
      * @memberof PagedResultDtoGetListPowerbookDto
      */
     items?: Array<GetListPowerbookDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListRegistrationDto
+ */
+export interface PagedResultDtoGetListRegistrationDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListRegistrationDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListRegistrationDto>}
+     * @memberof PagedResultDtoGetListRegistrationDto
+     */
+    items?: Array<GetListRegistrationDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListShouquanshuDto
+ */
+export interface PagedResultDtoGetListShouquanshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListShouquanshuDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListShouquanshuDto>}
+     * @memberof PagedResultDtoGetListShouquanshuDto
+     */
+    items?: Array<GetListShouquanshuDto>;
 }
 
 /**
@@ -4233,6 +6667,26 @@ export interface PagedResultDtoGetListXinjinjiaokuandanDto {
      * @memberof PagedResultDtoGetListXinjinjiaokuandanDto
      */
     items?: Array<GetListXinjinjiaokuandanDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListYewujiesuanshenqingshuDto
+ */
+export interface PagedResultDtoGetListYewujiesuanshenqingshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListYewujiesuanshenqingshuDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListYewujiesuanshenqingshuDto>}
+     * @memberof PagedResultDtoGetListYewujiesuanshenqingshuDto
+     */
+    items?: Array<GetListYewujiesuanshenqingshuDto>;
 }
 
 /**
@@ -5103,6 +7557,158 @@ export interface UnblockUserInput {
 /**
  * 
  * @export
+ * @interface UpdataJszhsqshuDto
+ */
+export interface UpdataJszhsqshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    accounttitle?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    bankname?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    bankcode?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    naturezccount?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    basic?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    special?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    general?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    temporary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    voucher?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdataJszhsqshuDto
+     */
+    fillingexplanation?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    day?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdataJszhsqshuDto
+     */
+    day1?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateAndroidAppEditionInput
  */
 export interface UpdateAndroidAppEditionInput {
@@ -5233,6 +7839,332 @@ export interface UpdateCurrentUserInput {
      * @memberof UpdateCurrentUserInput
      */
     phoneNumber?: string;
+}
+
+/**
+ * 
+ * @export
+ * @interface UpdateDanweixinxidengjibiaoDto
+ */
+export interface UpdateDanweixinxidengjibiaoDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    company?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    code?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    information?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    shareholders3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity3?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    proportion3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    or3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    benefiviary?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    name3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity5?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity6?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    identity7?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    number7?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date5?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date6?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    date7?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateDanweixinxidengjibiaoDto
+     */
+    address3?: string;
 }
 
 /**
@@ -5397,10 +8329,10 @@ export interface UpdateJiangzhangdanDto {
     chupiaorenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateJiangzhangdanDto
      */
-    chupiaorenzh?: number;
+    chupiaorenzh?: string;
     /**
      * 
      * @type {string}
@@ -5415,10 +8347,10 @@ export interface UpdateJiangzhangdanDto {
     shoukuanrenqc?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateJiangzhangdanDto
      */
-    shoukuanrenzh?: number;
+    shoukuanrenzh?: string;
     /**
      * 
      * @type {string}
@@ -5644,6 +8576,418 @@ export interface UpdateProfilePictureInput {
 /**
  * 
  * @export
+ * @interface UpdateRegistrationDto
+ */
+export interface UpdateRegistrationDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    year1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    month1?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    day1?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    name1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    namePinyin?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    gender1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    nationality1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    phoneNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    type1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    number1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    riqi1?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    year2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    month2?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    day2?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    license?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    oftenAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    oftenAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    oftenAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    unitAddress1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    unitAddress2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    unitAddress3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    tax?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    number2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    name2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    gender2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    nationality2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    type2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    number3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    riqi2?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    year3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    month3?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    day3?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    license2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    phoneNumber2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    province?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    city?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    area?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    type3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    why?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    marriage?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    record?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    familyNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    industry?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    unitName?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    unitNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    email?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    professiona2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    product?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    type4?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    indicate?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    typeNumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateRegistrationDto
+     */
+    signature?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    year4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    month4?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateRegistrationDto
+     */
+    day4?: number;
+}
+
+/**
+ * 
+ * @export
+ * @interface UpdateShouquanshuDto
+ */
+export interface UpdateShouquanshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateShouquanshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanshuDto
+     */
+    zhihang?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanshuDto
+     */
+    name?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanshuDto
+     */
+    idcard?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanshuDto
+     */
+    telephonenumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanshuDto
+     */
+    other?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateShouquanshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateShouquanshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateShouquanshuDto
+     */
+    day?: number;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateShouquanweituoshu1Dto
  */
 export interface UpdateShouquanweituoshu1Dto {
@@ -5673,10 +9017,10 @@ export interface UpdateShouquanweituoshu1Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateShouquanweituoshu1Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -5691,10 +9035,40 @@ export interface UpdateShouquanweituoshu1Dto {
     seal?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateShouquanweituoshu1Dto
      */
-    phone?: number;
+    phone?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu1Dto
+     */
+    bingXing?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu1Dto
+     */
+    feiZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu1Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu1Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu1Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -5729,10 +9103,10 @@ export interface UpdateShouquanweituoshu2Dto {
     idType?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateShouquanweituoshu2Dto
      */
-    idNumber?: number;
+    idNumber?: string;
     /**
      * 
      * @type {string}
@@ -5745,6 +9119,126 @@ export interface UpdateShouquanweituoshu2Dto {
      * @memberof UpdateShouquanweituoshu2Dto
      */
     post?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    add?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    bianGeng?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    shanXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    miZhi?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    miJie?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    qianYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    jieYue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    huanBu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    zengHao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    cheXiao?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    xiuGai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    gouMai?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    shuHui?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    fengGu?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    daoDong?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    zhiHuan?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    buFa?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateShouquanweituoshu2Dto
+     */
+    ri?: string;
 }
 
 /**
@@ -5784,13 +9278,31 @@ export interface UpdateXinjinjiaokuandanDto {
      * @type {string}
      * @memberof UpdateXinjinjiaokuandanDto
      */
+    nian?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    yue?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
+    ri?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateXinjinjiaokuandanDto
+     */
     accountName?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateXinjinjiaokuandanDto
      */
-    accountNumber?: number;
+    accountNumber?: string;
     /**
      * 
      * @type {string}
@@ -5820,6 +9332,116 @@ export interface UpdateXinjinjiaokuandanDto {
 /**
  * 
  * @export
+ * @interface UpdateYewujiesuanshenqingshuDto
+ */
+export interface UpdateYewujiesuanshenqingshuDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    id?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    designation?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    telephone?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    designation1?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account2?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    addiess?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account3?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    currency?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    money?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    account4?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    pay?: number;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    nationality?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    type?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    professional?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    number?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface UpdateYwdlsqbiaoDto
  */
 export interface UpdateYwdlsqbiaoDto {
@@ -5834,73 +9456,97 @@ export interface UpdateYwdlsqbiaoDto {
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    customername?: string;
+    accounttitle?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    clientinformation?: string;
+    bankname?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    name?: string;
+    bankcode?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    certificatetype?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    idnumber?: number;
+    account?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    contactnumber?: string;
+    naturezccount?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    agentinformation?: string;
+    basic?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    name1?: string;
+    special?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    certificatetype1?: string;
-    /**
-     * 
-     * @type {number}
-     * @memberof UpdateYwdlsqbiaoDto
-     */
-    idnumber1?: number;
+    general?: string;
     /**
      * 
      * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    contactnumber1?: string;
+    temporary?: string;
     /**
      * 
-     * @type {Location}
+     * @type {string}
      * @memberof UpdateYwdlsqbiaoDto
      */
-    location?: Location;
+    personal?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    accountnumber?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    pinreasons?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    species?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    anumberof?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    allnumbers?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYwdlsqbiaoDto
+     */
+    fillingexplanation?: string;
 }
 
 /**
@@ -10188,6 +13834,467 @@ export class ConfigurationApi extends BaseAPI {
 }
 
 /**
+ * DanweixinxidengjibiaoApi - fetch parameter creator
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoCreate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoDelete.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGet.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoGetAll.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appDanweixinxidengjibiaoUpdate.');
+            }
+            const localVarPath = `/api/services/app/danweixinxidengjibiao/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateDanweixinxidengjibiaoDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * DanweixinxidengjibiaoApi - functional programming interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListDanweixinxidengjibiaoDto> {
+            const localVarFetchArgs = DanweixinxidengjibiaoApiFetchParamCreator(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * DanweixinxidengjibiaoApi - factory interface
+ * @export
+ */
+export const DanweixinxidengjibiaoApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateDanweixinxidengjibiaoDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return DanweixinxidengjibiaoApiFp(configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * DanweixinxidengjibiaoApi - object-oriented interface
+ * @export
+ * @class DanweixinxidengjibiaoApi
+ * @extends {BaseAPI}
+ */
+export class DanweixinxidengjibiaoApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateDanweixinxidengjibiaoDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoCreate(input: CreateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateDanweixinxidengjibiaoDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DanweixinxidengjibiaoApi
+     */
+    public appDanweixinxidengjibiaoUpdate(input: UpdateDanweixinxidengjibiaoDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return DanweixinxidengjibiaoApiFp(this.configuration).appDanweixinxidengjibiaoUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
  * DemoApi - fetch parameter creator
  * @export
  */
@@ -12597,6 +16704,467 @@ export class JingzhangdanApi extends BaseAPI {
      */
     public appJingzhangdanUpdate(input: UpdateJiangzhangdanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return JingzhangdanApiFp(this.configuration).appJingzhangdanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * JszhsqshuApi - fetch parameter creator
+ * @export
+ */
+export const JszhsqshuApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuCreate.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateJszhsqshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuDelete.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuGet.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuGetAll.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appJszhsqshuUpdate.');
+            }
+            const localVarPath = `/api/services/app/jszhsqshu/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdataJszhsqshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * JszhsqshuApi - functional programming interface
+ * @export
+ */
+export const JszhsqshuApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListJszhsqshuDto> {
+            const localVarFetchArgs = JszhsqshuApiFetchParamCreator(configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * JszhsqshuApi - factory interface
+ * @export
+ */
+export const JszhsqshuApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdataJszhsqshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return JszhsqshuApiFp(configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * JszhsqshuApi - object-oriented interface
+ * @export
+ * @class JszhsqshuApi
+ * @extends {BaseAPI}
+ */
+export class JszhsqshuApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateJszhsqshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuCreate(input: CreateJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdataJszhsqshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof JszhsqshuApi
+     */
+    public appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return JszhsqshuApiFp(this.configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }
@@ -16812,6 +21380,467 @@ export class RegisterApi extends BaseAPI {
 }
 
 /**
+ * RegistrationApi - fetch parameter creator
+ * @export
+ */
+export const RegistrationApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationCreate(input: CreateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appRegistrationCreate.');
+            }
+            const localVarPath = `/api/services/app/registration/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateRegistrationDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appRegistrationDelete.');
+            }
+            const localVarPath = `/api/services/app/registration/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appRegistrationGet.');
+            }
+            const localVarPath = `/api/services/app/registration/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appRegistrationGetAll.');
+            }
+            const localVarPath = `/api/services/app/registration/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationUpdate(input: UpdateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appRegistrationUpdate.');
+            }
+            const localVarPath = `/api/services/app/registration/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateRegistrationDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * RegistrationApi - functional programming interface
+ * @export
+ */
+export const RegistrationApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationCreate(input: CreateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListRegistrationDto> {
+            const localVarFetchArgs = RegistrationApiFetchParamCreator(configuration).appRegistrationCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = RegistrationApiFetchParamCreator(configuration).appRegistrationDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListRegistrationDto> {
+            const localVarFetchArgs = RegistrationApiFetchParamCreator(configuration).appRegistrationGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListRegistrationDto> {
+            const localVarFetchArgs = RegistrationApiFetchParamCreator(configuration).appRegistrationGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationUpdate(input: UpdateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListRegistrationDto> {
+            const localVarFetchArgs = RegistrationApiFetchParamCreator(configuration).appRegistrationUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * RegistrationApi - factory interface
+ * @export
+ */
+export const RegistrationApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationCreate(input: CreateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return RegistrationApiFp(configuration).appRegistrationCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return RegistrationApiFp(configuration).appRegistrationDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return RegistrationApiFp(configuration).appRegistrationGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return RegistrationApiFp(configuration).appRegistrationGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateRegistrationDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appRegistrationUpdate(input: UpdateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return RegistrationApiFp(configuration).appRegistrationUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * RegistrationApi - object-oriented interface
+ * @export
+ * @class RegistrationApi
+ * @extends {BaseAPI}
+ */
+export class RegistrationApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateRegistrationDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegistrationApi
+     */
+    public appRegistrationCreate(input: CreateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return RegistrationApiFp(this.configuration).appRegistrationCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegistrationApi
+     */
+    public appRegistrationDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return RegistrationApiFp(this.configuration).appRegistrationDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegistrationApi
+     */
+    public appRegistrationGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return RegistrationApiFp(this.configuration).appRegistrationGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegistrationApi
+     */
+    public appRegistrationGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return RegistrationApiFp(this.configuration).appRegistrationGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateRegistrationDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof RegistrationApi
+     */
+    public appRegistrationUpdate(input: UpdateRegistrationDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return RegistrationApiFp(this.configuration).appRegistrationUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
  * RestPasswordApi - fetch parameter creator
  * @export
  */
@@ -17825,6 +22854,467 @@ export class SessionApi extends BaseAPI {
      */
     public appSessionGetCurrentLoginInformations(X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return SessionApiFp(this.configuration).appSessionGetCurrentLoginInformations(X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * ShouquanshuApi - fetch parameter creator
+ * @export
+ */
+export const ShouquanshuApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuCreate(input: CreateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appShouquanshuCreate.');
+            }
+            const localVarPath = `/api/services/app/shouquanshu/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateShouquanshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appShouquanshuDelete.');
+            }
+            const localVarPath = `/api/services/app/shouquanshu/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appShouquanshuGet.');
+            }
+            const localVarPath = `/api/services/app/shouquanshu/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appShouquanshuGetAll.');
+            }
+            const localVarPath = `/api/services/app/shouquanshu/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuUpdate(input: UpdateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appShouquanshuUpdate.');
+            }
+            const localVarPath = `/api/services/app/shouquanshu/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateShouquanshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * ShouquanshuApi - functional programming interface
+ * @export
+ */
+export const ShouquanshuApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuCreate(input: CreateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListShouquanshuDto> {
+            const localVarFetchArgs = ShouquanshuApiFetchParamCreator(configuration).appShouquanshuCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = ShouquanshuApiFetchParamCreator(configuration).appShouquanshuDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListShouquanshuDto> {
+            const localVarFetchArgs = ShouquanshuApiFetchParamCreator(configuration).appShouquanshuGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListShouquanshuDto> {
+            const localVarFetchArgs = ShouquanshuApiFetchParamCreator(configuration).appShouquanshuGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuUpdate(input: UpdateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListShouquanshuDto> {
+            const localVarFetchArgs = ShouquanshuApiFetchParamCreator(configuration).appShouquanshuUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * ShouquanshuApi - factory interface
+ * @export
+ */
+export const ShouquanshuApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuCreate(input: CreateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return ShouquanshuApiFp(configuration).appShouquanshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return ShouquanshuApiFp(configuration).appShouquanshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return ShouquanshuApiFp(configuration).appShouquanshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return ShouquanshuApiFp(configuration).appShouquanshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateShouquanshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appShouquanshuUpdate(input: UpdateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return ShouquanshuApiFp(configuration).appShouquanshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * ShouquanshuApi - object-oriented interface
+ * @export
+ * @class ShouquanshuApi
+ * @extends {BaseAPI}
+ */
+export class ShouquanshuApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateShouquanshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShouquanshuApi
+     */
+    public appShouquanshuCreate(input: CreateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return ShouquanshuApiFp(this.configuration).appShouquanshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShouquanshuApi
+     */
+    public appShouquanshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return ShouquanshuApiFp(this.configuration).appShouquanshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShouquanshuApi
+     */
+    public appShouquanshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return ShouquanshuApiFp(this.configuration).appShouquanshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShouquanshuApi
+     */
+    public appShouquanshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return ShouquanshuApiFp(this.configuration).appShouquanshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateShouquanshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof ShouquanshuApi
+     */
+    public appShouquanshuUpdate(input: UpdateShouquanshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return ShouquanshuApiFp(this.configuration).appShouquanshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }
@@ -20934,6 +26424,467 @@ export class XianjinjiaokuandanApi extends BaseAPI {
      */
     public appXianjinjiaokuandanUpdate(input: UpdateXinjinjiaokuandanDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return XianjinjiaokuandanApiFp(this.configuration).appXianjinjiaokuandanUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * YewujiesuanshenqingshuApi - fetch parameter creator
+ * @export
+ */
+export const YewujiesuanshenqingshuApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuCreate.');
+            }
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuDelete.');
+            }
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGet.');
+            }
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuGetAll.');
+            }
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appYewujiesuanshenqingshuUpdate.');
+            }
+            const localVarPath = `/api/services/app/yewujiesuanshenqingshu/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateYewujiesuanshenqingshuDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * YewujiesuanshenqingshuApi - functional programming interface
+ * @export
+ */
+export const YewujiesuanshenqingshuApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListYewujiesuanshenqingshuDto> {
+            const localVarFetchArgs = YewujiesuanshenqingshuApiFetchParamCreator(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * YewujiesuanshenqingshuApi - factory interface
+ * @export
+ */
+export const YewujiesuanshenqingshuApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateYewujiesuanshenqingshuDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return YewujiesuanshenqingshuApiFp(configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * YewujiesuanshenqingshuApi - object-oriented interface
+ * @export
+ * @class YewujiesuanshenqingshuApi
+ * @extends {BaseAPI}
+ */
+export class YewujiesuanshenqingshuApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateYewujiesuanshenqingshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof YewujiesuanshenqingshuApi
+     */
+    public appYewujiesuanshenqingshuCreate(input: CreateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof YewujiesuanshenqingshuApi
+     */
+    public appYewujiesuanshenqingshuDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof YewujiesuanshenqingshuApi
+     */
+    public appYewujiesuanshenqingshuGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof YewujiesuanshenqingshuApi
+     */
+    public appYewujiesuanshenqingshuGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateYewujiesuanshenqingshuDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof YewujiesuanshenqingshuApi
+     */
+    public appYewujiesuanshenqingshuUpdate(input: UpdateYewujiesuanshenqingshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return YewujiesuanshenqingshuApiFp(this.configuration).appYewujiesuanshenqingshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }

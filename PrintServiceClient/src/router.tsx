@@ -4,6 +4,7 @@ import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { LocaleProvider } from 'antd';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import zh from 'react-intl/locale-data/zh';
+import Navigation from './routes/Navigation/Navigation';
 import IndexPage from './routes/IndexPage';
 import User from './routes/User/User';
 import Home from './routes/Home/Home';
@@ -69,75 +70,78 @@ import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
  * 描述: 路由
  */
 export default function RouterConfig({ history }) {
+	addLocaleData(zh);
 	return (
 		<LocaleProvider locale={zhCN}>
-			<Router history={history}>
-				<Route path="/" component={IndexPage} />
-				<Route path="/register" component={Register} />
-				<Route path="/registerByEmail" component={RegisterByEmail} />
-				<Route path="/thirdpartybinding" component={ThirdPartyBinding} />
-				<Route path="/binding" component={BindingLoginUser} />
-				<Route path="/emailregister" component={Emailregister}>
-					<Route path="/showres" component={Showregister} />
-					<Route path="/sucess" component={Sucessregister} />
-					<Route path="/callsucess" component={Callsucess} />
-				</Route>
-				<Route path="/" component={Activation}>
-					<Route path="/sendemail" component={Sendemail} />
-					<Route path="/active" component={Active} />
-					<Route path="/actsucess" component={Actsucess} />
-					<Route path="/confirm" component={Confirmsucess} />
-					<Route path="/qrLogin" component={QRLogin} />
-				</Route>
-				<Route path="/" component={Findpass}>
-					<Route path="/backknow" component={Backknow} />
-					<Route path="/callback" component={Callback} />
-					<Route path="/resetpassword" component={Rentbyemail} />
-					<Route path="/backsucess" component={Backsucess} />
-				</Route>
-				<Route path="/" component={Home}>
-					<Route path="/echartall" component={Echartall} />
-					<Route path="/user" component={User} />
-					<Route path="/role" component={Role} />
-					<Route path="/auditLog" component={AuditLog} />
-					<Route path="/configuration" component={Configuration} />
-					<Route path="/menu" component={MenuList} />
-					<Route path="/organization" component={OrganizationList} />
-					<Route path="/notification" component={Notification} />
-					<Route path="/editor" component={Editor} />
-					<Route path="/auditLogCRUDDemo" component={AuditLogCRUDDemo} />
-					<Route path="/demo" component={Demo} />
-					<Route path="/getsetDemo" component={GetsetDemo} />
-					<Route path="/userCRUDDemo" component={UserCRUDDemo} />
-					<Route path="/appEdition" component={AppEdition} />
-					<Route path="/appStartPage" component={AppStartPage} />
-					<Route path="/print" component={Print} />
-					<Route path="/xinjinjiaokuandan" component={Xinjinjiaokuandan} />
-					<Route path="/jiangzhangdan" component={Jiangzhangdan} />
-					<Route path="/powerbook" component={Powerbook} />
-					<Route path="/registration" component={Registration} />
-					<Route path="/ywdlsqbiao" component={Ywdlsqbiao} />
-					<Route path="/Shouqunweituoshu1" component={Shouqunweituoshu1} />
-					<Route path="/Shouqunweituoshu2" component={Shouqunweituoshu2} />
-					<Route path="/jszhsqshu" component={Jszhsqshu} />
-					<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu} />
-					<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao} />
-					<Route path="/shouquanshu" component={Shouquanshu} />
-				</Route>
+			<IntlProvider locale='zh'>
+				<Router history={history}>
+					<Route path="/" component={Navigation} />
+					<Route path="/admin" component={IndexPage} />
+					<Route path="/register" component={Register} />
+					<Route path="/registerByEmail" component={RegisterByEmail} />
+					<Route path="/thirdpartybinding" component={ThirdPartyBinding} />
+					<Route path="/binding" component={BindingLoginUser} />
+					<Route path="/emailregister" component={Emailregister}>
+						<Route path="/showres" component={Showregister} />
+						<Route path="/sucess" component={Sucessregister} />
+						<Route path="/callsucess" component={Callsucess} />
+					</Route>
+					<Route path="/" component={Activation}>
+						<Route path="/sendemail" component={Sendemail} />
+						<Route path="/active" component={Active} />
+						<Route path="/actsucess" component={Actsucess} />
+						<Route path="/confirm" component={Confirmsucess} />
+						<Route path="/qrLogin" component={QRLogin} />
+					</Route>
+					<Route path="/" component={Findpass}>
+						<Route path="/backknow" component={Backknow} />
+						<Route path="/callback" component={Callback} />
+						<Route path="/resetpassword" component={Rentbyemail} />
+						<Route path="/backsucess" component={Backsucess} />
+					</Route>
+					<Route path="/" component={Home}>
+						<Route path="/echartall" component={Echartall} />
+						<Route path="/user" component={User} />
+						<Route path="/role" component={Role} />
+						<Route path="/auditLog" component={AuditLog} />
+						<Route path="/configuration" component={Configuration} />
+						<Route path="/menu" component={MenuList} />
+						<Route path="/organization" component={OrganizationList} />
+						<Route path="/notification" component={Notification} />
+						<Route path="/editor" component={Editor} />
+						<Route path="/auditLogCRUDDemo" component={AuditLogCRUDDemo} />
+						<Route path="/demo" component={Demo} />
+						<Route path="/getsetDemo" component={GetsetDemo} />
+						<Route path="/userCRUDDemo" component={UserCRUDDemo} />
+						<Route path="/appEdition" component={AppEdition} />
+						<Route path="/appStartPage" component={AppStartPage} />
+						<Route path="/print" component={Print} />
+						<Route path="/xinjinjiaokuandan" component={Xinjinjiaokuandan} />
+						<Route path="/jiangzhangdan" component={Jiangzhangdan} />
+						<Route path="/powerbook" component={Powerbook} />
+						<Route path="/registration" component={Registration} />
+						<Route path="/ywdlsqbiao" component={Ywdlsqbiao} />
+						<Route path="/Shouqunweituoshu1" component={Shouqunweituoshu1} />
+						<Route path="/Shouqunweituoshu2" component={Shouqunweituoshu2} />
+						<Route path="/jszhsqshu" component={Jszhsqshu} />
+						<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu} />
+						<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao} />
+						<Route path="/shouquanshu" component={Shouquanshu} />
+					</Route>
 
-				<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
-				<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
-				<Route path="/luruPowerbook" component={LuruPowerbook} />
-				<Route path="/luruRegistration" component={LuruRegistration} />
-				<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao} />
-				<Route path="/luruShouqunweituoshu1" component={LuruShouqunweituoshu1} />
-				<Route path="/luruShouqunweituoshu2" component={LuruShouqunweituoshu2} />
-				<Route path="/luruJszhsqshu" component={LuruJszhsqshu} />
-				<Route path="/luruYewujiesuanshenqngshu" component={LuruYewujiesuanshenqngshu} />
-				<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao} />
-
-				<Route path="/lurushouquanshu" component={LuruShouquanshu} />
-			</Router>
+					<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
+					<Route path="/lurujiangzhangdan" component={Lurujiangzhangdan} />
+					<Route path="/luruPowerbook" component={LuruPowerbook} />
+					<Route path="/luruRegistration" component={LuruRegistration} />
+					<Route path="/luruYwdlsqbiao" component={LuruYwdlsqbiao} />
+					<Route path="/luruShouqunweituoshu1" component={LuruShouqunweituoshu1} />
+					<Route path="/luruShouqunweituoshu2" component={LuruShouqunweituoshu2} />
+					<Route path="/luruJszhsqshu" component={LuruJszhsqshu} />
+					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu} />
+					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao} />
+					<Route path="/lurushouquanshu" component={LuruShouquanshu} />
+				</Router>
+			</IntlProvider>
 		</LocaleProvider>
 	);
 }

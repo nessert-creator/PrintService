@@ -10,29 +10,29 @@ export default class Dayin extends React.Component {
 		console.log(xinjinjiaokuandan)
 		return (
 			<div style={{
-				padding: "55px 20px 0 20px",
+				padding: "35px 20px 0 20px",
 				lineHeight: "30px",
 				fontSize: '16px',
 			}}>
-				<div>
+				<div style={{
+					paddingBottom: "10px",
+					marginLeft: 270,
+					width: 150
+				}}>
 					<div style={{
-						float: 'left'
-					}}>
-						{xinjinjiaokuandan.nian}
-					</div>
-					<div
-						style={{
-							float: 'left'
-						}}>
-						{xinjinjiaokuandan.yue}
-					</div>
-					<div
-						style={{
-							float: 'left'
-						}}>
-						{xinjinjiaokuandan.ri}
-					</div>
+						width: "45px",
+						float: "left"
+					}}>{xinjinjiaokuandan.nian}</div>
+					<div style={{
+						width: '45px',
+						float: "left"
+					}}>{xinjinjiaokuandan.yue}</div>
+					<div style={{
+						width: '45px',
+						float: "left"
+					}}>{xinjinjiaokuandan.ri}</div>
 				</div>
+
 				<div>
 					<div style={{
 						float: 'left',
@@ -76,7 +76,8 @@ export default class Dayin extends React.Component {
 					</div>
 					<div style={{
 						float: 'right',
-						letterSpacing: "10px"
+						marginRight:15,
+						letterSpacing: "8px"
 					}}>
 						{"￥" + xinjinjiaokuandan.money}
 					</div>

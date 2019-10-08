@@ -10,7 +10,7 @@ export default class Jiangzhangdan extends React.Component {
             <div
                 style={{
                     fontSize: '14px',
-                    padding: "40px 20px 0 10px"
+                    padding: "45px 20px 0 20px"
                 }}>
                 <div style={{
                     paddingBottom: "10px",
@@ -31,7 +31,7 @@ export default class Jiangzhangdan extends React.Component {
                     }}>{jiangzhangdan.day}</div>
                 </div>
                 <div style={{
-                    paddingTop:"10px"
+                    paddingTop: "10px"
                 }}>
                     <div style={{
                     }}>
@@ -75,7 +75,7 @@ export default class Jiangzhangdan extends React.Component {
                     </div>
 
                     <div style={{
-                        marginTop: "12px"
+                        marginTop: "20px"
                     }}>
                         <div style={{
                             float: "left",
@@ -86,7 +86,7 @@ export default class Jiangzhangdan extends React.Component {
                         <div style={{
                             float: "right",
                             letterSpacing: "8px",
-                            marginRight: "20px"
+                            marginRight: "22px"
                         }}>￥{jiangzhangdan.renminbi}</div>
                         <div style={{ clear: "both" }}></div>
                     </div>

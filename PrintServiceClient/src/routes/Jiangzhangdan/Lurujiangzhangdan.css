@@ -1,133 +1,142 @@
 .container {
-    width: 100%;
-    min-height: 100%;
-    background: white;
-    overflow: hidden
+  width: 60%;
+  margin: 0 auto;
+  color: #6c6c6c;
+  padding: 10px 0 25px 0;
 }
 
-.header {
-    width: 89%;
-    margin: 0 auto;
-    font-size: 30px;
-    text-align: center;
+.logo {
+  background-image: url('../../assets/logo.png');
+  background-size: 100% 100%;
+  width: 228px;
+  height: 63px;
+}
+
+.title {
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+}
+
+.inputNumber {
+  width: 100%;
+}
+
+.datePicker {
+  width: 100%;
 }
 
 .date {
-    width: 25%;
-    margin: 0 auto;
-    margin-top: 20px;
+  width: 30%;
+  margin: 0 auto;
 }
 
 .biao {
-    width: 50%;
-    margin: 0 auto;
-    border: 1px black solid;
+  margin: 0 auto;
+  border: 1px black solid;
 }
 
 .chupiaorenheader {
-    width: 1%;
-    font-size: 20px;
-    float: left;
-    margin: 30px -40px 0px 30px;
+  width: 1%;
+  font-size: 20px;
+  float: left;
+  margin: 30px -40px 0px 30px;
 }
 
 .chupiaorenName {
-    margin: 1px;
-    float: left;
-    width: 48%;
-    border-right: 1px black solid;
+  margin: 1px;
+  float: left;
+  width: 48%;
+  border-right: 1px black solid;
 }
 
 .shoukuanrenheader {
-    width: 1%;
-    font-size: 20px;
-    float: left;
-    margin: 30px -40px 0px 30px;
+  width: 1%;
+  font-size: 20px;
+  float: left;
+  margin: 30px -40px 0px 30px;
 }
 
 .shoukuanrenName {
-    margin: 1px;
-    float: left;
-    width: 48%;
+  margin: 1px;
+  float: left;
+  width: 48%;
 }
 
 .top {
-    border: 1px black solid;
-    display: inline-block;
-    width: 99.8%;
-    margin: 1px 1px 0px 1px;
+  border: 1px black solid;
+  display: inline-block;
+  width: 99.8%;
+  margin: 1px 1px 0px 1px;
 }
 
 .moneyheader {
-    float: left;
-    width: 1%;
-    font-size: 20px;
-    margin: 0 auto;
-    text-align: center;
-    margin: 0px -120px 0px 40px;
+  float: left;
+  width: 1%;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0px -120px 0px 40px;
 }
 
 .renminbi {
-    float: left;
-    width: 90%;
+  float: left;
+  width: 90%;
 }
 
 .money {
-    border-left: 1px black solid;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid;
-    display: inline-block;
-    width: 99.8%;
-    margin: -5px 1px 0px 1px;
-    padding-top: 15px;
-    line-height: 20px;
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+  display: inline-block;
+  width: 99.8%;
+  margin: -5px 1px 0px 1px;
+  padding-top: 15px;
+  line-height: 20px;
 }
 
 .left {
-    width: 48%;
-    float: left;
-    border-left: 1px black solid;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid;
-    margin: -5px 1px 1px 1px;
-    padding-top: 2px;
+  width: 48%;
+  float: left;
+  border-left: 1px black solid;
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+  margin: -5px 1px 1px 1px;
+  padding-top: 2px;
 }
 
 .right {
-    width: 51.5%;
-    float: left;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid; 
-    margin: -6px 0px 0px 2px;
-    padding-top: 269px;
-    padding-left: 350px;
+  width: 51.5%;
+  float: left;
+  border-bottom: 1px black solid;
+  border-right: 1px black solid;
+  margin: -6px 0px 0px 2px;
+  padding-top: 269px;
+  padding-left: 350px;
 }
-/* 
-.piaojuzhonglei {
-    width: 50%;
-    float: left;
-}
-
-.piaojuzhangshu {
-    width: 50%;
-    float: left;
-} 
-*/
 
 .fuhejizhang {
-    border-top: 1px black solid;
-    padding-top: 100px;
+  border-top: 1px black solid;
+  padding-top: 100px;
 }
 
 .fuhe {
-    margin-left: 200px;
+  margin-left: 200px;
 }
 
 .jizhang {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
 .footer {
-    text-align: center;
-    margin-top: 30px;
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
 }

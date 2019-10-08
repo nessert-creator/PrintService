@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
-import { Form, Icon, Input, Button, Checkbox, message, Row, Col, InputNumber } from 'antd';
+import { Link } from 'dva/router';
+import { Form, Select, Input, Button, Checkbox, message, Row, Col, InputNumber } from 'antd';
 import styles from './LuruRegistration.css';
 
 const FormItem = Form.Item;
 const create = Form.create;
+const Option = Select.Option;
 
 
 import { DatePicker } from 'antd';
@@ -163,10 +165,12 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
         labelCol: { span: 8 },
         wrapperCol: { span: 12 }
     };
+
     const formCol_1 = {
         labelCol: { span: 2 },
         wrapperCol: { span: 20 }
     };
+
     const formCol_2 = {
         labelCol: { span: 5 },
         wrapperCol: { span: 18 }
@@ -175,31 +179,31 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <div className={styles.content_header}>
-                    <span>中信银行</span><br />
-                    <span>CHINA CITIC BANK</span><br />
-                </div>
                 <header className={styles.title}>
-                    <span>个人客户信息登记表</span>
+                    <Row className={styles.logo}></Row>
+                    <Row className={styles.title}>个人客户信息登记表</Row>
                 </header>
+
                 <section>
                     <Form onSubmit={handleSubmit}>
-                        <FormItem label='日期' {...formCol} className={styles.day}>
-                            {getFieldDecorator('Title_date', {
-                                //rules: [{ required: true, message: '请输入日期！' }]
-                            })(
-                                <DatePicker />
-                            )}
-                        </FormItem>
+                        <div className={styles.date}>
+                            <FormItem label='日期' {...{ labelCol: { span: 4 }, wrapperCol: { span: 18 } }}>
+                                {getFieldDecorator('Title_date', {
+                                    rules: [{ required: true, message: '请输入日期！' }]
+                                })(
+                                    <DatePicker className={styles.datePicker} />
+                                )}
+                            </FormItem>
+                        </div>
                         <div className={styles.outsideborder}>
                             <div className={styles.customer}>客户信息(必填)</div>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={7}>
                                     <FormItem label='姓名' {...formCol} >
                                         {getFieldDecorator('name_1', {
                                             //rules: [{ required: true, message: '请输入姓名！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -208,13 +212,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('name_pinyin', {
                                             //rules: [{ required: true, message: '请输入姓名拼音！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
 
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={7}>
                                     <FormItem label='性别' {...formCol} >
                                         {getFieldDecorator('gender_1', {
@@ -232,7 +236,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('nationality_1', {
                                             //rules: [{ requRadioired: true, message: '请输入国籍/地区！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -241,92 +245,45 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('phoneNumber', {
                                             //rules: [{ required: true, message: '请输入手机号码！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
-                                <Col>
+                            <Row className={styles.block}>
+
+                                <Col span={12}>
                                     <FormItem label='证件类型' {...formCol}>
                                         {getFieldDecorator('type_1', {
                                             //rules: [{ required: true, message: '请输入证件类型！' }]
                                         })(
-                                            <Row>
-                                                <Col span={5}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("居民身份证")
-                                                    }} checked={type_1 == "居民身份证"} name="证件类型">居民身份证</Radio>
-                                                </Col>
-                                                <Col span={5}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("临时身份证")
-                                                    }} checked={type_1 == "临时身份证"} name="证件类型">临时身份证</Radio>
-                                                </Col>
-                                                <Col span={4}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("中国护照")
-                                                    }} checked={type_1 == "中国护照"} name="证件类型">中国护照</Radio>
-                                                </Col>
-                                                <Col span={7}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("户口簿(仅供未满16周岁客户)")
-                                                    }} checked={type_1 == "户口簿(仅供未满16周岁客户)"} name="证件类型">户口簿(仅供未满16周岁客户)</Radio>
-                                                </Col>
-                                                <Col span={4}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("军官证")
-                                                    }} checked={type_1 == "军官证"} name="证件类型">军官证</Radio>
-                                                </Col>
-                                                <Col span={4}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("武警证")
-                                                    }} checked={type_1 == "武警证"} name="证件类型">武警证</Radio>
-                                                </Col>
-                                                <Col span={8}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("港澳居民来往内地通行证")
-                                                    }} checked={type_1 == "港澳居民来往内地通行证"} name="证件类型">港澳居民来往内地通行证</Radio>
-                                                </Col>
-                                                <Col span={8}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("台湾居民来往大陆通行证")
-                                                    }} checked={type_1 == "台湾居民来往大陆通行证"} name="证件类型">台湾居民来往大陆通行证</Radio>
-                                                </Col>
-                                                <Col span={8}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("外国人永久居留身份证")
-                                                    }} checked={type_1 == "外国人永久居留身份证"} name="证件类型">外国人永久居留身份证</Radio>
-                                                </Col>
-                                                <Col span={7}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("边民出入境通行证")
-                                                    }} checked={type_1 == "边民出入境通行证"} name="证件类型">边民出入境通行证</Radio>
-                                                </Col>
-                                                <Col span={4}>
-                                                    <Radio onChange={() => {
-                                                        changeType_1("外国护照")
-                                                    }} checked={type_1 == "外国护照"} name="证件类型">外国护照</Radio>
-                                                </Col>
-                                            </Row>
+                                            <Select>
+                                                <Option value="居民身份证">居民身份证</Option>
+                                                <Option value="临时身份证">临时身份证</Option>
+                                                <Option value="中国护照" >中国护照</Option>
+                                                <Option value="户口簿(仅供未满16周岁客户)">户口簿(仅供未满16周岁客户)</Option>
+                                                <Option value="军官证" >军官证</Option>
+                                                <Option value="武警证" >武警证</Option>
+                                                <Option value="港澳居民来往内地通行证" >港澳居民来往内地通行证</Option>
+                                                <Option value="台湾居民来往大陆通行证" >台湾居民来往大陆通行证</Option>
+                                                <Option value="外国人永久居留身份证" >外国人永久居留身份证</Option>
+                                                <Option value="边民出入境通行证" >边民出入境通行证</Option>
+                                                <Option value="外国护照" >外国护照</Option>
+                                            </Select>
                                         )}
-                                        <div className={styles.border2}></div>
                                     </FormItem>
                                 </Col>
-                            </Row>
-                            <Row className={styles.zhengjianhaoma}>
-                                <Col span={9}>
+                                <Col span={12}>
                                     <FormItem label='证件号码' {...formCol} >
                                         {getFieldDecorator('number_1', {
                                             //rules: [{ required: true, message: '请输入证件号码！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
-                                <Col span={14}>
+                                <Col span={12}>
                                     <FormItem label='证件有效期限到期日' {...formCol} >
-
                                         {getFieldDecorator('riqi_1', {
                                             // //rules: [{ required: false, message: '请输入证件有效期限到期日！' }]
                                         })(
@@ -353,21 +310,17 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         )}
                                     </FormItem>
                                 </Col>
-
-                            </Row>
-                            <Row className={styles.fazhengjiguan}>
-                                <Col span={9} className={styles.Position}>
+                                <Col span={12}>
                                     <FormItem label='发证机关' {...formCol} >
                                         {getFieldDecorator('license', {
                                             //rules: [{ required: true, message: '请输入发证机关！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
-
                                 </Col>
                             </Row>
-                            <Row className={styles.border_address}>
+                            <Row className={styles.block}>
                                 <Col className={styles.often_address1} >
 
                                     <FormItem label='联系地址' {...formCol}>
@@ -387,7 +340,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('often_address2', {
                                             //  rules: [{ required: true, message: '请输入市/区/县！' }]
                                         })(
-                                            <Input className={styles.input1} />
+                                            <Input className={styles.input} />
                                         )}
                                         <span className={styles.shi}>市/区/县</span>
                                     </FormItem>
@@ -395,7 +348,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('often_address3', {
                                             //rules: [{ required: true, message: '请输入街道/小区/门牌号！' }]
                                         })(
-                                            <Input className={styles.input2} />
+                                            <Input className={styles.input} />
                                         )}
                                         <span className={styles.qu}>街道/小区/门牌号</span>
                                     </FormItem>
@@ -412,7 +365,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                             {getFieldDecorator('unit_address1', {
                                                 // rules: [{ required: true, message: '请输入省/自治区/直辖市！' }]
                                             })(
-                                                <Input className={styles.input3} />
+                                                <Input className={styles.input} />
                                             )}
                                             <span className={styles.sheng2}>省/自治区/直辖市</span>
                                         </Radio>
@@ -421,7 +374,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('unit_address2', {
                                             // rules: [{ required: true, message: '请输入市/区/县！' }]
                                         })(
-                                            <Input className={styles.input4} />
+                                            <Input className={styles.input} />
                                         )}
                                         <span className={styles.shi2}>市/区/县</span>
                                     </FormItem>
@@ -429,19 +382,19 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('unit_address3', {
                                             //rules: [{ required: true, message: '请输入市/区/县！' }]
                                         })(
-                                            <Input className={styles.input5} />
+                                            <Input className={styles.input} />
                                         )}
                                         <span className={styles.qu2}>街道/小区/门牌号</span>
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row style={{ height: '214px', width: '100%' }}>
+                            <Row className={styles.block}>
                                 <Col >
                                     <FormItem label='职业' {...formCol} style={{ position: 'relative', left: '-624px' }}>
                                         {getFieldDecorator('professional', {
                                             //rules: [{ required: true, message: '请输入证件类型！' }]
                                         })(
-                                            <Row style={{ width: '200%', position: 'relative',left: '711px',  top: '-37px' }}>
+                                            <Row style={{ width: '200%', position: 'relative', left: '711px', top: '-37px' }}>
                                                 <Col span={2}>
                                                     <Radio onChange={() => {
                                                         changeProfessional("公务员")
@@ -523,7 +476,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.Tax}>
+                            <Row className={styles.block}>
                                 <Col >
                                     <FormItem label='税收居民身份' {...formCol_2} >
                                         {getFieldDecorator('tax', {
@@ -554,11 +507,11 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </div>
                                 </Col>
                             </Row>
-                            <div className={styles.border3}></div>
-                            <div className={styles.customer}>
+                            <div className={styles.block}></div>
+                            <div className={styles.block}>
                                 是否为美国纳税居民(必填)
                             </div>
-                            <Row className={styles.border_amercial}>
+                            <Row className={styles.block}>
                                 <Col >
                                     <FormItem label='美国纳税人识别号' {...formCol_2} >
                                         {getFieldDecorator('number_2', {
@@ -579,16 +532,16 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </div>
                                 </Col>
                             </Row>
-                            <div className={styles.customer}>
+                            <div className={styles.block}>
                                 代理人/监护人信息(若代理人/监护人办理，则以下信息必填)
                             </div>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={7}>
                                     <FormItem label='姓名' {...formCol} >
                                         {getFieldDecorator('name_2', {
                                             //rules: [{ required: true, message: '请输入姓名！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -609,12 +562,12 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('nationality_2', {
                                             //rules: [{ required: true, message: '请输入国籍/地区！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='证件类型' {...formCol}>
                                         {getFieldDecorator('type_2', {
@@ -677,13 +630,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={9}>
                                     <FormItem label='证件号码' {...formCol} >
                                         {getFieldDecorator('number_3', {
                                             //rules: [{ required: true, message: '请输入证件号码！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -718,13 +671,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                 </Col>
 
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={9}>
                                     <FormItem label='发证机关' {...formCol} >
                                         {getFieldDecorator('license2', {
                                             //rules: [{ required: true, message: '请输入发证机关！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -733,12 +686,12 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('phoneNumber2', {
                                             //rules: [{ required: false, message: '请输入手机号码！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col style={{ width: '50%', marginLeft: '-33px', marginTop: '15px' }}>
                                     <FormItem label='联系地址' {...formCol}>
                                         {getFieldDecorator('province', {
@@ -770,7 +723,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={9} style={{ marginLeft: '-23px' }}>
                                     <FormItem label='类型' {...formCol} >
                                         {getFieldDecorator('type_3', {
@@ -785,27 +738,27 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col style={{ margin: '12px 0 0 -259px' }}>
                                     <FormItem label='代理原因' {...formCol} >
                                         {getFieldDecorator('why', {
                                             //rules: [{ required: true, message: '请输入代理原因！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <div className={styles.customer}>
+                            <div className={styles.block}>
                                 客户补充信息(选填)
                             </div>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={9}>
                                     <FormItem label='婚姻状况' {...formCol} >
                                         {getFieldDecorator('marriage', {
                                             //rules: [{ required: false, message: '请输入婚姻状况！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -814,7 +767,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('record', {
                                             //rules: [{ required: false, message: '请输入最高学历！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -823,13 +776,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('family_number', {
                                             //rules: [{ required: false, message: '请输入家庭电话！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
                             {/* 行业 */}
-                            <Row style={{ marginLeft: '-288px' }}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='行业' {...formCol}>
                                         {getFieldDecorator('industry', {
@@ -947,13 +900,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.border1}>
+                            <Row className={styles.block}>
                                 <Col span={9}>
                                     <FormItem label='单位名称' {...formCol} >
                                         {getFieldDecorator('unit_name', {
                                             //rules: [{ required: false, message: '请输入单位名称！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -962,7 +915,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('unit_number', {
                                             //rules: [{ required: false, message: '请输入单位电话！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -971,13 +924,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         {getFieldDecorator('email', {
                                             //rules: [{ required: false, message: '请输入电子邮箱！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
                             </Row>
 
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='职务' {...formCol}>
                                         {getFieldDecorator('professiona2', {
@@ -1010,7 +963,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='你感兴趣的产品' {...formCol}>
                                         {getFieldDecorator('product', {
@@ -1064,7 +1017,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='辅助证件类型' {...formCol}>
                                         {getFieldDecorator('type_4', {
@@ -1137,26 +1090,26 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <Col>
                                     <FormItem label='辅助证件号码' {...formCol}>
                                         {getFieldDecorator('type_number', {
                                             //rules: [{ required: false, message: '请输入辅助证件号码！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                         <div className={styles.border2}></div>
                                     </FormItem>
                                 </Col>
                             </Row>
-                            <Row className={styles.type}>
+                            <Row className={styles.block}>
                                 <div className={styles.footer}>本人已阅读中信银行客户须知并确认以上所填信息真实。以上资料如有变更，本人将及时通知贵行进行个人信息更新。</div>
                                 <Col>
                                     <FormItem label='签名' {...formCol}>
                                         {getFieldDecorator('signature', {
                                             //rules: [{ required: true, message: '请输入签名！' }]
                                         })(
-                                            <Input />
+                                            <Input className={styles.input} />
                                         )}
                                     </FormItem>
                                 </Col>
@@ -1171,8 +1124,21 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                 </Col> */}
                             </Row>
                         </div>
-                        <div className={styles.btn}>
-                            <Button type="primary" htmlType="submit">提交</Button>
+                        <div className={styles.footer}>
+                            <Row>
+                                <Col span={4}>
+                                    <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+                                </Col>
+
+                                <Col offset={5} span={8}>
+                                    <Button.Group size='large'>
+                                        <Button type="primary" htmlType="submit">提交</Button>
+                                        <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+                                        <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+                                    </Button.Group>
+                                </Col>
+                            </Row>
+
                         </div>
 
                     </Form>

@@ -1,256 +1,261 @@
 .container {
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden
+  width: 60%;
+  margin: 0 auto;
+  color: #6c6c6c;
+  padding: 10px 0 25px 0;
 }
 
-.content {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.content_header>span:nth-child(1) {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.day {
-    padding-left: 600px;
+.logo {
+  background-image: url('../../assets/logo.png');
+  background-size: 100% 100%;
+  width: 228px;
+  height: 63px;
 }
 
 .title {
-    width: 100%;
-    text-align: center;
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.outsideborder {
-    border: 1px solid black;
-}
-
-.customer {
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    border-bottom: 1px solid black;
-}
-
-.border1 {
-    border-bottom: 1px solid black;
-}
-
-.type {
-    margin-left: -257px;
-}
-
-.border2 {
-    width: 153.8%;
-    position: relative;
-    left: -110px;
-    border-bottom: 1px solid black;
-}
-
-.often_address1 {
-    width: 100%;
-    height: 130px;
-    position: relative;
-    left: -174px;
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .input {
-    position: relative;
-    top: 2px;
-    left: 1px;
-    width: 100px;
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+}
+
+.inputNumber {
+  width: 100%;
+}
+
+.datePicker {
+  width: 100%;
+}
+
+.date {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.content_header>span:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.day {
+  padding-left: 600px;
+}
+
+.outsideborder {
+  border: 1px solid black;
+}
+
+.customer {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.block {
+  padding: 5px 10px;
+  border-bottom: 1px solid black;
+}
+
+.type {
+  margin-left: -257px;
+}
+
+.border2 {
+  width: 153.8%;
+  position: relative;
+  left: -110px;
+  border-bottom: 1px solid black;
+}
+
+.often_address1 {
+  width: 100%;
+  height: 130px;
+  position: relative;
+  left: -174px;
 }
 
 .sheng {
-    position: relative;
-    top: 2px;
-    left: 6px;
+  position: relative;
+  top: 2px;
+  left: 6px;
 }
 
 .sheng2 {
-    position: relative;
-    top: -15px;
-    left: 3px;
-}
-
-.input1 {
-    position: relative;
-    top: -50px;
-    left: 583px;
-    width: 100px;
+  position: relative;
+  top: -15px;
+  left: 3px;
 }
 
 .shi {
-    position: relative;
-    top: -53px;
-    left: 583px;
-}
-
-.input2 {
-    width: 100px;
-    position: relative;
-    top: -105px;
-    left: 739px;
+  position: relative;
+  top: -53px;
+  left: 583px;
 }
 
 .qu {
-    position: relative;
-    left: 741px;
-    top: -107px;
+  position: relative;
+  left: 741px;
+  top: -107px;
 }
 
 .often_address2 {
-    width: 100%;
-    height: 0;
-    position: relative;
-    left: -315px;
-    top: -28px;
-}
-
-.input3 {
-    position: relative;
-    top: -15px;
-    width: 100px;
-}
-
-.input4 {
-    width: 40%;
-    position: relative;
-    left: 725px;
-    top: -56px;
-    width: 100px;
+  width: 100%;
+  height: 0;
+  position: relative;
+  left: -315px;
+  top: -28px;
 }
 
 .shi2 {
-    position: relative;
-    top: -53px;
-    left: 725px;
+  position: relative;
+  top: -53px;
+  left: 725px;
 }
 
 .shi3 {
-    width: 40%;
-}
-
-.input5 {
-    position: relative;
-    left: 881px;
-    top: -111px;
-    width: 100px;
+  width: 40%;
 }
 
 .qu2 {
-    position: relative;
-    top: -111px;
-    left: 884px;
+  position: relative;
+  top: -111px;
+  left: 884px;
 }
 
 .border_address {
-    height: 194px;
-    border-bottom: 1px solid black;
+  height: 194px;
+  border-bottom: 1px solid black;
 }
 
 .often_addressH {
-    height: 0;
+  height: 0;
 }
 
 .span {
-    position: relative;
-    top: -15px;
+  position: relative;
+  top: -15px;
 }
 
- .zhiye {
-   position: relative;
-    left: -413px;
-} 
-.content1{
-    position: relative;
-    top: -39px;
-    left: 506px;
+.zhiye {
+  position: relative;
+  left: -413px;
 }
-.border_zhiye{
-    height: 177px;
-    border-bottom: 1px solid black;
+
+.content1 {
+  position: relative;
+  top: -39px;
+  left: 506px;
 }
-.Tax{
-    height: 141px;
-    position: relative;
-    left: -40px;
-    top: -15px;
+
+.border_zhiye {
+  height: 177px;
+  border-bottom: 1px solid black;
 }
-.border3{
-    width: 100.3%;
-    position: relative;
-    left: -1px;
-    border-bottom: 1px solid black;
+
+.Tax {
+  height: 141px;
+  position: relative;
+  left: -40px;
+  top: -15px;
 }
-.note{
-    position: relative;
-    left: 83px;
+
+.border3 {
+  width: 100.3%;
+  position: relative;
+  left: -1px;
+  border-bottom: 1px solid black;
 }
-.input_1{
-    width: 40%;
+
+.note {
+  position: relative;
+  left: 83px;
 }
-.border_amercial{
-    border-bottom: 1px solid black;
+
+.input_1 {
+  width: 40%;
 }
-.area{
-    margin-left: 481px;
-    margin-right: -190px;
-    margin-top: -54px;
-    width: 50%;
+
+.border_amercial {
+  border-bottom: 1px solid black;
 }
-.border4{
-    width: 149.3%;
-    position: relative;
-    left: -89px;
-    border-bottom: 1px solid black;
+
+.area {
+  margin-left: 481px;
+  margin-right: -190px;
+  margin-top: -54px;
+  width: 50%;
 }
-.zhuming{
-    display: inline-block;
-    position: relative;
-    top: -38px;
-    left: 261px;
+
+.border4 {
+  width: 149.3%;
+  position: relative;
+  left: -89px;
+  border-bottom: 1px solid black;
 }
-.footer{
-    margin-left: 273px;
-    font-size: 15px;
-    font-weight: bold;
+
+.zhuming {
+  display: inline-block;
+  position: relative;
+  top: -38px;
+  left: 261px;
 }
-.btn{
-    text-align: center;
-    margin-top: 30px;
+
+.footer {
+  margin-left: 273px;
+  font-size: 15px;
+  font-weight: bold;
 }
-.DatePicker{
-    width: 138%;
-    position: relative;
-    top: -22px;
-    left: 25px;
+
+.btn {
+  text-align: center;
+  margin-top: 30px;
 }
-.changqi{
-    position: relative;
-    top: -114px;
-    left: 182px;
+
+.DatePicker {
+  width: 138%;
+  position: relative;
+  top: -22px;
+  left: 25px;
 }
+
+.changqi {
+  position: relative;
+  top: -114px;
+  left: 182px;
+}
+
 .zhengjianhaoma {
-    height: 56px;
-    border-bottom: 1px solid black;
+  height: 56px;
+  border-bottom: 1px solid black;
 }
-.fazhengjiguan{
-    border-bottom: 1px solid black;
+
+.fazhengjiguan {
+  border-bottom: 1px solid black;
 }
-.Position{
-    position: relative;
-    top: -43px;
+
+.Position {
+  position: relative;
+  top: -43px;
 }
-.border_zhiye{
-    width: 200%;
-    height: 0;
-    position: relative;
-    left: 624px;
-    border-bottom: 1px solid black;
+
+.border_zhiye {
+  width: 200%;
+  height: 0;
+  position: relative;
+  left: 624px;
+  border-bottom: 1px solid black;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
 }

@@ -1,70 +1,102 @@
-.jszhsqs{
-    width: 100%;
-    margin: 0 auto;
+.container {
+  width: 60%;
+  margin: 0 auto;
+  color: #6c6c6c;
+  padding: 10px 0 25px 0;
 }
 
-.cxyh{
-    position: relative;
-    right: -550px;
-    font-size: 34px;
+.logo {
+  background-image: url('../../assets/logo.png');
+  background-size: 100% 100%;
+  width: 228px;
+  height: 63px;
 }
 
-.accounttitle1{
-    border-bottom: 1px black solid;
+.title {
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.border{
-    border: 1px black solid;
-    margin: 0 auto;
-    width: 50%;
+.input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
 }
 
-.bankname1{
-    border-bottom: 1px black solid;
+.inputNumber {
+  width: 100%;
 }
 
-.bankcode{
-    border-bottom: 1px black solid;
-    
+.datePicker {
+  width: 100%;
 }
 
-.account{
-    border-bottom: 1px black solid;
-    
+.date {
+  width: 30%;
+  margin: 0 auto;
 }
 
-.naturezccount1{
-    border-bottom: 1px black solid;
+.accounttitle1 {
+  border-bottom: 1px black solid;
 }
 
-.accountnumber1{
-    border-bottom: 1px black solid;
+.border {
+  border: 1px black solid;
 }
 
-.pinreasons1{
-    border-bottom: 1px black solid;
+.bankname1 {
+  border-bottom: 1px black solid;
 }
 
-.dbk{
-    width: 50%;
-    border: 1px solid black;
-    border-right-color: transparent;
-    float: left;
+.bankcode {
+  border-bottom: 1px black solid;
+
 }
 
-.ckrqz{
-    padding: 27px 100px 18px 100px;
+.account {
+  border-bottom: 1px black solid;
+
 }
 
-.nyr{
-    padding: 27px 100px 18px 100px;
+.naturezccount1 {
+  border-bottom: 1px black solid;
 }
 
-.khyhbk{
-    float: left;
+.accountnumber1 {
+  border-bottom: 1px black solid;
 }
 
-.voucher1{
-    border-bottom: 1px black solid;
+.pinreasons1 {
+  border-bottom: 1px black solid;
 }
 
+.dbk {
+  width: 50%;
+  border: 1px solid black;
+  border-right-color: transparent;
+  float: left;
+}
+
+.ckrqz {
+  padding: 27px 100px 18px 100px;
+}
+
+.nyr {
+  padding: 27px 100px 18px 100px;
+}
+
+.khyhbk {
+  float: left;
+}
+
+.voucher1 {
+  border-bottom: 1px black solid;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
+}

@@ -1,174 +1,146 @@
-.zxxet{
-    width: 10%;
-    min-height: 10%;
-    font-size: 10px;
-    padding-left:500px;
-}
-
-.fl{
-    width: 10%;
-    min-height: 10%;
-    font-size: 10px;
-    padding-left:2px;
-
-}
-
-.clearfix{
-    clear: both;
-}
-
 .container {
-    width: 100%;
-    min-height: 100%;
-    background:white;
-    overflow: hidden;
-  }
+  width: 60%;
+  margin: 0 auto;
+  color: #6c6c6c;
+  padding: 10px 0 25px 0;
+}
 
-  .content {
-    width: 50%;
-   margin: 0 auto;
-  }
+.logo {
+  background-image: url('../../assets/logo.png');
+  background-size: 100% 100%;
+  width: 228px;
+  height: 63px;
+}
 
-  .zxyh {
-    width: 50%;
-    font-size: 22px;
-   margin: 0 auto;
-  }
+.title {
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
 
-  .czry {
-    width: 100%;
-    display: inline-block;
-    text-align: left;
-    font-size: 15px;
-    border-bottom: 1px black solid;
-    background: darkgray;
-  }
+.input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+}
 
-  .zbk{
-      border: solid 1px;
-  }
+.inputNumber {
+  width: 100%;
+}
 
-  .customername{
-    width: 100%;
-    display: inline-block;
-  }
+.datePicker {
+  width: 100%;
+}
 
-  .content{
-    font-size: 20px;
-   
-  }
+.date {
+  width: 30%;
+  margin: 0 auto;
+}
 
-  .wtrxx{
-    width: 50%;
-    border-bottom: 1px black solid;
-    border-top: 1px black solid;
-    border-right: 1px black solid;
-    
-  }
 
-  .dlrxx{
-    width: 50%;
-    font-size: 20px;
-    border-left-color: transparent;
-  }
-  .contentborder{
-      width: 100%;
-  }
-  .biankuang{
-    width: 50%;
-    border: 1px solid black;
-    border-left-color: transparent;
-    float: left;
-  }
-  .rightborder{
-    width: 50%;
-    border: 1px solid black;
-    border-right-color: transparent;
-    float: left;
-    height: 252px;
-    border-left-color: transparent;
-    padding-top: 27px;
-  }
-  .contentborder1{
-      width: 100%;
-      margin-top: 269px;
-  }
-  .agentinformation1{
-    width: 50%;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid;
-    border-left-color: transparent;
-    float: left;
-  }
-  .hint{
-    width: 50%;
-    font-size: 20px;
-    float: left;
-    position: relative;
-    top: 90px;
-    border-bottom: 1px black solid;
-    padding-bottom: 129px;
-  }
-  .btn{
-      clear: both;
-      position: absolute;
-      top: 1000px;
-      left: 728px;
-  }
-  .tishi{
-      font-size: 20px;
-      font-weight: bold;
-  }
-  
-  .zhbk{
-      width: 100%;
-      border-bottom: 1px black solid;
-      border-right: 1px black solid;
-      float: left;
-  }
-  .debk{
-      width: 50%;
-      border-right:1px black solid; 
-      float: left;
-  }
-  .dwgz{
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 250px;
-      margin-top: 10px;
-      margin-left: 5px;
-  }
-  .day{
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 5px;
-  }
-  .dybk{
-      font-size: 20px;
-      margin-bottom: 198px;
-      font-weight: bold;
-      margin-top: 10px;
-      margin-left: 5px;
-  }
-  .jb{
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 10px;
-      margin-left: 5px;
-      margin-bottom: 10px;
-  }
 
-  .sgfd{
-      float: left;
-  }
-  .fh{
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 5px;
-  }
-  .day2{
-    font-size: 20px;
-    font-weight: bold;
-    float: right;
-    margin-top: -25px;
-  }
+.czry {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
+  font-size: 15px;
+  background: darkgray;
+}
+
+.customername {
+  width: 100%;
+  display: inline-block;
+}
+.items{
+  border: 1px black solid;
+  padding: 0 10px;
+}
+.content {
+  font-size: 20px;
+}
+
+.wtrxx {
+  width: 50%;
+  border-bottom: 1px black solid;
+  border-top: 1px black solid;
+  border-right: 1px black solid;
+
+}
+
+.dlrxx {
+  width: 50%;
+  font-size: 20px;
+}
+
+.contentborder {
+  width: 100%;
+}
+
+
+
+.contentborder1 {
+  width: 100%;
+  margin-top: 269px;
+}
+
+.btn {
+  clear: both;
+  position: absolute;
+  top: 1000px;
+  left: 728px;
+}
+
+.tishi {
+  font-size: 20px;
+}
+
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.day {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.dybk {
+  font-size: 20px;
+  margin-bottom: 198px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.jb {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+
+.fh {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.day2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+
+.footer {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
+}

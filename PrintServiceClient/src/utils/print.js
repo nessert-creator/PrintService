@@ -221,18 +221,23 @@ function getFujitsu_DPK1560Index() {
     });
     return -1;
 }
-export function PrintXinjinjiaokuandan(html) {
+function getFujitsu_DPK1560Index() {
     let LODOP = getLodop();
-    var index = getFujitsu_DPK1560Index();
-    if (index >= 0) {
-        LODOP.PRINT_INIT();
-        LODOP.SET_PRINTER_INDEX(index);
-        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
-        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
-        LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
-        // LODOP.PRINT();
-        LODOP.PREVIEW();
+    let count = LODOP.GET_PRINTER_COUNT();
+    var name = 'Fujitsu DPK1560';
+    if (window.needleDeviceName) {
+        name = window.needleDeviceName;
     }
+    for (let i = count - 1; i >= 0; i--) {
+        if (LODOP.GET_PRINTER_NAME(`${i}`).indexOf(name) >= 0) {
+            return i;
+        }
+    }
+    notification.error({
+        message: '针式打印机出错',
+        description: '没有找到针式打印机或针式打印机驱动未安装'
+    });
+    return -1;
 }
 function getFujitsu_DPK1560Index() {
     let LODOP = getLodop();
@@ -251,6 +256,84 @@ function getFujitsu_DPK1560Index() {
         description: '没有找到针式打印机或针式打印机驱动未安装'
     });
     return -1;
+}
+export function printJinzhangdan(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
+}
+export function PrintXinjinjiaokuandan(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
+}
+export function PrintYewujiesuanshenqingshu(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 2100, 1400, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
+}
+export function PrintShouquanshu(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
+}
+export function PrintYwdlsqbiao(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
+}
+export function PrintPowerbook(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
+        LODOP.PRINT();
+        // LODOP.PREVIEW();
+    }
 }
 export function PrintShouqunweituoshu1(html) {
     let LODOP = getLodop();
@@ -265,24 +348,6 @@ export function PrintShouqunweituoshu1(html) {
         LODOP.PREVIEW();
     }
 }
-function getFujitsu_DPK1560Index() {
-    let LODOP = getLodop();
-    let count = LODOP.GET_PRINTER_COUNT();
-    var name = 'Fujitsu DPK1560';
-    if (window.needleDeviceName) {
-        name = window.needleDeviceName;
-    }
-    for (let i = count - 1; i >= 0; i--) {
-        if (LODOP.GET_PRINTER_NAME(`${i}`).indexOf(name) >= 0) {
-            return i;
-        }
-    }
-    notification.error({
-        message: '针式打印机出错',
-        description: '没有找到针式打印机或针式打印机驱动未安装'
-    });
-    return -1;
-}
 export function PrintShouqunweituoshu2(html) {
     let LODOP = getLodop();
     var index = getFujitsu_DPK1560Index();
@@ -295,35 +360,4 @@ export function PrintShouqunweituoshu2(html) {
         // LODOP.PRINT();
         LODOP.PREVIEW();
     }
-}
-export function PrintYwdlsqbiao(html) {
-    let LODOP = getLodop();
-    var index = getEPSONLQ_630KIndex();
-    if (index >= 0) {
-        LODOP.PRINT_INIT();
-        LODOP.SET_PRINTER_INDEX(index);
-        LODOP.ADD_PRINT_HTM(0, 0, 830, '', html);
-        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
-        LODOP.SET_PRINT_PAGESIZE(3, 2080, 2940, '');
-        // LODOP.PRINT();
-        LODOP.PREVIEW();
-    }
-}
-function getFujitsu_DPK1560Index() {
-    let LODOP = getLodop();
-    let count = LODOP.GET_PRINTER_COUNT();
-    var name = 'Fujitsu DPK1560';
-    if (window.needleDeviceName) {
-        name = window.needleDeviceName;
-    }
-    for (let i = count - 1; i >= 0; i--) {
-        if (LODOP.GET_PRINTER_NAME(`${i}`).indexOf(name) >= 0) {
-            return i;
-        }
-    }
-    notification.error({
-        message: '针式打印机出错',
-        description: '没有找到针式打印机或针式打印机驱动未安装'
-    });
-    return -1;
 }

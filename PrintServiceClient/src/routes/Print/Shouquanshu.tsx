@@ -9,7 +9,7 @@ export default class Shouquanshu extends React.Component {
         return (
             <div style={{
                 fontSize: "21px",
-                paddingTop: "210px"
+                paddingTop: "200px"
             }}>
                 <div>
                     <span
@@ -29,19 +29,28 @@ export default class Shouquanshu extends React.Component {
                 </div>
                 <div style={{}}>
                     <span
-                    style={{
-                        marginLeft:"170px"
-                    }}>{Shouquanshu.telephonenumber}</span>
+                        style={{
+                            marginTop: 10,
+                            marginLeft: "170px"
+                        }}>{Shouquanshu.telephonenumber}</span>
                 </div>
-                <div style={{}}>
+                <div style={{
+                    marginTop: 180,
+                    marginLeft: 240
+                }}>
                     <span>{Shouquanshu.other}</span>
                 </div>
-                <div>
+                <div style={{
+                    marginTop: 325,
+                    marginLeft: 500
+                }}>
                     <span style={{
                     }}>{Shouquanshu.year}</span>
                     <span style={{
+                        marginLeft: 50
                     }}>{Shouquanshu.month}</span>
                     <span style={{
+                        marginLeft: 50
                     }}>{Shouquanshu.day}</span>
                 </div>
             </div>

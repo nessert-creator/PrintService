@@ -10,12 +10,15 @@ namespace QC.MF.Yewujiesuanshenqingshus.Dto
     [AutoMap(typeof(QC.MF.Yewujiesuanshenqingshu.Yewujiesuanshenqingshu))]
     public class CreateYewujiesuanshenqingshuDto
     {
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
         public string Designation { get; set; }
         //申请人
         //名称
         public string Account { get; set; }
         //账号
-        public int Telephone { get; set; }
+        public string Telephone { get; set; }
         //联系电话
         public string Account1 { get; set; }
         //开户/汇出行
@@ -23,17 +26,19 @@ namespace QC.MF.Yewujiesuanshenqingshus.Dto
         //收款人/名称
         public string Account2 { get; set; }
         //账号
-        public string Addiess { get; set; }
-        //地址
+        public string Provice { get; set; }
+        //省
+        public string City { get; set; }
+        //市
         public string Account3 { get; set; }
         //开户/汇出行
         public string Currency { get; set; }
         //币种
-        public int Money { get; set; }
+        public decimal Money { get; set; }
         //金额
         public string Account4 { get; set; }
         //账号
-        public int Pay { get; set; }
+        public string Pay { get; set; }
         //支付密码
         public string Nationality { get; set; }
         //国籍
@@ -43,5 +48,7 @@ namespace QC.MF.Yewujiesuanshenqingshus.Dto
         //职业
         public string Number { get; set; }
         //证件号码
+        public string Extra { get; set; }
+        //附加信息
     }
 }

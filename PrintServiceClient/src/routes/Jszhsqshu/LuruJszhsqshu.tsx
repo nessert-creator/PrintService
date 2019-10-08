@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 import { Form, Icon, Input, Button, Checkbox, message, Row, Col } from 'antd';
 const FormItem = Form.Item;
 const create = Form.create;
@@ -52,8 +53,13 @@ function LuruJszhsqshu({ dispatch, form }) {
     };
 
     return (
-        <div className={styles.jszhsqs}>
-            <span className={styles.cxyh}>撤销银行结算账户申请书</span>
+        <div className={styles.container}>
+
+            <header className={styles.title}>
+                <Row className={styles.logo}></Row>
+                <Row className={styles.title}>撤销银行结算账户申请书</Row>
+            </header>
+
             <div className={styles.zdborder}>
                 <section className={styles.border}>
                     <Form onSubmit={handleSubmit} className={styles.accounttitle}>
@@ -61,14 +67,14 @@ function LuruJszhsqshu({ dispatch, form }) {
                             <FormItem label="账户名称" {...formCol}>
                                 {getFieldDecorator('accounttitle', {
                                     rules: [{ required: true, message: '请输入账户名称！' }]
-                                })(<Input />)}
+                                })(<Input className={styles.input}/>)}
                             </FormItem>
                         </div>
                         <div className={styles.bankname1}>
                             <FormItem label="开户银行名称" {...formCol}>
                                 {getFieldDecorator('bankname', {
                                     rules: [{ required: true, message: '请输入开户银行名称！' }]
-                                })(<Input />)}
+                                })(<Input className={styles.input}/>)}
                             </FormItem>
                         </div>
                         <div className={styles.bankcode}>
@@ -76,13 +82,13 @@ function LuruJszhsqshu({ dispatch, form }) {
                                 <FormItem label="开户银行代码" {...formCol}>
                                     {getFieldDecorator('bankcode', {
                                         rules: [{ required: true, message: '请输入开户银行代码！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <div className={`${styles.hint} clearfix`}>
                                     <FormItem label="账号" {...formCol}>
                                         {getFieldDecorator('account', {
                                             rules: [{ required: true, message: '请输入账号！' }]
-                                        })(<Input />)}
+                                        })(<Input className={styles.input}/>)}
                                     </FormItem>
                                 </div>
                             </div>
@@ -90,21 +96,21 @@ function LuruJszhsqshu({ dispatch, form }) {
                                 <FormItem label="账户性质" {...formCol}>
                                     {getFieldDecorator('naturezccount', {
                                         rules: [{ required: true, message: '请输入账户性质！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                             </div>
                             <div className={styles.accountnumber1}>
                                 <FormItem label="开户许可证核准号" {...formCol}>
                                     {getFieldDecorator('accountnumber', {
                                         rules: [{ required: true, message: '请输入开户许可证核准号！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                             </div>
                             <div className={styles.pinreasons1}>
                                 <FormItem label="销户原因" {...formCol}>
                                     {getFieldDecorator('pinreasons', {
                                         rules: [{ required: true, message: '请输入销户原因！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                             </div>
                             <div>
@@ -132,37 +138,37 @@ function LuruJszhsqshu({ dispatch, form }) {
                                 <FormItem label="年" {...formCol}>
                                     {getFieldDecorator('year', {
                                         rules: [{ required: true, message: '请输入年！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="月" {...formCol}>
                                     {getFieldDecorator('month', {
                                         rules: [{ required: true, message: '请输入月！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="日" {...formCol}>
                                     {getFieldDecorator('day', {
                                         rules: [{ required: true, message: '请输入日！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="年" {...formCol}>
                                     {getFieldDecorator('year1', {
                                         rules: [{ required: true, message: '请输入年！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="月" {...formCol}>
                                     {getFieldDecorator('month1', {
                                         rules: [{ required: true, message: '请输入月！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="日" {...formCol}>
                                     {getFieldDecorator('day1', {
                                         rules: [{ required: true, message: '请输入日！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                                 <FormItem label="交回空白重要凭证" {...formCol}>
                                     {getFieldDecorator('voucher', {
                                         rules: [{ required: true, message: '请输入交回空白重要凭证！' }]
-                                    })(<Input />)}
+                                    })(<Input className={styles.input}/>)}
                                 </FormItem>
                             </div>
                             <div>
@@ -176,22 +182,22 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -199,22 +205,22 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -222,22 +228,22 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -245,22 +251,22 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -268,22 +274,22 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -291,32 +297,44 @@ function LuruJszhsqshu({ dispatch, form }) {
                                         <FormItem >
                                             {getFieldDecorator('species', {
                                                 rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input />)}
+                                            })(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={4}>
-                                    <FormItem >
-                                        {getFieldDecorator('anumberof', {
-                                            rules: [{ required: true, message: '请输入张（份）数！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem >
+                                            {getFieldDecorator('anumberof', {
+                                                rules: [{ required: true, message: '请输入张（份）数！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                     <Col span={10}>
-                                    <FormItem>
-                                        {getFieldDecorator('allnumbers', {
-                                            rules: [{ required: true, message: '请输入起讫号码！' }]
-                                        })(<Input />)}
-                                    </FormItem>
+                                        <FormItem>
+                                            {getFieldDecorator('allnumbers', {
+                                                rules: [{ required: true, message: '请输入起讫号码！' }]
+                                            })(<Input className={styles.input}/>)}
+                                        </FormItem>
                                     </Col>
                                 </Row>
-                                
+
                             </div>
                         </div>
 
 
-                        <Button type="primary" htmlType="submit" className={styles.btn}>
-                            提交
-					</Button>
+                        <div className={styles.footer}>
+                            <Row>
+                                <Col span={4}>
+                                    <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+                                </Col>
+
+                                <Col offset={5} span={8}>
+                                    <Button.Group size='large'>
+                                        <Button type="primary" htmlType="submit">提交</Button>
+                                        <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+                                        <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+                                    </Button.Group>
+                                </Col>
+                            </Row>
+                        </div>
                     </Form>
                 </section>
             </div>

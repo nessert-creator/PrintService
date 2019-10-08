@@ -1,13 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import * as api from './../api/api';
-import { createApiAuthParam } from './../api/apiUtil';
-import { PrintReceipt, PrintIOU, PrintXinjinjiaokuandan } from './../utils/print';
-import ActiveCardReceipt from './../routes/Print/ActiveCardReceipt';
-import InactiveCardReceipt from './../routes/Print/InactiveCardReceipt';
-import IOU from './../routes/Print/IOU';
-import AccountReceipt from './../routes/Print/AccountReceipt';
+import { printJinzhangdan, PrintXinjinjiaokuandan, PrintYewujiesuanshenqingshu, PrintShouquanshu, PrintYwdlsqbiao, PrintPowerbook } from './../utils/print';
 import Xinjinjiaokuandan from './../routes/Print/Xinjinjiaokuandan';
+import Jiangzhangdan from './../routes/Print/Jiangzhangdan';
+import Yewujiesuanshenqingshu from './../routes/Print/Yewujiesuanshenqingshu';
+import Shouquanshu from './../routes/Print/Shouquanshu';
+import Ywdlsqbiao from './../routes/Print/Ywdlsqbiao';
+import Powerbook from './../routes/Print/Powerbook';
 function print(reactElement, printFunction) {
     let div = document.createElement('div');
     document.body.appendChild(div);
@@ -20,54 +19,35 @@ function print(reactElement, printFunction) {
 }
 export default {
     namespace: 'print',
-    state: {
-        activeCardReceipt: {},
-        inactiveCardReceipt: { consume: {} },
-        iou: { endCoachSchoolName: '青才驾校', usedTimeSubFeeTime: 1, consume: { realFee: 200 } }
-    },
+    state: {},
     reducers: {
         setState(state, { payload }) {
             return Object.assign({}, state, payload);
         }
     },
     effects: {
-        *printActiveCardReceipt({ payload }, { call, put }) {
-            const { success, result } = yield call(...createApiAuthParam({
-                method: new api.PrintApi().appPrintPrintStartReceipt,
-                payload: payload
-            }));
-            if (success) {
-                print(<ActiveCardReceipt activeCardReceipt={result}/>, PrintReceipt);
-            }
-        },
-        *printInactiveCardReceipt({ payload }, { call, put }) {
-            const { success, result } = yield call(...createApiAuthParam({
-                method: new api.PrintApi().appPrintPrintEndReceipt,
-                payload: payload
-            }));
-            if (success) {
-                print(<InactiveCardReceipt inactiveCardReceipt={result}/>, PrintReceipt);
-            }
-        },
-        *printIOU({ payload }, { call, put }) {
-            // const { success, result } = yield call(
-            // 	...createApiAuthParam({
-            // 		method: new api.PrintApi().appPrintPrintIOU,
-            // 		payload: payload
-            // 	})
-            // );
-            // if (success) {
-            let result = { endCoachSchoolName: '青才驾校', usedTimeSubFeeTime: 1, consume: { realFee: 200 } };
-            print(<IOU iou={result}/>, PrintIOU);
-            // }
-        },
-        *printAccountReceipt({ payload }, { select }) {
-            payload.receipt.examinationCenterName = yield select(state => state.indexpage.setting.systemName);
-            print(<AccountReceipt accountReceipt={payload.receipt}/>, PrintReceipt);
+        *printJinzhangdan({ payload }, { call, put }) {
+            print(<Jiangzhangdan jiangzhangdan={payload}/>, printJinzhangdan);
         },
         *printXinjinjiaokuandan({ payload }, { call, put }) {
             console.log(payload);
             print(<Xinjinjiaokuandan xinjinjiaokuandan={payload}/>, PrintXinjinjiaokuandan);
+        },
+        *printYewujiesuanshenqingshu({ payload }, { call, put }) {
+            console.log(payload);
+            print(<Yewujiesuanshenqingshu data={payload}/>, PrintYewujiesuanshenqingshu);
+        },
+        *printShouquanshu({ payload }, { call, put }) {
+            console.log(payload);
+            print(<Shouquanshu Shouquanshu={payload}/>, PrintShouquanshu);
+        },
+        *printYwdlsqbiao({ payload }, { call, put }) {
+            console.log(payload);
+            print(<Ywdlsqbiao ywdlsqbiao={payload}/>, PrintYwdlsqbiao);
+        },
+        *printPowerbook({ payload }, { call, put }) {
+            console.log(payload);
+            print(<Powerbook powerbook={payload}/>, PrintPowerbook);
         },
     },
     subscriptions: {}

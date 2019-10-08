@@ -4,34 +4,27 @@ import { Form, Input, InputNumber, Badge, DatePicker } from 'antd';
 
 const create = Form.create;
 const FormItem = Form.Item;
-
-const { TextArea } = Input;
 import * as api from '../../api/api';
 
 import CRUD from '../CRUD/CRUD';
-import moment from 'moment';
 
 function Xinjinjiaokuandan({ form, record }) {
     const columns = [
         {
             title: '年',
-            dataIndex: 'nian',
-            sorter: true
+            dataIndex: 'nian'
         },
         {
             title: '月',
-            dataIndex: 'yue',
-            sorter: true
+            dataIndex: 'yue'
         },
         {
             title: '日',
-            dataIndex: 'ri',
-            sorter: true
+            dataIndex: 'ri'
         },
         {
             title: '收款单位',
-            dataIndex: 'accountName',
-            sorter: true
+            dataIndex: 'accountName'
         },
         {
             title: '收款账号',
@@ -40,23 +33,19 @@ function Xinjinjiaokuandan({ form, record }) {
         },
         {
             title: '开户行',
-            dataIndex: 'openingBank',
-            sorter: true,
+            dataIndex: 'openingBank'
         },
         {
             title: '摘要',
-            dataIndex: 'abstract',
-            sorter: true
+            dataIndex: 'abstract'
         },
         {
             title: '币种及金额（大写)',
-            dataIndex: 'money',
-            sorter: true
+            dataIndex: 'money'
         },
         {
             title: '银行专用栏',
-            dataIndex: 'bankSpecialColumn',
-            sorter: true
+            dataIndex: 'bankSpecialColumn'
         },
     ];
     const { getFieldDecorator } = form;
@@ -70,19 +59,19 @@ function Xinjinjiaokuandan({ form, record }) {
                 {getFieldDecorator('nian', {
                     initialValue: record.accountname,
                     rules: [{ required: true, message: '请填写年' }]
-                })(<Input />)}
+                })(<InputNumber style={{ width: "100%" }} />)}
             </FormItem>
             <FormItem label="月" {...formCol}>
                 {getFieldDecorator('yue', {
                     initialValue: record.accountname,
                     rules: [{ required: true, message: '请填写月' }]
-                })(<Input />)}
+                })(<InputNumber style={{ width: "100%" }} />)}
             </FormItem>
             <FormItem label="日" {...formCol}>
                 {getFieldDecorator('ri', {
                     initialValue: record.accountname,
                     rules: [{ required: true, message: '请填写日' }]
-                })(<Input />)}
+                })(<InputNumber style={{ width: "100%" }} />)}
             </FormItem>
             <FormItem label="收款单位" {...formCol}>
                 {getFieldDecorator('accountname', {
@@ -111,7 +100,7 @@ function Xinjinjiaokuandan({ form, record }) {
                 {getFieldDecorator('money', {
                     initialValue: record.money,
                     rules: [{ required: true, message: '请填写金额' }]
-                })(<Input />)}
+                })(<InputNumber style={{ width: "100%" }} />)}
             </FormItem>
             <FormItem label="银行专用栏" {...formCol}>
                 {getFieldDecorator('bankSpecialColumn', {
@@ -120,53 +109,7 @@ function Xinjinjiaokuandan({ form, record }) {
             </FormItem>
         </Form>
     );
-    const filters = [
-        {
-            name: 'nian',
-            displayName: '年',
-            option: 'like'
-        },
-        {
-            name: 'yue',
-            displayName: '月',
-            option: 'like'
-        },
-        {
-            name: 'ri',
-            displayName: '日',
-            option: 'like'
-        },
-        {
-            name: 'accountname',
-            displayName: '收款单位',
-            option: 'like'
-        },
-        {
-            name: 'accountname',
-            displayName: '收款账号',
-            option: 'like'
-        },
-        {
-            name: 'openingbank',
-            displayName: '开户行',
-            option: 'like'
-        },
-        {
-            name: 'abstract',
-            displayName: '摘要',
-            option: 'like'
-        },
-        {
-            name: 'money',
-            displayName: '币种及金额（大写)',
-            option: 'like'
-        },
-        {
-            name: 'bankspecialcolumn',
-            displayName: '银行专用栏',
-            option: 'like'
-        },
-    ];
+    const filters = [];
 
     return (
         <CRUD
@@ -181,7 +124,6 @@ function Xinjinjiaokuandan({ form, record }) {
             customColumnOption={(text, record) => (
                 <span>
                     <a onClick={() => {
-
                         dispatch({
                             type: "print/printXinjinjiaokuandan",
                             payload: record
@@ -189,7 +131,7 @@ function Xinjinjiaokuandan({ form, record }) {
                     }}
                     >
                         打印
-            </a>
+                    </a>
                     <span style={{ marginLeft: '6px' }} />
                 </ span >
             )}

@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { Form, Icon, Input, Button, Checkbox, message, Row, Col } from 'antd';
+import { Link } from 'dva/router';
 const FormItem = Form.Item;
 const create = Form.create;
 import styles from './LuruDanweixinxidengjibiao.css';
@@ -77,12 +78,12 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
-				<header className={styles.zhongxinyinhang}>
-					<span>附件1</span><br />
+
+				<header className={styles.title}>
+					<Row className={styles.logo}></Row>
+					<Row className={styles.title}>单位信息登记表</Row>
 				</header>
-				<header>
-					<div className={styles.title}>单位信息登记表</div>
-				</header>
+
 				<section>
 					<Form onSubmit={handleSubmit}>
 						<div className={styles.content1}>
@@ -128,14 +129,14 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 										</Row>
 									</div>
 									<div>
-									<Row className={styles.dixian}>
-										<Col span={4} className={styles.mingcheng} >股东名称</Col>
-										<Col span={3} className={styles.mingcheng}>证件类型</Col>
-										<Col span={4} className={styles.mingcheng}>证件号码</Col>
-										<Col span={3} className={styles.mingcheng}>有效期限</Col>
-										<Col span={2} className={styles.mingcheng}>持股比例</Col>
-										<Col span={6} className={styles.mingcheng}>是否控股股东或实际控股人</Col>
-									</Row>
+										<Row className={styles.dixian}>
+											<Col span={4} className={styles.mingcheng} >股东名称</Col>
+											<Col span={3} className={styles.mingcheng}>证件类型</Col>
+											<Col span={4} className={styles.mingcheng}>证件号码</Col>
+											<Col span={3} className={styles.mingcheng}>有效期限</Col>
+											<Col span={2} className={styles.mingcheng}>持股比例</Col>
+											<Col span={6} className={styles.mingcheng}>是否控股股东或实际控股人</Col>
+										</Row>
 									</div>
 									<Row>
 										<Col>
@@ -719,9 +720,21 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 
 
 								</div>
-								<Button type="primary" htmlType="submit">
-									保存
-							</Button>
+								<div className={styles.footer}>
+									<Row>
+										<Col span={4}>
+											<Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+										</Col>
+
+										<Col offset={5} span={8}>
+											<Button.Group size='large'>
+												<Button type="primary" htmlType="submit">提交</Button>
+												<Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+												<Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+											</Button.Group>
+										</Col>
+									</Row>
+								</div>
 
 							</div>
 						</div>

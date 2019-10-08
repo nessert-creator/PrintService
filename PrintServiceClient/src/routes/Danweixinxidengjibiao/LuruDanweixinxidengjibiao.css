@@ -1,24 +1,45 @@
 .container {
-    width: 100%;
-    min-height: 100%;
-    overflow: hidden;
-}
-
-.zhongxinyinhang {
-    width: 40%;
+    width: 60%;
     margin: 0 auto;
-}
-
-.title {
+    color: #6c6c6c;
+    padding: 10px 0 25px 0;
+  }
+  
+  .logo {
+    background-image: url('../../assets/logo.png');
+    background-size: 100% 100%;
+    width: 228px;
+    height: 63px;
+  }
+  
+  .title {
+    padding: 5px 0 10px 0;
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-}
+  }
+  
+  .input {
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+  }
+  
+  .inputNumber {
+    width: 100%;
+  }
+  
+  .datePicker {
+    width: 100%;
+  }
+  
+  .date {
+    width: 30%;
+    margin: 0 auto;
+  }
 
 .content1 {
     border: 1px black solid;
-    width: 50%;
-    margin: 0 auto;
 }
 
 .shenqingren {
@@ -36,8 +57,6 @@
 }
 
 .content2 {
-    width: 50%;
-    float: left;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -47,8 +66,6 @@
 }
 
 .shoukuanren1 {
-    width: 50%;
-    float: left;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
     border-right-color: transparent;
@@ -159,12 +176,16 @@
 }
 .zhongxian{
     border-right: 1px solid;
-    width: 50%;
-    float: left;
     height: 240px;
 }
 .mingcheng{
     text-align: center;
     font-size: 21px;
     /* border-right: 1px black solid; */
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
 }

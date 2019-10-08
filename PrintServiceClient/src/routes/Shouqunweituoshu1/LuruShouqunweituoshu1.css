@@ -1,21 +1,42 @@
-.clearfix:after {
-    clear: both;
-    height: 0;
-    content: "";
-    display: block;
-    visibility: hidden;
-}
-
 .container {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
-}
-
-.title {
+    color: #6c6c6c;
+    padding: 10px 0 25px 0;
+  }
+  
+  .logo {
+    background-image: url('../../assets/logo.png');
+    background-size: 100% 100%;
+    width: 228px;
+    height: 63px;
+  }
+  
+  .title {
+    padding: 5px 0 10px 0;
     text-align: center;
     font-size: 30px;
-    font-weight: 300;
-}
+    font-weight: bold;
+  }
+  
+  .input {
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+  }
+  
+  .inputNumber {
+    width: 100%;
+  }
+  
+  .datePicker {
+    width: 100%;
+  }
+  
+  .date {
+    width: 30%;
+    margin: 0 auto;
+  }
 
 .kuan {
     width: 30%;
@@ -33,4 +54,10 @@
 
 .xia {
     margin-bottom: -15px;
+}
+
+.footer {
+  margin-top: 30px;
+  padding: 0 20px;
+  color: white;
 }

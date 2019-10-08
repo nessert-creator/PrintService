@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
+import { Link } from 'dva/router';
 import { Form, Icon, Input, Button, DatePicker, Checkbox, message, Row, Col } from 'antd';
 const FormItem = Form.Item;
 const create = Form.create;
@@ -39,10 +40,11 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
-				<header className={styles.title}>
-					<span>授权委托书（二）</span>
-				</header>
 
+				<header className={styles.title}>
+					<Row className={styles.logo}></Row>
+					<Row className={styles.title}>授权委托书（二）</Row>
+				</header>
 				<Form onSubmit={handleSubmit}>
 					<Row className={styles.xia}>
 						<div className={styles.fudong}>中信银行</div>
@@ -150,11 +152,21 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 							<DatePicker />
 						)}
 					</FormItem>
-					<Form>
-						<Button type="primary" htmlType="submit" className={styles.baocun}>
-							保存
-							</Button>
-					</Form>
+					<div className={styles.footer}>
+						<Row>
+							<Col span={4}>
+								<Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+							</Col>
+
+							<Col offset={5} span={8}>
+								<Button.Group size='large'>
+									<Button type="primary" htmlType="submit">提交</Button>
+									<Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+									<Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+								</Button.Group>
+							</Col>
+						</Row>
+					</div>
 				</Form>
 			</div>
 		</div >

@@ -15,68 +15,55 @@ function Jiangzhangdan({ form, record }) {
     const columns = [
         {
             title: '年',
-            dataIndex: 'year',
-            sorter: true
+            dataIndex: 'year'
         },
         {
             title: '月',
-            dataIndex: 'month',
-            sorter: true
+            dataIndex: 'month'
         },
         {
             title: '日',
-            dataIndex: 'day',
-            sorter: true,
+            dataIndex: 'day'
         },
         {
             title: '出票人全称',
-            dataIndex: 'chupiaorenqc',
-            sorter: true
+            dataIndex: 'chupiaorenqc'
         },
         {
             title: '出票人账号',
-            dataIndex: 'chupiaorenzh',
-            sorter: true
+            dataIndex: 'chupiaorenzh'
         },
         {
             title: '出票人开户银行',
-            dataIndex: 'chupiaorenkhyh',
-            sorter: true
+            dataIndex: 'chupiaorenkhyh'
         },
         {
             title: '收款人全称',
-            dataIndex: 'shoukuanrenqc',
-            sorter: true
+            dataIndex: 'shoukuanrenqc'
         },
         {
             title: '收款人账号',
-            dataIndex: 'shoukuanrenzh',
-            sorter: true
+            dataIndex: 'shoukuanrenzh'
         },
         {
             title: '收款人开户银行',
-            dataIndex: 'shoukuanrenkhyh',
-            sorter: true
+            dataIndex: 'shoukuanrenkhyh'
         },
         {
             title: '人民币',
-            dataIndex: 'renminbi',
-            sorter: true
+            dataIndex: 'renminbi'
         },
         {
             title: '票据种类',
-            dataIndex: 'piaojuzhonglei',
-            sorter: true
+            dataIndex: 'piaojuzhonglei'
         },
         {
             title: '票据张数',
-            dataIndex: 'piaojuzhangshu',
-            sorter: true
+            dataIndex: 'piaojuzhangshu'
         },
         {
             title: '票据号码',
-            dataIndex: 'piaojuhaoma',
-            sorter: true
+            dataIndex: 'piaojuhaoma'
         },
     ];
     const { getFieldDecorator } = form;
@@ -135,7 +122,7 @@ function Jiangzhangdan({ form, record }) {
             <FormItem label="人民币" {...formCol}>
                 {getFieldDecorator('renminbi', {
                     initialValue: record.renminbi,
-                })(<Input />)}
+                })(<InputNumber />)}
             </FormItem>
             <FormItem label="票据种类" {...formCol}>
                 {getFieldDecorator('piaojuzhonglei', {
@@ -154,23 +141,7 @@ function Jiangzhangdan({ form, record }) {
             </FormItem>
         </Form>
     );
-    const filters = [
-        {
-            name: 'year',
-            displayName: '年',
-            option: 'like'
-        },
-        {
-            name: 'month',
-            displayName: '月',
-            option: 'like'
-        },
-        {
-            name: 'day',
-            displayName: '日',
-            option: 'like'
-        },
-    ];
+    const filters = [];
 
     return (
         <CRUD
