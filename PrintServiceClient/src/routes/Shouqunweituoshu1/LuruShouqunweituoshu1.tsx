@@ -43,7 +43,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 			<div className={styles.content}>
 
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>授权委托书（一）</Row>
 				</header>
 				<Form onSubmit={handleSubmit} style={{ fontSize: 25 }}>

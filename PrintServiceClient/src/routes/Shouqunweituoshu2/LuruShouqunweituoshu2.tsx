@@ -41,7 +41,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 			<div className={styles.content}>
 
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>授权委托书（二）</Row>
 				</header>
 				<Form onSubmit={handleSubmit} style={{ fontSize: 25 }}>
@@ -216,7 +216,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 
 					</Row>
 					<Row>
-						<Col span={6}>9、开立存算资信证明</Col>	
+						<Col span={6}>9、开立存算资信证明</Col>
 					</Row>
 					<Row>
 						<span>10、其他 </span>

@@ -76,7 +76,7 @@ function Lurujiangzhangdan({ dispatch, form }) {
         <div className={styles.container}>
 
             <header className={styles.title}>
-                <Row className={styles.logo}></Row>
+                <Link to="/"><Row className={styles.logo}></Row></Link>
                 <Row className={styles.title}>进账单</Row>
             </header>
 
