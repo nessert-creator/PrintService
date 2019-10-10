@@ -1,60 +1,46 @@
 .container {
-    width: 60%;
-    margin: 0 auto;
-    color: #6c6c6c;
-    padding: 10px 0 25px 0;
-  }
-  
-  .logo {
-    background-image: url('../../assets/logo.png');
-    background-size: 100% 100%;
-    width: 228px;
-    height: 63px;
-  }
-  
-  .title {
-    padding: 5px 0 10px 0;
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  .input {
-    border: none;
-    border-bottom: 1px solid;
-    border-radius: 0;
-  }
-  
-  .inputNumber {
-    width: 100%;
-  }
-  
-  .datePicker {
-    width: 100%;
-  }
-  
-  .date {
-    width: 30%;
-    margin: 0 auto;
-  }
-  
-
-.kuan {
-    width: 30%;
-    float: left;
-    border: none;
-    border-bottom: 1px solid;
-    border-radius: unset;
-    text-decoration: underline;
+  width: 60%;
+  margin: 0 auto;
+  color: #6c6c6c;
+  padding: 10px 0 25px 0;
 }
 
-.fudong {
-    float: left;
-    line-height: 50px;
+.logo {
+  background-image: url('../../assets/logo.png');
+  background-size: 100% 100%;
+  width: 228px;
+  height: 63px;
 }
 
-.xia {
-    margin-bottom: -15px;
+.title {
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+}
+
+.inputNumber {
+  width: 100%;
+}
+
+.datePicker {
+  width: 100%;
+}
+
+.date {
+  width: 30%;
+  margin: 0 auto;
+}
+
+
+.formItem{
+  display: inline-block;
 }
 
 .footer {

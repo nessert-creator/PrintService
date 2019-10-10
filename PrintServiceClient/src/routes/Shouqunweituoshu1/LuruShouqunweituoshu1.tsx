@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
-import { Form, Icon, Input, Button, DatePicker, Checkbox, message, Row, Col } from 'antd';
+import { Form, Icon, Input, Button, DatePicker, Checkbox, Select, Row, Col } from 'antd';
 const FormItem = Form.Item;
 const create = Form.create;
 import styles from './LuruShouqunweituoshu1.css';
 import TextArea from 'antd/lib/input/TextArea';
 import { COLLECTION_FORMATS } from '../../api/api';
+const Option = Select.Option;
 
 
 function LuruShouqunweituoshu1({ dispatch, form }) {
@@ -45,129 +46,147 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 					<Row className={styles.logo}></Row>
 					<Row className={styles.title}>授权委托书（一）</Row>
 				</header>
-				<Form onSubmit={handleSubmit}>
-					<Row className={styles.xia}>
-						<div className={styles.fudong}>中信银行</div>
-						<FormItem>
+				<Form onSubmit={handleSubmit} style={{ fontSize: 25 }}>
+					<div className={styles.date}>
+						<FormItem label='日期' {...{ labelCol: { span: 4 }, wrapperCol: { span: 18 } }}>
+							{getFieldDecorator('date', {
+								rules: [{ required: true, message: '请输入日期！' }]
+							})(
+								<DatePicker className={styles.datePicker} />
+							)}
+						</FormItem>
+					</div>
+					<Row>
+						<span>中信银行</span>
+						<FormItem className={styles.formItem}>
 							{getFieldDecorator('bankName', {
 							})(
-								<Input className={styles.kuan} />
+								<Input className={styles.input} />
 							)}
 						</FormItem>
 					</Row>
 					<Row>
-						<span>兹对我单位在贵行办理账户义务及日常结算业务中相关事宜做如下授权：</span>
+						兹对我单位在贵行办理账户义务及日常结算业务中相关事宜做如下授权：
 					</Row>
 					<Row>
-						<span><p className={styles.fudong}>(一)授权</p>
-							<p className={`${styles.fudong} ${styles.xia}`}>(先生/女士)</p>
-							<FormItem >
-								{getFieldDecorator('name', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>证件种类:</p>
-							<FormItem>
-								{getFieldDecorator('idType', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>证件号码：</p>
-							<FormItem>
-								{getFieldDecorator('idNumber', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>职务：</p>
-							<FormItem>
-								{getFieldDecorator('Post', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p>办理业务：</p>
-							<Checkbox>开户</Checkbox>
-							<Checkbox>销户</Checkbox>
-							<Checkbox>变更</Checkbox>
-						</span>
-					</Row>
-					<Row>
-						<span>
-							<p className={`${styles.fudong} ${styles.xia}`}>(二)授权使用</p>
-							<FormItem>
-								{getFieldDecorator('name', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p>个人名章为我单位预留银行印鉴，预留名章样式如下：（盖章）</p>
-						</span>
-					</Row>
-					<Row>
-						<span>
-							<p className={styles.fudong}>(三)授权</p>
+						<span>(一)授权</span>
+						<FormItem className={styles.formItem} >
+							{getFieldDecorator('name', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>(先生/女士)</span>
+						<span>证件种类:</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('idType', {
+							})(
+								<Select style={{ width: 200 }}>
+									<Option value="居民身份证">居民身份证</Option>
+									<Option value="临时身份证">临时身份证</Option>
+									<Option value="中国护照" >中国护照</Option>
+									<Option value="户口簿(仅供未满16周岁客户)">户口簿(仅供未满16周岁客户)</Option>
+									<Option value="军官证" >军官证</Option>
+									<Option value="武警证" >武警证</Option>
+									<Option value="港澳居民来往内地通行证" >港澳居民来往内地通行证</Option>
+									<Option value="台湾居民来往大陆通行证" >台湾居民来往大陆通行证</Option>
+									<Option value="外国人永久居留身份证" >外国人永久居留身份证</Option>
+									<Option value="边民出入境通行证" >边民出入境通行证</Option>
+									<Option value="外国护照" >外国护照</Option>
+								</Select>
+							)}
+						</FormItem>
+						<span>证件号码：</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('idNumber', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>职务：</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('Post', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>办理账户</span>
 
-							<p className={`${styles.fudong} ${styles.xia}`}>(先生/女士)</p>
-							<FormItem>
-								{getFieldDecorator('name', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>身份证号码：</p>
-							<FormItem>
-								{getFieldDecorator('idNumber', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={styles.fudong}>办理单位结算凭证及支付密码的购买。授权</p>
-							<p className={styles.fudong}>(先生/女士)</p>
-							<FormItem>
-								{getFieldDecorator('name', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>身份证号码：</p>
-							<FormItem>
-								{getFieldDecorator('idNumber', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={`${styles.fudong} ${styles.xia}`}>联系电话:</p>
-							<FormItem>
-								{getFieldDecorator('phone', {
-								})(
-									<Input className={styles.kuan} />
-								)}
-							</FormItem>
-							<p className={styles.fudong}>办理单位大额出款电话核实。</p>
-						</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('business', {
+							})(
+								<Select style={{ width: 100 }}>
+									<Option value="开户">开户</Option>
+									<Option value="销户">销户</Option>
+									<Option value="变更" >变更</Option>
+								</Select>
+							)}
+						</FormItem>
+						<span>业务</span>
 					</Row>
 					<Row>
-						<span>
-							<p>(四)办理变更后，原授权事项：</p>
-							<Checkbox>并行</Checkbox>
-							<Checkbox>废止</Checkbox>
-							<p>授权单位（公章）：</p>
-							<p>法定代表人/单位负责人：<br />
-								（盖章）</p>
-						</span>
+						<span>(二)授权使用</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('name', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>个人名章为我单位预留银行印鉴，预留名章样式如下：（盖章）</span>
 					</Row>
-					<FormItem style={{
-						marginLeft: '335px',
-						width: '120px'
-					}}>
-						{getFieldDecorator('date', {
-						})(
-							<DatePicker />
-						)}
-					</FormItem>
+					<Row>
+						<span>(三)授权</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('name', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>(先生/女士)</span>
+						<span>身份证号码：</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('idNumber', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span >办理单位结算凭证及支付密码的购买。授权</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('name', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span >(先生/女士)</span>
+						<span>身份证号码：</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('idNumber', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span>联系电话:</span>
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('phone', {
+							})(
+								<Input className={styles.input} />
+							)}
+						</FormItem>
+						<span >办理单位大额出款电话核实。</span>
+					</Row>
+					<Row>
+						<span>(四)办理变更后，原授权事项：</span>
+
+						<FormItem className={styles.formItem}>
+							{getFieldDecorator('business', {
+							})(
+								<Select style={{ width: 100 }}>
+									<Option value="并行">并行</Option>
+									<Option value="废止">废止</Option>
+								</Select>
+							)}
+						</FormItem>
+					</Row>
 					<div className={styles.footer}>
 						<Row>
 							<Col span={4}>
