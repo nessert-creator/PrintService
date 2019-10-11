@@ -376,6 +376,12 @@
     <Compile Include="Jszhsqshus\Dto\UpdataJszhsqshuDto.cs" />
     <Compile Include="Jszhsqshus\IJszhsqshuAppService.cs" />
     <Compile Include="Jszhsqshus\JszhsqshuAppService.cs" />
+    <Compile Include="KailiApplyBooks\Dto\CreateKailiApplyBookDto.cs" />
+    <Compile Include="KailiApplyBooks\Dto\GetKailiApplyBookDto.cs" />
+    <Compile Include="KailiApplyBooks\Dto\GetListKailiApplyBookDto.cs" />
+    <Compile Include="KailiApplyBooks\Dto\UpdateKailiApplyBookDto.cs" />
+    <Compile Include="KailiApplyBooks\IKailiApplyBookAppService.cs" />
+    <Compile Include="KailiApplyBooks\KailiApplyBooksAppService.cs" />
     <Compile Include="Menus\CodeNavigationProvider.cs" />
     <Compile Include="Menus\Dto\CreateMenuInput.cs" />
     <Compile Include="Menus\Dto\DeleteMenuInput.cs" />

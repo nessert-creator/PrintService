@@ -2919,3 +2919,498 @@ DEBUG 2019-10-05 15:58:15,200 [36   ] Abp.Logging.LogHelper                    -
 DEBUG 2019-10-05 15:58:15,201 [36   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
 DEBUG 2019-10-05 15:58:15,202 [36   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppStartPages.IAppStartPageAppService' with service name 'app/appStartPage'.
 DEBUG 2019-10-05 15:58:15,203 [36   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppEditions.IAppEditionsAppService' with service name 'app/appEditions'.
+DEBUG 2019-10-10 21:26:38,187 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-10 21:26:38,257 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-10 21:26:38,263 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,279 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,279 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,279 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,280 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,280 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,280 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,280 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,280 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,307 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,308 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:38,311 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-10 21:26:38,654 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:26:38,654 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:26:38,655 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:26:38,655 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:26:39,014 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:26:43,740 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-10 21:26:43,883 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-10 21:26:43,982 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-10 21:26:43,987 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-10 21:26:44,017 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-10 21:26:47,907 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-10-10 21:26:48,507 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 97 classes define auto mapping attributes
+DEBUG 2019-10-10 21:26:48,508 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Cache.FriendCacheItem
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.CreateYwdlsqbiaoDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetListYwdlsqbiaoDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetYwdlsqbiaoDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.UpdateYwdlsqbiaoDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.CreateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetListYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.UpdateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,511 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.CreateUserDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UpdateCurrentUserInput
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto
+DEBUG 2019-10-10 21:26:48,512 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserLoginAttemptDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.CreateShouquanshuDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetListShouquanshuDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetShouquanshuDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.UpdateShouquanshuDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu2.Dto.GetListShouqunweituoshu2Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.CreateShouqunweituoshus2Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.GetShouquanweituoshu2Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.UpdateShouquanweituoshu2Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.UpdateShouquanweituoshu1Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.CreateShouqunweituoshus1Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.GetShouquanweituoshu1Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu1.Dto.GetListShouqunweituoshu1Dto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.CreateRoleDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.PermissionDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleDto
+DEBUG 2019-10-10 21:26:48,513 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleEditDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleListDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.CreateRegistrationDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetListRegistrationDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetRegistrationDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.UpdateRegistrationDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.CreatePowerbookDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetListPowerbookDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetPowerbookDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.UpdatePowerbookDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserListDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.CreateMenuInput
+DEBUG 2019-10-10 21:26:48,514 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.MenuDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.CreateKailiApplyBookDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetKailiApplyBookDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetListKailiApplyBookDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.UpdateKailiApplyBookDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.CreateJszhsqshuDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetJszhsqshuDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetListJszhsqshuDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.UpdataJszhsqshuDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.CreateJingzhangdanDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetJiangzhangdanDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetListJiangzhangdanDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.UpdateJiangzhangdanDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetFileSettingDemoDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.SetFileSettingDemoDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.CreateDemoDto
+DEBUG 2019-10-10 21:26:48,515 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetListDemoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetDemoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.UpdateDemoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FirendshipUserDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FriendDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.CreateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetListDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.UpdateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatMessageDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.PermissionDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Auditing.Dto.AuditLogListDto
+DEBUG 2019-10-10 21:26:48,516 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.CreateAppStartPageDto
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetAppStartPageDto
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetListAppStartPageDto
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.UpdateAppStartPageDto
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.AppEditionDto
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateAndroidAppEditionInput
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateIOSAppEditionInput
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateAndroidAppEditionInput
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateIOSAppEditionInput
+DEBUG 2019-10-10 21:26:48,517 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2019-10-10 21:26:50,921 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Ywdlsqbiaos.IYwdlsqbiaoAppService' with service name 'app/ywdlsqbiao'.
+DEBUG 2019-10-10 21:26:50,922 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Yewujiesuanshenqingshus.IYewujiesuanshenqingshuAppService' with service name 'app/yewujiesuanshenqingshu'.
+DEBUG 2019-10-10 21:26:50,923 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Xianjinjiaokuandan.IXianjinjiaokuandanAppService' with service name 'app/xianjinjiaokuandan'.
+DEBUG 2019-10-10 21:26:50,923 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2019-10-10 21:26:50,924 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2019-10-10 21:26:50,925 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2019-10-10 21:26:50,926 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2019-10-10 21:26:50,927 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouquanshus.IShouquanshuAppService' with service name 'app/shouquanshu'.
+DEBUG 2019-10-10 21:26:50,928 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu2.IShouqunweituoshu2AppService' with service name 'app/shouqunweituoshu2'.
+DEBUG 2019-10-10 21:26:50,929 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu1.IShouqunweituoshu1AppService' with service name 'app/shouqunweituoshu1'.
+DEBUG 2019-10-10 21:26:50,930 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2019-10-10 21:26:50,931 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Registrations.IRegistrationAppService' with service name 'app/registration'.
+DEBUG 2019-10-10 21:26:50,932 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Powerbooks.IPowerbookAppService' with service name 'app/powerbook'.
+DEBUG 2019-10-10 21:26:50,933 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.OrganizationUnits.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2019-10-10 21:26:50,934 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2019-10-10 21:26:50,935 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Menus.IMenuAppService' with service name 'app/menu'.
+DEBUG 2019-10-10 21:26:50,936 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.KailiApplyBooks.IKailiApplyBookAppService' with service name 'app/kailiApplyBook'.
+DEBUG 2019-10-10 21:26:50,936 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jszhsqshus.IJszhsqshuAppService' with service name 'app/jszhsqshu'.
+DEBUG 2019-10-10 21:26:50,937 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jingzhangdans.IJingzhangdanAppService' with service name 'app/jingzhangdan'.
+DEBUG 2019-10-10 21:26:50,939 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.InterfaceExport.IInterfaceExportAppService' with service name 'app/interfaceExport'.
+DEBUG 2019-10-10 21:26:50,940 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IFileSettingDemoAppService' with service name 'app/fileSettingDemo'.
+DEBUG 2019-10-10 21:26:50,941 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IDemoAppService' with service name 'app/demo'.
+DEBUG 2019-10-10 21:26:50,943 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Geetests.IGeetestAppService' with service name 'app/geetest'.
+DEBUG 2019-10-10 21:26:50,944 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2019-10-10 21:26:50,945 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.DragVerifications.IDragVerificationAppService' with service name 'app/dragVerification'.
+DEBUG 2019-10-10 21:26:50,946 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Danweixinxidengjibiaos.IDanweixinxidengjibiaoAppService' with service name 'app/danweixinxidengjibiao'.
+DEBUG 2019-10-10 21:26:50,947 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2019-10-10 21:26:50,948 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2019-10-10 21:26:50,948 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2019-10-10 21:26:50,949 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.RestPasswords.IRestPasswordAppService' with service name 'app/restPassword'.
+DEBUG 2019-10-10 21:26:50,950 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Registers.IRegisterAppService' with service name 'app/register'.
+DEBUG 2019-10-10 21:26:50,951 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Actives.IActiveAppService' with service name 'app/active'.
+DEBUG 2019-10-10 21:26:50,952 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2019-10-10 21:26:50,953 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2019-10-10 21:26:50,954 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppStartPages.IAppStartPageAppService' with service name 'app/appStartPage'.
+DEBUG 2019-10-10 21:26:50,955 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppEditions.IAppEditionsAppService' with service name 'app/appEditions'.
+DEBUG 2019-10-10 21:47:15,010 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-10 21:47:15,057 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-10 21:47:15,063 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,065 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,066 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,067 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,108 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,109 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,110 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:15,112 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-10 21:47:15,623 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:47:15,623 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:47:15,623 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:47:15,624 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 21:47:16,002 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 21:47:23,290 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-10 21:47:23,459 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-10 21:47:23,554 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-10 21:47:23,574 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-10 21:47:23,622 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-10 21:47:31,390 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-10-10 21:47:32,014 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 97 classes define auto mapping attributes
+DEBUG 2019-10-10 21:47:32,014 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Cache.FriendCacheItem
+DEBUG 2019-10-10 21:47:32,017 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.CreateYwdlsqbiaoDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetListYwdlsqbiaoDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetYwdlsqbiaoDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.UpdateYwdlsqbiaoDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.CreateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetListYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.UpdateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,018 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXianjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXinjinjiaokuandanDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.CreateUserDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UpdateCurrentUserInput
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserLoginAttemptDto
+DEBUG 2019-10-10 21:47:32,019 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.CreateShouquanshuDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetListShouquanshuDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetShouquanshuDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.UpdateShouquanshuDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu2.Dto.GetListShouqunweituoshu2Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.CreateShouqunweituoshus2Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.GetShouquanweituoshu2Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.UpdateShouquanweituoshu2Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.UpdateShouquanweituoshu1Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.CreateShouqunweituoshus1Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.GetShouquanweituoshu1Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu1.Dto.GetListShouqunweituoshu1Dto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.CreateRoleDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.PermissionDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleEditDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleListDto
+DEBUG 2019-10-10 21:47:32,020 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.CreateRegistrationDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetListRegistrationDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetRegistrationDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.UpdateRegistrationDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.CreatePowerbookDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetListPowerbookDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetPowerbookDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.UpdatePowerbookDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserListDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.CreateMenuInput
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.MenuDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.CreateKailiApplyBookDto
+DEBUG 2019-10-10 21:47:32,021 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetKailiApplyBookDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetListKailiApplyBookDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.UpdateKailiApplyBookDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.CreateJszhsqshuDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetJszhsqshuDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetListJszhsqshuDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.UpdataJszhsqshuDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.CreateJingzhangdanDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetJiangzhangdanDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetListJiangzhangdanDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.UpdateJiangzhangdanDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetFileSettingDemoDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.SetFileSettingDemoDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.CreateDemoDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetListDemoDto
+DEBUG 2019-10-10 21:47:32,022 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetDemoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.UpdateDemoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FirendshipUserDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FriendDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.CreateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetListDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.UpdateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatMessageDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.PermissionDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Auditing.Dto.AuditLogListDto
+DEBUG 2019-10-10 21:47:32,023 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.CreateAppStartPageDto
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetAppStartPageDto
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetListAppStartPageDto
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.UpdateAppStartPageDto
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.AppEditionDto
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateAndroidAppEditionInput
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateIOSAppEditionInput
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateAndroidAppEditionInput
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateIOSAppEditionInput
+DEBUG 2019-10-10 21:47:32,024 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2019-10-10 21:47:34,813 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Ywdlsqbiaos.IYwdlsqbiaoAppService' with service name 'app/ywdlsqbiao'.
+DEBUG 2019-10-10 21:47:34,814 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Yewujiesuanshenqingshus.IYewujiesuanshenqingshuAppService' with service name 'app/yewujiesuanshenqingshu'.
+DEBUG 2019-10-10 21:47:34,815 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Xianjinjiaokuandan.IXianjinjiaokuandanAppService' with service name 'app/xianjinjiaokuandan'.
+DEBUG 2019-10-10 21:47:34,816 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2019-10-10 21:47:34,817 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2019-10-10 21:47:34,818 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2019-10-10 21:47:34,819 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2019-10-10 21:47:34,820 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouquanshus.IShouquanshuAppService' with service name 'app/shouquanshu'.
+DEBUG 2019-10-10 21:47:34,821 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu2.IShouqunweituoshu2AppService' with service name 'app/shouqunweituoshu2'.
+DEBUG 2019-10-10 21:47:34,822 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu1.IShouqunweituoshu1AppService' with service name 'app/shouqunweituoshu1'.
+DEBUG 2019-10-10 21:47:34,824 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2019-10-10 21:47:34,825 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Registrations.IRegistrationAppService' with service name 'app/registration'.
+DEBUG 2019-10-10 21:47:34,826 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Powerbooks.IPowerbookAppService' with service name 'app/powerbook'.
+DEBUG 2019-10-10 21:47:34,827 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.OrganizationUnits.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2019-10-10 21:47:34,827 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2019-10-10 21:47:34,828 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Menus.IMenuAppService' with service name 'app/menu'.
+DEBUG 2019-10-10 21:47:34,829 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.KailiApplyBooks.IKailiApplyBookAppService' with service name 'app/kailiApplyBook'.
+DEBUG 2019-10-10 21:47:34,831 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jszhsqshus.IJszhsqshuAppService' with service name 'app/jszhsqshu'.
+DEBUG 2019-10-10 21:47:34,832 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jingzhangdans.IJingzhangdanAppService' with service name 'app/jingzhangdan'.
+DEBUG 2019-10-10 21:47:34,833 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.InterfaceExport.IInterfaceExportAppService' with service name 'app/interfaceExport'.
+DEBUG 2019-10-10 21:47:34,834 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IFileSettingDemoAppService' with service name 'app/fileSettingDemo'.
+DEBUG 2019-10-10 21:47:34,835 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IDemoAppService' with service name 'app/demo'.
+DEBUG 2019-10-10 21:47:34,836 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Geetests.IGeetestAppService' with service name 'app/geetest'.
+DEBUG 2019-10-10 21:47:34,837 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2019-10-10 21:47:34,838 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.DragVerifications.IDragVerificationAppService' with service name 'app/dragVerification'.
+DEBUG 2019-10-10 21:47:34,839 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Danweixinxidengjibiaos.IDanweixinxidengjibiaoAppService' with service name 'app/danweixinxidengjibiao'.
+DEBUG 2019-10-10 21:47:34,839 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2019-10-10 21:47:34,840 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2019-10-10 21:47:34,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2019-10-10 21:47:34,842 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.RestPasswords.IRestPasswordAppService' with service name 'app/restPassword'.
+DEBUG 2019-10-10 21:47:34,843 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Registers.IRegisterAppService' with service name 'app/register'.
+DEBUG 2019-10-10 21:47:34,844 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Actives.IActiveAppService' with service name 'app/active'.
+DEBUG 2019-10-10 21:47:34,846 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2019-10-10 21:47:34,847 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2019-10-10 21:47:34,848 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppStartPages.IAppStartPageAppService' with service name 'app/appStartPage'.
+DEBUG 2019-10-10 21:47:34,849 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppEditions.IAppEditionsAppService' with service name 'app/appEditions'.
+DEBUG 2019-10-10 22:36:32,963 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-10 22:36:32,990 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-10 22:36:32,999 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,003 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,004 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,005 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,007 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:33,011 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-10 22:36:33,534 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 22:36:33,534 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 22:36:33,534 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 22:36:33,534 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-10 22:36:34,244 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-10 22:36:36,142 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-10 22:36:36,362 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-10 22:36:36,427 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-10 22:36:36,433 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-10 22:36:36,490 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-10 22:37:06,707 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-10-10 22:37:07,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 97 classes define auto mapping attributes
+DEBUG 2019-10-10 22:37:07,714 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Cache.FriendCacheItem
+DEBUG 2019-10-10 22:37:07,723 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.CreateYwdlsqbiaoDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetListYwdlsqbiaoDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.GetYwdlsqbiaoDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Ywdlsqbiaos.Dto.UpdateYwdlsqbiaoDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.CreateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.GetListYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 22:37:07,724 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Yewujiesuanshenqingshus.Dto.UpdateYewujiesuanshenqingshuDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXianjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.CreateXinjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXianjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetListXinjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXianjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.GetXinjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXianjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,725 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Xianjinjiaokuandan.Dto.UpdateXinjinjiaokuandanDto
+DEBUG 2019-10-10 22:37:07,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2019-10-10 22:37:07,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Sessions.Dto.UserLoginInfoDto
+DEBUG 2019-10-10 22:37:07,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Profile.Dto.CurrentUserProfileEditDto
+DEBUG 2019-10-10 22:37:07,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.CreateUserDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UpdateCurrentUserInput
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserLoginAttemptDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.CreateShouquanshuDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetListShouquanshuDto
+DEBUG 2019-10-10 22:37:07,727 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.GetShouquanshuDto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouquanshus.Dto.UpdateShouquanshuDto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu2.Dto.GetListShouqunweituoshu2Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.CreateShouqunweituoshus2Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.GetShouquanweituoshu2Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus2.Dto.UpdateShouquanweituoshu2Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.UpdateShouquanweituoshu1Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.CreateShouqunweituoshus1Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshus1.Dto.GetShouquanweituoshu1Dto
+DEBUG 2019-10-10 22:37:07,728 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Shouqunweituoshu1.Dto.GetListShouqunweituoshu1Dto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.CreateRoleDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.PermissionDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleEditDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Roles.Dto.RoleListDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.CreateRegistrationDto
+DEBUG 2019-10-10 22:37:07,729 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetListRegistrationDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.GetRegistrationDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Registrations.Dto.UpdateRegistrationDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.CreatePowerbookDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetListPowerbookDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.GetPowerbookDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Powerbooks.Dto.UpdatePowerbookDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserListDto
+DEBUG 2019-10-10 22:37:07,730 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.OrganizationUnits.Dto.OrganizationUnitUserDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Notifications.Dto.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.CreateMenuInput
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Menus.Dto.MenuDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.CreateKailiApplyBookDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetKailiApplyBookDto
+DEBUG 2019-10-10 22:37:07,731 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.GetListKailiApplyBookDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.KailiApplyBooks.Dto.UpdateKailiApplyBookDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.CreateJszhsqshuDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetJszhsqshuDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.GetListJszhsqshuDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jszhsqshus.Dto.UpdataJszhsqshuDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.CreateJingzhangdanDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetJiangzhangdanDto
+DEBUG 2019-10-10 22:37:07,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.GetListJiangzhangdanDto
+DEBUG 2019-10-10 22:37:07,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Jingzhangdans.Dto.UpdateJiangzhangdanDto
+DEBUG 2019-10-10 22:37:07,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetFileSettingDemoDto
+DEBUG 2019-10-10 22:37:07,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.SetFileSettingDemoDto
+DEBUG 2019-10-10 22:37:07,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.CreateDemoDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetListDemoDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.GetDemoDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Demos.Dto.UpdateDemoDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FirendshipUserDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Friendships.Dto.FriendDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.CreateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 22:37:07,734 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.GetListDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Danweixinxidengjibiaos.Dto.UpdateDanweixinxidengjibiaoDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatMessageDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Chat.Dto.ChatUserWithMessagesDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.FlatPermissionWithLevelDto
+DEBUG 2019-10-10 22:37:07,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Authorization.Permissions.Dto.PermissionDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Auditing.Dto.AuditLogListDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.CreateAppStartPageDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetAppStartPageDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.GetListAppStartPageDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppStartPages.Dto.UpdateAppStartPageDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.AppEditionDto
+DEBUG 2019-10-10 22:37:07,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateAndroidAppEditionInput
+DEBUG 2019-10-10 22:37:07,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.CreateIOSAppEditionInput
+DEBUG 2019-10-10 22:37:07,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateAndroidAppEditionInput
+DEBUG 2019-10-10 22:37:07,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.AppEditions.Dto.UpdateIOSAppEditionInput
+DEBUG 2019-10-10 22:37:07,737 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - QC.MF.Users.Dto.UserListDto+UserListRoleDto
+DEBUG 2019-10-10 22:37:10,829 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Ywdlsqbiaos.IYwdlsqbiaoAppService' with service name 'app/ywdlsqbiao'.
+DEBUG 2019-10-10 22:37:10,831 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Yewujiesuanshenqingshus.IYewujiesuanshenqingshuAppService' with service name 'app/yewujiesuanshenqingshu'.
+DEBUG 2019-10-10 22:37:10,832 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Xianjinjiaokuandan.IXianjinjiaokuandanAppService' with service name 'app/xianjinjiaokuandan'.
+DEBUG 2019-10-10 22:37:10,833 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2019-10-10 22:37:10,835 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2019-10-10 22:37:10,836 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2019-10-10 22:37:10,837 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2019-10-10 22:37:10,839 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouquanshus.IShouquanshuAppService' with service name 'app/shouquanshu'.
+DEBUG 2019-10-10 22:37:10,840 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu2.IShouqunweituoshu2AppService' with service name 'app/shouqunweituoshu2'.
+DEBUG 2019-10-10 22:37:10,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Shouqunweituoshu1.IShouqunweituoshu1AppService' with service name 'app/shouqunweituoshu1'.
+DEBUG 2019-10-10 22:37:10,842 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2019-10-10 22:37:10,843 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Registrations.IRegistrationAppService' with service name 'app/registration'.
+DEBUG 2019-10-10 22:37:10,844 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Powerbooks.IPowerbookAppService' with service name 'app/powerbook'.
+DEBUG 2019-10-10 22:37:10,846 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.OrganizationUnits.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2019-10-10 22:37:10,848 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2019-10-10 22:37:10,849 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Menus.IMenuAppService' with service name 'app/menu'.
+DEBUG 2019-10-10 22:37:10,850 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.KailiApplyBooks.IKailiApplyBookAppService' with service name 'app/kailiApplyBook'.
+DEBUG 2019-10-10 22:37:10,853 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jszhsqshus.IJszhsqshuAppService' with service name 'app/jszhsqshu'.
+DEBUG 2019-10-10 22:37:10,853 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Jingzhangdans.IJingzhangdanAppService' with service name 'app/jingzhangdan'.
+DEBUG 2019-10-10 22:37:10,855 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.InterfaceExport.IInterfaceExportAppService' with service name 'app/interfaceExport'.
+DEBUG 2019-10-10 22:37:10,856 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IFileSettingDemoAppService' with service name 'app/fileSettingDemo'.
+DEBUG 2019-10-10 22:37:10,857 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Demos.IDemoAppService' with service name 'app/demo'.
+DEBUG 2019-10-10 22:37:10,858 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Geetests.IGeetestAppService' with service name 'app/geetest'.
+DEBUG 2019-10-10 22:37:10,863 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2019-10-10 22:37:10,866 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.DragVerifications.IDragVerificationAppService' with service name 'app/dragVerification'.
+DEBUG 2019-10-10 22:37:10,868 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Danweixinxidengjibiaos.IDanweixinxidengjibiaoAppService' with service name 'app/danweixinxidengjibiao'.
+DEBUG 2019-10-10 22:37:10,870 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2019-10-10 22:37:10,872 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2019-10-10 22:37:10,873 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2019-10-10 22:37:10,875 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.RestPasswords.IRestPasswordAppService' with service name 'app/restPassword'.
+DEBUG 2019-10-10 22:37:10,876 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Registers.IRegisterAppService' with service name 'app/register'.
+DEBUG 2019-10-10 22:37:10,878 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Actives.IActiveAppService' with service name 'app/active'.
+DEBUG 2019-10-10 22:37:10,879 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2019-10-10 22:37:10,881 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2019-10-10 22:37:10,882 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppStartPages.IAppStartPageAppService' with service name 'app/appStartPage'.
+DEBUG 2019-10-10 22:37:10,883 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppEditions.IAppEditionsAppService' with service name 'app/appEditions'.

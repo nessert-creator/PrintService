@@ -4,7 +4,7 @@ import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { LocaleProvider } from 'antd';
 import { addLocaleData, IntlProvider } from 'react-intl';
 import zh from 'react-intl/locale-data/zh';
-import Navigation from './routes/Navigation/Navigation';
+//import Navigation from './routes/Navigation/Navigation';
 import IndexPage from './routes/IndexPage';
 import User from './routes/User/User';
 import Home from './routes/Home/Home';
@@ -64,6 +64,7 @@ import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxiden
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
+import KailiApplyBook from './routes/KailiApplyBook/KailiApplyBook';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -74,7 +75,7 @@ export default function RouterConfig({ history }) {
     return (<LocaleProvider locale={zhCN}>
 			<IntlProvider locale='zh'>
 				<Router history={history}>
-					<Route path="/" component={Navigation}/>
+					
 					<Route path="/admin" component={IndexPage}/>
 					<Route path="/register" component={Register}/>
 					<Route path="/registerByEmail" component={RegisterByEmail}/>
@@ -126,6 +127,7 @@ export default function RouterConfig({ history }) {
 						<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu}/>
 						<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao}/>
 						<Route path="/shouquanshu" component={Shouquanshu}/>
+						<Route path="/kailiApplyBook" component={KailiApplyBook}/>
 					</Route>
 
 					<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan}/>

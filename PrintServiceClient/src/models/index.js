@@ -33,6 +33,7 @@ import jiangzhangdan from './jiangzhangdan';
 import powerbook from './powerbook';
 import registration from './registration';
 import yewujiesuanshenqingshu from './yewujiesuanshenqingshu';
+import kailiApplyBook from './kailiApplyBook';
 /**
  * index.js
  * Created by 李廷旭 on 2017/9/5 10:15
@@ -74,4 +75,5 @@ export function registerModels(app) {
     app.model(powerbook);
     app.model(registration);
     app.model(yewujiesuanshenqingshu);
+    app.model(kailiApplyBook);
 }
