@@ -192,6 +192,7 @@
     <Compile Include="AppStartPages\AppStartPage.cs" />
     <Compile Include="Authorization\LoginSettingVerificationResult.cs" />
     <Compile Include="Authorization\ThirdParty\ThirdPartyUser.cs" />
+    <Compile Include="Bgyhjszhsqss\Bgyhjszhsqs.cs" />
     <Compile Include="Captcha\CaptchaManager.cs" />
     <Compile Include="Captcha\CodeMaker.cs" />
     <Compile Include="Captcha\ICaptchaManager.cs" />

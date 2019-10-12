@@ -285,6 +285,12 @@
     <Compile Include="Authorization\ThirdParty\QQAuthService.cs" />
     <Compile Include="Authorization\ThirdParty\WeiboAuthService.cs" />
     <Compile Include="Authorization\ThirdParty\WeixinAuthService.cs" />
+    <Compile Include="Bgyhjszhsqss\BgyhjszhsqsAppService.cs" />
+    <Compile Include="Bgyhjszhsqss\Dto\CreateBgyhjszhsqsDto.cs" />
+    <Compile Include="Bgyhjszhsqss\Dto\GetBgyhjszhsqsDto.cs" />
+    <Compile Include="Bgyhjszhsqss\Dto\GetListBgyhjszhsqsDto.cs" />
+    <Compile Include="Bgyhjszhsqss\Dto\UpdataBgyhjszhsqsDto.cs" />
+    <Compile Include="Bgyhjszhsqss\IBgyhjszhsqsAppService.cs" />
     <Compile Include="Chat\ChatAppService.cs" />
     <Compile Include="Chat\Dto\ChatMessageDto.cs" />
     <Compile Include="Chat\Dto\ChatUserDto.cs" />
