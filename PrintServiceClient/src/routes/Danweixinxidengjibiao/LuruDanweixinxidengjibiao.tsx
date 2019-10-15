@@ -80,7 +80,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 			<div className={styles.content}>
 
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>单位信息登记表</Row>
 				</header>
 

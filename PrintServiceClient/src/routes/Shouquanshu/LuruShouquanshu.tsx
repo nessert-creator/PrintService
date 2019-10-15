@@ -75,7 +75,7 @@ function LuruShouquanshu({ dispatch, form }) {
     return (
         <div className={styles.container}>
             <header className={styles.title}>
-                <Row className={styles.logo}></Row>
+                <Link to="/"><Row className={styles.logo}></Row></Link>
                 <Row className={styles.title}>中信银行公司电子银行业务办理授权书</Row>
             </header>
             <section className={styles.content}>

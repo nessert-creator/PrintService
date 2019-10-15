@@ -243,6 +243,14 @@
     <Compile Include="Migrations\201910101251180_yuanhui20191010.Designer.cs">
       <DependentUpon>201910101251180_yuanhui20191010.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201910110803335_yuanhui201910111603.cs" />
+    <Compile Include="Migrations\201910110803335_yuanhui201910111603.Designer.cs">
+      <DependentUpon>201910110803335_yuanhui201910111603.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910111300091_yuanhui201910112100.cs" />
+    <Compile Include="Migrations\201910111300091_yuanhui201910112100.Designer.cs">
+      <DependentUpon>201910111300091_yuanhui201910112100.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MFDataModule.cs" />
@@ -315,6 +323,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910101251180_yuanhui20191010.resx">
       <DependentUpon>201910101251180_yuanhui20191010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910110803335_yuanhui201910111603.resx">
+      <DependentUpon>201910110803335_yuanhui201910111603.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910111300091_yuanhui201910112100.resx">
+      <DependentUpon>201910111300091_yuanhui201910112100.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

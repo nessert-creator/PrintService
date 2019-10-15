@@ -74,7 +74,7 @@ function LuruPowerbook({ dispatch, form, }) {
 		<div className={styles.container}>
 
 			<header className={styles.title}>
-				<Row className={styles.logo}></Row>
+				<Link to="/"><Row className={styles.logo}></Row></Link>
 				<Row className={styles.title}>中信银行公司电子银行企业法定代表人授权书</Row>
 			</header>
 			<section >
