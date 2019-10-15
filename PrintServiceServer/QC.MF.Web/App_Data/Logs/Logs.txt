@@ -3239,3 +3239,123 @@ DEBUG 2019-10-10 17:04:13,252 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2019-10-10 17:04:13,255 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
 DEBUG 2019-10-10 17:04:13,259 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppStartPages.IAppStartPageAppService' with service name 'app/appStartPage'.
 DEBUG 2019-10-10 17:04:13,263 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'QC.MF.AppEditions.IAppEditionsAppService' with service name 'app/appEditions'.
+DEBUG 2019-10-15 09:14:11,004 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-15 09:14:11,037 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-15 09:14:11,052 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,055 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,056 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,057 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,058 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:11,065 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-15 09:14:11,473 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:14:11,474 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:14:11,474 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:14:11,475 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:14:12,209 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:14:18,134 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-15 09:14:18,252 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-15 09:14:18,369 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-15 09:14:18,377 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-15 09:14:18,437 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-15 09:25:19,380 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-15 09:25:19,409 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-15 09:25:19,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,429 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,429 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,430 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,430 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,435 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:19,443 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-15 09:25:19,817 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:25:19,817 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:25:19,817 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:25:19,817 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:25:20,516 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:25:21,970 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-15 09:25:22,079 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-15 09:25:22,188 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-15 09:25:22,196 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-15 09:25:22,254 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-15 09:30:35,349 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-15 09:30:35,389 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-15 09:30:35,406 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,410 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,411 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,411 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,411 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,412 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,413 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,413 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,413 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,414 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,414 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,415 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,415 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,416 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,416 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,416 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,417 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:35,427 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-15 09:30:35,959 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:30:35,960 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:30:35,960 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:30:35,960 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:30:37,112 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:30:39,736 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-15 09:30:39,924 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-15 09:30:40,058 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-15 09:30:40,073 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-15 09:30:40,175 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-10-15 09:39:29,883 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-10-15 09:39:29,902 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2019-10-15 09:39:29,910 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Web.MFWebModule, QC.MF.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFDataModule, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,912 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,913 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFCoreModule, QC.MF.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.MFApplicationModule, QC.MF.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: QC.MF.Api.MFWebApiModule, QC.MF.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:29,918 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2019-10-15 09:39:30,141 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:39:30,141 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:39:30,141 [1    ] o.Configuration.LanguageManagementConfig - Converted MF (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:39:30,141 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2019-10-15 09:39:30,573 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: QC.MF.EntityFramework.MFDbContext, QC.MF.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-10-15 09:39:34,832 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2019-10-15 09:39:34,944 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-10-15 09:39:35,022 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2019-10-15 09:39:35,029 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MF
+DEBUG 2019-10-15 09:39:35,086 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb

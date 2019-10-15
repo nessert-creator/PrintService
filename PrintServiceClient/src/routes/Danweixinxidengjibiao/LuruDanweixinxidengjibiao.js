@@ -71,7 +71,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
     }
     const formCol = {
         labelCol: { span: 8 },
-        wrapperCol: { span: 12 }
+        wrapperCol: { span: 40 }
     };
     return (<div className={styles.container}>
 			<div className={styles.content}>
@@ -84,7 +84,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 				<section>
 					<Form onSubmit={handleSubmit}>
 						<div className={styles.content1}>
-							<div className={styles.content3}>
+							<div className={styles.content3} style={{ height: '699px' }}>
 								<div className={styles.dixian}>
 									<div className={styles.dixian}>
 										<Row>
@@ -130,42 +130,42 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 										</Row>
 									</div>
 									<Row>
-										<Col>
-											<FormItem>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入股东名称' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件类型' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件号码' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入有效期限' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={2}>
+											<FormItem className={styles.biankuanx}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入持股比例' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
+										<Col span={8}>
 											<FormItem>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: ' ' }]
@@ -173,43 +173,43 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 											</FormItem>
 										</Col>
 									</Row>
-									<Row>
-										<Col>
-											<FormItem>
+									<Row style={{ position: 'relative', top: '-19px' }}>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入股东名称' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件类型' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件号码' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入有效期限' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={2}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入持股比例' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
+										<Col span={8}>
 											<FormItem>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: ' ' }]
@@ -217,43 +217,43 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 											</FormItem>
 										</Col>
 									</Row>
-									<Row>
-										<Col>
-											<FormItem>
+									<Row style={{ position: 'relative', top: '-38px' }}>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入股东名称' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件类型' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件号码' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入有效期限' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={2}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入持股比例' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
+										<Col span={8}>
 											<FormItem>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: ' ' }]
@@ -261,43 +261,43 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 											</FormItem>
 										</Col>
 									</Row>
-									<Row>
-										<Col>
-											<FormItem>
+									<Row style={{ position: 'relative', top: '-58px' }}>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入股东名称' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件类型' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={4}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入证件号码' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={3}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入有效期限' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
-											<FormItem>
+										<Col span={2}>
+											<FormItem className={styles.biankuanx1}>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: '请输入持股比例' }]
     })(<Input className={styles.leixing}/>)}
 											</FormItem>
 										</Col>
-										<Col>
+										<Col span={8}>
 											<FormItem>
 												{getFieldDecorator('abstract', {
         rules: [{ required: true, message: ' ' }]
@@ -305,291 +305,298 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 											</FormItem>
 										</Col>
 									</Row>
-									<Row>
-										<Col>受益人所有信息
-										<FormItem>
+									<Row style={{ position: 'relative', top: '-48px' }}>
+										<Col span={6} className={styles.nnn}>受益人所有信息</Col>
+										<Col span={18} className={styles.hhh}> 
+										<FormItem {...formCol}>
 												{getFieldDecorator('designation', {
         rules: [{ required: true, message: '请输入受益人所有信息！' }]
-    })(<Input className={styles.leixing}/>)}
+    })(<Input className={styles.leixing} style={{ width: '111%' }}/>)}
 											</FormItem>
 										</Col>
 									</Row>
-									<Row>
-										<Col>受益人类型</Col>
-										<Col>受益人名称</Col>
-										<Col>证件类型</Col>
-										<Col>证件号码</Col>
-										<Col>有效期限</Col>
-										<Col>地址</Col>
+									<Row className={styles.dixian1}>
+										<Col span={2}>受益人类型</Col>
+										<Col span={4}>受益人名称</Col>
+										<Col span={3}>证件类型</Col>
+										<Col span={5}>证件号码</Col>
+										<Col span={5}>有效期限</Col>
+										<Col span={5}>地址</Col>
 									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
-									<Row>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入受益人名称' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件类型' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '请输入证件号码' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '有效期限' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-										<Col>
-											<FormItem>
-												{getFieldDecorator('abstract', {
-        rules: [{ required: true, message: '有请输入地址' }]
-    })(<Input className={styles.leixing}/>)}
-											</FormItem>
-										</Col>
-									</Row>
+									<Row style={{ position: 'relative', top: '-70px' }}>
 
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+									<Row style={{ position: 'relative', top: '-89px' }}>
+
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+									<Row style={{ position: 'relative', top: '-108px' }}>
+
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+									<Row style={{ position: 'relative', top: '-127px' }}>
+
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+									<Row style={{ position: 'relative', top: '-147px' }}>
+
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+									<Row style={{ position: 'relative', top: '-167px' }}>
+
+										<Col span={2} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={4} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入受益人名称' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={3} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件类型' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入证件号码' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5} className={styles.biankuanx}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入有效期限' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+										<Col span={5}>
+											<FormItem>
+												{getFieldDecorator('abstract', {
+        rules: [{ required: true, message: '请输入地址' }]
+    })(<Input className={styles.leixing}/>)}
+											</FormItem>
+										</Col>
+									</Row>
+								
 
 								</div>
-								<div className={styles.footer}>
+								<div className={styles.footer} style={{ position: 'relative', top: '-196px' }}>
 									<Row>
 										<Col span={4}>
 											<Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
