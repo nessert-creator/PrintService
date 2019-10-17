@@ -44,6 +44,8 @@ import AppStartPage from './routes/AppStartPage/AppStartPage';
 import Print from './routes/Print/Print';
 import Xinjinjiaokuandan from './routes/Xinjinjiaokuandan/Xinjinjiaokuandan';
 import LuruXinjinjiaokuandan from './routes/Xinjinjiaokuandan/LuruXinjinjiaokuandan';
+import Shenqingshu from './routes/Shenqingshu/Shenqingshu';
+import LuruShenqingshu from './routes/Shenqingshu/LuruShenqingshu';
 import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
 import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
 import Powerbook from './routes/Powerbook/Powerbook';
@@ -126,6 +128,7 @@ export default function RouterConfig({ history }) {
 						<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu}/>
 						<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao}/>
 						<Route path="/shouquanshu" component={Shouquanshu}/>
+						<Route path="/shenqingshu" component={Shenqingshu}/>
 					</Route>
 
 					<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan}/>
@@ -139,6 +142,7 @@ export default function RouterConfig({ history }) {
 					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu}/>
 					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao}/>
 					<Route path="/lurushouquanshu" component={LuruShouquanshu}/>
+					<Route path="/lurushenqingshu" component={LuruShenqingshu}/>
 				</Router>
 			</IntlProvider>
 		</LocaleProvider>);

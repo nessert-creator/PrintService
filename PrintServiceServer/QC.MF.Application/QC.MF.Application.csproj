@@ -445,6 +445,12 @@
     <Compile Include="Roles\Dto\RoleEditDto.cs" />
     <Compile Include="Roles\Dto\RoleListDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
+    <Compile Include="Shenqingshu\Dto\CreateShenqingshuDto.cs" />
+    <Compile Include="Shenqingshu\Dto\GetListShenqingshuDto.cs" />
+    <Compile Include="Shenqingshu\Dto\GetShenqingshuDto.cs" />
+    <Compile Include="Shenqingshu\Dto\UpdateShenqingshuDto.cs" />
+    <Compile Include="Shenqingshu\IShenqingshuAppService.cs" />
+    <Compile Include="Shenqingshu\ShenqingshuAppService.cs" />
     <Compile Include="Shouqunweituoshus1\IShouqunweituoshu1AppService.cs" />
     <Compile Include="Shouqunweituoshus1\Shouqunweituoshu1AppService.cs" />
     <Compile Include="Shouqunweituoshus1\Dto\UpdateShouqunweituoshu1Dto.cs" />

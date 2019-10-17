@@ -23,6 +23,7 @@ using QC.MF.Jszhsqshus;
 using QC.MF.danweixinxidengjibiao;
 using QC.MF.Registrations;
 using QC.MF.Shouquanshus;
+using QC.MF.Shenqingshu;
 
 namespace QC.MF.EntityFramework
 {
@@ -49,7 +50,7 @@ namespace QC.MF.EntityFramework
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
         public IDbSet<QC.MF.Shouqunweituoshus1.Shouqunweituoshus1> Shouqunweituoshus1 { get; set; }
         public IDbSet<QC.MF.Shouqunweituoshus2.Shouqunweituoshus2> Shouqunweituoshus2 { get; set; }
-
+        public IDbSet<Shenqingshu.Shenqingshu> Shenqingshu { get; set; }
 
         public IDbSet<Jszhsqshu> Jszhsqshu { get; set; }
         public IDbSet<Shouquanshu> Shouquanshu { get; set; }
