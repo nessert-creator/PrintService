@@ -1,3 +1,4 @@
+"use strict";
 // tslint:disable
 /**
  * Web
@@ -10,12 +11,16 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-export class Configuration {
-    constructor(param = {}) {
+exports.__esModule = true;
+var Configuration = /** @class */ (function () {
+    function Configuration(param) {
+        if (param === void 0) { param = {}; }
         this.apiKey = param.apiKey;
         this.username = param.username;
         this.password = param.password;
         this.accessToken = param.accessToken;
         this.basePath = param.basePath;
     }
-}
+    return Configuration;
+}());
+exports.Configuration = Configuration;

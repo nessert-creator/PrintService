@@ -5,7 +5,7 @@ namespace QC.MF.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class yuanhui20191010 : DbMigration
+    public partial class merge20191017 : DbMigration
     {
         public override void Up()
         {
@@ -81,6 +81,38 @@ namespace QC.MF.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Jingzhangdans",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Year = c.Int(nullable: false),
+                        Month = c.Int(nullable: false),
+                        Day = c.Int(nullable: false),
+                        Chupiaorenqc = c.String(),
+                        Chupiaorenzh = c.String(),
+                        Chupiaorenkhyh = c.String(),
+                        Shoukuanrenqc = c.String(),
+                        Shoukuanrenzh = c.String(),
+                        Shoukuanrenkhyh = c.String(),
+                        Renminbi = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Piaojuzhonglei = c.String(),
+                        Piaojuzhangshu = c.Int(nullable: false),
+                        Piaojuhaoma = c.Int(nullable: false),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(),
+                        LastModificationTime = c.DateTime(),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Jingzhangdan_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Jszhsqshus",
                 c => new
                     {
@@ -135,6 +167,9 @@ namespace QC.MF.Migrations
                         Tax = c.String(),
                         ZhangHuNature = c.String(),
                         ZiJiNature = c.String(),
+                        Year = c.Int(nullable: false),
+                        Moth = c.Int(nullable: false),
+                        Day = c.Int(nullable: false),
                         DirectorName = c.String(),
                         CunkuanZhangHu = c.String(),
                         ZuZhiJiGou = c.String(),
@@ -154,6 +189,134 @@ namespace QC.MF.Migrations
                 {
                     { "DynamicFilter_KailiApplyBook_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Powerbooks",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Sname = c.String(),
+                        Name_1 = c.String(),
+                        Type_1 = c.String(),
+                        Number_1 = c.String(),
+                        PhoneNumber_1 = c.String(),
+                        Name_2 = c.String(),
+                        Type_2 = c.String(),
+                        Number_2 = c.String(),
+                        PhoneNumber_2 = c.String(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(),
+                        LastModificationTime = c.DateTime(),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Powerbook_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Registrations",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Year_1 = c.Int(nullable: false),
+                        Month_1 = c.Int(nullable: false),
+                        Day_1 = c.Int(nullable: false),
+                        Name_1 = c.String(),
+                        Name_pinyin = c.String(),
+                        Gender_1 = c.String(),
+                        Nationality_1 = c.String(),
+                        PhoneNumber = c.String(),
+                        Type_1 = c.String(),
+                        Number_1 = c.String(),
+                        Year_2 = c.Int(nullable: false),
+                        Month_2 = c.Int(nullable: false),
+                        Day_2 = c.Int(nullable: false),
+                        License = c.String(),
+                        Often_address1 = c.String(),
+                        Often_address2 = c.String(),
+                        Often_address3 = c.String(),
+                        Unit_address1 = c.String(),
+                        Unit_address2 = c.String(),
+                        Unit_address3 = c.String(),
+                        Professional = c.String(),
+                        Tax = c.String(),
+                        Number_2 = c.String(),
+                        Name_2 = c.String(),
+                        Gender_2 = c.String(),
+                        Nationality_2 = c.String(),
+                        Type_2 = c.String(),
+                        Number_3 = c.String(),
+                        Year_3 = c.Int(nullable: false),
+                        Month_3 = c.Int(nullable: false),
+                        Day_3 = c.Int(nullable: false),
+                        License2 = c.String(),
+                        PhoneNumber2 = c.String(),
+                        Province = c.String(),
+                        City = c.String(),
+                        Area = c.String(),
+                        Type_3 = c.String(),
+                        Why = c.String(),
+                        Marriage = c.String(),
+                        Record = c.String(),
+                        Family_number = c.String(),
+                        Industry = c.String(),
+                        Unit_name = c.String(),
+                        Unit_number = c.String(),
+                        Email = c.String(),
+                        Professiona2 = c.String(),
+                        Product = c.String(),
+                        Type_4 = c.String(),
+                        Indicate = c.String(),
+                        Type_number = c.String(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(),
+                        LastModificationTime = c.DateTime(),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Registration_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Shenqingshus",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        AccountName = c.String(),
+                        AccountNumber = c.String(),
+                        Money = c.String(),
+                        Account = c.String(),
+                        WithdrawalDate = c.String(),
+                        Number = c.String(),
+                        VoucherNumber = c.String(),
+                        Liushuihao = c.String(),
+                        Zhonglei = c.String(),
+                        Haoma = c.String(),
+                        Jianer = c.String(),
+                        Shoukuanren = c.String(),
+                        Chupiaoriqi = c.String(),
+                        Daoqiri = c.String(),
+                        Sangshishijian = c.String(),
+                        Didian = c.String(),
+                        Yuanyin = c.String(),
+                        Jiezhiriqi = c.String(),
+                        Shuoming = c.String(),
+                        Biangengyuanyin = c.String(),
+                        Zhuzhanghao = c.String(),
+                        Yuanzhanghao = c.String(),
+                        Xinzhanghao = c.String(),
+                    })
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
@@ -239,6 +402,23 @@ namespace QC.MF.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Xianjinjiaokuandans",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Nian = c.String(),
+                        Yue = c.String(),
+                        Ri = c.String(),
+                        AccountName = c.String(),
+                        AccountNumber = c.String(),
+                        OpeningBank = c.String(),
+                        Abstract = c.String(),
+                        Money = c.String(),
+                        BankSpecialColumn = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Yewujiesuanshenqingshus",
                 c => new
                     {
@@ -278,55 +458,38 @@ namespace QC.MF.Migrations
                 })
                 .PrimaryKey(t => t.Id);
             
-            AddColumn("dbo.Xianjinjiaokuandans", "Nian", c => c.String());
-            AddColumn("dbo.Xianjinjiaokuandans", "Yue", c => c.String());
-            AddColumn("dbo.Xianjinjiaokuandans", "Ri", c => c.String());
-            AddColumn("dbo.Ywdlsqbiaos", "Name2", c => c.String());
-            AddColumn("dbo.Ywdlsqbiaos", "Certificatetype2", c => c.String());
-            AddColumn("dbo.Ywdlsqbiaos", "Idnumber2", c => c.Int(nullable: false));
-            AddColumn("dbo.Ywdlsqbiaos", "Contactnumber2", c => c.String());
-            AlterColumn("dbo.Jingzhangdans", "Chupiaorenzh", c => c.String());
-            AlterColumn("dbo.Jingzhangdans", "Shoukuanrenzh", c => c.String());
-            AlterColumn("dbo.Xianjinjiaokuandans", "AccountNumber", c => c.String());
-            DropColumn("dbo.Xianjinjiaokuandans", "Thousand1");
-            DropColumn("dbo.Xianjinjiaokuandans", "Hundred1");
-            DropColumn("dbo.Xianjinjiaokuandans", "Ten1");
-            DropColumn("dbo.Xianjinjiaokuandans", "TenThousand");
-            DropColumn("dbo.Xianjinjiaokuandans", "Thousand2");
-            DropColumn("dbo.Xianjinjiaokuandans", "Hundred2");
-            DropColumn("dbo.Xianjinjiaokuandans", "Ten2");
-            DropColumn("dbo.Xianjinjiaokuandans", "Yuan");
-            DropColumn("dbo.Xianjinjiaokuandans", "Jiao");
-            DropColumn("dbo.Xianjinjiaokuandans", "Fen");
+            CreateTable(
+                "dbo.Ywdlsqbiaos",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Customername = c.String(),
+                        Name = c.String(),
+                        Certificatetype = c.String(),
+                        Idnumber = c.Int(nullable: false),
+                        Contactnumber = c.String(),
+                        Name2 = c.String(),
+                        Certificatetype2 = c.String(),
+                        Idnumber2 = c.Int(nullable: false),
+                        Contactnumber2 = c.String(),
+                        Name1 = c.String(),
+                        Certificatetype1 = c.String(),
+                        Idnumber1 = c.Int(nullable: false),
+                        Contactnumber1 = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
-            AddColumn("dbo.Xianjinjiaokuandans", "Fen", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Jiao", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Yuan", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Ten2", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Hundred2", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Thousand2", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "TenThousand", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Ten1", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Hundred1", c => c.Int(nullable: false));
-            AddColumn("dbo.Xianjinjiaokuandans", "Thousand1", c => c.Int(nullable: false));
-            AlterColumn("dbo.Xianjinjiaokuandans", "AccountNumber", c => c.Int(nullable: false));
-            AlterColumn("dbo.Jingzhangdans", "Shoukuanrenzh", c => c.Int(nullable: false));
-            AlterColumn("dbo.Jingzhangdans", "Chupiaorenzh", c => c.Int(nullable: false));
-            DropColumn("dbo.Ywdlsqbiaos", "Contactnumber2");
-            DropColumn("dbo.Ywdlsqbiaos", "Idnumber2");
-            DropColumn("dbo.Ywdlsqbiaos", "Certificatetype2");
-            DropColumn("dbo.Ywdlsqbiaos", "Name2");
-            DropColumn("dbo.Xianjinjiaokuandans", "Ri");
-            DropColumn("dbo.Xianjinjiaokuandans", "Yue");
-            DropColumn("dbo.Xianjinjiaokuandans", "Nian");
+            DropTable("dbo.Ywdlsqbiaos");
             DropTable("dbo.Yewujiesuanshenqingshus",
                 removedAnnotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_Yewujiesuanshenqingshu_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
+            DropTable("dbo.Xianjinjiaokuandans");
             DropTable("dbo.Shouqunweituoshus2");
             DropTable("dbo.Shouqunweituoshus1");
             DropTable("dbo.Shouquanshus",
@@ -334,12 +497,28 @@ namespace QC.MF.Migrations
                 {
                     { "DynamicFilter_Shouquanshu_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
+            DropTable("dbo.Shenqingshus");
+            DropTable("dbo.Registrations",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Registration_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.Powerbooks",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Powerbook_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
             DropTable("dbo.KailiApplyBooks",
                 removedAnnotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_KailiApplyBook_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
             DropTable("dbo.Jszhsqshus");
+            DropTable("dbo.Jingzhangdans",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Jingzhangdan_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
             DropTable("dbo.Danweixinxidengjibiaos",
                 removedAnnotations: new Dictionary<string, object>
                 {
