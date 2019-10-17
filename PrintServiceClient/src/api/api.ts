@@ -1542,6 +1542,170 @@ export interface CreateJszhsqshuDto {
 }
 
 /**
+ * 
+ * @export
+ * @interface CreateKailiApplyBookDto
+ */
+export interface CreateKailiApplyBookDto {
+    /**
+     * 存款人名称
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    sname?: string;
+    /**
+     * 电话
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    phoneNumber?: string;
+    /**
+     * 地址
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    address?: string;
+    /**
+     * 邮编
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    postCode?: string;
+    /**
+     * 存款人类别
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    depositorsType?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    organization?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    fadingAndDanwei?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    name?: string;
+    /**
+     * 证件类型
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    paperType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    paperNumber?: string;
+    /**
+     * 行业分类
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    industry?: string;
+    /**
+     * 注册资金
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    zijin?: string;
+    /**
+     * 地区代码
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    addressDaima?: string;
+    /**
+     * 经营范围
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    business?: string;
+    /**
+     * 证明文件种类
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    paperWenjian?: string;
+    /**
+     * 证明文件编号
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    paperBianhao?: string;
+    /**
+     * 税务登记证
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    tax?: string;
+    /**
+     * 账户性质
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    zhangHuNature?: string;
+    /**
+     * 资金性质
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    ziJiNature?: string;
+    /**
+     * 主管名称
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    directorName?: string;
+    /**
+     * 基本存款账户开户
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    cunkuanZhangHu?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    zuZhiJiGou?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    fadingDaiBiao?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    fadingDaiBiaoName?: string;
+    /**
+     * 证件种类
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    fadingDaiBiaoType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof CreateKailiApplyBookDto
+     */
+    fadingDaiBiaoNumber?: string;
+}
+
+/**
  * 创建菜单参数
  * @export
  * @interface CreateMenuInput
@@ -2451,6 +2615,24 @@ export interface CreateXinjinjiaokuandanDto {
 export interface CreateYewujiesuanshenqingshuDto {
     /**
      * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    day?: number;
+    /**
+     * 
      * @type {string}
      * @memberof CreateYewujiesuanshenqingshuDto
      */
@@ -2463,10 +2645,10 @@ export interface CreateYewujiesuanshenqingshuDto {
     account?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateYewujiesuanshenqingshuDto
      */
-    telephone?: number;
+    telephone?: string;
     /**
      * 
      * @type {string}
@@ -2490,7 +2672,13 @@ export interface CreateYewujiesuanshenqingshuDto {
      * @type {string}
      * @memberof CreateYewujiesuanshenqingshuDto
      */
-    addiess?: string;
+    provice?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    city?: string;
     /**
      * 
      * @type {string}
@@ -2517,10 +2705,10 @@ export interface CreateYewujiesuanshenqingshuDto {
     account4?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof CreateYewujiesuanshenqingshuDto
      */
-    pay?: number;
+    pay?: string;
     /**
      * 
      * @type {string}
@@ -2545,6 +2733,12 @@ export interface CreateYewujiesuanshenqingshuDto {
      * @memberof CreateYewujiesuanshenqingshuDto
      */
     number?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateYewujiesuanshenqingshuDto
+     */
+    extra?: string;
 }
 
 /**
@@ -4244,6 +4438,176 @@ export interface GetListJszhsqshuDto {
 /**
  * 
  * @export
+ * @interface GetListKailiApplyBookDto
+ */
+export interface GetListKailiApplyBookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListKailiApplyBookDto
+     */
+    id?: number;
+    /**
+     * 存款人名称
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    sname?: string;
+    /**
+     * 电话
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    phoneNumber?: string;
+    /**
+     * 地址
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    address?: string;
+    /**
+     * 邮编
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    postCode?: string;
+    /**
+     * 存款人类别
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    depositorsType?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    organization?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    fadingAndDanwei?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    name?: string;
+    /**
+     * 证件类型
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    paperType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    paperNumber?: string;
+    /**
+     * 行业分类
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    industry?: string;
+    /**
+     * 注册资金
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    zijin?: string;
+    /**
+     * 地区代码
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    addressDaima?: string;
+    /**
+     * 经营范围
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    business?: string;
+    /**
+     * 证明文件种类
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    paperWenjian?: string;
+    /**
+     * 证明文件编号
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    paperBianhao?: string;
+    /**
+     * 税务登记证
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    tax?: string;
+    /**
+     * 账户性质
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    zhangHuNature?: string;
+    /**
+     * 资金性质
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    ziJiNature?: string;
+    /**
+     * 主管名称
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    directorName?: string;
+    /**
+     * 基本存款账户开户
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    cunkuanZhangHu?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    zuZhiJiGou?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    fadingDaiBiao?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    fadingDaiBiaoName?: string;
+    /**
+     * 证件种类
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    fadingDaiBiaoType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof GetListKailiApplyBookDto
+     */
+    fadingDaiBiaoNumber?: string;
+}
+
+/**
+ * 
+ * @export
  * @interface GetListPowerbookDto
  */
 export interface GetListPowerbookDto {
@@ -5059,6 +5423,24 @@ export interface GetListYewujiesuanshenqingshuDto {
     id?: number;
     /**
      * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    day?: number;
+    /**
+     * 
      * @type {string}
      * @memberof GetListYewujiesuanshenqingshuDto
      */
@@ -5071,10 +5453,10 @@ export interface GetListYewujiesuanshenqingshuDto {
     account?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListYewujiesuanshenqingshuDto
      */
-    telephone?: number;
+    telephone?: string;
     /**
      * 
      * @type {string}
@@ -5098,7 +5480,13 @@ export interface GetListYewujiesuanshenqingshuDto {
      * @type {string}
      * @memberof GetListYewujiesuanshenqingshuDto
      */
-    addiess?: string;
+    provice?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    city?: string;
     /**
      * 
      * @type {string}
@@ -5125,10 +5513,10 @@ export interface GetListYewujiesuanshenqingshuDto {
     account4?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof GetListYewujiesuanshenqingshuDto
      */
-    pay?: number;
+    pay?: string;
     /**
      * 
      * @type {string}
@@ -5153,6 +5541,12 @@ export interface GetListYewujiesuanshenqingshuDto {
      * @memberof GetListYewujiesuanshenqingshuDto
      */
     number?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof GetListYewujiesuanshenqingshuDto
+     */
+    extra?: string;
 }
 
 /**
@@ -6547,6 +6941,26 @@ export interface PagedResultDtoGetListJszhsqshuDto {
      * @memberof PagedResultDtoGetListJszhsqshuDto
      */
     items?: Array<GetListJszhsqshuDto>;
+}
+
+/**
+ * 
+ * @export
+ * @interface PagedResultDtoGetListKailiApplyBookDto
+ */
+export interface PagedResultDtoGetListKailiApplyBookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof PagedResultDtoGetListKailiApplyBookDto
+     */
+    totalCount?: number;
+    /**
+     * 
+     * @type {Array<GetListKailiApplyBookDto>}
+     * @memberof PagedResultDtoGetListKailiApplyBookDto
+     */
+    items?: Array<GetListKailiApplyBookDto>;
 }
 
 /**
@@ -8384,6 +8798,176 @@ export interface UpdateJiangzhangdanDto {
 }
 
 /**
+ * 
+ * @export
+ * @interface UpdateKailiApplyBookDto
+ */
+export interface UpdateKailiApplyBookDto {
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    id?: number;
+    /**
+     * 存款人名称
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    sname?: string;
+    /**
+     * 电话
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    phoneNumber?: string;
+    /**
+     * 地址
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    address?: string;
+    /**
+     * 邮编
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    postCode?: string;
+    /**
+     * 存款人类别
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    depositorsType?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    organization?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    fadingAndDanwei?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    name?: string;
+    /**
+     * 证件类型
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    paperType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    paperNumber?: string;
+    /**
+     * 行业分类
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    industry?: string;
+    /**
+     * 注册资金
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    zijin?: string;
+    /**
+     * 地区代码
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    addressDaima?: string;
+    /**
+     * 经营范围
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    business?: string;
+    /**
+     * 证明文件种类
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    paperWenjian?: string;
+    /**
+     * 证明文件编号
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    paperBianhao?: string;
+    /**
+     * 税务登记证
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    tax?: string;
+    /**
+     * 账户性质
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    zhangHuNature?: string;
+    /**
+     * 资金性质
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    ziJiNature?: string;
+    /**
+     * 主管名称
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    directorName?: string;
+    /**
+     * 基本存款账户开户
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    cunkuanZhangHu?: string;
+    /**
+     * 组织机构代码
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    zuZhiJiGou?: string;
+    /**
+     * 法定代表人和单位负责人
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    fadingDaiBiao?: string;
+    /**
+     * 姓名
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    fadingDaiBiaoName?: string;
+    /**
+     * 证件种类
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    fadingDaiBiaoType?: string;
+    /**
+     * 证件号码
+     * @type {string}
+     * @memberof UpdateKailiApplyBookDto
+     */
+    fadingDaiBiaoNumber?: string;
+}
+
+/**
  * 更新菜单信息
  * @export
  * @interface UpdateMenuInput
@@ -9343,6 +9927,24 @@ export interface UpdateYewujiesuanshenqingshuDto {
     id?: number;
     /**
      * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    year?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    month?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    day?: number;
+    /**
+     * 
      * @type {string}
      * @memberof UpdateYewujiesuanshenqingshuDto
      */
@@ -9355,10 +9957,10 @@ export interface UpdateYewujiesuanshenqingshuDto {
     account?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    telephone?: number;
+    telephone?: string;
     /**
      * 
      * @type {string}
@@ -9382,7 +9984,13 @@ export interface UpdateYewujiesuanshenqingshuDto {
      * @type {string}
      * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    addiess?: string;
+    provice?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    city?: string;
     /**
      * 
      * @type {string}
@@ -9409,10 +10017,10 @@ export interface UpdateYewujiesuanshenqingshuDto {
     account4?: string;
     /**
      * 
-     * @type {number}
+     * @type {string}
      * @memberof UpdateYewujiesuanshenqingshuDto
      */
-    pay?: number;
+    pay?: string;
     /**
      * 
      * @type {string}
@@ -9437,6 +10045,12 @@ export interface UpdateYewujiesuanshenqingshuDto {
      * @memberof UpdateYewujiesuanshenqingshuDto
      */
     number?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof UpdateYewujiesuanshenqingshuDto
+     */
+    extra?: string;
 }
 
 /**
@@ -17165,6 +17779,467 @@ export class JszhsqshuApi extends BaseAPI {
      */
     public appJszhsqshuUpdate(input: UpdataJszhsqshuDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
         return JszhsqshuApiFp(this.configuration).appJszhsqshuUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+}
+
+/**
+ * KailiApplyBookApi - fetch parameter creator
+ * @export
+ */
+export const KailiApplyBookApiFetchParamCreator = function (configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input: CreateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appKailiApplyBookCreate.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"CreateKailiApplyBookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appKailiApplyBookDelete.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appKailiApplyBookGet.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appKailiApplyBookGetAll.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {UpdateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input: UpdateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options: any = {}): FetchArgs {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input','Required parameter input was null or undefined when calling appKailiApplyBookUpdate.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = (<any>"UpdateKailiApplyBookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body =  needsSerialization ? JSON.stringify(input || {}) : (input || "");
+
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    }
+};
+
+/**
+ * KailiApplyBookApi - functional programming interface
+ * @export
+ */
+export const KailiApplyBookApiFp = function(configuration?: Configuration) {
+    return {
+        /**
+         * 
+         * @param {CreateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input: CreateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListKailiApplyBookDto> {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<Response> {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListKailiApplyBookDto> {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<PagedResultDtoGetListKailiApplyBookDto> {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         * 
+         * @param {UpdateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input: UpdateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any): (fetch?: FetchAPI, basePath?: string) => Promise<GetListKailiApplyBookDto> {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch: FetchAPI = portableFetch, basePath: string = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    } else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    }
+};
+
+/**
+ * KailiApplyBookApi - factory interface
+ * @export
+ */
+export const KailiApplyBookApiFactory = function (configuration?: Configuration, fetch?: FetchAPI, basePath?: string) {
+    return {
+        /**
+         * 
+         * @param {CreateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input: CreateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {EntityDtoInt32} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {PagedSortedAndFilteredInputDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         * 
+         * @param {UpdateKailiApplyBookDto} input 
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input: UpdateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+
+/**
+ * KailiApplyBookApi - object-oriented interface
+ * @export
+ * @class KailiApplyBookApi
+ * @extends {BaseAPI}
+ */
+export class KailiApplyBookApi extends BaseAPI {
+    /**
+     * 
+     * @param {CreateKailiApplyBookDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    public appKailiApplyBookCreate(input: CreateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    public appKailiApplyBookDelete(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {EntityDtoInt32} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    public appKailiApplyBookGet(input: EntityDtoInt32, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {PagedSortedAndFilteredInputDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    public appKailiApplyBookGetAll(input: PagedSortedAndFilteredInputDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+
+    /**
+     * 
+     * @param {UpdateKailiApplyBookDto} input 
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    public appKailiApplyBookUpdate(input: UpdateKailiApplyBookDto, X_XSRF_TOKEN?: string, authorization?: string, options?: any) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
     }
 
 }

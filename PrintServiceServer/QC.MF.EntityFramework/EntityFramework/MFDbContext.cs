@@ -24,6 +24,7 @@ using QC.MF.danweixinxidengjibiao;
 using QC.MF.Registrations;
 using QC.MF.Shouquanshus;
 using QC.MF.Shenqingshu;
+using QC.MF.KailiApplyBooks;
 
 namespace QC.MF.EntityFramework
 {
@@ -47,6 +48,8 @@ namespace QC.MF.EntityFramework
         public IDbSet<Xianjinjiaokuandan> Xianjinjiaokuandan { get; set; }
         public IDbSet<Powerbook> Powerbook { get; set; }
         public IDbSet<Registration> Registration { get; set; }
+        public IDbSet<KailiApplyBook> KailiApplyBook { get; set; }
+
         public IDbSet<Jingzhangdan.Jingzhangdan> Jingzhangdan { get; set; }
         public IDbSet<QC.MF.Shouqunweituoshus1.Shouqunweituoshus1> Shouqunweituoshus1 { get; set; }
         public IDbSet<QC.MF.Shouqunweituoshus2.Shouqunweituoshus2> Shouqunweituoshus2 { get; set; }

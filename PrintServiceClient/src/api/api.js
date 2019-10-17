@@ -6925,6 +6925,438 @@ export class JszhsqshuApi extends BaseAPI {
     }
 }
 /**
+ * KailiApplyBookApi - fetch parameter creator
+ * @export
+ */
+export const KailiApplyBookApiFetchParamCreator = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appKailiApplyBookCreate.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Create`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("CreateKailiApplyBookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appKailiApplyBookDelete.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Delete`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appKailiApplyBookGet.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Get`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("EntityDtoInt32" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appKailiApplyBookGetAll.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/GetAll`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("PagedSortedAndFilteredInputDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         *
+         * @param {UpdateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options = {}) {
+            // verify required parameter 'input' is not null or undefined
+            if (input === null || input === undefined) {
+                throw new RequiredError('input', 'Required parameter input was null or undefined when calling appKailiApplyBookUpdate.');
+            }
+            const localVarPath = `/api/services/app/kailiApplyBook/Update`;
+            const localVarUrlObj = url.parse(localVarPath, true);
+            const localVarRequestOptions = Object.assign({ method: 'POST' }, options);
+            const localVarHeaderParameter = {};
+            const localVarQueryParameter = {};
+            if (X_XSRF_TOKEN !== undefined && X_XSRF_TOKEN !== null) {
+                localVarHeaderParameter['X-XSRF-TOKEN'] = String(X_XSRF_TOKEN);
+            }
+            if (authorization !== undefined && authorization !== null) {
+                localVarHeaderParameter['authorization'] = String(authorization);
+            }
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
+            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
+            delete localVarUrlObj.search;
+            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
+            const needsSerialization = ("UpdateKailiApplyBookDto" !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.body = needsSerialization ? JSON.stringify(input || {}) : (input || "");
+            return {
+                url: url.format(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+    };
+};
+/**
+ * KailiApplyBookApi - functional programming interface
+ * @export
+ */
+export const KailiApplyBookApiFp = function (configuration) {
+    return {
+        /**
+         *
+         * @param {CreateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response;
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+        /**
+         *
+         * @param {UpdateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            const localVarFetchArgs = KailiApplyBookApiFetchParamCreator(configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options);
+            return (fetch = portableFetch, basePath = BASE_PATH) => {
+                return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
+                    if (response.status >= 200 && response.status < 300) {
+                        return response.json();
+                    }
+                    else {
+                        throw response;
+                    }
+                });
+            };
+        },
+    };
+};
+/**
+ * KailiApplyBookApi - factory interface
+ * @export
+ */
+export const KailiApplyBookApiFactory = function (configuration, fetch, basePath) {
+    return {
+        /**
+         *
+         * @param {CreateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {EntityDtoInt32} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {PagedSortedAndFilteredInputDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+        /**
+         *
+         * @param {UpdateKailiApplyBookDto} input
+         * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+         * @param {string} [authorization] token
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options) {
+            return KailiApplyBookApiFp(configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options)(fetch, basePath);
+        },
+    };
+};
+/**
+ * KailiApplyBookApi - object-oriented interface
+ * @export
+ * @class KailiApplyBookApi
+ * @extends {BaseAPI}
+ */
+export class KailiApplyBookApi extends BaseAPI {
+    /**
+     *
+     * @param {CreateKailiApplyBookDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookCreate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookDelete(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {EntityDtoInt32} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookGet(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {PagedSortedAndFilteredInputDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookGetAll(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+    /**
+     *
+     * @param {UpdateKailiApplyBookDto} input
+     * @param {string} [X_XSRF_TOKEN] XSRF-TOKEN
+     * @param {string} [authorization] token
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof KailiApplyBookApi
+     */
+    appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options) {
+        return KailiApplyBookApiFp(this.configuration).appKailiApplyBookUpdate(input, X_XSRF_TOKEN, authorization, options)(this.fetch, this.basePath);
+    }
+}
+/**
  * MenuApi - fetch parameter creator
  * @export
  */
