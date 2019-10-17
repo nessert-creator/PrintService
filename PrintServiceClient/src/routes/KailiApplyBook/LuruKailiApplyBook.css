@@ -1,0 +1,46 @@
+.container {
+    width: 60%;
+    margin: 0 auto;
+    color: #6c6c6c;
+    padding: 10px 0 25px 0;
+}
+
+.logo {
+    background-image: url('../../assets/logo.png');
+    background-size: 100% 100%;
+    width: 228px;
+    height: 63px;
+}
+
+.title {
+    padding: 5px 0 10px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.items{
+    border: 1px black solid;
+    padding: 0 30px;
+  }
+.border {
+    border: 1px solid;
+}
+
+.input {
+    border: none;
+    border-bottom: 1px solid;
+    border-radius: 0;
+}
+.BorderBottom{
+    width: 106.2%;
+    position: relative;
+    left: -30px;
+    border-bottom: 1px solid black;
+}
+.fadingAndDanwei{
+    position: relative;
+    top: 57px;
+}
+.nameLeftBod{
+    border-left: 1px solid;
+}
