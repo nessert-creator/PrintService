@@ -257,6 +257,19 @@ export default class Navigation extends React.Component {
                   </Row>
                 </Link>
               </Col>
+              <Col span={4} className={styles.documentContainer}>
+                <Link to="/luruShenqingshu">
+                  <Row className={styles.documentTitle}>单位业务综合申请书</Row>
+                  <Row>
+                    <Col span={6} className={styles.indexArrow}>
+                      <img src={IndexArrow} />
+                    </Col>
+                    <Col offset={2} span={16}>
+                      <img src={Order} />
+                    </Col>
+                  </Row>
+                </Link>
+              </Col>
             </Row>
           </article>
         </section>

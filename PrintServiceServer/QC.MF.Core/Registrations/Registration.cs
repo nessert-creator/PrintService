@@ -29,7 +29,6 @@ namespace QC.MF.Registrations
         //证件号码
         public string Number_1 { get; set; }
         //证件有效日期
-        public string Riqi_1 { get; set; }
         public int Year_2 { get; set; }
         public int Month_2 { get; set; }
         public int Day_2 { get; set; }
@@ -64,7 +63,6 @@ namespace QC.MF.Registrations
         //证件号码
         public string Number_3 { get; set; }
         //证件有效日期
-        public string Riqi_2 { get; set; }
         public int Year_3 { get; set; }
         public int Month_3 { get; set; }
         public int Day_3 { get; set; }
@@ -107,11 +105,5 @@ namespace QC.MF.Registrations
         public string Indicate { get; set; }
         //辅助证件号码
         public string Type_number { get; set; }
-        //签名
-        public string Signature { get; set; }
-        //日期
-        public int Year_4 { get; set; }
-        public int Month_4 { get; set; }
-        public int Day_4 { get; set; }
     }
 }

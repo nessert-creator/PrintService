@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
 	printJinzhangdan, PrintXinjinjiaokuandan, PrintYewujiesuanshenqingshu, PrintShouquanshu,
-	PrintYwdlsqbiao, PrintPowerbook
+	PrintYwdlsqbiao, PrintPowerbook,PrintKailiApplyBook,PrintRegistration
 } from './../utils/print';
 import Xinjinjiaokuandan from './../routes/Print/Xinjinjiaokuandan';
 import Jiangzhangdan from './../routes/Print/Jiangzhangdan';
@@ -59,6 +59,14 @@ export default {
 		*printPowerbook({ payload }, { call, put }) {
 			console.log(payload)
 			print(<Powerbook powerbook={payload} />, PrintPowerbook);
+		},
+		*PrintKailiApplyBook({ payload }, { call, put }) {
+			console.log(payload)
+			print(<KailiApplyBook kailiApplyBook={payload} />, PrintKailiApplyBook);
+		},
+		*PrintRegistration({ payload }, { call, put }) {
+			console.log(payload)
+			print(<Registration registration={payload} />, PrintRegistration);
 		},
 	},
 	subscriptions: {}

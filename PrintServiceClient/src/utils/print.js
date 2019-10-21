@@ -361,3 +361,29 @@ export function PrintShouqunweituoshu2(html) {
         LODOP.PREVIEW();
     }
 }
+export function PrintKailiApplyBook(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
+        // LODOP.PRINT();
+        LODOP.PREVIEW();
+    }
+}
+export function PrintRegistration(html) {
+    let LODOP = getLodop();
+    var index = getFujitsu_DPK1560Index();
+    if (index >= 0) {
+        LODOP.PRINT_INIT();
+        LODOP.SET_PRINTER_INDEX(index);
+        LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
+        LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
+        LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
+        // LODOP.PRINT();
+        LODOP.PREVIEW();
+    }
+}

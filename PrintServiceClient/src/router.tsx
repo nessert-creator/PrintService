@@ -44,6 +44,8 @@ import AppStartPage from './routes/AppStartPage/AppStartPage';
 import Print from './routes/Print/Print';
 import Xinjinjiaokuandan from './routes/Xinjinjiaokuandan/Xinjinjiaokuandan';
 import LuruXinjinjiaokuandan from './routes/Xinjinjiaokuandan/LuruXinjinjiaokuandan';
+import Shenqingshu from './routes/Shenqingshu/Shenqingshu';
+import LuruShenqingshu from './routes/Shenqingshu/LuruShenqingshu';
 import Jiangzhangdan from './routes/Jiangzhangdan/Jiangzhangdan';
 import Lurujiangzhangdan from './routes/Jiangzhangdan/Lurujiangzhangdan';
 import Powerbook from './routes/Powerbook/Powerbook';
@@ -64,6 +66,8 @@ import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxiden
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
+import KailiApplyBook from './routes/KailiApplyBook/KailiApplyBook';
+import LuruKailiApplyBook from './routes/KailiApplyBook/LuruKailiApplyBook';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -127,6 +131,8 @@ export default function RouterConfig({ history }) {
 						<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu} />
 						<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao} />
 						<Route path="/shouquanshu" component={Shouquanshu} />
+						<Route path="/shenqingshu" component={Shenqingshu} />
+						<Route path="/kailiApplyBook" component={KailiApplyBook} />
 					</Route>
 
 					<Route path="/luruXinjinjiaokuandan" component={LuruXinjinjiaokuandan} />
@@ -140,6 +146,8 @@ export default function RouterConfig({ history }) {
 					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu} />
 					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao} />
 					<Route path="/lurushouquanshu" component={LuruShouquanshu} />
+					<Route path="/lurushenqingshu" component={LuruShenqingshu} />
+					<Route path="/luruKailiApplyBook" component={LuruKailiApplyBook} />
 				</Router>
 			</IntlProvider>
 		</LocaleProvider>

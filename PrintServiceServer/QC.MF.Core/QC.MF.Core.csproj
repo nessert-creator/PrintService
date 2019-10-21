@@ -238,6 +238,7 @@
     <Compile Include="IAppFolders.cs" />
     <Compile Include="Jingzhangdan\Jingzhangdan.cs" />
     <Compile Include="Jszhsqshus\Jszhsqshu.cs" />
+    <Compile Include="KailiApplyBooks\KailiApplyBook.cs" />
     <Compile Include="Powerbooks\Powerbook.cs" />
     <Compile Include="Push\Getui\GetuiServer.cs" />
     <Compile Include="Push\Getui\IGetuiServer.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="Registrations\Registration.cs" />
     <Compile Include="Security\PasswordComplexityChecker.cs" />
     <Compile Include="Security\PasswordComplexitySetting.cs" />
+    <Compile Include="Shenqingshu\Shenqingshu.cs" />
     <Compile Include="Shouqunweituoshus1\Shouqunweituoshus1.cs" />
     <Compile Include="Shouqunweituoshus2\Shouqunweituoshus2.cs" />
     <Compile Include="Shouquanshus\Shouquanshu.cs" />
