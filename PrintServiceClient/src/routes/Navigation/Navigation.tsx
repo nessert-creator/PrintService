@@ -30,7 +30,7 @@ export default class Navigation extends React.Component {
           <header className={styles.sectionTitle}>信息登记/业务申请</header>
           <article>
             <Row>
-              <Col  offset={8} span={4} className={styles.documentContainer}>
+              <Col offset={8} span={4} className={styles.documentContainer}>
                 <Link to="/luruRegistration">
                   <Row className={styles.documentTitle}>个人客户信息登记表</Row>
                   <Row>
@@ -57,9 +57,8 @@ export default class Navigation extends React.Component {
                   </Row>
                 </Link>
               </Col>
-{/* 
               <Col span={4} className={styles.documentContainer}>
-                <Link to="/luruXinjinjiaokuandan">
+                <Link to="/luruShenqingshu">
                   <Row className={styles.documentTitle}>单位业务综合申请书</Row>
                   <Row>
                     <Col span={6} className={styles.indexArrow}>
@@ -70,10 +69,9 @@ export default class Navigation extends React.Component {
                     </Col>
                   </Row>
                 </Link>
-              </Col> */}
-{/* 
+              </Col>
               <Col span={4} className={styles.documentContainer}>
-                <Link to="/luruXinjinjiaokuandan">
+                <Link to="/luruKailiApplyBook">
                   <Row className={styles.documentTitle}>开立单位银行结算账户申请书</Row>
                   <Row>
                     <Col span={6} className={styles.indexArrow}>
@@ -84,8 +82,8 @@ export default class Navigation extends React.Component {
                     </Col>
                   </Row>
                 </Link>
-              </Col> */}
-{/* 
+              </Col>
+              {/* 
               <Col span={4} className={styles.documentContainer}>
                 <Link to="/luruXinjinjiaokuandan">
                   <Row className={styles.documentTitle}>变更银行结算账户申请书</Row>
@@ -99,7 +97,6 @@ export default class Navigation extends React.Component {
                   </Row>
                 </Link>
               </Col> */}
-{/* 
               <Col span={4} className={styles.documentContainer}>
                 <Link to="/luruJszhsqshu">
                   <Row className={styles.documentTitle}>撤销银行结算账户申请书</Row>
@@ -112,7 +109,7 @@ export default class Navigation extends React.Component {
                     </Col>
                   </Row>
                 </Link>
-              </Col> */}
+              </Col>
             </Row>
           </article>
         </section>
@@ -151,7 +148,7 @@ export default class Navigation extends React.Component {
                 </Link>
               </Col>
 
-{/* 
+              {/* 
               <Col span={4} className={styles.documentContainer}>
                 <Link to="/luruXinjinjiaokuandan">
                   <Row className={styles.documentTitle}>付款通知书</Row>
@@ -183,7 +180,7 @@ export default class Navigation extends React.Component {
             </Row>
           </article>
         </section>
-        
+
         <section className={styles.section}>
           <header className={styles.sectionTitle}>代理授权</header>
           <article>
@@ -247,19 +244,6 @@ export default class Navigation extends React.Component {
               <Col span={4} className={styles.documentContainer}>
                 <Link to="/luruShouqunweituoshu2">
                   <Row className={styles.documentTitle}>授权委托书（二）</Row>
-                  <Row>
-                    <Col span={6} className={styles.indexArrow}>
-                      <img src={IndexArrow} />
-                    </Col>
-                    <Col offset={2} span={16}>
-                      <img src={Order} />
-                    </Col>
-                  </Row>
-                </Link>
-              </Col>
-              <Col span={4} className={styles.documentContainer}>
-                <Link to="/luruShenqingshu">
-                  <Row className={styles.documentTitle}>单位业务综合申请书</Row>
                   <Row>
                     <Col span={6} className={styles.indexArrow}>
                       <img src={IndexArrow} />

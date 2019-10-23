@@ -7,7 +7,6 @@ const FormItem = Form.Item;
 const create = Form.create;
 //用库
 import { DatePicker } from 'antd';
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
 const { Option, OptGroup } = Select;
 function handleChange(value) {
     console.log(`selected ${value}`);
@@ -141,93 +140,13 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
             }
         });
     }
-    const changeOften_address1 = function (o) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { often_address1: o }
-        });
-    };
-    const changeUnit_address1 = function (u) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { unit_address1: u }
-        });
-    };
-    const changeType_1 = function (t) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { type_1: t }
-        });
-    };
-    const changeType_2 = function (t2) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { type_2: t2 }
-        });
-    };
-    const changeProfessional = function (p) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { professional: p }
-        });
-    };
-    const changeTax = function (a) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { tax: a }
-        });
-    };
-    const changeIndustry = function (i) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { industry: i }
-        });
-    };
-    const changeProduct = function (p) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { product: p }
-        });
-    };
-    const changeProfessiona2 = function (p2) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { professiona2: p2 }
-        });
-    };
-    const changeType_4 = function (t4) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { type_4: t4 }
-        });
-    };
-    const changeRiqi_1 = function (r1) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { riqi_1: r1 }
-        });
-    };
-    const changeRiqi_2 = function (r) {
-        dispatch({
-            type: 'registration/setState',
-            payload: { riqi_2: r }
-        });
-    };
     const formCol = {
-        labelCol: { span: 3 },
-        wrapperCol: { span: 12 }
-    };
-    const formCol_4 = {
-        labelCol: { span: 3 },
-        wrapperCol: { span: 6 }
+        labelCol: { span: 6 },
+        wrapperCol: { span: 16 }
     };
     const formCol_3 = {
         labelCol: { span: 8 },
-        wrapperCol: { span: 12 }
-    };
-    const formCol_2 = {
-        labelCol: { span: 6 },
-        wrapperCol: { span: 18 }
+        wrapperCol: { span: 14 }
     };
     return (<div className={styles.container}>
             <div className={styles.content}>
@@ -246,48 +165,46 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
     })(<DatePicker className={styles.datePicker}/>)}
                             </FormItem>
                         </div>
-                        <div className={styles.items}>
-                            <div>
-                                <div className={styles.customer}>客户信息(必填)</div>
-                                <div className={styles.BorderBottom}></div>
+                        <section className={styles.items}>
+                            <section className={styles.contentSection}>
+                                <div className={styles.contentSectionHeader}>客户信息(必填)</div>
+
                                 <Row className={styles.block}>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='姓名' {...formCol}>
                                             {getFieldDecorator('name_1', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='姓名拼音' {...formCol}>
                                             {getFieldDecorator('name_pinyin', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='性别' {...formCol}>
-                                            {getFieldDecorator('gender_1', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('gender_1', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="男">男</Option>
                                                     <Option value="女">女</Option>
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={7}>
-                                        <FormItem label='国籍/地区' {...formCol_2}>
+                                </Row>
+                                <Row>
+                                    <Col span={8}>
+                                        <FormItem label='国籍/地区' {...formCol}>
                                             {getFieldDecorator('nationality_1', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={8}>
-                                        <FormItem label='手机号码' {...formCol_2}>
+                                        <FormItem label='手机号码' {...formCol}>
                                             {getFieldDecorator('phoneNumber', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
-                                    <Col span={15}>
+                                    <Col span={8}>
                                         <FormItem label='证件类型' {...formCol}>
-                                            {getFieldDecorator('type_1', {})(<Select>
+                                            {getFieldDecorator('type_1', {})(<Select className={styles.select}>
                                                     <Option value="居民身份证">居民身份证</Option>
                                                     <Option value="临时身份证">临时身份证</Option>
                                                     <Option value="中国护照">中国护照</Option>
@@ -302,69 +219,93 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='证件号码' {...formCol}>
                                             {getFieldDecorator('number_1', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={12}>
-                                        <FormItem label='有效日期至' {...formCol_2}>
+                                    <Col span={8}>
+                                        <FormItem label='有效日期至' {...formCol}>
                                             {getFieldDecorator('youxiaodate', {
         rules: [{ required: true, message: '请输入日期！' }]
     })(<DatePicker className={styles.datePicker}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='发证机关' {...formCol}>
                                             {getFieldDecorator('license', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
                                     <Row style={{ fontWeight: 'bold' }}>联系地址:</Row>
-                                    <Col span={15} style={{ height: '50px' }}>
-                                        <span>常住地址:</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('often_address1', {})(<Input className={styles.AddressInput1}/>)}
-                                        </FormItem>
-                                        <span className={styles.sheng}>(省/自治区/直辖市)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('often_address2', {})(<Input className={styles.AddressInput2}/>)}
-                                        </FormItem>
-                                        <span className={styles.shi}>(市/区/县)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('often_address3', {})(<Input className={styles.AddressInput3}/>)}
-                                        </FormItem>
-                                        <span className={styles.qu}>(街道/小区/门牌号)</span>
-                                    </Col>
-                                    <Col span={15} style={{ height: '50px' }}>
-                                        <span>单位地址:</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('unit_address1', {})(<Input className={styles.AddressInput1}/>)}
-                                        </FormItem>
-                                        <span className={styles.sheng}>(省/自治区/直辖市)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('unit_address2', {})(<Input className={styles.AddressInput2}/>)}
-                                        </FormItem>
-                                        <span className={styles.shi}>(市/区/县)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('unit_address3', {})(<Input className={styles.AddressInput3}/>)}
-                                        </FormItem>
-                                        <span className={styles.qu}>(街道/小区/门牌号)</span>
-                                    </Col>
+                                    <Row>
+                                        <Col span={2}>
+                                            <span>常住地址:</span>
+                                        </Col>
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('often_address1', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+                                        <Col span={3}>
+                                            <span>(省/自治区/直辖市)</span>
+                                        </Col>
+
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('often_address2', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+                                        <Col span={2}>
+                                            <span>(市/区/县)</span>
+                                        </Col>
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('often_address3', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+
+                                        <Col span={3}>
+                                            <span>(街道/小区/门牌号)</span>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col span={2}>
+                                            <span>单位地址:</span>
+                                        </Col>
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('unit_address1', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+                                        <Col span={3}>
+                                            <span>(省/自治区/直辖市)</span>
+                                        </Col>
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('unit_address2', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+                                        <Col span={2}>
+                                            <span>(市/区/县)</span>
+                                        </Col>
+                                        <Col span={4}>
+                                            <FormItem>
+                                                {getFieldDecorator('unit_address3', {})(<Input className={styles.input}/>)}
+                                            </FormItem>
+                                        </Col>
+                                        <Col span={3}>
+                                            <span>(街道/小区/门牌号)</span>
+                                        </Col>
+                                    </Row>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
-                                    <Col span={10}>
+                                    <Col span={8}>
                                         <FormItem label='职业' {...formCol}>
-                                            {getFieldDecorator('professional', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('professional', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="公务员">公务员</Option>
                                                     <Option value="军人、警察">军人、警察</Option>
                                                     <Option value="企事业单位负责人">企事业单位负责人</Option>
@@ -384,68 +325,71 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
-                                    <Col span={10}>
-                                        <FormItem label='税收居民身份' {...formCol_2}>
-                                            {getFieldDecorator('tax', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                    <Col span={8}>
+                                        <FormItem label='税收居民身份' {...formCol}>
+                                            {getFieldDecorator('tax', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="仅为中国纳税居民">仅为中国纳税居民</Option>
                                                     <Option value="仅为非居民">仅为非居民</Option>
                                                     <Option value="既是中国税收居民又是其他国家(地区)税收居民">既是中国税收居民又是其他国家(地区)税收居民</Option>
                                                 </Select>)}
                                         </FormItem>
-                                        <div className={styles.note}>
-                                            <span>注:1.如此处勾选“仅为非居民”或"既是中国税收居民又是其他国家(地区)税收居民"，请您填写《个人税收居民身份声明文件;</span><br />
-                                            <span>  2.军人、武装警察无需填写此项</span>
-                                        </div>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <div className={styles.customer}>
+                                <Row>
+                                    <div className={styles.note}>
+                                        <span>注:1.如此处勾选“仅为非居民”或"既是中国税收居民又是其他国家(地区)税收居民"，请您填写《个人税收居民身份声明文件;</span><br />
+                                        <span>  2.军人、武装警察无需填写此项</span>
+                                    </div>
+                                </Row>
+                            </section>
+                            <section className={styles.contentSection}>
+                                <div className={styles.contentSectionHeader}>
                                     是否为美国纳税居民
-                                 </div>
-                                <div className={styles.BorderBottom}></div>
+                                    </div>
                                 <Row className={styles.block}>
-                                    <Col>
-                                        <FormItem label='美国纳税人识别号' {...formCol_2}>
-                                            {getFieldDecorator('number_2', {})(<Input className={styles.input_1}/>)}
+                                    <Col span={12}>
+                                        <FormItem label='美国纳税人识别号' {...formCol}>
+                                            {getFieldDecorator('number_2', {})(<Input className={styles.input}/>)}
                                             <span>(如果"有",请提供美国纳税识别号)</span>
                                         </FormItem>
-                                        <div className={styles.americal}>
-                                            <span>注:美国纳税居民是指根据相关法规及税收协定,在美国负有纳税义务的个人。主要包括:美国国籍，或持有美国绿卡或在美国长期逗留的自然人。</span><br />
-                                        </div>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <div className={styles.customer}>
+
+                                <div className={styles.americal}>
+                                    <span>注:美国纳税居民是指根据相关法规及税收协定,在美国负有纳税义务的个人。主要包括:美国国籍，或持有美国绿卡或在美国长期逗留的自然人。</span><br />
+                                </div>
+                            </section>
+
+                            <section className={styles.contentSection}>
+                                <div className={styles.contentSectionHeader}>
                                     代理人/监护人信息(若代理人/监护人办理，则以下信息(必填)
                                  </div>
-                                <div className={styles.BorderBottom}></div>
                                 <Row className={styles.block}>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='姓名' {...formCol}>
                                             {getFieldDecorator('name_2', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={7}>
+                                    <Col span={8}>
                                         <FormItem label='性别' {...formCol}>
-                                            {getFieldDecorator('gender_2', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('gender_2', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="男">男</Option>
                                                     <Option value="女">女</Option>
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={8}>
-                                        <FormItem label='国籍/地区' {...formCol_2}>
+                                        <FormItem label='国籍/地区' {...formCol}>
                                             {getFieldDecorator('nationality_2', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={7}>
-                                        <FormItem label='证件类型' {...formCol_2}>
-                                            {getFieldDecorator('type_2', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+
+                                <Row className={styles.block}>
+                                    <Col span={8}>
+                                        <FormItem label='证件类型' {...formCol}>
+                                            {getFieldDecorator('type_2', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value=" 证件类型"> 证件类型</Option>
                                                     <Option value=" 中国护照 "> 中国护照 </Option>
                                                     <Option value=" 证件类型"> 证件类型</Option>
@@ -459,102 +403,125 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row className={styles.block}>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='证件号码' {...formCol}>
                                             {getFieldDecorator('number_3', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={12}>
-                                        <FormItem label='有效日期至' {...formCol_2}>
+
+                                </Row>
+
+                                <Row className={styles.block}>
+                                    <Col span={8}>
+                                        <FormItem label='有效日期至' {...formCol}>
                                             {getFieldDecorator('dialirenyouxiaodate', {
         rules: [{ required: true, message: '请输入日期！' }]
     })(<DatePicker className={styles.datePicker}/>)}
                                         </FormItem>
                                     </Col>
-
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row className={styles.block}>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='发证机关' {...formCol}>
                                             {getFieldDecorator('license2', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={12}>
+                                    <Col span={8}>
                                         <FormItem label='手机号码' {...formCol}>
                                             {getFieldDecorator('phoneNumber2', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
+
                                 <Row>
                                     <Row style={{ fontWeight: 'bold' }}>联系地址:</Row>
-                                    <Col span={15} style={{ height: '50px' }}>
+                                    <Col span={2}>
                                         <span>常住地址:</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('province', {})(<Input className={styles.AddressInput1}/>)}
+                                    </Col>
+                                    <Col span={4}>
+                                        <FormItem>
+                                            {getFieldDecorator('province', {})(<Input className={styles.input}/>)}
                                         </FormItem>
-                                        <span className={styles.sheng}>(省/自治区/直辖市)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('city', {})(<Input className={styles.AddressInput2}/>)}
+                                    </Col>
+                                    <Col span={3}>
+                                        <span>(省/自治区/直辖市)</span>
+                                    </Col>
+                                    <Col span={4}>
+                                        <FormItem>
+                                            {getFieldDecorator('city', {})(<Input className={styles.input}/>)}
                                         </FormItem>
-                                        <span className={styles.shi}>(市/区/县)</span>
-                                        <FormItem label='' {...formCol_4}>
-                                            {getFieldDecorator('area', {})(<Input className={styles.AddressInput3}/>)}
+                                    </Col>
+                                    <Col span={2}>
+                                        <span>(市/区/县)</span>
+                                    </Col>
+                                    <Col span={4}>
+                                        <FormItem>
+                                            {getFieldDecorator('area', {})(<Input className={styles.input}/>)}
                                         </FormItem>
-                                        <span className={styles.qu}>(街道/小区/门牌号)</span>
+                                    </Col>
+                                    <Col span={3}>
+                                        <span>(街道/小区/门牌号)</span>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
                                 <Row>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='类型' {...formCol}>
-                                            {getFieldDecorator('type_3', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('type_3', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="代理人">代理人</Option>
                                                     <Option value="监护人">监护人</Option>
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={7}>
-                                        <FormItem label='代理原因' {...formCol_2}>
+                                    <Col span={8}>
+                                        <FormItem label='代理原因' {...formCol}>
                                             {getFieldDecorator('why', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <div className={styles.customer}>
+                            </section>
+                            <section className={styles.contentSection} style={{ border: "none" }}>
+                                <div className={styles.contentSectionHeader}>
                                     客户补充信息(选填)
-                                  </div>
-                                <div className={styles.BorderBottom}></div>
+                                </div>
+
                                 <Row>
                                     <Col span={8}>
-                                        <FormItem label='婚姻状况' {...formCol_2}>
+                                        <FormItem label='婚姻状况' {...formCol}>
                                             {getFieldDecorator('marriage', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
-                                    <Col span={7}>
-                                        <FormItem label='最高学历' {...formCol_2}>
+                                    <Col span={8}>
+                                        <FormItem label='最高学历' {...formCol}>
                                             {getFieldDecorator('record', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={8}>
-                                        <FormItem label='家庭电话' {...formCol_2}>
+                                        <FormItem label='家庭电话' {...formCol}>
                                             {getFieldDecorator('family_number', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
-                                
+
                                 <Row>
-                                    <Col span={9}>
+                                    <Col span={8}>
+                                        <FormItem label='单位名称' {...formCol}>
+                                            {getFieldDecorator('unit_name', {})(<Input className={styles.input}/>)}
+                                        </FormItem>
+                                    </Col>
+                                    <Col span={8}>
+                                        <FormItem label='单位电话' {...formCol}>
+                                            {getFieldDecorator('unit_number', {})(<Input className={styles.input}/>)}
+                                        </FormItem>
+                                    </Col>
+                                    <Col span={8}>
+                                        <FormItem label='电子邮箱' {...formCol}>
+                                            {getFieldDecorator('email', {})(<Input className={styles.input}/>)}
+                                        </FormItem>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col span={8}>
                                         <FormItem label='行业' {...formCol}>
-                                            {getFieldDecorator('industry', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('industry', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="机关事业单位">机关事业单位</Option>
                                                     <Option value="部队">部队</Option>
                                                     <Option value="国际组织">国际组织</Option>
@@ -580,30 +547,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={7}>
-                                        <FormItem label='单位名称' {...formCol_2}>
-                                            {getFieldDecorator('unit_name', {})(<Input className={styles.input}/>)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={7}>
-                                        <FormItem label='单位电话' {...formCol_2}>
-                                            {getFieldDecorator('unit_number', {})(<Input className={styles.input}/>)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={7}>
-                                        <FormItem label='电子邮箱' {...formCol_2}>
-                                            {getFieldDecorator('email', {})(<Input className={styles.input}/>)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='职务' {...formCol}>
-                                            {getFieldDecorator('professiona2', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('professiona2', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="老板/CEO">老板/CEO</Option>
                                                     <Option value="高级管理人员">高级管理人员</Option>
                                                     <Option value="中层管理人员">中层管理人员</Option>
@@ -612,12 +558,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
 
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={9}>
+                                    <Col span={8}>
                                         <FormItem label='你感兴趣的产品' {...formCol_3}>
-                                            {getFieldDecorator('product', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                            {getFieldDecorator('product', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="资金">资金</Option>
                                                     <Option value="债券产品">债券产品</Option>
                                                     <Option value="保险产品">保险产品</Option>
@@ -630,11 +573,11 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                         </FormItem>
                                     </Col>
                                 </Row>
-                                <div className={styles.BorderBottom}></div>
+
                                 <Row>
-                                    <Col span={9}>
-                                        <FormItem label='辅助证件类型' {...formCol_3}>
-                                            {getFieldDecorator('type_4', {})(<Select style={{ width: 200 }} onChange={handleChange}>
+                                    <Col span={8}>
+                                        <FormItem label='辅助证件类型' {...formCol}>
+                                            {getFieldDecorator('type_4', {})(<Select className={styles.select} onChange={handleChange}>
                                                     <Option value="户口簿">户口簿</Option>
                                                     <Option value="中国护照">中国护照</Option>
                                                     <Option value="外国护照">外国护照</Option>
@@ -651,17 +594,14 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                 </Select>)}
                                         </FormItem>
                                     </Col>
-                                </Row>
-                                <div className={styles.BorderBottom}></div>
-                                <Row>
-                                    <Col span={9}>
-                                        <FormItem label='辅助证件号码' {...formCol_3}>
+                                    <Col span={8}>
+                                        <FormItem label='辅助证件号码' {...formCol}>
                                             {getFieldDecorator('type_number', {})(<Input className={styles.input}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
-                            </div>
-                        </div>
+                            </section>
+                        </section>
                         <div className={styles.footer}>
                             <Row>
                                 <Col span={4}>

@@ -72,34 +72,34 @@ function LuruKailiApplyBook({ dispatch, form, }) {
             if (!err) {
                 let data = {
                     "sname": values.sname,
-                "phoneNumber": values.phoneNumber,
-                "address": values.address,
-                "postCode": values.postCode,
-                "depositorsType": values.depositorsType,
-                "organization": values.organization,
-                "fadingAndDanwei": values.fadingAndDanwei,
-                "name": values.name,
-                "paperType": values.paperType,
-                "paperNumber": values.paperNumber,
-                "industry": values.industry,
-                "zijin": values.zijin,
-                "addressDaima": values.addressDaima,
-                "business": values.business,
-                "paperWenjian": values.paperWenjian,
-                "paperBianhao": values.paperBianhao,
-                "tax": values.tax,
-                "zhangHuNature": values.zhangHuNature,
-                "ziJiNature": values.ziJiNature,
-                "year": values.date.year(),
-                "month": values.date.month() + 1,
-                "day": values.date.day(),
-                "directorName": values.directorName,
-                "cunkuanZhangHu": values.cunkuanZhangHu,
-                "zuZhiJiGou": values.zuZhiJiGou,
-                "fadingDaiBiao": values.fadingDaiBiao,
-                "fadingDaiBiaoName": values.fadingDaiBiaoName,
-                "fadingDaiBiaoType": values.fadingDaiBiaoType,
-                "fadingDaiBiaoNumber": values.fadingDaiBiaoNumber
+                    "phoneNumber": values.phoneNumber,
+                    "address": values.address,
+                    "postCode": values.postCode,
+                    "depositorsType": values.depositorsType,
+                    "organization": values.organization,
+                    "fadingAndDanwei": values.fadingAndDanwei,
+                    "name": values.name,
+                    "paperType": values.paperType,
+                    "paperNumber": values.paperNumber,
+                    "industry": values.industry,
+                    "zijin": values.zijin,
+                    "addressDaima": values.addressDaima,
+                    "business": values.business,
+                    "paperWenjian": values.paperWenjian,
+                    "paperBianhao": values.paperBianhao,
+                    "tax": values.tax,
+                    "zhangHuNature": values.zhangHuNature,
+                    "ziJiNature": values.ziJiNature,
+                    "year": values.date.year(),
+                    "month": values.date.month() + 1,
+                    "day": values.date.day(),
+                    "directorName": values.directorName,
+                    "cunkuanZhangHu": values.cunkuanZhangHu,
+                    "zuZhiJiGou": values.zuZhiJiGou,
+                    "fadingDaiBiao": values.fadingDaiBiao,
+                    "fadingDaiBiaoName": values.fadingDaiBiaoName,
+                    "fadingDaiBiaoType": values.fadingDaiBiaoType,
+                    "fadingDaiBiaoNumber": values.fadingDaiBiaoNumber
                 };
 
                 dispatch({
@@ -111,8 +111,8 @@ function LuruKailiApplyBook({ dispatch, form, }) {
     }
 
     const formCol = {
-        labelCol: { span: 3 },
-        wrapperCol: { span: 12 }
+        labelCol: { span: 8 },
+        wrapperCol: { span: 16 }
     };
     const formCol1 = {
         labelCol: { span: 5 },
@@ -136,7 +136,7 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                 <Form onSubmit={handleSubmit}>
                     <div className={styles.items}>
                         <Row>
-                            <Col span={15}>
+                            <Col span={10}>
                                 <FormItem label="存款人名称"{...formCol}>
                                     {getFieldDecorator('sname', {
                                         // // rules: [{ required: true, message: '请输入姓名！' }]
@@ -145,7 +145,7 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                     )}
                                 </FormItem>
                             </Col>
-                            <Col span={9}>
+                            <Col offset={2} span={10}>
                                 <FormItem label="电话"{...formCol}>
                                     {getFieldDecorator('phoneNumber', {
                                         // rules: [{ required: true, message: '请输入姓名！' }]
@@ -155,9 +155,8 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
-                            <Col span={12}>
+                            <Col span={10}>
                                 <FormItem label="地址"{...formCol}>
                                     {getFieldDecorator('address', {
                                         // // rules: [{ required: true, message: '请输入姓名！' }]
@@ -166,7 +165,7 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                     )}
                                 </FormItem>
                             </Col>
-                            <Col span={12}>
+                            <Col offset={2} span={10}>
                                 <FormItem label="邮编"{...formCol}>
                                     {getFieldDecorator('postCode', {
                                         // rules: [{ required: true, message: '请输入姓名！' }]
@@ -176,9 +175,8 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
-                            <Col span={20}>
+                            <Col span={10}>
                                 <FormItem label="存款人类别"{...formCol}>
                                     {getFieldDecorator('depositorsType', {
                                         // // rules: [{ required: true, message: '请输入姓名！' }]
@@ -187,7 +185,7 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                     )}
                                 </FormItem>
                             </Col>
-                            <Col span={20}>
+                            <Col offset={2} span={10}>
                                 <FormItem label="组织机构代码"{...formCol}>
                                     {getFieldDecorator('organization', {
                                         // rules: [{ required: true, message: '请输入姓名！' }]
@@ -197,9 +195,17 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
-                            <Col span={7} className={styles.fadingAndDanwei}>
+                            <Col span={10}>
+                                <FormItem label="姓名"{...formCol}>
+                                    {getFieldDecorator('name', {
+                                        // rules: [{ required: true, message: '请输入姓名！' }]
+                                    })(
+                                        <Input className={styles.input} />
+                                    )}
+                                </FormItem>
+                            </Col>
+                            <Col offset={2} span={10}>
                                 <FormItem label=""{...formCol}>
                                     {getFieldDecorator('fadingAndDanwei', {
                                         // // rules: [{ required: true, message: '请输入姓名！' }]
@@ -212,14 +218,9 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                     )}
                                 </FormItem>
                             </Col>
-                            <Col span={17} className={styles.nameLeftBod}>
-                                <FormItem label="姓名"{...formCol}>
-                                    {getFieldDecorator('name', {
-                                        // rules: [{ required: true, message: '请输入姓名！' }]
-                                    })(
-                                        <Input className={styles.input} />
-                                    )}
-                                </FormItem>
+                        </Row>
+                        <Row>
+                            <Col span={10} >
                                 <FormItem label="证件类型"{...formCol}>
                                     {getFieldDecorator('paperType', {
                                         // rules: [{ required: true, message: '请输入姓名！' }]
@@ -227,6 +228,8 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                         <Input className={styles.input} />
                                     )}
                                 </FormItem>
+                            </Col>
+                            <Col offset={2} span={10}>
                                 <FormItem label="证件号码"{...formCol}>
                                     {getFieldDecorator('paperNumber', {
                                         // rules: [{ required: true, message: '请输入姓名！' }]
@@ -236,7 +239,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={14}>
                                 <FormItem label="行业分类"{...formCol}>
@@ -270,7 +272,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={12}>
                                 <FormItem label="注册资金"{...formCol}>
@@ -291,7 +292,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={12}>
                                 <FormItem label="经营范围"{...formCol}>
@@ -303,7 +303,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={20}>
                                 <FormItem label="证明文件种类"{...formCol}>
@@ -324,7 +323,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={24}>
                                 <FormItem label="税务登记证(国税或地税)编号"{...formCol1}>
@@ -336,11 +334,9 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row style={{ fontSize: '15px', fontWeight: 'bold' }}>
                             关联企业:关联企业信息填列在"关联企业登记表"上。
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={14}>
                                 <FormItem label="账户性质"{...formCol}>
@@ -358,7 +354,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={13}>
                                 <FormItem label="资金性质"{...formCol}>
@@ -379,7 +374,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={12}>
                                 <FormItem label="上级法人或主管单位名称"{...formCol3}>
@@ -391,7 +385,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={13}>
                                 <FormItem label="基本存款账户开户许可证核准号"{...formCol3}>
@@ -412,7 +405,6 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
                         <Row>
                             <Col span={7} className={styles.fadingAndDanwei}>
                                 <FormItem label=""{...formCol}>
@@ -451,22 +443,19 @@ function LuruKailiApplyBook({ dispatch, form, }) {
                                 </FormItem>
                             </Col>
                         </Row>
-                        <div className={styles.BorderBottom}></div>
-                        <div>
-                            <Row>
-                                <Col span={4}>
-                                    <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
-                                </Col>
+                        <Row>
+                            <Col span={4}>
+                                <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+                            </Col>
 
-                                <Col offset={5} span={8}>
-                                    <Button.Group size='large'>
-                                        <Button type="primary" htmlType="submit">提交</Button>
-                                        <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
-                                        <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
-                                    </Button.Group>
-                                </Col>
-                            </Row>
-                        </div>
+                            <Col offset={5} span={8}>
+                                <Button.Group size='large'>
+                                    <Button type="primary" htmlType="submit">提交</Button>
+                                    <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+                                    <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+                                </Button.Group>
+                            </Col>
+                        </Row>
                     </div>
 
 

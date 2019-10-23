@@ -22,58 +22,38 @@
   border: 1px black solid;
   padding: 0 15px;
 }
-.input,
-.AddressInput1,
-.AddressInput2,
-.AddressInput3{
+.input{
   border: none;
   border-bottom: 1px solid;
   border-radius: 0;
-}
-.AddressInput1{
-  position: relative;
-    top: -35px;
-    left: 64px;
-}
-.sheng {
-  position: relative;
-    top: -76px;
-    left: 218px;
-}
-.AddressInput2{
-  position: relative;
-    top: -111px;
-    left: 339px;
-}
-.shi {
-  position: relative;
-    top: -150px;
-    left: 498px;
-}
-.AddressInput3{
-  position: relative;
-    top: -186px;
-    left: 563px;
 }
 
 .inputNumber {
   width: 100%;
 }
 
+
+.select {
+  width: 100%;
+}
+
 .datePicker {
   width: 100%;
 }
-.BorderBottom{
-  width: 103.3%;
-  position: relative;
-  left: -16px;
+
+.contentSection{
   border-bottom: 1px solid black;
+  padding-bottom: 10px;
 }
-.qu {
-  position: relative;
-  left: 718px;
-  top: -224px;
+
+.contentSectionHeader{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
 }
+
 .date {
   width: 30%;
   margin: 0 auto;
@@ -88,134 +68,12 @@
   padding-left: 600px;
 }
 
-.outsideborder {
-  border: 1px solid black;
-}
-
-.customer {
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-}
-.type {
-  margin-left: -257px;
-}
-
-.border2 {
-  width: 153.8%;
-  position: relative;
-  left: -110px;
-  border-bottom: 1px solid black;
-}
-.border_address {
-  height: 194px;
-  border-bottom: 1px solid black;
-}
-
-.often_addressH {
-  height: 0;
-}
-
-.span {
-  position: relative;
-  top: -15px;
-}
-
-.zhiye {
-  position: relative;
-  left: -413px;
-}
-
-.content1 {
-  position: relative;
-  top: -39px;
-  left: 506px;
-}
-
-.border_zhiye {
-  height: 177px;
-  border-bottom: 1px solid black;
-}
-
-.Tax {
-  height: 141px;
-  position: relative;
-  left: -40px;
-  top: -15px;
-}
-
-.border3 {
-  width: 100.3%;
-  position: relative;
-  left: -1px;
-  border-bottom: 1px solid black;
-}
-
 .note {
   width: 187%;
   position: relative;
   left: 2px;
 }
 
-.input_1 {
-  width: 40%;
-}
-
-.border_amercial {
-  border-bottom: 1px solid black;
-}
-
-.area {
-  margin-left: 481px;
-  margin-right: -190px;
-  margin-top: -54px;
-  width: 50%;
-}
-.zhuming {
-  display: inline-block;
-  position: relative;
-  top: -38px;
-  left: 261px;
-}
-
-.footer {
-  margin-left: 273px;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.btn {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.DatePicker {
-  width: 138%;
-  position: relative;
-  top: -22px;
-  left: 25px;
-}
-
-.changqi {
-  position: relative;
-  top: -114px;
-  left: 182px;
-}
-
-.zhengjianhaoma {
-  height: 56px;
-  border-bottom: 1px solid black;
-}
-
-.fazhengjiguan {
-  border-bottom: 1px solid black;
-}
-
-.Position {
-  position: relative;
-  top: -43px;
-}
 .footer {
   margin-top: 30px;
   margin-left: 0;
