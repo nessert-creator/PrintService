@@ -23,8 +23,12 @@ using QC.MF.Jszhsqshus;
 using QC.MF.danweixinxidengjibiao;
 using QC.MF.Registrations;
 using QC.MF.Shouquanshus;
+<<<<<<< HEAD
+using QC.MF.Bgyhjszhsqss;
+=======
 using QC.MF.Shenqingshu;
 using QC.MF.KailiApplyBooks;
+>>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
 
 namespace QC.MF.EntityFramework
 {
@@ -60,6 +64,7 @@ namespace QC.MF.EntityFramework
 
         public IDbSet<Danweixinxidengjibiao> Danweixinxidengjibiao { get; set; }
         public IDbSet<Yewujiesuanshenqingshu.Yewujiesuanshenqingshu> Yewujiesuanshenqingshu { get; set; }
+        public IDbSet<Bgyhjszhsqs> Bgyhjszhsqs { get; set; }
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not

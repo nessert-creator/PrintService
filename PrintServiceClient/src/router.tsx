@@ -66,8 +66,12 @@ import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxiden
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
+<<<<<<< HEAD
+import LuruBgyhjszhsqss from './routes/Bgyhjszhsqss/LuruBgyhjszhsqss';
+=======
 import KailiApplyBook from './routes/KailiApplyBook/KailiApplyBook';
 import LuruKailiApplyBook from './routes/KailiApplyBook/LuruKailiApplyBook';
+>>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -146,8 +150,12 @@ export default function RouterConfig({ history }) {
 					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu} />
 					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao} />
 					<Route path="/lurushouquanshu" component={LuruShouquanshu} />
+<<<<<<< HEAD
+					<Route path="/luruBgyhjszhsqss" component={LuruBgyhjszhsqss} />
+=======
 					<Route path="/lurushenqingshu" component={LuruShenqingshu} />
 					<Route path="/luruKailiApplyBook" component={LuruKailiApplyBook} />
+>>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
 				</Router>
 			</IntlProvider>
 		</LocaleProvider>

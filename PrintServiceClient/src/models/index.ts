@@ -33,6 +33,7 @@ import jiangzhangdan from './jiangzhangdan';
 import powerbook from './powerbook';
 import registration from './registration';
 import yewujiesuanshenqingshu from './yewujiesuanshenqingshu';
+import bgyhjszhsqss from './bgyhjszhsqss';
 
 /**
  * index.js
