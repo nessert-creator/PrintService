@@ -239,27 +239,18 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201909290705463_merge20190929.cs" />
-    <Compile Include="Migrations\201909290705463_merge20190929.Designer.cs">
-      <DependentUpon>201909290705463_merge20190929.cs</DependentUpon>
+<<<<<<< HEAD
+    <Compile Include="Migrations\201910121205464_gaoz201910122005.cs" />
+    <Compile Include="Migrations\201910121205464_gaoz201910122005.Designer.cs">
+      <DependentUpon>201910121205464_gaoz201910122005.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910010746194_fany20191001.cs" />
-    <Compile Include="Migrations\201910010746194_fany20191001.Designer.cs">
-      <DependentUpon>201910010746194_fany20191001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910010750457_fany2019100101.cs" />
-    <Compile Include="Migrations\201910010750457_fany2019100101.Designer.cs">
-      <DependentUpon>201910010750457_fany2019100101.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910030150455_fany20191003.cs" />
-    <Compile Include="Migrations\201910030150455_fany20191003.Designer.cs">
-      <DependentUpon>201910030150455_fany20191003.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910040311437_fany20191004.cs" />
-    <Compile Include="Migrations\201910040311437_fany20191004.Designer.cs">
-      <DependentUpon>201910040311437_fany20191004.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201910170853197_merge20191017.cs" />
+    <Compile Include="Migrations\201910170853197_merge20191017.Designer.cs">
+      <DependentUpon>201910170853197_merge20191017.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
+>>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MFDataModule.cs" />
     <Compile Include="Migrations\SeedData\DefaultMenuCreator.cs" />
@@ -329,20 +320,13 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201909290705463_merge20190929.resx">
-      <DependentUpon>201909290705463_merge20190929.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910010746194_fany20191001.resx">
-      <DependentUpon>201910010746194_fany20191001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910010750457_fany2019100101.resx">
-      <DependentUpon>201910010750457_fany2019100101.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910030150455_fany20191003.resx">
-      <DependentUpon>201910030150455_fany20191003.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910040311437_fany20191004.resx">
-      <DependentUpon>201910040311437_fany20191004.cs</DependentUpon>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Migrations\201910121205464_gaoz201910122005.resx">
+      <DependentUpon>201910121205464_gaoz201910122005.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201910170853197_merge20191017.resx">
+      <DependentUpon>201910170853197_merge20191017.cs</DependentUpon>
+>>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
