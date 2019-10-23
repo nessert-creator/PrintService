@@ -363,7 +363,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 										</Col>
 									</Row>
 									<Row style={{position: 'relative', top:'-48px'}}>
-										<Col span={6}  className={styles.nnn}>受益人所有信息</Col>
+										<Col span={6}  className={styles.nnn} >受益人所有信息</Col>
 										<Col span={18} className={styles.hhh}> 
 										<FormItem {...formCol}>
 												{getFieldDecorator('designation', {
@@ -375,12 +375,12 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 										</Col>
 									</Row>
 									<Row className={styles.dixian1} >
-										<Col span={2}>受益人类型</Col>
-										<Col span={4}>受益人名称</Col>
-										<Col span={3}>证件类型</Col>
-										<Col span={5}>证件号码</Col>
-										<Col span={5}>有效期限</Col>
-										<Col span={5}>地址</Col>
+										<Col span={2} >受益人类型</Col>
+										<Col span={4} >受益人名称</Col>
+										<Col span={3} >证件类型</Col>
+										<Col span={5} >证件号码</Col>
+										<Col span={5} >有效期限</Col>
+										<Col span={5} >地址</Col>
 									</Row>
 									<Row style={{position: 'relative', top:'-70px'}}>
 
