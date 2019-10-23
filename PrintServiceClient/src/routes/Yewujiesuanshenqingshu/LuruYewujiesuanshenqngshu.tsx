@@ -97,7 +97,7 @@ function LuruYewujiesuanshenqngshu({ dispatch, form, intl }) {
 			<div className={styles.content}>
 
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>结算业务申请书</Row>
 				</header>
 				<section>
@@ -317,7 +317,7 @@ function LuruYewujiesuanshenqngshu({ dispatch, form, intl }) {
 												<FormItem >
 													{getFieldDecorator('extra', {
 													})(
-														<Input.TextArea rows={3}/>
+														<Input.TextArea rows={3} />
 													)}
 												</FormItem>
 											</Row>

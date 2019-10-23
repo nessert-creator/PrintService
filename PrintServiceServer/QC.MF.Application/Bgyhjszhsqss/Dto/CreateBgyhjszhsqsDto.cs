@@ -20,7 +20,7 @@ namespace QC.MF.Bgyhjszhsqss.Dto
         public string Natureofaccount { get; set; }
         //开户许可证核准号
         public string Accountopennumber { get; set; }
-        //变更事项及变更后内容如下
+        //变更事项及变更后内容如下:
         public string Changesas { get; set; }
         //账户名称
         public string Customername1 { get; set; }

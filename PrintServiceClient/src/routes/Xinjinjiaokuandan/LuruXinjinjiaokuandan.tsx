@@ -74,7 +74,7 @@ function LuruXinjinjiaokuandan({ dispatch, form }) {
 		<div className={styles.container}>
 			<div className={styles.content}>
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>现金交款单</Row>
 				</header>
 

@@ -180,7 +180,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
         <div className={styles.container}>
             <div className={styles.content}>
                 <header className={styles.title}>
-                    <Row className={styles.logo}></Row>
+                    <Link to="/"><Row className={styles.logo}></Row></Link>
                     <Row className={styles.title}>个人客户信息登记表</Row>
                 </header>
 

@@ -64,6 +64,7 @@ import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxiden
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
+import LuruBgyhjszhsqss from './routes/Bgyhjszhsqss/LuruBgyhjszhsqss';
 /**
  * router.js
  * Created by 李廷旭 on 2017/9/5 12:39
@@ -139,6 +140,7 @@ export default function RouterConfig({ history }) {
 					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu}/>
 					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao}/>
 					<Route path="/lurushouquanshu" component={LuruShouquanshu}/>
+					<Route path="/luruBgyhjszhsqss" component={LuruBgyhjszhsqss}/>
 				</Router>
 			</IntlProvider>
 		</LocaleProvider>);

@@ -81,7 +81,7 @@ function LuruYwdlsqbiao({ dispatch, form }) {
 		<div className={styles.container}>
 			<div className={styles.content}>
 				<header className={styles.title}>
-					<Row className={styles.logo}></Row>
+					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>中信银行公司电子银行业务代理授权表</Row>
 				</header>
 				<section>
