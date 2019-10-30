@@ -23,12 +23,9 @@ using QC.MF.Jszhsqshus;
 using QC.MF.danweixinxidengjibiao;
 using QC.MF.Registrations;
 using QC.MF.Shouquanshus;
-<<<<<<< HEAD
 using QC.MF.Bgyhjszhsqss;
-=======
 using QC.MF.Shenqingshu;
 using QC.MF.KailiApplyBooks;
->>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
 
 namespace QC.MF.EntityFramework
 {

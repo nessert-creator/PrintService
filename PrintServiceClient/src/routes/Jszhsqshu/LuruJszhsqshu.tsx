@@ -1,44 +1,27 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'dva';
 import { Link } from 'dva/router';
-import { Form, Icon, Input, Button, Checkbox, message, Row, Col } from 'antd';
+import { Form, Icon, Input, Button, Select, message, Row, Col } from 'antd';
 const FormItem = Form.Item;
 const create = Form.create;
+const Option = Select.Option;
 import styles from './LuruJszhsqshu.css';
 
 function LuruJszhsqshu({ dispatch, form }) {
     const { getFieldDecorator } = form;
+
     function handleSubmit(e) {
         form.validateFields((err, values) => {
-            console.log(values);
-
-            let data = {
-                "accounttitle": values.accounttitle,
-                "bankname": values.bankname,
-                "bankcode": values.bankcode,
-                "account": values.account,
-                "naturezccount": values.naturezccount,
-                // "basic": values.basic,
-                // "special": values.special,
-                // "general": values.general,
-                // "temporary": values.temporary,
-                // "personal": values.personal,
-                "accountnumber": values.accountnumber,
-                "pinreasons": values.pinreasons,
-                "voucher": values.voucher,
-                "species": values.species,
-                "anumberof": values.anumberof,
-                "allnumbers": values.allnumbers,
-                "fillingexplanation": values.fillingexplanation,
-                "year": values.year,
-                "month": values.month,
-                "day": values.day,
-                "year1": values.year1,
-                "month1": values.month1,
-                "day1": values.day1,
-            };
-
             if (!err) {
+                let data = {
+                    "accounttitle": values.accounttitle,
+                    "bankname": values.bankname,
+                    "bankcode": values.bankcode,
+                    "account": values.account,
+                    "naturezccount": values.naturezccount,
+                    "accountnumber": values.accountnumber,
+                    "pinreasons": values.pinreasons
+                };
                 dispatch({
                     type: 'jszhsqshu/createjszhsqshu',
                     payload: data
@@ -47,9 +30,35 @@ function LuruJszhsqshu({ dispatch, form }) {
         });
     }
 
+
+    function handleReset() {
+        form.resetFields();
+    }
+
+    function handlePrint() {
+        form.validateFields((err, values) => {
+            if (!err) {
+                let data = {
+                    "accounttitle": values.accounttitle,
+                    "bankname": values.bankname,
+                    "bankcode": values.bankcode,
+                    "account": values.account,
+                    "naturezccount": values.naturezccount,
+                    "accountnumber": values.accountnumber,
+                    "pinreasons": values.pinreasons,
+                };
+
+                dispatch({
+                    type: "print/printJszhsqshu",
+                    payload: data
+                });
+            }
+        });
+    }
+
     const formCol = {
-        labelCol: { span: 5 },
-        wrapperCol: { span: 15 }
+        labelCol: { span: 6 },
+        wrapperCol: { span: 18 }
     };
 
     return (
@@ -61,282 +70,69 @@ function LuruJszhsqshu({ dispatch, form }) {
             </header>
 
             <div className={styles.zdborder}>
-                <section className={styles.border}>
-                    <Form onSubmit={handleSubmit} className={styles.accounttitle}>
-                        <div className={styles.accounttitle1}>
-                            <FormItem label="账户名称" {...formCol}>
-                                {getFieldDecorator('accounttitle', {
-                                    rules: [{ required: true, message: '请输入账户名称！' }]
-                                })(<Input className={styles.input} />)}
-                            </FormItem>
-                        </div>
-                        <div className={styles.bankname1}>
-                            <FormItem label="开户银行名称" {...formCol}>
-                                {getFieldDecorator('bankname', {
-                                    rules: [{ required: true, message: '请输入开户银行名称！' }]
-                                })(<Input className={styles.input} />)}
-                            </FormItem>
-                        </div>
-                        <div className={styles.bankcode}>
-                            <div className={styles.account}>
-                                <FormItem label="开户银行代码" {...formCol}>
-                                    {getFieldDecorator('bankcode', {
-                                        rules: [{ required: true, message: '请输入开户银行代码！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <div className={`${styles.hint} clearfix`}>
-                                    <FormItem label="账号" {...formCol}>
-                                        {getFieldDecorator('account', {
-                                            rules: [{ required: true, message: '请输入账号！' }]
-                                        })(<Input className={styles.input} />)}
-                                    </FormItem>
-                                </div>
-                            </div>
-                            <div className={styles.naturezccount1}>
-                                <FormItem label="账户性质" {...formCol}>
-                                    {getFieldDecorator('naturezccount', {
-                                        rules: [{ required: true, message: '请输入账户性质！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                            </div>
-                            <div className={styles.accountnumber1}>
-                                <FormItem label="开户许可证核准号" {...formCol}>
-                                    {getFieldDecorator('accountnumber', {
-                                        rules: [{ required: true, message: '请输入开户许可证核准号！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                            </div>
-                            <div className={styles.pinreasons1}>
-                                <FormItem label="销户原因" {...formCol}>
-                                    {getFieldDecorator('pinreasons', {
-                                        rules: [{ required: true, message: '请输入销户原因！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                            </div>
-                            <div>
-                                <div>
-                                </div>
-                                <div className={`${styles.hint} clearfix`}>
-                                    <header className={styles.dbk}>
-                                        <span className={styles.bckr}>本存款人申请撤销上述银行账户，承诺所提供的证明文件真实，有效。</span>
-                                        <span className={styles.ckrqz}>存款人（签章）</span>
-                                        <span className={styles.nyr}>年 月 日</span>
-                                    </header>
-                                </div>
-                            </div>
+                <Form onSubmit={handleSubmit}>
+                    <section className={styles.border}>
+                        <FormItem label="账户名称" {...formCol}>
+                            {getFieldDecorator('accounttitle', {
+                                // rules: [{ required: true, message: '请输入账户名称！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                        <FormItem label="开户银行名称" {...formCol}>
+                            {getFieldDecorator('bankname', {
+                                // rules: [{ required: true, message: '请输入开户银行名称！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                        <FormItem label="开户银行代码" {...formCol}>
+                            {getFieldDecorator('bankcode', {
+                                // rules: [{ required: true, message: '请输入开户银行代码！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                        <FormItem label="账号" {...formCol}>
+                            {getFieldDecorator('account', {
+                                // rules: [{ required: true, message: '请输入账号！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                        <FormItem label="账户性质" {...formCol}>
+                            {getFieldDecorator('naturezccount', {
+                                // rules: [{ required: true, message: '请输入账户性质！' }]
+                            })(
+                                <Select className={styles.select}>
+                                    <Option value="基本">基本</Option>
+                                    <Option value="专用">专用</Option>
+                                    <Option value="一般">一般</Option>
+                                    <Option value="临时">临时</Option>
+                                    <Option value="个人">个人</Option>
+                                </Select>
+                            )}
+                        </FormItem>
+                        <FormItem label="开户许可证核准号" {...formCol}>
+                            {getFieldDecorator('accountnumber', {
+                                // rules: [{ required: true, message: '请输入开户许可证核准号！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                        <FormItem label="销户原因" {...formCol}>
+                            {getFieldDecorator('pinreasons', {
+                                // rules: [{ required: true, message: '请输入销户原因！' }]
+                            })(<Input className={styles.input} />)}
+                        </FormItem>
+                    </section>
 
-                            <div className={styles.khyhbk}>
-                                <header className={styles.khyh}>开户银行审核意见:</header>
-                                <span className={styles.jbrqz}>经办人（签章）</span>
-                            </div>
-                            <div className={styles.nyrbk}>
-                                <div className={styles.dybk}>开户银行（签章）</div>
-                                <div className={styles.nyr1}>年 月 日</div>
-                            </div>
-                            <div className={styles.jhkb}>交回空白重要凭证</div>
-                            <div className={styles.voucher1}>
-                                <FormItem label="年" {...formCol}>
-                                    {getFieldDecorator('year', {
-                                        rules: [{ required: true, message: '请输入年！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="月" {...formCol}>
-                                    {getFieldDecorator('month', {
-                                        rules: [{ required: true, message: '请输入月！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="日" {...formCol}>
-                                    {getFieldDecorator('day', {
-                                        rules: [{ required: true, message: '请输入日！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="年" {...formCol}>
-                                    {getFieldDecorator('year1', {
-                                        rules: [{ required: true, message: '请输入年！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="月" {...formCol}>
-                                    {getFieldDecorator('month1', {
-                                        rules: [{ required: true, message: '请输入月！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="日" {...formCol}>
-                                    {getFieldDecorator('day1', {
-                                        rules: [{ required: true, message: '请输入日！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                                <FormItem label="交回空白重要凭证" {...formCol}>
-                                    {getFieldDecorator('voucher', {
-                                        rules: [{ required: true, message: '请输入交回空白重要凭证！' }]
-                                    })(<Input className={styles.input} />)}
-                                </FormItem>
-                            </div>
-                            <div>
-                                <Row>
-                                    <Col span={6}>种类</Col>
-                                    <Col span={4}>张（份）数</Col>
-                                    <Col span={10}>起讫号码</Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col span={6}>
-                                        <FormItem >
-                                            {getFieldDecorator('species', {
-                                                rules: [{ required: true, message: '请输入种类！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={4}>
-                                        <FormItem >
-                                            {getFieldDecorator('anumberof', {
-                                                rules: [{ required: true, message: '请输入张（份）数！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                    <Col span={10}>
-                                        <FormItem>
-                                            {getFieldDecorator('allnumbers', {
-                                                rules: [{ required: true, message: '请输入起讫号码！' }]
-                                            })(<Input className={styles.input} />)}
-                                        </FormItem>
-                                    </Col>
-                                </Row>
+                    <div className={styles.footer}>
+                        <Row>
+                            <Col span={4}>
+                                <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+                            </Col>
 
-                            </div>
-                        </div>
-
-
-                        <div className={styles.footer}>
-                            <Row>
-                                <Col span={4}>
-                                    <Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
-                                </Col>
-
-                                <Col offset={5} span={8}>
-                                    <Button.Group size='large'>
-                                        <Button type="primary" htmlType="submit">提交</Button>
-                                        <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
-                                        <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
-                                    </Button.Group>
-                                </Col>
-                            </Row>
-                        </div>
-                    </Form>
-                </section>
+                            <Col offset={5} span={8}>
+                                <Button.Group size='large'>
+                                    <Button type="primary" htmlType="submit">提交</Button>
+                                    <Button type="primary" htmlType="button" onClick={() => { handlePrint() }}>打印</Button>
+                                    <Button type="primary" htmlType="button" onClick={() => { handleReset() }}>重置</Button>
+                                </Button.Group>
+                            </Col>
+                        </Row>
+                    </div>
+                </Form>
             </div>
         </div>
     );

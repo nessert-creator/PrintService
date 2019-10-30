@@ -11,12 +11,9 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  */
-import url from 'url';
-const portableFetch = fetch;
-//const BASE_PATH = "http://220.165.143.73:666".replace(/\/+$/, "");
-const BASE_PATH = location.host.indexOf('localhost') >= 0 || location.host.indexOf('127.0.0.1') >= 0
-    ? `${location.protocol}//${location.host}/api`.replace(/\/+$/, '')
-    : `${location.protocol}//${location.host}`.replace(/\/+$/, '');
+import * as url from "url";
+import * as portableFetch from "portable-fetch";
+const BASE_PATH = "http://localhost:6634".replace(/\/+$/, "");
 /**
  *
  * @export

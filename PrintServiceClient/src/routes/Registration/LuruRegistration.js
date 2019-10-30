@@ -18,9 +18,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
             console.log(values);
             console.log(form);
             let data = {
-                "year_1": values.Title_date.year(),
-                "month_1": values.Title_date.month() + 1,
-                "day_1": values.Title_date.day(),
+                "year_1": values.Title_date && values.Title_date.year(),
+                "month_1": values.Title_date && values.Title_date.month() + 1,
+                "day_1": values.Title_date && values.Title_date.day(),
                 "name_1": values.name_1,
                 "name_pinyin": values.name_pinyin,
                 "gender_1": values.gender_1,
@@ -28,9 +28,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                 "phoneNumber": values.phoneNumber,
                 "type_1": type_1,
                 "number_1": values.number_1,
-                "year_2": values.youxiaodate.year(),
-                "month_2": values.youxiaodate.month() + 1,
-                "day_2": values.youxiaodate.day(),
+                "year_2": values.youxiaodate && values.youxiaodate.year(),
+                "month_2": values.youxiaodate && values.youxiaodate.month() + 1,
+                "day_2": values.youxiaodate && values.youxiaodate.day(),
                 "license": values.license,
                 "often_address1": often_address1,
                 "often_address2": values.often_address2,
@@ -46,9 +46,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                 "nationality_2": values.nationality_2,
                 "type_2": type_2,
                 "number_3": values.number_3,
-                "year_3": values.dialirenyouxiaodate.year(),
-                "month_3": values.dialirenyouxiaodate.month() + 1,
-                "day_3": values.dialirenyouxiaodate.day(),
+                "year_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.year(),
+                "month_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.month() + 1,
+                "day_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.day(),
                 "license2": values.license2,
                 "phoneNumber2": values.phoneNumber2,
                 "province": values.province,
@@ -83,9 +83,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
         form.validateFields((err, values) => {
             if (!err) {
                 let data = {
-                    "year_1": values.Title_date.year(),
-                    "month_1": values.Title_date.month() + 1,
-                    "day_1": values.Title_date.day(),
+                    "year_1": values.Title_date && values.Title_date.year(),
+                    "month_1": values.Title_date && values.Title_date.month() + 1,
+                    "day_1": values.Title_date && values.Title_date.day(),
                     "name_1": values.name_1,
                     "name_pinyin": values.name_pinyin,
                     "gender_1": values.gender_1,
@@ -93,9 +93,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                     "phoneNumber": values.phoneNumber,
                     "type_1": type_1,
                     "number_1": values.number_1,
-                    "year_2": values.youxiaodate.year(),
-                    "month_2": values.youxiaodate.month() + 1,
-                    "day_2": values.youxiaodate.day(),
+                    "year_2": values.youxiaodate && values.youxiaodate.year(),
+                    "month_2": values.youxiaodate && values.youxiaodate.month() + 1,
+                    "day_2": values.youxiaodate && values.youxiaodate.day(),
                     "license": values.license,
                     "often_address1": often_address1,
                     "often_address2": values.often_address2,
@@ -111,9 +111,9 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                     "nationality_2": values.nationality_2,
                     "type_2": type_2,
                     "number_3": values.number_3,
-                    "year_3": values.dialirenyouxiaodate.year(),
-                    "month_3": values.dialirenyouxiaodate.month() + 1,
-                    "day_3": values.dialirenyouxiaodate.day(),
+                    "year_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.year(),
+                    "month_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.month() + 1,
+                    "day_3": values.dialirenyouxiaodate && values.dialirenyouxiaodate.day(),
                     "license2": values.license2,
                     "phoneNumber2": values.phoneNumber2,
                     "province": values.province,
@@ -226,9 +226,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </Col>
                                     <Col span={8}>
                                         <FormItem label='有效日期至' {...formCol}>
-                                            {getFieldDecorator('youxiaodate', {
-        rules: [{ required: true, message: '请输入日期！' }]
-    })(<DatePicker className={styles.datePicker}/>)}
+                                            {getFieldDecorator('youxiaodate', {})(<DatePicker className={styles.datePicker}/>)}
                                         </FormItem>
                                     </Col>
                                 </Row>
@@ -240,7 +238,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Row style={{ fontWeight: 'bold' }}>联系地址:</Row>
+                                    <Row style={{ fontWeight: 'bold', padding: 20 }}>联系地址:</Row>
                                     <Row>
                                         <Col span={2}>
                                             <span>常住地址:</span>
@@ -390,9 +388,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                     <Col span={8}>
                                         <FormItem label='证件类型' {...formCol}>
                                             {getFieldDecorator('type_2', {})(<Select className={styles.select} onChange={handleChange}>
-                                                    <Option value=" 证件类型"> 证件类型</Option>
                                                     <Option value=" 中国护照 "> 中国护照 </Option>
-                                                    <Option value=" 证件类型"> 证件类型</Option>
                                                     <Option value=" 军官证 ">   军官证 </Option>
                                                     <Option value=" 武警证"> 武警证</Option>
                                                     <Option value=" 港澳居民来往内地通行证 "> 港澳居民来往内地通行证 </Option>
@@ -414,9 +410,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                 <Row className={styles.block}>
                                     <Col span={8}>
                                         <FormItem label='有效日期至' {...formCol}>
-                                            {getFieldDecorator('dialirenyouxiaodate', {
-        rules: [{ required: true, message: '请输入日期！' }]
-    })(<DatePicker className={styles.datePicker}/>)}
+                                            {getFieldDecorator('dialirenyouxiaodate', {})(<DatePicker className={styles.datePicker}/>)}
                                         </FormItem>
                                     </Col>
                                     <Col span={8}>
@@ -432,7 +426,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                 </Row>
 
                                 <Row>
-                                    <Row style={{ fontWeight: 'bold' }}>联系地址:</Row>
+                                    <Row style={{ fontWeight: 'bold', padding: 20 }}>联系地址:</Row>
                                     <Col span={2}>
                                         <span>常住地址:</span>
                                     </Col>
@@ -539,7 +533,7 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                     <Option value="建筑业">建筑业</Option>
                                                     <Option value="农林牧渔业">农林牧渔业</Option>
                                                     <Option value="旅游业">旅游业</Option>
-                                                    <Option value="制造业">批发零售业</Option>
+                                                    <Option value="批发零售业">批发零售业</Option>
                                                     <Option value="进出口贸易业">进出口贸易业</Option>
                                                     <Option value="住宿餐饮业">住宿餐饮业</Option>
                                                     <Option value="文化娱乐体育业">文化娱乐体育业</Option>
@@ -568,7 +562,6 @@ function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, i
                                                     <Option value="银行理财类">银行理财类</Option>
                                                     <Option value="海外投资类">海外投资类</Option>
                                                     <Option value="外币类">外币类</Option>
-                                                    <Option value="信托理财类">信托理财类</Option>
                                                 </Select>)}
                                         </FormItem>
                                     </Col>

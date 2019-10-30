@@ -1,15 +1,30 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import {
-	printJinzhangdan, PrintXinjinjiaokuandan, PrintYewujiesuanshenqingshu, PrintShouquanshu,
-	PrintYwdlsqbiao, PrintPowerbook,PrintKailiApplyBook,PrintRegistration
+	printJinzhangdan,
+	PrintXinjinjiaokuandan,
+	PrintYewujiesuanshenqingshu,
+	PrintShouquanshu,
+	PrintYwdlsqbiao,
+	PrintPowerbook,
+	PrintKailiApplyBook,
+	PrintRegistration,
+	PrintJszhsqshu,
+	PrintBgyhjszhsqss,
+	PrintDanweixinxidengjibiao
 } from './../utils/print';
+
 import Xinjinjiaokuandan from './../routes/Print/Xinjinjiaokuandan';
 import Jiangzhangdan from './../routes/Print/Jiangzhangdan';
 import Yewujiesuanshenqingshu from './../routes/Print/Yewujiesuanshenqingshu';
 import Shouquanshu from './../routes/Print/Shouquanshu';
 import Ywdlsqbiao from './../routes/Print/Ywdlsqbiao';
 import Powerbook from './../routes/Print/Powerbook';
+import Jszhsqshu from './../routes/Print/Jszhsqshu';
+import KailiApplyBook from './../routes/Print/KailiApplyBook';
+import Bgyhjszhsqss from './../routes/Print/Bgyhjszhsqss';
+import Registration from './../routes/Print/Registration';
+import Danweixinxidengjibiao from './../routes/Print/Danweixinxidengjibiao';
 
 function print(reactElement, printFunction) {
 	let div = document.createElement('div');
@@ -37,36 +52,38 @@ export default {
 		}
 	},
 	effects: {
-		*printJinzhangdan({ payload }, { call, put }) {
+		*printJinzhangdan({ payload }) {
 			print(<Jiangzhangdan jiangzhangdan={payload} />, printJinzhangdan);
 		},
-		*printXinjinjiaokuandan({ payload }, { call, put }) {
-			console.log(payload)
+		*printXinjinjiaokuandan({ payload }) {
 			print(<Xinjinjiaokuandan xinjinjiaokuandan={payload} />, PrintXinjinjiaokuandan);
 		},
-		*printYewujiesuanshenqingshu({ payload }, { call, put }) {
-			console.log(payload)
+		*printYewujiesuanshenqingshu({ payload }) {
 			print(<Yewujiesuanshenqingshu data={payload} />, PrintYewujiesuanshenqingshu);
 		},
-		*printShouquanshu({ payload }, { call, put }) {
-			console.log(payload)
+		*printShouquanshu({ payload }) {
 			print(<Shouquanshu Shouquanshu={payload} />, PrintShouquanshu);
 		},
-		*printYwdlsqbiao({ payload }, { call, put }) {
-			console.log(payload)
+		*printYwdlsqbiao({ payload }) {
 			print(<Ywdlsqbiao ywdlsqbiao={payload} />, PrintYwdlsqbiao);
 		},
-		*printPowerbook({ payload }, { call, put }) {
-			console.log(payload)
+		*printPowerbook({ payload }) {
 			print(<Powerbook powerbook={payload} />, PrintPowerbook);
 		},
-		*PrintKailiApplyBook({ payload }, { call, put }) {
-			console.log(payload)
+		*printKailiApplyBook({ payload }) {
 			print(<KailiApplyBook kailiApplyBook={payload} />, PrintKailiApplyBook);
 		},
-		*PrintRegistration({ payload }, { call, put }) {
-			console.log(payload)
+		*printRegistration({ payload }) {
 			print(<Registration registration={payload} />, PrintRegistration);
+		},
+		*printJszhsqshu({ payload }) {
+			print(<Jszhsqshu data={payload} />, PrintJszhsqshu);
+		},
+		*printBgyhjszhsqss({ payload }) {
+			print(<Bgyhjszhsqss data={payload} />, PrintBgyhjszhsqss);
+		},
+		*printDanweixinxidengjibiao({ payload }) {
+			print(<Danweixinxidengjibiao data={payload} />, PrintDanweixinxidengjibiao);
 		},
 	},
 	subscriptions: {}

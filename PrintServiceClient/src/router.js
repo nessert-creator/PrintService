@@ -67,6 +67,13 @@ import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanwei
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
 import LuruBgyhjszhsqss from './routes/Bgyhjszhsqss/LuruBgyhjszhsqss';
+import KailiApplyBook from './routes/KailiApplyBook/KailiApplyBook';
+import LuruKailiApplyBook from './routes/KailiApplyBook/LuruKailiApplyBook';
+/**
+ * router.js
+ * Created by 李廷旭 on 2017/9/5 12:39
+ * 描述: 路由
+ */
 export default function RouterConfig({ history }) {
     addLocaleData(zh);
     return (<LocaleProvider locale={zhCN}>
@@ -138,15 +145,11 @@ export default function RouterConfig({ history }) {
 					<Route path="/luruJszhsqshu" component={LuruJszhsqshu}/>
 					<Route path="/luruYewujiesuanshenqingshu" component={LuruYewujiesuanshenqngshu}/>
 					<Route path="/luruDanweixinxidengjibiao" component={LuruDanweixinxidengjibiao}/>
-					<Route path="/lurushouquanshu" component={LuruShouquanshu}/></>
+					<Route path="/lurushouquanshu" component={LuruShouquanshu}/>
 					<Route path="/luruBgyhjszhsqss" component={LuruBgyhjszhsqss}/>
-=======
 					<Route path="/lurushenqingshu" component={LuruShenqingshu}/>
 					<Route path="/luruKailiApplyBook" component={LuruKailiApplyBook}/>
->>>>>>> 57204b62038326a73db4278dda0573fb73bee1a2
 				</Router>
-			</IntlProvider>);
-    LocaleProvider >
-    ;
-    ;
+			</IntlProvider>
+		</LocaleProvider>);
 }

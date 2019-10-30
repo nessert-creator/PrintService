@@ -38,38 +38,14 @@
   margin: 0 auto;
 }
 
-.accounttitle1 {
-  border-bottom: 1px black solid;
+.select {
+  width:100%;
 }
+
 
 .border {
   border: 1px black solid;
-}
-
-.bankname1 {
-  border-bottom: 1px black solid;
-}
-
-.bankcode {
-  border-bottom: 1px black solid;
-
-}
-
-.account {
-  border-bottom: 1px black solid;
-
-}
-
-.naturezccount1 {
-  border-bottom: 1px black solid;
-}
-
-.accountnumber1 {
-  border-bottom: 1px black solid;
-}
-
-.pinreasons1 {
-  border-bottom: 1px black solid;
+  padding: 20px 20%;
 }
 
 .dbk {
