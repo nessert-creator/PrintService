@@ -11,7 +11,9 @@ import {
 	PrintRegistration,
 	PrintJszhsqshu,
 	PrintBgyhjszhsqss,
-	PrintDanweixinxidengjibiao
+	PrintDanweixinxidengjibiao,
+	PrintShouqunweituoshu1,
+	PrintShouqunweituoshu2
 } from './../utils/print';
 
 import Xinjinjiaokuandan from './../routes/Print/Xinjinjiaokuandan';
@@ -25,6 +27,8 @@ import KailiApplyBook from './../routes/Print/KailiApplyBook';
 import Bgyhjszhsqss from './../routes/Print/Bgyhjszhsqss';
 import Registration from './../routes/Print/Registration';
 import Danweixinxidengjibiao from './../routes/Print/Danweixinxidengjibiao';
+import Shouqunweituoshu1 from './../routes/Print/Shouqunweituoshu1';
+import Shouqunweituoshu2 from './../routes/Print/Shouqunweituoshu2';
 
 function print(reactElement, printFunction) {
 	let div = document.createElement('div');
@@ -84,6 +88,12 @@ export default {
 		},
 		*printDanweixinxidengjibiao({ payload }) {
 			print(<Danweixinxidengjibiao data={payload} />, PrintDanweixinxidengjibiao);
+		},
+		*printShouqunweituoshu1({ payload }) {
+			print(<Shouqunweituoshu1 data={payload} />, PrintShouqunweituoshu1);
+		},
+		*printShouqunweituoshu2({ payload }) {
+			print(<Shouqunweituoshu2 data={payload} />, PrintShouqunweituoshu2);
 		},
 	},
 	subscriptions: {}

@@ -12,16 +12,51 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
         form.validateFields((err, values) => {
             console.log(values);
             let data = {
-                "bankname": values.bankname,
+                "bankName": values.bankName,
                 "name": values.name,
-                "idtype": values.idtype,
-                "idnumber": 0,
-                "seal": values.seal,
-                "phone": values.phone
+                "idType": values.idType,
+                "idNumber": values.idNumber,
+                "post": values.post,
+                "phone": values.phone,
+                "name1": values.name1,
+                "name2": values.name2,
+                "idNumber2": values.idNumber2,
+                "name3": values.name3,
+                "idNumber3": values.idNumber3,
+                "phone3": values.phone3,
+                "business4": values.business4
             };
             if (!err) {
                 dispatch({
                     type: 'shouqunweituoshu1/creatShouqunweituoshu1',
+                    payload: data
+                });
+            }
+        });
+    }
+    function handleReset() {
+        form.resetFields();
+    }
+    function handlePrint() {
+        form.validateFields((err, values) => {
+            if (!err) {
+                let data = {
+                    "bankName": values.bankName,
+                    "name": values.name,
+                    "idType": values.idType,
+                    "idNumber": values.idNumber,
+                    "post": values.post,
+                    "phone": values.phone,
+                    "name1": values.name1,
+                    "name2": values.name2,
+                    "idNumber2": values.idNumber2,
+                    "name3": values.name3,
+                    "idNumber3": values.idNumber3,
+                    "phone3": values.phone3,
+                    "business4": values.business4
+                };
+                dispatch({
+                    type: "print/printShouqunweituoshu1",
                     payload: data
                 });
             }
@@ -83,7 +118,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						</FormItem>
 						<span>职务：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('Post', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('post', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>办理账户</span>
 
@@ -99,32 +134,32 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 					<Row>
 						<span>(二)授权使用</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('name1', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>个人名章为我单位预留银行印鉴，预留名章样式如下：（盖章）</span>
 					</Row>
 					<Row>
 						<span>(三)授权</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('name2', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>(先生/女士)</span>
 						<span>身份证号码：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idNumber', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('idNumber2', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>办理单位结算凭证及支付密码的购买。授权</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('name3', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>(先生/女士)</span>
 						<span>身份证号码：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idNumber', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('idNumber3', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>联系电话:</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('phone', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('phone3', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>办理单位大额出款电话核实。</span>
 					</Row>
@@ -132,7 +167,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						<span>(四)办理变更后，原授权事项：</span>
 
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('business', {})(<Select style={{ width: 100 }}>
+							{getFieldDecorator('business4', {})(<Select style={{ width: 100 }}>
 									<Option value="并行">并行</Option>
 									<Option value="废止">废止</Option>
 								</Select>)}

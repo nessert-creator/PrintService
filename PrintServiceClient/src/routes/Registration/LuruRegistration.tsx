@@ -18,6 +18,7 @@ function handleChange(value) {
 
 function LuruRegistration({ dispatch, form, type_1, professional, tax, type_2, industry, product, professiona2, type_4, riqi_1, riqi_2, often_address1, unit_address1 }) {
     const { getFieldDecorator } = form;
+
     function handleSubmit(e) {
         form.validateFields((err, values) => {
             console.log(values);

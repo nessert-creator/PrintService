@@ -351,9 +351,9 @@ export function PrintShouqunweituoshu1(html) {
 		LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
-		LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 
@@ -367,9 +367,9 @@ export function PrintShouqunweituoshu2(html) {
 		LODOP.ADD_PRINT_HTM(0, 0, '100%', '100%', html);
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
-		LODOP.SET_PRINT_PAGESIZE(1, 1740, 1000, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 export function PrintKailiApplyBook(html) {
@@ -383,8 +383,8 @@ export function PrintKailiApplyBook(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 export function PrintRegistration(html) {
@@ -398,8 +398,8 @@ export function PrintRegistration(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 export function PrintJszhsqshu(html) {
@@ -413,8 +413,8 @@ export function PrintJszhsqshu(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 export function PrintBgyhjszhsqss(html) {
@@ -428,8 +428,8 @@ export function PrintBgyhjszhsqss(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }
 export function PrintDanweixinxidengjibiao(html) {
@@ -443,7 +443,7 @@ export function PrintDanweixinxidengjibiao(html) {
 
 		LODOP.ADD_PRINT_TEXT(0, 0, 830, 30, ''); //打印空行,不然打印html的时候会不知道打印多长
 		LODOP.SET_PRINT_PAGESIZE(1, 2100, 2970, '');
-		// LODOP.PRINT();
-		LODOP.PREVIEW();
+		LODOP.PRINT();
+		// LODOP.PREVIEW();
 	}
 }

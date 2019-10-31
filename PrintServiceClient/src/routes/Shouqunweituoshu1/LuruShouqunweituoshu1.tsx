@@ -18,12 +18,19 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 			console.log(values);
 
 			let data = {
-				"bankname": values.bankname,
+				"bankName": values.bankName,
 				"name": values.name,
-				"idtype": values.idtype,
-				"idnumber": 0,
-				"seal": values.seal,
-				"phone": values.phone
+				"idType": values.idType,
+				"idNumber": values.idNumber,
+				"post": values.post,
+				"phone": values.phone,
+				"name1": values.name1,
+				"name2": values.name2,
+				"idNumber2": values.idNumber2,
+				"name3": values.name3,
+				"idNumber3": values.idNumber3,
+				"phone3": values.phone3,
+				"business4": values.business4
 			};
 			if (!err) {
 				dispatch({
@@ -32,6 +39,35 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 				});
 			}
 		});
+	}
+	function handleReset() {
+			form.resetFields();
+	}
+	function handlePrint() {
+			form.validateFields((err, values) => {
+					if (!err) {
+							let data = {
+								"bankName": values.bankName,
+								"name": values.name,
+								"idType": values.idType,
+								"idNumber": values.idNumber,
+								"post": values.post,
+								"phone": values.phone,
+								"name1": values.name1,
+								"name2": values.name2,
+								"idNumber2": values.idNumber2,
+								"name3": values.name3,
+								"idNumber3": values.idNumber3,
+								"phone3": values.phone3,
+								"business4": values.business4
+							};
+
+							dispatch({
+									type: "print/printShouqunweituoshu1",
+									payload: data
+							});
+					}
+			});
 	}
 
 	const formCol = {
@@ -105,7 +141,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						</FormItem>
 						<span>职务：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('Post', {
+							{getFieldDecorator('post', {
 							})(
 								<Input className={styles.input} />
 							)}
@@ -127,7 +163,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 					<Row>
 						<span>(二)授权使用</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {
+							{getFieldDecorator('name1', {
 							})(
 								<Input className={styles.input} />
 							)}
@@ -137,7 +173,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 					<Row>
 						<span>(三)授权</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {
+							{getFieldDecorator('name2', {
 							})(
 								<Input className={styles.input} />
 							)}
@@ -145,14 +181,14 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						<span>(先生/女士)</span>
 						<span>身份证号码：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idNumber', {
+							{getFieldDecorator('idNumber2', {
 							})(
 								<Input className={styles.input} />
 							)}
 						</FormItem>
 						<span >办理单位结算凭证及支付密码的购买。授权</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('name', {
+							{getFieldDecorator('name3', {
 							})(
 								<Input className={styles.input} />
 							)}
@@ -160,14 +196,14 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						<span >(先生/女士)</span>
 						<span>身份证号码：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idNumber', {
+							{getFieldDecorator('idNumber3', {
 							})(
 								<Input className={styles.input} />
 							)}
 						</FormItem>
 						<span>联系电话:</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('phone', {
+							{getFieldDecorator('phone3', {
 							})(
 								<Input className={styles.input} />
 							)}
@@ -178,7 +214,7 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 						<span>(四)办理变更后，原授权事项：</span>
 
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('business', {
+							{getFieldDecorator('business4', {
 							})(
 								<Select style={{ width: 100 }}>
 									<Option value="并行">并行</Option>

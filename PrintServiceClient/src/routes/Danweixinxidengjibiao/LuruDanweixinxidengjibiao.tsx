@@ -97,6 +97,10 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 					"date1": values.date1,
 					"date2": values.date2,
 					"date3": values.date3,
+					"ratio": values.ratio,
+					"ratio1": values.ratio1,
+					"ratio2": values.ratio2,
+					"ratio3": values.ratio3,
 					"or": values.or,
 					"or1": values.or1,
 					"or2": values.or2,
@@ -207,7 +211,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {
+												{getFieldDecorator('ratio', {
 													// rules: [{ required: true, message: '请输入持股比例' }]
 												})(
 													<Input className={styles.input} />
@@ -251,7 +255,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {
+												{getFieldDecorator('ratio1', {
 													// rules: [{ required: true, message: '请输入持股比例' }]
 												})(
 													<Input className={styles.input} />
@@ -295,7 +299,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {
+												{getFieldDecorator('ratio2', {
 													// rules: [{ required: true, message: '请输入持股比例' }]
 												})(
 													<Input className={styles.input} />
@@ -339,7 +343,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {
+												{getFieldDecorator('ratio3', {
 													// rules: [{ required: true, message: '请输入持股比例' }]
 												})(
 													<Input className={styles.input} />

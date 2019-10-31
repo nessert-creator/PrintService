@@ -95,6 +95,10 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
                     "date1": values.date1,
                     "date2": values.date2,
                     "date3": values.date3,
+                    "ratio": values.ratio,
+                    "ratio1": values.ratio1,
+                    "ratio2": values.ratio2,
+                    "ratio3": values.ratio3,
                     "or": values.or,
                     "or1": values.or1,
                     "or2": values.or2,
@@ -179,7 +183,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('ratio', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or', {})(<Input className={styles.input}/>)}
@@ -199,7 +203,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date1', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('ratio1', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or1', {})(<Input className={styles.input}/>)}
@@ -219,7 +223,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date2', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('ratio2', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or2', {})(<Input className={styles.input}/>)}
@@ -239,7 +243,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date3', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('abstract', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('ratio3', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or3', {})(<Input className={styles.input}/>)}

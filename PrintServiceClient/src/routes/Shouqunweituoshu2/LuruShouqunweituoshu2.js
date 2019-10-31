@@ -10,18 +10,56 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
     const { getFieldDecorator } = form;
     function handleSubmit(e) {
         form.validateFields((err, values) => {
-            console.log(values);
-            let data = {
-                "bankname": values.bankname,
-                "name": values.name,
-                "idtype": values.idtype,
-                "idnumber": 0,
-                "seal": values.seal,
-                "phone": values.phone
-            };
             if (!err) {
+                let data = {
+                    "bankName": values.bankName,
+                    "name": values.name,
+                    "idType": values.idType,
+                    "idNumber": values.idNumber,
+                    "department": values.department,
+                    "post": values.post,
+                    "dzdz": values.dzdz,
+                    "zzhdk": values.zzhdk,
+                    "dwjrdxt": values.dwjrdxt,
+                    "lccp": values.lccp,
+                    "jgxck": values.jgxck,
+                    "decd": values.decd,
+                    "dwckzss": values.dwckzss,
+                    "dwdqcd": values.dwdqcd,
+                    "other": values.other
+                };
                 dispatch({
                     type: 'shouqunweituoshu2/creatShouqunweituoshu2',
+                    payload: data
+                });
+            }
+        });
+    }
+    function handleReset() {
+        form.resetFields();
+    }
+    function handlePrint() {
+        form.validateFields((err, values) => {
+            if (!err) {
+                let data = {
+                    "bankName": values.bankName,
+                    "name": values.name,
+                    "idType": values.idType,
+                    "idNumber": values.idNumber,
+                    "department": values.department,
+                    "post": values.post,
+                    "dzdz": values.dzdz,
+                    "zzhdk": values.zzhdk,
+                    "dwjrdxt": values.dwjrdxt,
+                    "lccp": values.lccp,
+                    "jgxck": values.jgxck,
+                    "decd": values.decd,
+                    "dwckzss": values.dwckzss,
+                    "dwdqcd": values.dwdqcd,
+                    "other": values.other
+                };
+                dispatch({
+                    type: "print/printShouqunweituoshu2",
                     payload: data
                 });
             }
@@ -38,6 +76,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Link to="/"><Row className={styles.logo}></Row></Link>
 					<Row className={styles.title}>授权委托书（二）</Row>
 				</header>
+
 				<Form onSubmit={handleSubmit} style={{ fontSize: 25 }}>
 					<div className={styles.date}>
 						<FormItem label='日期' {...{ labelCol: { span: 4 }, wrapperCol: { span: 18 } }}>
@@ -79,18 +118,18 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 						</FormItem>
 						<span>部门：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('Department', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('department', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>职务：</span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('Post', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('post', {})(<Input className={styles.input}/>)}
 						</FormItem>
 						<span>前往贵行办理：</span>
 					</Row>
 					<Row>
 						<Col span={6}>1、电子对账</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('dzdz', {})(<Select style={{ width: 200 }}>
 									<Option value="增加/开立">增加/开立</Option>
 									<Option value="变更">变更</Option>
 									<Option value="删除/注销">删除/注销</Option>
@@ -102,7 +141,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>2、自助回单卡</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('zzhdk', {})(<Select style={{ width: 200 }}>
 									<Option value="签约">签约</Option>
 									<Option value="解约">解约</Option>
 									<Option value="换卡/补卡">换卡/补卡</Option>
@@ -114,7 +153,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>3、单位金融短信通</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('dwjrdxt', {})(<Select style={{ width: 200 }}>
 									<Option value="签约">签约</Option>
 									<Option value="撤销">撤销</Option>
 									<Option value="修改">修改</Option>
@@ -124,7 +163,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>4、理财产品</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('lccp', {})(<Select style={{ width: 200 }}>
 									<Option value="购买">购买</Option>
 									<Option value="赎回">赎回</Option>
 									<Option value="风险评估">风险评估</Option>
@@ -134,7 +173,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>5、结构性存款</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('jgxck', {})(<Select style={{ width: 200 }}>
 									<Option value="购买">购买</Option>
 									<Option value="到期冻结">到期冻结</Option>
 								</Select>)}
@@ -143,7 +182,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>6、大额存单</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('decd', {})(<Select style={{ width: 200 }}>
 									<Option value="购买">购买</Option>
 									<Option value="到期冻结">到期冻结</Option>
 								</Select>)}
@@ -152,7 +191,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>7、单位存款证实书</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Select style={{ width: 200 }}>
+							{getFieldDecorator('dwckzss', {})(<Select style={{ width: 200 }}>
 									<Option value="质押换开">质押换开</Option>
 									<Option value="补发">补发</Option>
 								</Select>)}
@@ -161,7 +200,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<Col span={6}>8、单位定期存单</Col>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('idType', {})(<Checkbox>撤押更换</Checkbox>)}
+							{getFieldDecorator('dwdqcd', {})(<Checkbox>撤押更换</Checkbox>)}
 						</FormItem>
 
 					</Row>
@@ -171,7 +210,7 @@ function LuruShouqunweituoshu2({ dispatch, form }) {
 					<Row>
 						<span>10、其他 </span>
 						<FormItem className={styles.formItem}>
-							{getFieldDecorator('Other', {})(<Input className={styles.input}/>)}
+							{getFieldDecorator('other', {})(<Input className={styles.input}/>)}
 						</FormItem>
 					</Row>
 					<div className={styles.footer}>
