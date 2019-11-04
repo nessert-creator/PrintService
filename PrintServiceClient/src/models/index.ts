@@ -34,6 +34,12 @@ import powerbook from './powerbook';
 import registration from './registration';
 import yewujiesuanshenqingshu from './yewujiesuanshenqingshu';
 import bgyhjszhsqss from './bgyhjszhsqss';
+import danweixinxidengjibiao from './danweixinxidengjibiao';
+import kailiApplyBook from './kailiApplyBook';
+import jszhsqshu from './jszhsqshu';
+import shouquanshu from './shouquanshu';
+import shouqunweituoshu1 from './Shouqunweituoshu1';
+import Shouqunweituoshu2 from './Shouqunweituoshu2';
 
 /**
  * index.js
@@ -76,4 +82,11 @@ export function registerModels(app) {
 	app.model(powerbook);
 	app.model(registration);
 	app.model(yewujiesuanshenqingshu);
+	app.model(danweixinxidengjibiao);
+	app.model(kailiApplyBook);
+	app.model(bgyhjszhsqss);
+	app.model(jszhsqshu);
+	app.model(shouquanshu);
+	app.model(shouqunweituoshu1);
+	app.model(Shouqunweituoshu2);
 }

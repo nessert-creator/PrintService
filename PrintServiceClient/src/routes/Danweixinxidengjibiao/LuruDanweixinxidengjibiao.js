@@ -31,6 +31,10 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
                     "date1": values.date1,
                     "date2": values.date2,
                     "date3": values.date3,
+                    "proportion": values.proportion,
+                    "proportion1": values.proportion1,
+                    "proportion2": values.proportion2,
+                    "proportion3": values.proportion3,
                     "or": values.or,
                     "or1": values.or1,
                     "or2": values.or2,
@@ -62,7 +66,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
                     "address3": values.address3,
                 };
                 dispatch({
-                    type: 'yewujiesuanshenqingshu/createYewujiesuanshenqngshu',
+                    type: 'danweixinxidengjibiao/createDanweixinxidengjibiao',
                     payload: data
                 });
             }
@@ -95,10 +99,10 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
                     "date1": values.date1,
                     "date2": values.date2,
                     "date3": values.date3,
-                    "ratio": values.ratio,
-                    "ratio1": values.ratio1,
-                    "ratio2": values.ratio2,
-                    "ratio3": values.ratio3,
+                    "proportion": values.proportion,
+                    "proportion1": values.proportion1,
+                    "proportion2": values.proportion2,
+                    "proportion3": values.proportion3,
                     "or": values.or,
                     "or1": values.or1,
                     "or2": values.or2,
@@ -148,8 +152,8 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 					<Row className={styles.title}>单位信息登记表</Row>
 				</header>
 
-				<section>
-					<Form onSubmit={handleSubmit}>
+				<Form onSubmit={handleSubmit}>
+					<section>
 						<div className={styles.content1}>
 							<div>
 								<div>
@@ -183,7 +187,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('ratio', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('proportion', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or', {})(<Input className={styles.input}/>)}
@@ -203,7 +207,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date1', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('ratio1', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('proportion1', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or1', {})(<Input className={styles.input}/>)}
@@ -223,7 +227,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date2', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('ratio2', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('proportion2', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or2', {})(<Input className={styles.input}/>)}
@@ -243,7 +247,7 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 												{getFieldDecorator('date3', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='持股比例'>
-												{getFieldDecorator('ratio3', {})(<Input className={styles.input}/>)}
+												{getFieldDecorator('proportion3', {})(<Input className={styles.input}/>)}
 											</FormItem>
 											<FormItem label='是否控股股东或实际控股人'>
 												{getFieldDecorator('or3', {})(<Input className={styles.input}/>)}
@@ -344,24 +348,24 @@ function LuruDanweixinxidengjibiao({ dispatch, form }) {
 							</div>
 						</div>
 
-					</Form>
-				</section>
-			</div>
+					</section>
 
-			<div className={styles.footer}>
-				<Row>
-					<Col span={4}>
-						<Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
-					</Col>
+					<div className={styles.footer}>
+						<Row>
+							<Col span={4}>
+								<Link to="/" style={{ fontSize: 16 }}> &lt;&lt; 返回首页</Link>
+							</Col>
 
-					<Col offset={5} span={8}>
-						<Button.Group size='large'>
-							<Button type="primary" htmlType="submit">提交</Button>
-							<Button type="primary" htmlType="button" onClick={() => { handlePrint(); }}>打印</Button>
-							<Button type="primary" htmlType="button" onClick={() => { handleReset(); }}>重置</Button>
-						</Button.Group>
-					</Col>
-				</Row>
+							<Col offset={5} span={8}>
+								<Button.Group size='large'>
+									<Button type="primary" htmlType="submit">提交</Button>
+									<Button type="primary" htmlType="button" onClick={() => { handlePrint(); }}>打印</Button>
+									<Button type="primary" htmlType="button" onClick={() => { handleReset(); }}>重置</Button>
+								</Button.Group>
+							</Col>
+						</Row>
+					</div>
+				</Form>
 			</div>
 		</div>);
 }

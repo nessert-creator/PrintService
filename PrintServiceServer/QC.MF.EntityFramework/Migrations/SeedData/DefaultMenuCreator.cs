@@ -84,6 +84,149 @@ namespace QC.MF.Migrations.SeedData
                     IsSystem = true,
                     Url = "/auditLog",
                     RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "个人客户信息登记表",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/registration",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "单位信息登记表",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/danweixinxidengjibiao",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "开立单位银行结算账户申请书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/kailiApplyBook",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "变更银行结算账户申请书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/bgyhjszhsqss",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "撤销银行结算账户申请书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/jszhsqshu",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "进账单",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/jiangzhangdan",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "现金交款单",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/xinjinjiaokuandan",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "结算业务申请书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/yewujiesuanshenqingshu",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "电子银行业务办理授权书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/shouquanshu",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "公司电子银行业务代理授权表",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/ywdlsqbiao",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "公司电子银行企业法定代表人授权书",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/powerbook",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "授权委托书（一）",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/shouqunweituoshu1",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
+                },
+                new Menus.Menu
+                {
+                    DisplayName = "授权委托书（二）",
+                    Icon = "solution",
+                    Order = 6,
+                    IsVisible = true,
+                    Target = "_self",
+                    IsSystem = true,
+                    Url = "/shouqunweituoshu2",
+                    RequiredPermissionName = PermissionNames.Pages_Administration_AuditLogs
                 }
             };
         }

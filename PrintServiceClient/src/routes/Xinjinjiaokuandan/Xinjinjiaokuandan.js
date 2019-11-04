@@ -104,7 +104,13 @@ function Xinjinjiaokuandan({ form, record }) {
     })(<Input />)}
             </FormItem>
         </Form>);
-    const filters = [];
+    const filters = [
+        {
+            name: 'accountname',
+            displayName: '收款单位',
+            option: 'like'
+        }
+    ];
     return (<CRUD form={form} getAllApi={new api.XianjinjiaokuandanApi().appXianjinjiaokuandanGetAll} deleteApi={new api.XianjinjiaokuandanApi().appXianjinjiaokuandanDelete} updateApi={new api.XianjinjiaokuandanApi().appXianjinjiaokuandanUpdate} createApi={new api.XianjinjiaokuandanApi().appXianjinjiaokuandanCreate} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>
                     <a onClick={() => {
         dispatch({

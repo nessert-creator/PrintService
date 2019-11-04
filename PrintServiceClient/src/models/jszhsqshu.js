@@ -2,16 +2,13 @@ import * as api from './../api/api';
 import { createApiAuthParam } from './../api/apiUtil.js';
 import { notification } from 'antd';
 export default {
-    namespace: 'shouqunweituoshu2',
+    namespace: 'jszhsqshu',
     state: {},
-    subscriptions: {
-        setup({ dispatch, history }) {
-        }
-    },
+    subscriptions: {},
     effects: {
-        *creatShouqunweituoshu2({ payload }, { call, put }) {
+        *createJszhsqshu({ payload }, { call, put }) {
             const data = yield call(...createApiAuthParam({
-                method: new api.Shouqunweituoshu2Api().appShouqunweituoshu2Create,
+                method: new api.JszhsqshuApi().appJszhsqshuCreate,
                 payload: payload
             }));
             if (data.success) {
@@ -19,9 +16,8 @@ export default {
                     message: '保存成功',
                     description: '恭喜你保存成功'
                 });
-                yield;
             }
-        }
+        },
     },
     reducers: {
         setState(state, { payload }) {

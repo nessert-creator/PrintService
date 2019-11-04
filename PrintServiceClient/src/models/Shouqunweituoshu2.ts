@@ -15,7 +15,7 @@ export default {
 	},
 
 	effects: {
-		*creatShouqunweituoshu1({ payload }, { call, put }) {
+		*creatShouqunweituoshu2({ payload }, { call, put }) {
 			const data = yield call(
               ...createApiAuthParam({
                 method: new api.Shouqunweituoshu2Api().appShouqunweituoshu2Create,

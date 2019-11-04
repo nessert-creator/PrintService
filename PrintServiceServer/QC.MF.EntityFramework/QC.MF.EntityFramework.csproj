@@ -239,13 +239,13 @@
     <Compile Include="Migrations\201803200329425_init9.Designer.cs">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910170853197_merge20191017.cs" />
-    <Compile Include="Migrations\201910170853197_merge20191017.Designer.cs">
-      <DependentUpon>201910170853197_merge20191017.cs</DependentUpon>
+    <Compile Include="Migrations\201911040605144_merge1104.cs" />
+    <Compile Include="Migrations\201911040605144_merge1104.Designer.cs">
+      <DependentUpon>201911040605144_merge1104.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910230847323_merge1023.cs" />
-    <Compile Include="Migrations\201910230847323_merge1023.Designer.cs">
-      <DependentUpon>201910230847323_merge1023.cs</DependentUpon>
+    <Compile Include="Migrations\201911040637035_fany1104.cs" />
+    <Compile Include="Migrations\201911040637035_fany1104.Designer.cs">
+      <DependentUpon>201911040637035_fany1104.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -317,11 +317,11 @@
     <EmbeddedResource Include="Migrations\201803200329425_init9.resx">
       <DependentUpon>201803200329425_init9.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910170853197_merge20191017.resx">
-      <DependentUpon>201910170853197_merge20191017.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911040605144_merge1104.resx">
+      <DependentUpon>201911040605144_merge1104.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910230847323_merge1023.resx">
-      <DependentUpon>201910230847323_merge1023.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911040637035_fany1104.resx">
+      <DependentUpon>201911040637035_fany1104.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

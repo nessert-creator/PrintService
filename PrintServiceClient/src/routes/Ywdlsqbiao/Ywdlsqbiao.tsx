@@ -13,55 +13,41 @@ import moment from 'moment';
 
 function Ywdlsqbiao({ form, record }) {
 	const columns = [
-
 		{
 			title: '客户名称',
-			dataIndex: 'customername',
-			sorter: true
+			dataIndex: 'customername'
 		},
 		{
 			title: '姓名',
-			dataIndex: 'name',
-			sorter: true
+			dataIndex: 'name'
 		},
 		{
 			title: '证件类型',
-			dataIndex: 'certificatetype',
-			sorter: true,
-			
+			dataIndex: 'certificatetype'
 		},
 		{
 			title: '证件号码',
-			dataIndex: 'idnumber',
-			sorter: true
+			dataIndex: 'idnumber'
 		},
 		{
 			title: '联系电话',
-			dataIndex: 'contactnumber',
-			sorter: true
+			dataIndex: 'contactnumber'
 		},
 		{
 			title: '姓名',
-			dataIndex: 'name1',
-			sorter: true
+			dataIndex: 'name1'
 		},
 		{
 			title: '证件类型',
-			dataIndex: 'certificatetype1',
-			sorter: true,
-			
+			dataIndex: 'certificatetype1'
 		},
 		{
 			title: '证件号码',
-			dataIndex: 'idnumber1',
-			sorter: true,
-			
+			dataIndex: 'idnumber1'
 		},
 		{
 			title: '联系电话',
-			dataIndex: 'contactnumber1',
-			sorter: true,
-			
+			dataIndex: 'contactnumber1'
 		}
 	];
 	const { getFieldDecorator } = form;

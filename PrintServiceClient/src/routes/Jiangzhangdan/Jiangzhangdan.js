@@ -134,7 +134,18 @@ function Jiangzhangdan({ form, record }) {
     })(<Input />)}
             </FormItem>
         </Form>);
-    const filters = [];
+    const filters = [
+        {
+            name: 'chupiaorenqc',
+            displayName: '出票人全称',
+            option: 'like'
+        },
+        {
+            name: 'shoukuanrenqc',
+            displayName: '收款人全称',
+            option: 'like'
+        }
+    ];
     return (<CRUD form={form} getAllApi={new api.JingzhangdanApi().appJingzhangdanGetAll} deleteApi={new api.JingzhangdanApi().appJingzhangdanDelete} updateApi={new api.JingzhangdanApi().appJingzhangdanUpdate} createApi={new api.JingzhangdanApi().appJingzhangdanCreate} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>
 					<a onClick={() => {
         dispatch({

@@ -10,148 +10,113 @@ function KailiApplyBook({ form, record }) {
     const columns = [
         {
             title: '存款人名称',
-            dataIndex: 'sname',
-            sorter: true
+            dataIndex: 'sname'
         },
         {
             title: '电话',
-            dataIndex: 'phoneNumber',
-            sorter: true
+            dataIndex: 'phoneNumber'
         },
         {
             title: '地址',
-            dataIndex: 'address',
-            sorter: true
+            dataIndex: 'address'
         },
         {
             title: '邮编',
-            dataIndex: 'postCode',
-            sorter: true
+            dataIndex: 'postCode'
         },
         {
             title: '存款人类别',
-            dataIndex: 'depositorsType',
-            sorter: true
+            dataIndex: 'depositorsType'
         },
         {
             title: '组织机构代码',
-            dataIndex: 'organization',
-            sorter: true
+            dataIndex: 'organization'
         },
         {
             title: '法定代表人或单位负责人',
-            dataIndex: 'fadingAndDanwei',
-            sorter: true
+            dataIndex: 'fadingAndDanwei'
         },
         {
             title: '姓名',
-            dataIndex: 'name',
-            sorter: true
+            dataIndex: 'name'
         },
         {
             title: '证件类型',
-            dataIndex: 'paperType',
-            sorter: true
+            dataIndex: 'paperType'
         },
         {
             title: '证件号码',
-            dataIndex: 'paperNumber',
-            sorter: true
+            dataIndex: 'paperNumber'
         },
         {
             title: '行业分类',
-            dataIndex: 'industry',
-            sorter: true
+            dataIndex: 'industry'
         },
         {
             title: '注册资金',
-            dataIndex: 'zijin',
-            sorter: true
+            dataIndex: 'zijin'
         },
         {
             title: '地区代码',
-            dataIndex: 'addressDaima',
-            sorter: true
+            dataIndex: 'addressDaima'
         },
         {
             title: '经营范围',
-            dataIndex: 'business',
-            sorter: true
+            dataIndex: 'business'
         },
         {
             title: '证明文件种类',
-            dataIndex: 'paperWenjian',
-            sorter: true
+            dataIndex: 'paperWenjian'
         },
         {
             title: '证明文件编号',
-            dataIndex: 'paperBianhao',
-            sorter: true
+            dataIndex: 'paperBianhao'
         },
         {
             title: '税务登记证',
-            dataIndex: 'tax',
-            sorter: true
+            dataIndex: 'tax'
         },
         {
             title: '账户性质',
-            dataIndex: 'zhangHuNature',
-            sorter: true
+            dataIndex: 'zhangHuNature'
         },
         {
             title: '资金性质',
-            dataIndex: 'ziJiNature',
-            sorter: true
+            dataIndex: 'ziJiNature'
         },
         {
-            title: '年',
-            dataIndex: 'year',
-            sorter: true
-        },
-        {
-            title: '月',
-            dataIndex: 'moth',
-            sorter: true
-        },
-        {
-            title: '日',
-            dataIndex: 'day',
-            sorter: true
+            title: '有效日期',
+            render: (t, r) => {
+                return r.year + "-" + r.moth + "-" + r.day;
+            }
         },
         {
             title: '上级法人或主管单位名称',
-            dataIndex: 'directorName',
-            sorter: true
+            dataIndex: 'directorName'
         },
         {
             title: '基本存款账户开户许可证核准号',
-            dataIndex: 'cunkuanZhangHu',
-            sorter: true
+            dataIndex: 'cunkuanZhangHu'
         },
         {
             title: '组织机构代码',
-            dataIndex: 'zuZhiJiGou',
-            sorter: true
+            dataIndex: 'zuZhiJiGou'
         },
         {
             title: '法定代表人或单位负责人',
-            dataIndex: 'fadingDaiBiao',
-            sorter: true
+            dataIndex: 'fadingDaiBiao'
         },
         {
             title: ' 姓名',
-            dataIndex: 'fadingDaiBiaoName',
-            sorter: true
+            dataIndex: 'fadingDaiBiaoName'
         },
         {
             title: '证件种类',
-            dataIndex: 'fadingDaiBiaoType',
-            sorter: true
+            dataIndex: 'fadingDaiBiaoType'
         },
         {
             title: '证件号码',
-            dataIndex: 'fadingDaiBiaoNumber',
-            sorter: true
+            dataIndex: 'fadingDaiBiaoNumber'
         },
     ];
     const { getFieldDecorator } = form;
@@ -338,20 +303,8 @@ function KailiApplyBook({ form, record }) {
     const filters = [
         {
             name: 'sname',
-            displayName: '客户名称',
+            displayName: '存款人名称',
             option: 'like'
-        },
-        {
-            name: 'creationTime',
-            displayName: '添加时间',
-            type: 'datetime',
-            option: '>='
-        },
-        {
-            name: 'creationTime',
-            displayName: '',
-            type: 'datetime',
-            option: '<'
         }
     ];
     return (<CRUD form={form} getAllApi={new api.KailiApplyBookApi().appKailiApplyBookGetAll} deleteApi={new api.KailiApplyBookApi().appKailiApplyBookDelete} updateApi={new api.KailiApplyBookApi().appKailiApplyBookUpdate} createApi={new api.KailiApplyBookApi().appKailiApplyBookCreate} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>

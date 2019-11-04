@@ -39,7 +39,7 @@ export default class Danweixinxidengjibiao extends React.Component {
           <div style={{
             width: "40px",
             float: "left"
-        }}>{data.ratio}</div>
+        }}>{data.proportion}</div>
           <div style={{
             float: "left"
         }}>{data.or}</div>
@@ -66,7 +66,7 @@ export default class Danweixinxidengjibiao extends React.Component {
           <div style={{
             width: "40px",
             float: "left"
-        }}>{data.ratio1}</div>
+        }}>{data.proportion1}</div>
           <div style={{
             float: "left"
         }}>{data.or1}</div>
@@ -93,7 +93,7 @@ export default class Danweixinxidengjibiao extends React.Component {
           <div style={{
             width: "40px",
             float: "left"
-        }}>{data.ratio2}</div>
+        }}>{data.proportion2}</div>
           <div style={{
             float: "left"
         }}>{data.or2}</div>
@@ -120,7 +120,7 @@ export default class Danweixinxidengjibiao extends React.Component {
           <div style={{
             width: "40px",
             float: "left"
-        }}>{data.ratio3}</div>
+        }}>{data.proportion3}</div>
           <div style={{
             float: "left"
         }}>{data.or3}</div>

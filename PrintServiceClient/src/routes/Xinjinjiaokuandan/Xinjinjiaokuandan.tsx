@@ -109,7 +109,12 @@ function Xinjinjiaokuandan({ form, record }) {
             </FormItem>
         </Form>
     );
-    const filters = [];
+    const filters = [
+        {
+            name: 'accountname',
+            displayName: '收款单位',
+            option: 'like'
+        }];
 
     return (
         <CRUD

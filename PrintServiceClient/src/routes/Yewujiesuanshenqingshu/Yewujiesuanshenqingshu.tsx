@@ -183,7 +183,17 @@ function Yewujiesuanshenqingshu({ form, record }) {
 			</FormItem>
 		</Form>
 	);
-	const filters = [];
+	const filters = [
+		{
+				name: 'designation',
+				displayName: '申请人名称',
+				option: 'like'
+		},
+		{
+				name: 'designation1',
+				displayName: '收款人名称',
+				option: 'like'
+		}];
 
 	return (
 		<CRUD
@@ -194,6 +204,19 @@ function Yewujiesuanshenqingshu({ form, record }) {
 			createApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuCreate}
 			columns={columns}
 			formNode={formNode}
+
+			customColumnOption={(text, record) => (
+					<span>
+							<a onClick={() => {
+									dispatch({
+											type: "print/printYewujiesuanshenqingshu",
+											payload: record
+									})
+							}}
+							>打印</a>
+							<span style={{ marginLeft: '6px' }} />
+					</ span >
+			)}
 			filterProps={{
 				filters,
 				searchProvide: 'sql'

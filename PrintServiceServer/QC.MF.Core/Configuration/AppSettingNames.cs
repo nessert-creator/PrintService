@@ -117,5 +117,11 @@
                 public const string MasterSecret = "MasterSecret";
             }
         }
+
+        public static class PrintData 
+        {
+            public const string Hours = "App.PrintData.Hours";
+            public const string Minutes = "App.PrintData.Minutes";
+        }
     }
 }

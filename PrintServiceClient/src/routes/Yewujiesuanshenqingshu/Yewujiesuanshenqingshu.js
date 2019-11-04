@@ -175,8 +175,27 @@ function Yewujiesuanshenqingshu({ form, record }) {
     })(<Input />)}
 			</FormItem>
 		</Form>);
-    const filters = [];
-    return (<CRUD form={form} getAllApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuGetAll} deleteApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuDelete} updateApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuUpdate} createApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuCreate} columns={columns} formNode={formNode} filterProps={{
+    const filters = [
+        {
+            name: 'designation',
+            displayName: '申请人名称',
+            option: 'like'
+        },
+        {
+            name: 'designation1',
+            displayName: '收款人名称',
+            option: 'like'
+        }
+    ];
+    return (<CRUD form={form} getAllApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuGetAll} deleteApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuDelete} updateApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuUpdate} createApi={new api.YewujiesuanshenqingshuApi().appYewujiesuanshenqingshuCreate} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>
+							<a onClick={() => {
+        dispatch({
+            type: "print/printYewujiesuanshenqingshu",
+            payload: record
+        });
+    }}>打印</a>
+							<span style={{ marginLeft: '6px' }}/>
+					</span>)} filterProps={{
         filters,
         searchProvide: 'sql'
     }}/>);

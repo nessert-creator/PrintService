@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities;
+using Abp.Domain.Entities.Auditing;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QC.MF.Bgyhjszhsqss
 {
-    public class Bgyhjszhsqs:Entity
+    public class Bgyhjszhsqs: FullAuditedEntity
     {
         //账户名称
         public string Customername { get; set; }
@@ -24,7 +25,7 @@ namespace QC.MF.Bgyhjszhsqss
         //账户名称
         public string Customername1 { get; set; }
         //地址
-        public string Id { get; set; }
+        public string Address { get; set; }
         //邮政编码
         public string Postalcode { get; set; }
         //电话

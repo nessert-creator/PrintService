@@ -14,48 +14,39 @@ function Powerbook({ form, record }) {
 	const columns = [
 		{
 			title: '客户名称',
-			dataIndex: 'sname',
-			sorter: true
+			dataIndex: 'sname'
 		},
 		{
 			title: '姓名',
-			dataIndex: 'name_1',
-			sorter: true
+			dataIndex: 'name_1'
 		},
 		{
 			title: '证件类型',
 			dataIndex: 'type_1',
-			sorter: true,
 		},
 		{
 			title: '证件号码',
-			dataIndex: 'number_1',
-			sorter: true
+			dataIndex: 'number_1'
 		},
 		{
 			title: '联系电话',
-			dataIndex: 'phoneNumber_1',
-			sorter: true
+			dataIndex: 'phoneNumber_1'
 		},
 		{
 			title: '姓名',
-			dataIndex: 'name_2',
-			sorter: true
+			dataIndex: 'name_2'
 		},
 		{
 			title: '证件类型',
 			dataIndex: 'type_2',
-			sorter: true,
 		},
 		{
 			title: '证件号码',
 			dataIndex: 'number_2',
-			sorter: true,
 		},
 		{
 			title: '联系电话',
 			dataIndex: 'phoneNumber_2',
-			sorter: true,
 		}
 	];
 	const { getFieldDecorator } = form;

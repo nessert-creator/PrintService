@@ -299,6 +299,7 @@
     <Compile Include="Chat\Dto\GetUserChatMessagesInput.cs" />
     <Compile Include="Chat\Dto\MarkAllUnreadMessagesOfUserAsReadInput.cs" />
     <Compile Include="Chat\IChatAppService.cs" />
+    <Compile Include="ClearPrintData\ClearPrintData.cs" />
     <Compile Include="CommonDto\CascaderDto.cs" />
     <Compile Include="CommonDto\FilteredInputDto.cs" />
     <Compile Include="CommonDto\Grouping.cs" />
@@ -309,6 +310,7 @@
     <Compile Include="CommonDto\PreviousAndNextDto.cs" />
     <Compile Include="Configuration\Dto\ClientSettingDto.cs" />
     <Compile Include="Configuration\Dto\ISettingDto.cs" />
+    <Compile Include="Configuration\Dto\PrintDataSettingDto.cs" />
     <Compile Include="Configuration\Dto\PushSettingDto.cs" />
     <Compile Include="Configuration\Dto\SecuritySettingDto.cs" />
     <Compile Include="Configuration\Dto\SettingsEditOutput.cs" />

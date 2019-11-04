@@ -10,38 +10,31 @@ function Shouqunweituoshu2({ form, record }) {
     const columns = [
         {
             title: '银行名称',
-            dataIndex: 'bankName',
-            sorter: true
+            dataIndex: 'bankName'
         },
         {
             title: '姓名',
-            dataIndex: 'name',
-            sorter: true
+            dataIndex: 'name'
         },
         {
             title: '证件类型',
-            dataIndex: 'idtype',
-            sorter: true,
+            dataIndex: 'idType',
         },
         {
             title: '证件号码',
-            dataIndex: 'idnumber',
-            sorter: true
+            dataIndex: 'idNumber'
         },
         {
             title: '部门',
-            dataIndex: 'department',
-            sorter: true
+            dataIndex: 'department'
         },
         {
             title: '职务',
-            dataIndex: 'post',
-            sorter: true
+            dataIndex: 'post'
         },
         {
             title: '其他',
-            dataIndex: 'other',
-            sorter: true
+            dataIndex: 'other'
         },
     ];
     const { getFieldDecorator } = form;
@@ -94,37 +87,7 @@ function Shouqunweituoshu2({ form, record }) {
             name: 'bankName',
             displayName: '银行名称',
             option: 'like'
-        },
-        {
-            name: 'name',
-            displayName: '姓名',
-            option: 'like'
-        },
-        {
-            name: 'idtype',
-            displayName: '证件类型',
-            option: 'like'
-        },
-        {
-            name: 'idnumber',
-            displayName: '证件号码',
-            option: 'like'
-        },
-        {
-            name: 'department',
-            displayName: '部门',
-            option: 'like'
-        },
-        {
-            name: 'post',
-            displayName: '职务',
-            option: 'like'
-        },
-        {
-            name: 'other',
-            displayName: '其他',
-            option: 'like'
-        },
+        }
     ];
     return (<CRUD form={form} getAllApi={new api.Shouqunweituoshu2Api().appShouqunweituoshu2GetAll} deleteApi={new api.Shouqunweituoshu2Api().appShouqunweituoshu2Delete} updateApi={new api.Shouqunweituoshu2Api().appShouqunweituoshu2Update} createApi={new api.Shouqunweituoshu2Api().appShouqunweituoshu2Create} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>
                     <a onClick={() => {

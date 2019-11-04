@@ -15,43 +15,35 @@ function Shouquanshu({ form, record }) {
     const columns = [
         {
             title: '支行名称',
-            dataIndex: 'zhihang',
-            sorter: true
+            dataIndex: 'zhihang'
         },
         {
             title: '授权人姓名',
-            dataIndex: 'name',
-            sorter: true
+            dataIndex: 'name'
         },
         {
             title: '身份证号码',
             dataIndex: 'idcard',
-            sorter: true,
         },
         {
             title: '手机号码',
             dataIndex: 'telephonenumber',
-            sorter: true,
         },
         {
             title: '其他',
             dataIndex: 'other',
-            sorter: true,
         },
         {
             title: '年',
             dataIndex: 'year',
-            sorter: true,
         },
         {
             title: '月',
             dataIndex: 'month',
-            sorter: true,
         },
         {
             title: '日',
             dataIndex: 'day',
-            sorter: true,
         },
     ];
     const { getFieldDecorator } = form;

@@ -4,6 +4,7 @@ using Abp.Web;
 using Castle.Facilities.Logging;
 using System.Linq;
 using Abp.Localization;
+using Abp.Configuration;
 
 namespace QC.MF.Web
 {
@@ -26,6 +27,8 @@ namespace QC.MF.Web
             //{
             //    langCookie.Value = "zh-CN";
             //}
+            var PrintData = AbpBootstrapper.IocManager.Resolve<ClearPrintData.ClearPrintData>();
+            PrintData.Run();
             base.Application_BeginRequest(sender, e);
         }
     }

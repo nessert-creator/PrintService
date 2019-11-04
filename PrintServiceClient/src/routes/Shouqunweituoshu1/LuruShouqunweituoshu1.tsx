@@ -15,24 +15,22 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 
 	function handleSubmit(e) {
 		form.validateFields((err, values) => {
-			console.log(values);
-
-			let data = {
-				"bankName": values.bankName,
-				"name": values.name,
-				"idType": values.idType,
-				"idNumber": values.idNumber,
-				"post": values.post,
-				"phone": values.phone,
-				"name1": values.name1,
-				"name2": values.name2,
-				"idNumber2": values.idNumber2,
-				"name3": values.name3,
-				"idNumber3": values.idNumber3,
-				"phone3": values.phone3,
-				"business4": values.business4
-			};
 			if (!err) {
+				let data = {
+					"bankName": values.bankName,
+					"name": values.name,
+					"idType": values.idType,
+					"idNumber": values.idNumber,
+					"post": values.post,
+					"phone": values.phone,
+					"name1": values.name1,
+					"name2": values.name2,
+					"idNumber2": values.idNumber2,
+					"name3": values.name3,
+					"idNumber3": values.idNumber3,
+					"phone3": values.phone3,
+					"business4": values.business4
+				};
 				dispatch({
 					type: 'shouqunweituoshu1/creatShouqunweituoshu1',
 					payload: data
@@ -41,33 +39,33 @@ function LuruShouqunweituoshu1({ dispatch, form }) {
 		});
 	}
 	function handleReset() {
-			form.resetFields();
+		form.resetFields();
 	}
 	function handlePrint() {
-			form.validateFields((err, values) => {
-					if (!err) {
-							let data = {
-								"bankName": values.bankName,
-								"name": values.name,
-								"idType": values.idType,
-								"idNumber": values.idNumber,
-								"post": values.post,
-								"phone": values.phone,
-								"name1": values.name1,
-								"name2": values.name2,
-								"idNumber2": values.idNumber2,
-								"name3": values.name3,
-								"idNumber3": values.idNumber3,
-								"phone3": values.phone3,
-								"business4": values.business4
-							};
+		form.validateFields((err, values) => {
+			if (!err) {
+				let data = {
+					"bankName": values.bankName,
+					"name": values.name,
+					"idType": values.idType,
+					"idNumber": values.idNumber,
+					"post": values.post,
+					"phone": values.phone,
+					"name1": values.name1,
+					"name2": values.name2,
+					"idNumber2": values.idNumber2,
+					"name3": values.name3,
+					"idNumber3": values.idNumber3,
+					"phone3": values.phone3,
+					"business4": values.business4
+				};
 
-							dispatch({
-									type: "print/printShouqunweituoshu1",
-									payload: data
-							});
-					}
-			});
+				dispatch({
+					type: "print/printShouqunweituoshu1",
+					payload: data
+				});
+			}
+		});
 	}
 
 	const formCol = {

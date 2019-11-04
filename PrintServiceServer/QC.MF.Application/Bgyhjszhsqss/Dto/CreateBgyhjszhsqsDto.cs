@@ -25,7 +25,7 @@ namespace QC.MF.Bgyhjszhsqss.Dto
         //账户名称
         public string Customername1 { get; set; }
         //地址
-        public string Id { get; set; }
+        public string Address { get; set; }
         //邮政编码
         public string Postalcode { get; set; }
         //电话

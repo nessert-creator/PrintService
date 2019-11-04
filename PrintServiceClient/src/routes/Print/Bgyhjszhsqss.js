@@ -37,7 +37,7 @@ export default class data extends React.Component {
 				<div style={{
             lineHeight: "23px"
         }}>
-					<div style={{ float: 'left' }}>{data.id}</div>
+					<div style={{ float: 'left' }}>{data.address}</div>
 					<div style={{ clear: 'both' }}></div>
 				</div>
 

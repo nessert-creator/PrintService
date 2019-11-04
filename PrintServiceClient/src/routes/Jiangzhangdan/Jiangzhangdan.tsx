@@ -141,7 +141,17 @@ function Jiangzhangdan({ form, record }) {
             </FormItem>
         </Form>
     );
-    const filters = [];
+    const filters = [
+        {
+            name: 'chupiaorenqc',
+            displayName: '出票人全称',
+            option: 'like'
+        },
+        {
+            name: 'shoukuanrenqc',
+            displayName: '收款人全称',
+            option: 'like'
+        }];
 
     return (
         <CRUD

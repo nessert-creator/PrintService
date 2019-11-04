@@ -15,118 +15,75 @@ function Jszhsqshu({ form, record }) {
     const columns = [
         {
             title: '账户名称',
-            dataIndex: 'accounttitle',
-            sorter: true
+            dataIndex: 'accounttitle'
         },
         {
             title: '开户银行名称',
-            dataIndex: 'bankname',
-            sorter: true
+            dataIndex: 'bankname'
         },
         {
             title: '开户银行代码',
-            dataIndex: 'bankcode',
-            sorter: true
+            dataIndex: 'bankcode'
         },
         {
             title: '账号',
-            dataIndex: 'account',
-            sorter: true
+            dataIndex: 'account'
         },
         {
             title: '账户性质',
-            dataIndex: 'naturezccount',
-            sorter: true
+            dataIndex: 'naturezccount'
         },
-        // {
-        //     title: '基本',
-        //     dataIndex: 'basic',
-        //     sorter: true
-        // },
-        // {
-        //     title: '专用',
-        //     dataIndex: 'special',
-        //     sorter: true
-        // },
-        // {
-        //     title: '一般',
-        //     dataIndex: 'general',
-        //     sorter: true
-        // },
-        // {
-        //     title: '临时',
-        //     dataIndex: 'temporary',
-        //     sorter: true
-        // },
-        // {
-        //     title: '个人',
-        //     dataIndex: 'personal',
-        //     sorter: true
-        // },
         {
             title: '开户许可证核准号',
-            dataIndex: 'accountnumber',
-            sorter: true
+            dataIndex: 'accountnumber'
         },
         {
             title: '销户原因',
-            dataIndex: 'pinreasons',
-            sorter: true
+            dataIndex: 'pinreasons'
         },
         {
             title: '交回空白重要凭证',
-            dataIndex: 'voucher',
-            sorter: true
+            dataIndex: 'voucher'
         },
         {
             title: '种类',
-            dataIndex: 'species',
-            sorter: true
+            dataIndex: 'species'
         },
         {
             title: '张（份）数',
-            dataIndex: 'anumberof',
-            sorter: true
+            dataIndex: 'anumberof'
         },
         {
             title: '起讫号码',
-            dataIndex: 'allnumbers',
-            sorter: true
+            dataIndex: 'allnumbers'
         },
         {
             title: '填写说明',
-            dataIndex: 'fillingexplanation',
-            sorter: true
+            dataIndex: 'fillingexplanation'
         },
         {
             title: '年',
-            dataIndex: 'year',
-            sorter: true
+            dataIndex: 'year'
         },
         {
             title: '月',
-            dataIndex: 'month',
-            sorter: true
+            dataIndex: 'month'
         },
         {
             title: '日',
-            dataIndex: 'day',
-            sorter: true
+            dataIndex: 'day'
         },
         {
             title: '年',
-            dataIndex: 'year1',
-            sorter: true
+            dataIndex: 'year1'
         },
         {
             title: '月',
-            dataIndex: 'month1',
-            sorter: true
+            dataIndex: 'month1'
         },
         {
             title: '日',
-            dataIndex: 'day1',
-            sorter: true
+            dataIndex: 'day1'
         },
     ];
     const { getFieldDecorator } = form;
@@ -165,36 +122,6 @@ function Jszhsqshu({ form, record }) {
                 rules: [{ required: true, message: '请填写名称' }]
             })(<Input />)}
         </FormItem>
-        {/* <FormItem label="基本" {...formCol}>
-            {getFieldDecorator('basic', {
-                initialValue: record.Basic,
-                rules: [{ required: true, message: '请填写名称' }]
-            })(<Input />)}
-        </FormItem>
-        <FormItem label="专用" {...formCol}>
-            {getFieldDecorator('special', {
-                initialValue: record.Special,
-                rules: [{ required: true, message: '请填写名称' }]
-            })(<Input />)}
-        </FormItem>
-        <FormItem label="一般" {...formCol}>
-            {getFieldDecorator('general', {
-                initialValue: record.General,
-                rules: [{ required: true, message: '请填写名称' }]
-            })(<Input />)}
-        </FormItem>
-        <FormItem label="临时" {...formCol}>
-            {getFieldDecorator('temporary', {
-                initialValue: record.Temporary,
-                rules: [{ required: true, message: '请填写名称' }]
-            })(<Input />)}
-        </FormItem>
-        <FormItem label="个人" {...formCol}>
-            {getFieldDecorator('personal', {
-                initialValue: record.Personal,
-                rules: [{ required: true, message: '请填写名称' }]
-            })(<Input />)}
-        </FormItem> */}
         <FormItem label="开户许可证核准号" {...formCol}>
             {getFieldDecorator('accountnumber', {
                 initialValue: record.Accountnumber,

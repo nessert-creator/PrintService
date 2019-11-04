@@ -11,7 +11,7 @@ namespace QC.MF.danweixinxidengjibiao
     {
         public string Company { get; set; }
         //公司
-        public int Code { get; set; }
+        public string Code { get; set; }
         //社会统一信用代码
         public string Information { get; set; }
         //股东信息
@@ -31,29 +31,29 @@ namespace QC.MF.danweixinxidengjibiao
         //身份信息
         public string Identity3 { get; set; }
         //身份信息
-        public int Number { get; set; }
+        public string Number { get; set; }
         //证件号码
-        public int Number1 { get; set; }
+        public string Number1 { get; set; }
         //证件号码
-        public int Number2 { get; set; }
+        public string Number2 { get; set; }
         //证件号码
-        public int Number3 { get; set; }
+        public string Number3 { get; set; }
         //证件号码
-        public int Date { get; set; }
+        public string Date { get; set; }
         //有效期限
-        public int Date1 { get; set; }
+        public string Date1 { get; set; }
         //有效期限
-        public int Date2 { get; set; }
+        public string Date2 { get; set; }
         //有效期限
-        public int Date3 { get; set; }
+        public string Date3 { get; set; }
         //有效期限
-        public int Proportion { get; set; }
+        public string Proportion { get; set; }
         //持股比例
-        public int Proportion1 { get; set; }
+        public string Proportion1 { get; set; }
         //持股比例
-        public int Proportion2 { get; set; }
+        public string Proportion2 { get; set; }
         //持股比例
-        public int Proportion3 { get; set; }
+        public string Proportion3 { get; set; }
         //持股比例、
         public string Or { get; set; }
         //是否为实际控股人
@@ -89,21 +89,21 @@ namespace QC.MF.danweixinxidengjibiao
         //身份信息
         public string Identity7 { get; set; }
         //身份信息
-        public int Numbe4 { get; set; }
+        public string Numbe4 { get; set; }
         //证件号码
-        public int Number5 { get; set; }
+        public string Number5 { get; set; }
         //证件号码
-        public int Number6 { get; set; }
+        public string Number6 { get; set; }
         //证件号码
-        public int Number7 { get; set; }
+        public string Number7 { get; set; }
         //证件号码
-        public int Date4 { get; set; }
+        public string Date4 { get; set; }
         //有效期限
-        public int Date5 { get; set; }
+        public string Date5 { get; set; }
         //有效期限
-        public int Date6 { get; set; }
+        public string Date6 { get; set; }
         //有效期限
-        public int Date7 { get; set; }
+        public string Date7 { get; set; }
         //有效期限
         public string Address { get; set; }
         //地址

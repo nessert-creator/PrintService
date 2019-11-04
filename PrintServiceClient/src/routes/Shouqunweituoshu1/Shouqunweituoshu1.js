@@ -10,48 +10,39 @@ function Shouqunweituoshu1({ form, record }) {
     const columns = [
         {
             title: '银行名称',
-            dataIndex: 'bankName',
-            sorter: true
+            dataIndex: 'bankName'
         },
         {
             title: '姓名',
-            dataIndex: 'name',
-            sorter: true
+            dataIndex: 'name'
         },
         {
             title: '证件种类',
             dataIndex: 'idType',
-            sorter: true,
         },
         {
             title: '证件号码',
-            dataIndex: 'idNumber',
-            sorter: true
+            dataIndex: 'idNumber'
         },
         {
             title: '职务',
-            dataIndex: 'post',
-            sorter: true
+            dataIndex: 'post'
         },
         {
             title: '名章',
-            dataIndex: 'seal',
-            sorter: true
+            dataIndex: 'seal'
         },
         {
             title: '联系电话',
-            dataIndex: 'phone',
-            sorter: true
+            dataIndex: 'phone'
         },
         {
             title: '并行',
-            dataIndex: 'bingXing',
-            sorter: true
+            dataIndex: 'bingXing'
         },
         {
             title: '废止',
-            dataIndex: 'feiZhi',
-            sorter: true
+            dataIndex: 'feiZhi'
         },
     ];
     const { getFieldDecorator } = form;
@@ -114,47 +105,7 @@ function Shouqunweituoshu1({ form, record }) {
             name: 'bankName',
             displayName: '银行名称',
             option: 'like'
-        },
-        {
-            name: 'name',
-            displayName: '姓名',
-            option: 'like'
-        },
-        {
-            name: 'idType',
-            displayName: '证件种类',
-            option: 'like'
-        },
-        {
-            name: 'idNumber',
-            displayName: '证件号码',
-            option: 'like'
-        },
-        {
-            name: 'post',
-            displayName: '职务',
-            option: 'like'
-        },
-        {
-            name: 'seal',
-            displayName: '名章',
-            option: 'like'
-        },
-        {
-            name: 'phone',
-            displayName: '联系电话',
-            option: 'like'
-        },
-        {
-            name: 'bingXing',
-            displayName: '并行',
-            option: 'like'
-        },
-        {
-            name: 'feiZhi',
-            displayName: '废止',
-            option: 'like'
-        },
+        }
     ];
     return (<CRUD form={form} getAllApi={new api.Shouqunweituoshu1Api().appShouqunweituoshu1GetAll} deleteApi={new api.Shouqunweituoshu1Api().appShouqunweituoshu1Delete} updateApi={new api.Shouqunweituoshu1Api().appShouqunweituoshu1Update} createApi={new api.Shouqunweituoshu1Api().appShouqunweituoshu1Create} columns={columns} formNode={formNode} customColumnOption={(text, record) => (<span>
                     <a onClick={() => {

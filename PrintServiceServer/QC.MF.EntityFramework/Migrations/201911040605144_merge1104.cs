@@ -5,17 +5,62 @@ namespace QC.MF.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class merge20191017 : DbMigration
+    public partial class merge1104 : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Bgyhjszhsqs",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Customername = c.String(),
+                        Bankcode = c.String(),
+                        Accountnumber = c.String(),
+                        Natureofaccount = c.String(),
+                        Accountopennumber = c.String(),
+                        Changesas = c.String(),
+                        Customername1 = c.String(),
+                        Address = c.String(),
+                        Postalcode = c.String(),
+                        Phonenumber = c.String(),
+                        Registered = c.String(),
+                        Typeof = c.String(),
+                        Documentnumber = c.String(),
+                        Businessscope = c.String(),
+                        Legal = c.String(),
+                        Name = c.String(),
+                        Typedocument = c.String(),
+                        Idnumber = c.String(),
+                        Affiliated = c.String(),
+                        Dengjibiao = c.String(),
+                        Thesuperior = c.String(),
+                        Thename = c.String(),
+                        Headofunit = c.String(),
+                        Name1 = c.String(),
+                        Typedocument1 = c.String(),
+                        Idnumber1 = c.String(),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(),
+                        LastModificationTime = c.DateTime(),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Bgyhjszhsqs_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.Danweixinxidengjibiaos",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Company = c.String(),
-                        Code = c.Int(nullable: false),
+                        Code = c.String(),
                         Information = c.String(),
                         Shareholders = c.String(),
                         Shareholders1 = c.String(),
@@ -25,18 +70,18 @@ namespace QC.MF.Migrations
                         Identity1 = c.String(),
                         Identity2 = c.String(),
                         Identity3 = c.String(),
-                        Number = c.Int(nullable: false),
-                        Number1 = c.Int(nullable: false),
-                        Number2 = c.Int(nullable: false),
-                        Number3 = c.Int(nullable: false),
-                        Date = c.Int(nullable: false),
-                        Date1 = c.Int(nullable: false),
-                        Date2 = c.Int(nullable: false),
-                        Date3 = c.Int(nullable: false),
-                        Proportion = c.Int(nullable: false),
-                        Proportion1 = c.Int(nullable: false),
-                        Proportion2 = c.Int(nullable: false),
-                        Proportion3 = c.Int(nullable: false),
+                        Number = c.String(),
+                        Number1 = c.String(),
+                        Number2 = c.String(),
+                        Number3 = c.String(),
+                        Date = c.String(),
+                        Date1 = c.String(),
+                        Date2 = c.String(),
+                        Date3 = c.String(),
+                        Proportion = c.String(),
+                        Proportion1 = c.String(),
+                        Proportion2 = c.String(),
+                        Proportion3 = c.String(),
                         Or = c.String(),
                         Or1 = c.String(),
                         Or2 = c.String(),
@@ -54,14 +99,14 @@ namespace QC.MF.Migrations
                         Identity5 = c.String(),
                         Identity6 = c.String(),
                         Identity7 = c.String(),
-                        Numbe4 = c.Int(nullable: false),
-                        Number5 = c.Int(nullable: false),
-                        Number6 = c.Int(nullable: false),
-                        Number7 = c.Int(nullable: false),
-                        Date4 = c.Int(nullable: false),
-                        Date5 = c.Int(nullable: false),
-                        Date6 = c.Int(nullable: false),
-                        Date7 = c.Int(nullable: false),
+                        Numbe4 = c.String(),
+                        Number5 = c.String(),
+                        Number6 = c.String(),
+                        Number7 = c.String(),
+                        Date4 = c.String(),
+                        Date5 = c.String(),
+                        Date6 = c.String(),
+                        Date7 = c.String(),
                         Address = c.String(),
                         Address1 = c.String(),
                         Address2 = c.String(),
@@ -523,6 +568,11 @@ namespace QC.MF.Migrations
                 removedAnnotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_Danweixinxidengjibiao_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.Bgyhjszhsqs",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Bgyhjszhsqs_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
         }
     }

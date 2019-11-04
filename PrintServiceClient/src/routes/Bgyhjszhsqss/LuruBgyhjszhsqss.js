@@ -24,7 +24,7 @@ function LuruBgyhjszhsqss({ dispatch, form }) {
                     "accountopennumber": values.accountopennumber,
                     "changesas": values.changesas,
                     "customername1": values.customername1,
-                    "id": values.id,
+                    "address": values.address,
                     "postalcode": values.postalcode,
                     "phonenumber": values.phonenumber,
                     "registered": values.registered,
@@ -65,7 +65,7 @@ function LuruBgyhjszhsqss({ dispatch, form }) {
                     "accountopennumber": values.accountopennumber,
                     "changesas": values.changesas,
                     "customername1": values.customername1,
-                    "id": values.id,
+                    "address": values.address,
                     "postalcode": values.postalcode,
                     "phonenumber": values.phonenumber,
                     "registered": values.registered,
@@ -168,7 +168,7 @@ function LuruBgyhjszhsqss({ dispatch, form }) {
                             <Row>
                                 <Col span={24}>
                                     <FormItem label="地址" {...formCol1}>
-                                        {getFieldDecorator('id', {})(<Input className={styles.input}/>)}
+                                        {getFieldDecorator('address', {})(<Input className={styles.input}/>)}
                                     </FormItem>
                                 </Col>
                             </Row>
@@ -252,7 +252,7 @@ function LuruBgyhjszhsqss({ dispatch, form }) {
                                         变更后的关联企业信息填列在“关联企业登记表”中
                                     </FormItem>
                                 </Col>
-                            </Row> 
+                            </Row>
 
                             <Row>上级法人或主管单位信息</Row>
                             <Row>

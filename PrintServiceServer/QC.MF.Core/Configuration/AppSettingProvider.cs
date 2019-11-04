@@ -77,6 +77,8 @@ namespace QC.MF.Configuration
                 new SettingDefinition(AppSettingNames.Push.Getui.AppKey, ConfigurationManager.AppSettings[AppSettingNames.Push.Getui.AppKey] ?? ""),
                 new SettingDefinition(AppSettingNames.Push.Getui.MasterSecret, ConfigurationManager.AppSettings[AppSettingNames.Push.Getui.MasterSecret] ?? ""),
 
+                new SettingDefinition(AppSettingNames.PrintData.Hours, ConfigurationManager.AppSettings[AppSettingNames.PrintData.Hours] ?? ""),
+                new SettingDefinition(AppSettingNames.PrintData.Minutes, ConfigurationManager.AppSettings[AppSettingNames.PrintData.Minutes] ?? "")
             };
         }
     }

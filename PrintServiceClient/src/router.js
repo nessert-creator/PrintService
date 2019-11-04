@@ -66,6 +66,7 @@ import Danweixinxidengjibiao from './routes/Danweixinxidengjibiao/Danweixinxiden
 import LuruDanweixinxidengjibiao from './routes/Danweixinxidengjibiao/LuruDanweixinxidengjibiao';
 import Shouquanshu from './routes/Shouquanshu/Shouquanshu';
 import LuruShouquanshu from './routes/Shouquanshu/LuruShouquanshu';
+import Bgyhjszhsqss from './routes/Bgyhjszhsqss/Bgyhjszhsqss';
 import LuruBgyhjszhsqss from './routes/Bgyhjszhsqss/LuruBgyhjszhsqss';
 import KailiApplyBook from './routes/KailiApplyBook/KailiApplyBook';
 import LuruKailiApplyBook from './routes/KailiApplyBook/LuruKailiApplyBook';
@@ -131,6 +132,7 @@ export default function RouterConfig({ history }) {
 						<Route path="/yewujiesuanshenqingshu" component={Yewujiesuanshenqingshu}/>
 						<Route path="/danweixinxidengjibiao" component={Danweixinxidengjibiao}/>
 						<Route path="/shouquanshu" component={Shouquanshu}/>
+						<Route path="/bgyhjszhsqss" component={Bgyhjszhsqss}/>
 						<Route path="/shenqingshu" component={Shenqingshu}/>
 						<Route path="/kailiApplyBook" component={KailiApplyBook}/>
 					</Route>

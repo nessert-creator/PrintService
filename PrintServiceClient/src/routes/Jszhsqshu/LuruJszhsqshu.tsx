@@ -23,7 +23,7 @@ function LuruJszhsqshu({ dispatch, form }) {
                     "pinreasons": values.pinreasons
                 };
                 dispatch({
-                    type: 'jszhsqshu/createjszhsqshu',
+                    type: 'jszhsqshu/createJszhsqshu',
                     payload: data
                 });
             }

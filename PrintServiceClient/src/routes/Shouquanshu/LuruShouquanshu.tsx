@@ -14,19 +14,18 @@ function LuruShouquanshu({ dispatch, form }) {
     const { getFieldDecorator } = form;
     function handleSubmit(e) {
         form.validateFields((err, values) => {
-            console.log(values);
-            let data = {
-                "zhihang": values.zhihang,
-                "name": values.name,
-                "idcard": values.idcard,
-                "telephonenumber": values.telephonenumber,
-                "other": values.other,
-                "year": values.date.year(),
-                "month": values.date.month(),
-                "day": values.date.day(),
-            };
-
             if (!err) {
+                console.log(values);
+                let data = {
+                    "zhihang": values.zhihang,
+                    "name": values.name,
+                    "idcard": values.idcard,
+                    "telephonenumber": values.telephonenumber,
+                    "other": values.other,
+                    "year": values.date.year(),
+                    "month": values.date.month(),
+                    "day": values.date.day(),
+                };
                 dispatch({
                     type: 'shouquanshu/createShouquanshu',
                     payload: data

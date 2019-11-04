@@ -16,7 +16,7 @@ namespace QC.MF.Ywdlsqbiaos
         //证件类型
         public string Certificatetype { get; set; }
         //证件号码
-        public int Idnumber { get; set; }
+        public string Idnumber { get; set; }
         //联系电话
         public string Contactnumber { get; set; }
         //姓名
@@ -24,7 +24,7 @@ namespace QC.MF.Ywdlsqbiaos
         //证件类型
         public string Certificatetype2 { get; set; }
         //证件号码
-        public int Idnumber2 { get; set; }
+        public string Idnumber2 { get; set; }
         //联系电话
         public string Contactnumber2 { get; set; }
         //姓名
@@ -32,7 +32,7 @@ namespace QC.MF.Ywdlsqbiaos
         //证件类型
         public string Certificatetype1 { get; set; }
         //证件号码
-        public int Idnumber1 { get; set; }
+        public string Idnumber1 { get; set; }
         //联系电话
         public string Contactnumber1 { get; set; }
     }
